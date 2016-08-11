@@ -1,0 +1,12 @@
+title: blog.harveyk.me
+email: vaporize93@gmail.com
+github_username: vaporize93
+
+markdown: kramdown
+
+higlighter: pygments
+
+permalink: pretty
+
+safe: true
+lsi: true
