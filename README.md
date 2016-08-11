@@ -1,3 +1,3 @@
 # Blog.harveyk.me
 
-[homepage](blog.harveyk.me)
+[homepage](http://blog.harveyk.me)
