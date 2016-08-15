@@ -11,3 +11,5 @@ permalink: pretty
 
 safe: true
 lsi: true
+
+exclude: [vendor]
