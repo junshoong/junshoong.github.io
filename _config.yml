@@ -13,3 +13,7 @@ safe: true
 lsi: true
 
 exclude: [vendor]
+
+# Markdown Processors
+kramdown:
+  input:    GFM
