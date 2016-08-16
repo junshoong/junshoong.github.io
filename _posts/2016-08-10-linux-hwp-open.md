@@ -10,15 +10,10 @@ tags: hancom, hwp, linux
 
 ![한컴 오피스 뷰어 설치하기 이미지](/images/2016-08-16/01_hancom.png)
 
-
 리눅스라는 플랫폼이 국내에서 흔하게 쓰이는 플랫폼은 아니지만 얼마 안 되는 리눅스 사용자를 이용해서 혼란스러운 마케팅을 보여주는건 조금 속상하다.
 
 오해하고 있는 사람이 조금 있는데, 한글은 폐쇄적이진 않다. 실제로 .hwp의 한글 포맷은 한컴 공식홈페이지에서 공개하고 있다. 다만 그걸 굳이 다른 뷰어를 만들지 않는 게 문제인것 같다.
 
+한글 뷰어를 잃었을 때 사용했던 도구는 [pyhwp](https://github.com/mete0r/pyhwp)로, hwp 포맷을 odt나 html 포맷으로 변환 할 수 있는 도구였다.
 
-한글 뷰어를 잃었을 때 사용했던 도구는 pyhwp로, hwp 포맷을 odt나 html 포맷으로 변환 할 수 있는 도구였다. 아래 링크에서 받을 수 있다.
-https://github.com/mete0r/pyhwp
-
-
-한글 뷰어는 아래 링크에서 받을 수 있다.
-http://www.hancom.com/office/viewer_usage_guide.jsp
+한글 뷰어는 [한컴홈페이지](http://www.hancom.com/office/viewer_usage_guide.jsp)에서 받을 수 있다.
