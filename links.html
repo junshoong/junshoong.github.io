@@ -6,8 +6,9 @@ title: Links
   {% for post in site.posts %}
     {% if post.category == "link" %}
       <li>
-        <a class="note-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a class="note-link" href="{{ post.link }}">{{ post.title }}</a>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <p> {{ post.content }} </p>
       </li>
       {% endif %}
   {% endfor %}
