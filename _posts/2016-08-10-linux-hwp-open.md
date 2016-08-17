@@ -18,3 +18,9 @@ tags: hancom, hwp, linux
 한글 뷰어를 잃었을 때 사용했던 도구는 [pyhwp](https://github.com/mete0r/pyhwp)로, hwp 포맷을 odt나 html 포맷으로 변환 할 수 있는 도구였다.
 
 한글 뷰어는 [한컴홈페이지](http://www.hancom.com/office/viewer_usage_guide.jsp)에서 받을 수 있다.
+
+## 참고링크
+
+[한글파일(hwp)을 텍스트(txt) 혹은 웹문서(html)로 변환하자!](http://storycompiler.tistory.com/197)
+[리눅스에서 한글 파일(hwp) 파일 변환해서 읽기](http://mytory.net/archives/12797)
+[pyhwp Docs](http://pythonhosted.org/pyhwp/ko/intro.html)
