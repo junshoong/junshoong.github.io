@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "리눅스 FireFox에서 flash plugin 업데이트"
+category: post
 tags: firefox, linux, flash, plugin
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "리눅스에서 한글포맷 열기"
+category: post
 tags: hancom, hwp, linux
 ---
 
