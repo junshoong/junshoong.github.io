@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ""
+title: "[elementary OS] 초기 설치 셋팅"
 category: post
 tags: linux, elementary, setting
 ---
