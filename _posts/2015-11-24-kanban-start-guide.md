@@ -22,7 +22,7 @@ tags: kanban, book,
 >11. 운영 리뷰 회의  
 >12. 팀에 보드, WIP Limit, 당김 방식에 대한 교육  
 
-[칸반 - 데이비드 J. 앤더슨](http://www.insightbook.co.kr/books/agile/%EC%B9%B8%EB%B0%98) 중..
+[칸반 - 데이비드 J. 앤더슨](http://aladin.kr/p/yboZB) 중..
 
 책을 읽다가 일부를 조금 정리했다.
 
