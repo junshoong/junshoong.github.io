@@ -79,7 +79,7 @@ analytics:
 # Site Author
 author:
   name             : *name
-  avatar           : "bio-photo.jpg"
+  avatar           : "harvey.png"
   bio              : "Software developer"
   location         : "Korea, Asia"
   email            : vaporize93@gmail.com
