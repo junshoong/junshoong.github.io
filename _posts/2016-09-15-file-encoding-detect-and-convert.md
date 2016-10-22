@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "파일 인코딩 검사 및 인코딩 변환하기"
 category: post
 tags: encoding, charset

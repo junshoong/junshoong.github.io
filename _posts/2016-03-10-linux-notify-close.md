@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[elementary OS] critical notify-send 알림 없애기"
 category: post
 tags: linux, elementary, terminal

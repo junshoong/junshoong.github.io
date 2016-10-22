@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[Python] nosttest 사용하기"
 category: post
 tags: python, test

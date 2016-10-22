@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[PyQt5] PyQt5 설치"
 category: post
 tags: python, linux

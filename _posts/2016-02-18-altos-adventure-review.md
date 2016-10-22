@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[Game] 안드로이드 게임 Alto's Adventure"
 category: post
 tags: game, review

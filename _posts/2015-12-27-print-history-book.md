@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "커뮤니케이션이해총서 인쇄 역사 - 오성상"
 category: note
 tags: note, book, review

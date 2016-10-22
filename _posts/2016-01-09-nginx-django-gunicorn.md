@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[Nginx] Django+gunicorn 사용환경에서 외부에서 접속하기"
 category: post
 tags: nginx, django, gunicorn, network

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[wargame] flee button"
 category: post
 tags: wargame, html

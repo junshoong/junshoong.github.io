@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[github] 원격지에 새 branch를 만들며 push하기"
 category: post
 tags: git, github

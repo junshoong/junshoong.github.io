@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "8박 9일 라오스 여행기 - 첫째날(비엔티안)"
 category: post
 tags: laos, travel

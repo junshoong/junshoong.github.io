@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "리눅스에서 rename을 사용하여 여러 파일의 이름을 한번에 변경하는 방법"
 category: post
 tags: linux, shell

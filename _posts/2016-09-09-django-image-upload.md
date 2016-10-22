@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Django ImageField 업로드문제"
 category: post
 tags: django, python

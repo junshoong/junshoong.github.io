@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "2015 FOSS CON 후기"
 category: post
 tags: conference, review

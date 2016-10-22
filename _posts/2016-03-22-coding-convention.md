@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "코딩 컨벤션에 관해"
 category: post
 tags: convention, concept

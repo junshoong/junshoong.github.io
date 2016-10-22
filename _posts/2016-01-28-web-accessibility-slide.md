@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "웹 접근성(Web Accessibility)이란?"
 category: post
 tags: web, accessibility, slide

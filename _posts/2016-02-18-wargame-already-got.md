@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[wargame] already got"
 category: post
 tags: wargame, http, network

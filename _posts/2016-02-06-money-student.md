@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "돈 대학생 - 반값등록금 집회"
 category: note
 tags: note, protest, music

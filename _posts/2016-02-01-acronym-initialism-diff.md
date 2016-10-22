@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[영어] Acronym과 Initialism의 차이점"
 category: post
 tags: english

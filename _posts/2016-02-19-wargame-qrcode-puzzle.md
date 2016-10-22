@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[wargame] QR CODE PUZZLE"
 category: post
 tags: wargame, puzzle, css

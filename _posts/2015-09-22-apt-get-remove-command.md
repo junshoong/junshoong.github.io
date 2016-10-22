@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "apt-get 제거 명령어 정리"
 category: post
 tags: linux, shell

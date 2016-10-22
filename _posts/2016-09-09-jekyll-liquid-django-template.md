@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "jekyll에 django template 입력시 생기는 liquid 문제"
 category: post
 tags: jekyll, liquid

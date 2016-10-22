@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "8박 9일 라오스 여행기 - 둘째날(라오에어라인, 루앙프라방, 수영장)"
 category: post
 tags: laos, travel

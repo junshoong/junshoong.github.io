@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "MariaDB 10.0 의 이유 (MariaDB 유래)"
 category: link
 link: https://blog.lael.be/post/3926

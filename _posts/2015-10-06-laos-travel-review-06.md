@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "8박 9일 라오스 여행기 - 여섯째날(방비엥, 동굴튜빙, 카약, 사쿠라바)"
 category: post
 tags: laos, travel

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "칸반 - 데이비드 J. 앤더슨"
 category: post
 tags: book, note, kanban

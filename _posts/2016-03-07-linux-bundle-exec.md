@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[elementary OS] GUI환경에서 *.bundle 파일 실행이 안 될 때"
 category: post
 tags: linux, elementary

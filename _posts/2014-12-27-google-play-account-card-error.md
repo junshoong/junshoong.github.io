@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "구글 플레이 월렛 결제수단 등록오류 관련 팁"
 category: post
 tags: google, account, tip

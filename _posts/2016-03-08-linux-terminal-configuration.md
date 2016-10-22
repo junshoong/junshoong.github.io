@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[elementary OS] 터미널 속성 수정하기"
 category: post
 tags: linux, elementary, terminal

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[Zapier] Trello와 Wunderlist 연동해서 사용하기"
 category: post
 tags: tool, tip, intergration

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "기능 명세서 작성 요령 - 서광열"
 category: link
 link: http://m.dbguide.net/about.db?cmd=view&boardConfigUid=19&boardUid=126053#

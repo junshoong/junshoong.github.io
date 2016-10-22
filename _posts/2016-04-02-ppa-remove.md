@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[elementary os] ppa repository 삭제하기"
 category: post
 tags: linux, apt

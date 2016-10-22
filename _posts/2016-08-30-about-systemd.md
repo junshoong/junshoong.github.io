@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "systemd 살펴보기"
 category: link
 link: http://lunatine.net/about-systemd/

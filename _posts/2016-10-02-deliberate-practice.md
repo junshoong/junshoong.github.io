@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "의도적 수련하기"
 category: post
 tags: practice, agile

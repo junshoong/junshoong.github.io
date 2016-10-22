@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[Python] 8퍼센트 투자목록 출력 슬랙 봇"
 category: post
 tags: 8percent, slack, bot, python

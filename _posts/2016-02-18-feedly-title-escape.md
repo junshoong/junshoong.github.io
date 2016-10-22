@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "feedly로 구독시 <생략되는> 제목"
 category: post
 tags: feedly, tip

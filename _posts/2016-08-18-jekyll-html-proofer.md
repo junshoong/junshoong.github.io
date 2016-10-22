@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[jekyll] html-proofer에 ignore 항목 설정하기"
 category: post
 tags: jekyll, travis-ci, ruby, test

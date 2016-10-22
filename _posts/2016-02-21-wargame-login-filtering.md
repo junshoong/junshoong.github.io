@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[wargame] login filtering"
 category: post
 tags: wargame, php, mqsql

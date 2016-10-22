@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "feedly로 신문, 블로그 등 RSS 구독하기"
 category: post
 tags: tool, tip, rss

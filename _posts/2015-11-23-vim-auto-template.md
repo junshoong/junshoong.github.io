@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[vim] 새 파일 작성시 자동으로 템플릿(구조) 불러오기"
 category: post
 tags: vim

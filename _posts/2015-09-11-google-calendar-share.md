@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "구글 캘린더 공유하고 공개 캘린더 등록하기"
 category: post
 tags: google, calendar, tip

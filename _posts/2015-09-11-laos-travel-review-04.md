@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "8박 9일 라오스 여행기 - 넷째날(루앙프라방, 왕궁, 푸시산, 유토피아)"
 category: post
 tags: laos, travel

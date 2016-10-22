@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Standard Output, Standard Input, Redirection, Pipelines... 복잡한 것들 한 곳에 정리."
 category: link
 link: http://nemonein.egloos.com/5297363

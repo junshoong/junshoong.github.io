@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "날로 먹는 Django 웹 프레임워크"
 category: link
 link: http://blog.hannal.com/category/start-with-django-webframework/

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "세상을 보는 지혜 - 발타자르 그라시안"
 category: note
 tags: note, book

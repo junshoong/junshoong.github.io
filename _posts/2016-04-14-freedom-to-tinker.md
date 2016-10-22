@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Gone In Six Characters: Short URLs Considered Harmful for Cloud Services"
 category: link
 link: https://freedom-to-tinker.com/blog/vitaly/gone-in-six-characters-short-urls-considered-harmful-for-cloud-services/

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "NDC 2016-강연 자료를 한 자리에 모아 보아요!"
 category: link
 link:  https://docs.google.com/spreadsheets/d/1OHmrl44-e8rLgFvfOi8aadMMYZvA9VriciFgmRMRjKE/edit?usp=sharing

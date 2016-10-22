@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[elementary OS] eclipse 실행시 시스템이 멈추는 현상"
 category: post
 tags: linux, elementary, eclipse

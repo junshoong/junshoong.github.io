@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[conference] 제 81회 Open Technet 후기"
 category: post
 tags: conference, review

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[vim] (미해결) jedi-vim을 통한 python3 자동완성"
 category: post
 tags: python, vim, plugin

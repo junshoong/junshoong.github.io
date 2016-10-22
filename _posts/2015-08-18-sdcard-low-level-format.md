@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "SD카드 로우레벨 포맷 및 OS 부팅 디스크 만들기"
 category: post
 tags: linux, shell, sdcard

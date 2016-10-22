@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "sshfs로 리눅스간 디렉터리 공유하기"
 category: post
 tags: linux, ssh, shell

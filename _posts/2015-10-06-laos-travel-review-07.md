@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "8박 9일 라오스 여행기 - 일곱째날(방비엥, 블루라군)"
 category: post
 tags: laos, travel

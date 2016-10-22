@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[django]travis에서 test시 생기는 데이터베이스 문제"
 category: post
 tags: python, travis, djagno

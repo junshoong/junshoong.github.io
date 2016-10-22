@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "blinking 과 flashing의 차이"
 category: post
 tags: accessbility, english

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "용인 수지도서관 좌석 배정 확인 사이트"
 category: post
 tags: library, tip,

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "apt 패키지 관리 도구로 파이어폭스 마이너 버전 업그레이드"
 category: post
 tags: firefox, linux, apt

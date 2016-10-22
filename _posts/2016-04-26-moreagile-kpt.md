@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "회고에 대한 고찰 - KPT 진행의 노하우에 대하여"
 category: link
 link: http://www.moreagile.net/2016/04/kpt.html

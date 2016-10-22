@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "8박 9일 라오스 여행기 - 여덟째날(방비엥, 방비엥시장, 탐짱동굴)"
 category: post
 tags: laos, travel

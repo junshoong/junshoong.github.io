@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "8박 9일 라오스 여행기 - 셋째날(루앙프라방, 탁발, 아침시장, 꽝시폭포)"
 category: post
 tags: laos, travel

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[elementary OS] lenovo e450 FreeDos에 Install"
 category: post
 tags: linux, elementary, lenovo

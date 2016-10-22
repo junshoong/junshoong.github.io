@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Lenovo ThinkPad E450 구입 후기"
 category: post
 tags: lenovo, device, review

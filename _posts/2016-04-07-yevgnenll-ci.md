@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "slack + github + travis CI(Continous Integration) 지속적통합 구축!"
 category: link
 link: http://yevgnenll.me/archives/159

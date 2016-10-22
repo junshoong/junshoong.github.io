@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "웹브라우저 ‘비발디1.0′ 출시"
 category: link
 link: http://www.bloter.net/archives/253870

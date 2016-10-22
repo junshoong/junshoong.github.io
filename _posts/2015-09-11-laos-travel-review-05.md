@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "8박 9일 라오스 여행기 - 다섯째날(루앙프라방, 방비엥, 삼겹살 샤브샤브)"
 category: post
 tags: laos, travel

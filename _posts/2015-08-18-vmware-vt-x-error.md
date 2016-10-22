@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "64비트 환경의 Guest OS를 구동시 생기는 문제해결(VT)"
 category: post
 tags: vmware, bios

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Introducing the GitHub Community Cast"
 category: link
 link: https://github.com/blog/2129-introducing-the-github-community-cast

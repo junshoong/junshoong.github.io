@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Open365 Is An Open Source Alternative to Microsoft Office 365"
 category: link
 link: http://lifehacker.com/open365-is-an-open-source-alternative-to-microsoft-offi-1772845018

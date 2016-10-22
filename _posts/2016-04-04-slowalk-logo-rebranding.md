@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "로고 리브랜딩을 위한 다섯 가지 질문"
 category: link
 link: http://slowalk.tistory.com/2358

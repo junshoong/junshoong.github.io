@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "실리콘밸리의 한국인 2016 컨퍼런스 참가 후기"
 category: post
 tags: startup, review, conference

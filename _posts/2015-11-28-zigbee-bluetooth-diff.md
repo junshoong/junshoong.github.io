@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "직비(Zigbee) / 블루투스(Bluetooth) 비교"
 category: post
 tags: zigbee, bluetooth, network

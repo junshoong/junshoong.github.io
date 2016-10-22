@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "나의 집은 어디인가 - Lynn"
 category: link
 link: https://brunch.co.kr/magazine/zipbob

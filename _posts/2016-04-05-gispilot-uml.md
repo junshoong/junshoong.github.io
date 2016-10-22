@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "유스케이스 다이어그램(Use Case Diagram) 작성 방법"
 category: link
 link: http://gispilot.tistory.com/11

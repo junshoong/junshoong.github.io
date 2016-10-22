@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "칸반시스템 시작 가이드 12과정"
 category: post
 tags: kanban, book,

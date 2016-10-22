@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[운전면허] 1종보통 도로주행관련 정보"
 category: post
 tags: car, license, tip

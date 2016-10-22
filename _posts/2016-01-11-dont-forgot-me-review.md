@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "영화, 나를 잊지 말아요를 보고"
 category: post
 tags: movie, review

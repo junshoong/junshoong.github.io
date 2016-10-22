@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "MD5, SHA1 체크섬 확인하기"
 category: post
 tags: encrypt, linux

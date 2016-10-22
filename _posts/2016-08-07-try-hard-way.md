@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "어려운 것 선택하기"
 category: note
 tags: book, note

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "[Game] Monument Valley 클리어"
 category: post
 tags: game, review

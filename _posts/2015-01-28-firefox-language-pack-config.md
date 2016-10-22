@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "파이어폭스 언어팩 적용하기"
 category: post
 tags: firefox, language

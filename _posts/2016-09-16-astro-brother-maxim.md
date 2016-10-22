@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "중요한건 할 수 있다는 경험을 얻는 것."
 category: note
 tags: comic, maxim

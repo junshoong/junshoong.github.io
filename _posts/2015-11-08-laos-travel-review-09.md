@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "8박 9일 라오스 여행기 - 아홉째날(방비엥, 모터보트, 비엔티안, 짜뚜싸이, 탓루앙)"
 category: post
 tags: laos, travel
