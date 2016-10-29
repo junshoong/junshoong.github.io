@@ -145,7 +145,7 @@ root 계정 password와 hostname을 지정해준다.
 
 # 환경 구축하기
 
-재부팅이 되었으면 먼저 __root__로 로그인해준다.
+재부팅이 되었으면 먼저 __root__ 로 로그인해준다.
 
 ## 유저생성하기
 
@@ -179,9 +179,19 @@ root 계정 password와 hostname을 지정해준다.
 
 ## 기타 설치
 
-이외에 필요한 패키지들을 아래와 같이 설치했다. pacman을 통해서는 기본적인 패키지만 설치할 수 있고, AUR에 있는 패키지를 설치하는 경우에는 Helper인 [yaourt](https://archlinux.fr/yaourt-en)나 [aura](https://github.com/aurapm/aura)를 사용할 수 있다. 나는 aura을 사용해서 아래 패키지들을 받았다.
+이외에 필요한 패키지들을 아래와 같이 설치했다. pacman을 통해서는 기본적인 패키지만 설치할 수 있고, AUR에 있는 패키지를 설치하는 경우에는 Helper인 [yaourt](https://archlinux.fr/yaourt-en)나 [aura](https://github.com/aurapm/aura)를 사용할 수 있다.
+
+```bash
+$ makepkg -sri
+```
+
+`aura-bin(AUR)`, `terminix(AUR)`
+AUR에 있는 자료를 git clone 해서 받아오는경우 `PKGBUILD`, `.install`파일만 존재한다. 이 경우에는 위 명령을 통해서 설치할 수 있다.  
+
+나는 aura을 사용해서 아래 패키지들을 받았다.  
 `slack-desktop`, `gnome-tweak-tool`, `ibus`, `ibus-hangul`, `openssh`, `ttf-d2coding`, `ttf-monaco`, `jdk8-openjdk`, `pycharm-professional`, `atom`, `ntfs-3g`, `eclipse-jee`, `insync`, `pushbullet`, `cups`, `hplip`, `ttf-nanumgothic_coding`
-git을 통해서 설치 `powerline/fonts`, `vaporize93/dotfiles`, `VundleVim/Vundle.vim`, `aura-bin(AUR)`, `terminix(AUR)`
+
+이외에 git을 통해서 설치한 패키지는 아래와 같다. `powerline/fonts`, `vaporize93/dotfiles`, `VundleVim/Vundle.vim`  
 
 # References
 __ArchWiki__  
