@@ -89,7 +89,7 @@ root@archiso ~ #
 ## 패키지 설치
 
 ```bash
-# pacstrap /mnt base
+# pacstrap /mnt base base-devel
 # genfstab -U /mnt >> /mnt/etc/fstab
 ```
 
@@ -182,6 +182,8 @@ root 계정 password와 hostname을 지정해준다.
 이외에 필요한 패키지들을 아래와 같이 설치했다. pacman을 통해서는 기본적인 패키지만 설치할 수 있고, AUR에 있는 패키지를 설치하는 경우에는 Helper인 [yaourt](https://archlinux.fr/yaourt-en)나 [aura](https://github.com/aurapm/aura)를 사용할 수 있다.
 
 ```bash
+$ git cloen https://aur.archlinux.org/aura-bin.git
+$ cd aura-bin
 $ makepkg -sri
 ```
 
