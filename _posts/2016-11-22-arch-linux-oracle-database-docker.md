@@ -30,7 +30,7 @@ $ docker images | grep oracle
 
 ![pulling oracle docker image](/images/2016-11-22/01.png)
 
-![oracle docker image](/images/2016-11-11/02.png)
+![oracle docker image](/images/2016-11-22/02.png)
 
 이미지의 총 크기는 2.2G로 이미지를 받아오는데 10분이 안 걸렸다.
 
