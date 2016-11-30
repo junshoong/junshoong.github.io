@@ -92,7 +92,7 @@ oracle서버의 사용 약관을 동의한다면 위 내용을 추가해주는 �
 ```bash
 $ sqlplus system@localhost:49161
 ```
-![sqlplus connection](/images/2016-11-11/03.png)
+![sqlplus connection](/images/2016-11-22/03.png)
 
 # Oracle SQL Developer 설치 및 접속
 
