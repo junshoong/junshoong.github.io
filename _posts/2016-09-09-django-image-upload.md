@@ -46,14 +46,13 @@ from .forms import AddForm
 def add_image(request):
     if request.method == "POST":
         form = AddForm(request.POST, request.FILES)
-
+    
         if form.is_valid():
             new_image = form.save()
-
             return redirect('/add/')
     else:
         form = AddForm()
-
+    
     return render(request, 'add.html', {'form': form})
 {% endhighlight %}
 
@@ -72,6 +71,8 @@ def add_image(request):
 {% endhighlight %}
 
 > This field is required.
+>
+> - 필수 항목입니다.
 
 계속 이 메세지가 나왔던건 `enctype="multipart/form-data"`를 누락해서 그런 것이었다.
 
