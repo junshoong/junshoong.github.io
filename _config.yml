@@ -7,11 +7,11 @@
 
 # Site Settings
 locale                   : "en"
-title                    : "Harvey의 기술블로그"
+title                    : "Junshoong의 기술블로그"
 title_separator          : "-"
-name                     : &name "Harvey Kim"
+name                     : &name "Junshoong"
 description              : "기술 공유를 목적으로 하는 블로그 입니다."
-url                      : http://blog.harveyk.me
+url                      : http://blog.junshoong.net
 baseurl                  :
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
