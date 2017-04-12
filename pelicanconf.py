@@ -36,7 +36,7 @@ DEFAULT_PAGINATION = 7
 RELATIVE_URLS = True
 
 # Theme
-THEME = "themes/simple-bootstrap"
+THEME = "theme/pelican-hyde"
 DEFAULT_DATE_FORMAT = '%Y-%m-%d, %a'
 
 # Url settings, remove '.html'
