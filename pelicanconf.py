@@ -27,8 +27,12 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('email', 'junshoong@gmail.com'),
+          ('facebook', 'https://www.facebook.com/vaporize93'),
+          ('linkedin', 'https://www.linkedin.com/in/junshoong'),
+          ('slideshare', 'https://www.slideshare.net/Vaporize93'),
+          ('github','https://github.com/junshoong'),
+          ('stack-overflow','https://www.stackoverflow.com/users/4466697/junsu-kim'),)
 
 DEFAULT_PAGINATION = 7
 
@@ -58,4 +62,5 @@ TAG_SAVE_AS = TAG_URL+'.html'
 AUTHOR_URL = 'author/{slug}'
 AUTHOR_SAVE_AS = AUTHOR_URL+'.html'
 
-
+# Profile Settings
+PROFILE_IMAGE = 'profile.png'
