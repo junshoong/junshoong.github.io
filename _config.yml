@@ -20,7 +20,7 @@ words_per_minute         : 200
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
-    shortname            : "harveyk" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : "junshoong" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -82,7 +82,7 @@ author:
   avatar           : "harvey.png"
   bio              : "Software developer"
   location         : "Korea, Asia"
-  email            : vaporize93@gmail.com
+  email            : junshoong@gmail.com
   uri              :
   bitbucket        :
   codepen          :
@@ -90,16 +90,16 @@ author:
   flickr           :
   facebook         : *facebook
   foursquare       :
-  github           : "vaporize93"
+  github           : "junshoong"
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : "vaporize93"
+  linkedin         : "junshoong"
   slideshare       : "Vaporize93"
   pinterest        :
   soundcloud       :
-  stackoverflow    : "4466697/harvey-kim" # (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
+  stackoverflow    : "4466697/junsu-kim" # (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
   steam            :
   tumblr           :
   twitter          :
