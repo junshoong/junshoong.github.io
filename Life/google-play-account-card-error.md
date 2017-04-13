@@ -1,19 +1,9 @@
-Title: 구글 플레이 월렛 결제수단 등록오류 관련 팁
+Title: [Life] 구글 플레이 월렛 결제수단 등록오류 관련 팁
 Date: 2014-12-27
-Modified:
-Category:
-Tags:
+Category: Life
+Tags: life, google, tip
 Slug: google-play-account-card-error
 Authors: junshoong
-Summary:
-
-
-context
----
-title: "구글 플레이 월렛 결제수단 등록오류 관련 팁"
-category: post
-tags: google, account, tip
----
 
 ![신용카드 및 직불카드 등록 이미지](/images/2014-12-27/01.png)
 

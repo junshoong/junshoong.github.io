@@ -1,19 +1,9 @@
-Title: apt 패키지 관리 도구로 파이어폭스 마이너 버전 업그레이드
+Title: [Linux] apt 패키지 관리 도구로 파이어폭스 마이너 버전 업그레이드
 Date: 2016-07-26
-Modified:
-Category:
-Tags:
+Category: Linux
+Tags: linux, firefox
 Slug: firefox-minor-upgrade-with-apt
 Authors: junshoong
-Summary:
-
-
-context
----
-title: "apt 패키지 관리 도구로 파이어폭스 마이너 버전 업그레이드"
-category: post
-tags: firefox, linux, apt
----
 
 # 배경
 
@@ -32,10 +22,10 @@ django를 테스트하는데 selenium에서 firefox를 열 때 에러가 발생�
 이 페이지에서는 Security-testing packages 와 Daily updates를 사용하는 방법에 대해 적혀있다. Daily는 매일 업데이트 된 부분을 적용받는 것이고, Security-testing 패키지의 경우에는 업데이트들의 보안검사를 마친 것을 제공해준다. 이런게 모여서 minor버전, major 버전으로 판 올림되어 배포된다고 생각하면 되겠다.
 
 내 경우에는 Security-testing packages 를 통해 업그레이드 하기로 했다. 방법은 아주 간단하다. 해당 ppa를 추가해주고 업데이트 후 업그레이드를 해주면 된다.
-{% highlight bash %}
+```bash
 sudo add-apt-repository ppa:ubuntu-mozilla-security/ppa
 sudo apt-get update
 sudo apt-get upgrade
-{% endhighlight %}
+```
 
 다시 파이어폭스를 열어서 버전확인을 해보면 해당 버전으로 판올림 된걸 확인 할 수 있다.

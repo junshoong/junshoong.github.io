@@ -1,19 +1,10 @@
-Title: 구글 캘린더 공유하고 공개 캘린더 등록하기
+Title: [Life] 구글 캘린더 공유하고 공개 캘린더 등록하기
 Date: 2015-09-11
-Modified:
-Category:
-Tags:
+Category: Life
+Tags: google, tip, etc
 Slug: google-calendar-share
 Authors: junshoong
-Summary:
 
-
-context
----
-title: "구글 캘린더 공유하고 공개 캘린더 등록하기"
-category: post
-tags: google, calendar, tip
----
 새로운 공개 캘린더를 추가 하고 주소를 공유해보자.
 
 또한, 이전에 공유되어 있는 공개 캘린더를 자기 캘린더에 등록해보자.

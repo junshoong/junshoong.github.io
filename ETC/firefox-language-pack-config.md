@@ -1,19 +1,11 @@
-Title: 파이어폭스 언어팩 적용하기
+Title: [ETC] 파이어폭스 언어팩 적용하기
 Date: 2015-01-28
-Modified:
-Category:
-Tags:
+Modified: 2016-08-24
+Category: ETC
+Tags: firefox
 Slug: firefox-language-pack-config
 Authors: junshoong
-Summary:
 
-
-context
----
-title: "파이어폭스 언어팩 적용하기"
-category: post
-tags: firefox, language
----
 *deprecate*
 > 이글은 윈도우 기준으로 작성되었습니다.  
 > 현재(16.08.24) 언어팩은 제공되고 있지 않습니다.  

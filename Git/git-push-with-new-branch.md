@@ -1,19 +1,9 @@
-Title: [github] 원격지에 새 branch를 만들며 push하기
+Title: [Git] 원격지에 새 branch를 만들며 push하기
 Date: 2016-07-03
-Modified:
-Category:
-Tags:
+Category: Git
+Tags: git
 Slug: git-push-with-new-branch
 Authors: junshoong
-Summary:
-
-
-context
----
-title: "[github] 원격지에 새 branch를 만들며 push하기"
-category: post
-tags: git, github
----
 
 >local : master, test  
 >origin: master
@@ -21,9 +11,10 @@ tags: git, github
 의 상태에서 master는 서로 같은 시점에 있다. 여기서 local에 test를 만들어 작업하다가 원격지에도 test와 일치하는 새 branch를 만들어 관리하고 싶다.
 이런 경우 아래와 같이 처리한다.
 로컬저장소의 위치에서
-{% highlight bash %}
+
+```bash
 $ git push origin test
-{% endhighlight %}
+```
 
 를 입력한다. origin은 원격 저장소이름이고, test는 원하는 branch 이름이다. 성공하고나면 하단에
 
