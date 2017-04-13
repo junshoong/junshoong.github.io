@@ -1,19 +1,9 @@
-Title: 중요한건 할 수 있다는 경험을 얻는 것.
+Title: [Life] 중요한건 할 수 있다는 경험을 얻는 것.
 Date: 2016-09-16
-Modified:
-Category:
-Tags:
-Slug: astro-brother-maxim
+Category: Life
+Tags: note, life, comic
+Slug: astro-brother
 Authors: junshoong
-Summary:
-
-
-context
----
-title: "중요한건 할 수 있다는 경험을 얻는 것."
-category: note
-tags: comic, maxim
----
 
 > 중요한건 '할 수 있다'는 경험을 얻는 것.  
 > -이반 톨스토이

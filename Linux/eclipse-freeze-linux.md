@@ -1,19 +1,9 @@
-Title: [elementary OS] eclipse 실행시 시스템이 멈추는 현상
+Title: [Linux] eclipse 실행시 시스템이 멈추는 현상
 Date: 2016-03-08
-Modified:
-Category:
-Tags:
+Category: Linux
+Tags: elementary, linux, eclipse
 Slug: eclipse-freeze-linux
 Authors: junshoong
-Summary:
-
-
-context
----
-title: "[elementary OS] eclipse 실행시 시스템이 멈추는 현상"
-category: post
-tags: linux, elementary, eclipse
----
 
 eclipse 실행시 OS가 굳어버리는 문제가 있다.
 
@@ -24,10 +14,10 @@ GTK 버전 관련 이슈라고 한다.
 
 그 eclipse.ini 의 내용에 아래 항목을 추가한다.
 
-{% highlight ini %}
+```ini
 -launcher.GTK_version
 2
-{% endhighlight %}
+```
 
 다만 추가할 때 `--launcher.appendVmargs`의 윗줄에 추가해야 한다.
 

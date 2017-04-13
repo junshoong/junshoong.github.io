@@ -1,19 +1,10 @@
-Title: [영어] Acronym과 Initialism의 차이점
+Title: [English] Acronym과 Initialism의 차이점
 Date: 2016-02-01
-Modified:
-Category:
-Tags:
+Category: English
+Tags: english
 Slug: acronym-initialism-diff
 Authors: junshoong
-Summary:
 
-
-context
----
-title: "[영어] Acronym과 Initialism의 차이점"
-category: post
-tags: english
----
 공부를 하다가 abbr. 이라는 단어를 보게 되었다. abbr. 은 abbreviation의 약자로, abbreviation의 뜻 "약어, 약자"를 의미한다.
 
 그러니까 abbr.은 약자의 약자인데... 각설하고, 약어를 표현하는 방법은 여러가지가 존재하는데, abbr. 처럼, 일부 문자를 적고 period(점)을 찍는 경우가 있고, 여러 단어가 걸쳐있는 경우 그 첫문자를 적어주는 경우가 있다. 여기서 후자의 표현 방식을 acronym, 혹은 initialism 이라고 한다.

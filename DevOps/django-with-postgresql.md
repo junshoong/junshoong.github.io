@@ -1,25 +1,9 @@
-Title: ArchLinux에서 Django + PostgreSQL 설정하기
+Title: [DevOps] ArchLinux에서 Django + PostgreSQL 설정하기
 Date: 2017-01-04
-Modified:
-Category:
-Tags:
+Category: DevOps
+Tags: devops, linus, django, postgresql
 Slug: django-with-postgresql
 Authors: junshoong
-Summary:
-
-
-context
----
-title: "ArchLinux에서 Django + PostgreSQL 설정하기"
-category: post
-tags:
-    - arch
-    - linux
-    - django
-    - postgresql
----
-
-
 
 # Django + PostgreSQL
 

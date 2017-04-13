@@ -1,19 +1,10 @@
-Title: Django ImageField 업로드문제
+Title: [Django] ImageField 업로드문제
 Date: 2016-09-09
-Modified:
-Category:
-Tags:
+Category: Django
+Tags: django, python
 Slug: django-image-upload
 Authors: junshoong
-Summary:
 
-
-context
----
-title: "Django ImageField 업로드문제"
-category: post
-tags: django, python
----
 Django의 ImageFile를 만들어서 서버에 업로드를 하는데 계속해서 아래와 같은 메세지가 나타났다.  
 
 > This field is required.
@@ -21,35 +12,35 @@ Django의 ImageFile를 만들어서 서버에 업로드를 하는데 계속해�
 admin 페이지에서 업로드할때는 문제가 없는데 직접 구현해둔 곳에서만 문제가 발생한다. 여러가지를 추측해봤는데 결국 Templates 문제였다. 여기서 참고를 위해 코드 일부를 첨부한다.
 일단 `models.py`를 보자.  
 
-{% highlight python %}
+```python
 class Image(models.Model):
     title = models.CharField(max_length=50)
     image = models.ImageField(upload_to='%Y/%m/%d')
-{% endhighlight %}
+```
 
 `forms.py` 는 아주 간단하다.
 
-{% highlight python %}
+```python
 from django.forms import ModelForm
 from .models import Image
 
 class AddForm(ModelForm):
     class Meta:
         model = Image
-{% endhighlight %}
-
+```
 `urls.py`를 통해 연결해준다.  
 
-{% highlight python %}
+```
 ...
 
 urlpatterns = [
     url(r'^add/$', add_image, name='add'),
 ]
-{% endhighlight %}
+```
 
 `views.py`에서 자세한 내용을 올려준다.
-{% highlight python %}
+
+```python
 from django.shortcuts import render, redirect
 from .models import Image
 from .forms import AddForm
@@ -65,12 +56,11 @@ def add_image(request):
         form = AddForm()
     
     return render(request, 'add.html', {'form': form})
-{% endhighlight %}
+```
 
 마지막으로 template을 보자 `add.html` 이다.  
 
-{% highlight html %}
-{% raw %}
+```
 ...
 <form method="POST" action="{% url 'add' %}" id="add_form" enctype="multipart/form-data">
     {{ form.as_p }}
@@ -78,8 +68,7 @@ def add_image(request):
     <button type="submit" form="add_form">Add</button>
 </form>
 ...
-{% endraw %}
-{% endhighlight %}
+```
 
 > This field is required.
 >

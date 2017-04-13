@@ -1,19 +1,10 @@
-Title: blinking 과 flashing의 차이
+Title: [English] blinking 과 flashing의 차이
 Date: 2016-01-26
-Modified:
-Category:
-Tags:
+Category: English
+Tags: english, accessibility
 Slug: blinking-flashing-diff
 Authors: junshoong
-Summary:
 
-
-context
----
-title: "blinking 과 flashing의 차이"
-category: post
-tags: accessbility, english
----
 KWCAG를 공부하는 중 원칙 2인 운용의 용이성 중 지침 2.3의 광과민성 발작 예방 관련한 검사 항목 2.3.1 부분 이슈이다.
 
 > 2.3.1 (깜빡임과 번쩍임 사용 제한) 초당 3~50회 주기로 깜빡이거나 번쩍이는 콘텐츠를 제공하지 않아야 한다.

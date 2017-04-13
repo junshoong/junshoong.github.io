@@ -1,19 +1,10 @@
-Title: 영화, 나를 잊지 말아요를 보고
+Title: [Movie] 영화, 나를 잊지 말아요를 보고
 Date: 2016-01-11
-Modified:
-Category:
-Tags:
+Category: Movie
+Tags: movie, review
 Slug: dont-forgot-me-review
 Authors: junshoong
-Summary:
 
-
-context
----
-title: "영화, 나를 잊지 말아요를 보고"
-category: post
-tags: movie, review
----
 [나를 잊지 말아요 - 다음](http://movie.daum.net/moviedetail/moviedetailMain.do?movieId=78587)
 
 

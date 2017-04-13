@@ -1,19 +1,9 @@
-Title: feedly로 구독시 <생략되는> 제목
+Title: [Life] feedly로 구독시 <생략되는> 제목
 Date: 2016-02-18
-Modified:
-Category:
-Tags:
+Category: Life
+Tags: life, feedly, tip
 Slug: feedly-title-escape
 Authors: junshoong
-Summary:
-
-
-context
----
-title: "feedly로 구독시 <생략되는> 제목"
-category: post
-tags: feedly, tip
----
 
 혹시 Feedly가 뭔지 모르겠으면 이 글을 참고 하자.
 

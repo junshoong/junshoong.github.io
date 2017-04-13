@@ -1,14 +1,12 @@
-Title: 
+Title: [ETC] deview-2016
 Date: 2016-10-24
-Modified:
-Category:
-Tags:
+Category: ETC
+Tags: nhn, deview, review, semina
 Slug: deview-2016
 Authors: junshoong
-Summary:
 
+그냥 메모용으로만 쭉 정리
 
-context
 #챗봇 개발을 위한 네이버 랩스 API
 
 딥러닝 -> 챗봇

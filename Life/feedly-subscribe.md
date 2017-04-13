@@ -1,19 +1,10 @@
-Title: feedly로 신문, 블로그 등 RSS 구독하기
+Title: [Life] feedly로 신문, 블로그 등 RSS 구독하기
 Date: 2015-12-29
-Modified:
-Category:
-Tags:
+Category: Life
+Tags: life, tip, rss
 Slug: feedly-subscribe
 Authors: junshoong
-Summary:
 
-
-context
----
-title: "feedly로 신문, 블로그 등 RSS 구독하기"
-category: post
-tags: tool, tip, rss
----
 오랜만에 가이드를 하나 작성한다.
 
 Feedly라는 웹앱 / 어플을 통해서 RSS 구독하는 방법을 알아보도록 한다.

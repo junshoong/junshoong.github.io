@@ -1,19 +1,10 @@
 Title: [Game] 안드로이드 게임 Alto's Adventure
 Date: 2016-02-18
-Modified:
-Category:
-Tags:
+Category: Game
+Tags: game, review
 Slug: altos-adventure-review
 Authors: junshoong
-Summary:
 
-
-context
----
-title: "[Game] 안드로이드 게임 Alto's Adventure"
-category: post
-tags: game, review
----
 플레이 스토어에 재미 있는 게임이 하나 눈에 띄어서 받아보았다.
 
 이름은 Alto's Adventure. 알토의 모험이다. 간단하게 원터치로 즐길 수 있는 게임으로 누르면 점프하고, 누르고 있으면 돈다.

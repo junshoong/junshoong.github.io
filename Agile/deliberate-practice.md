@@ -1,19 +1,10 @@
-Title: 의도적 수련하기
+Title: [Agile] 의도적 수련하기
 Date: 2016-10-02
-Modified:
-Category:
-Tags:
+Category: Agile
+Tags: agile, practice
 Slug: deliberate-practice
 Authors: junshoong
-Summary:
 
-
-context
----
-title: "의도적 수련하기"
-category: post
-tags: practice, agile
----
 # 개요
 한참 전에 김창준님의 ["당신이 제자리 걸음인 이유 : 지루하거나 불안하거나"](http://agile.egloos.com/5749946)라는 글을 읽었는데 최근 Xpergroup에 올라온 [어떤 분의 고민](https://groups.google.com/d/topic/xper/7lCVZ_kfLvM/discussion)을 보고 다시 읽게 되었다. 많은 수업들과 그 수업들의 과제, 그리고 동아리 관리와 여러 overhead들에 치여 시간은 흐르지만 내 실력이나 남는 건 없는 듯한 느낌을 계속 받아 왔다. 이런 와중에 다시 읽게 된 글이 도움이 되었다.  
 

@@ -1,19 +1,10 @@
-Title: [운전면허] 1종보통 도로주행관련 정보
+Title: [Life] 1종보통 도로주행관련 정보
 Date: 2016-07-14
-Modified:
-Category:
-Tags:
-Slug: 8percent-slack-bot
+Category: Life
+Tags: license, life, tip
+Slug: driving-license-tip
 Authors: junshoong
-Summary:
 
-
-context
----
-title: "[운전면허] 1종보통 도로주행관련 정보"
-category: post
-tags: car, license, tip
----
 쉬운 운전면허 시험의 막바지라고 한다.
 작년엔 여러모로 시간이 안 되어서 필기만 치고 말았었는데 이번엔 다시 시험을 치게 되었다. 1종보통으로 학원에서 수강하는데 이게.. 기능은 쉬우니까 넘어가고, 주행 6시간 교육 후 시험이다보니까 촉박하다. 게다가 주행 6시간동안 강사가 많은 걸 알려주지는 않으니 개인적인 노력이 많이 필요하다.
 

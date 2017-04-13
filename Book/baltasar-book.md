@@ -1,19 +1,10 @@
-Title: 세상을 보는 지혜 - 발타자르 그라시안
+Title: [Book] 세상을 보는 지혜 - 발타자르 그라시안
 Date: 2015-12-21
-Modified:
-Category:
-Tags:
+Category: Book
+Tags: life, note, book, review
 Slug: baltasar-book
 Authors: junshoong
-Summary:
 
-
-context
----
-title: "세상을 보는 지혜 - 발타자르 그라시안"
-category: note
-tags: note, book
----
 쇼펜하우어가 엮은, 발타자르 그라시안의 세상을 보는 지혜라는 책이다. 책이 쓰여진 1647년으로부터 2015년, 거진 370년 가량 지났음에도, 지혜를 깨닫게 해주는 책이다. 짤막짤막한 문단으로 이뤄진 책인데, 내용이 참 와 닿는 게 많다.
 
 

@@ -1,23 +1,9 @@
-Title: atom 에디터의 UI font-size 변경
+Title: [Editor] atom 에디터의 UI font-size 변경
 Date: 2017-04-04
-Modified:
-Category:
-Tags:
+Category: Editor
+Tags: atom, editor
 Slug: atom-ui-font-size-change
 Authors: junshoong
-Summary:
-
-
-context
----
-title: "atom 에디터의 UI font-size 변경"
-category: post
-tags:
-  - linux
-  - atom
-  - ui
-
----
 
 ## 문제상황
 
