@@ -1,0 +1,42 @@
+language: python
+
+python:
+- '3.6'
+
+env:
+  global:
+  - GH_USER=junshoong
+  - GH_REPO=blog
+  - secure: GTsKUq/FOpbK/ufxo8aXJGUbjNWy44O2VXGNVpDTw3VMGUq2uHA58+aPvwvKMM2SYdpQt0ZPD4Ww3sTbf+CRfL1Ahi2ZWqpG0yL2L7RXu680BQmbrlei7bgXtAgT5iXsvMJCCX7f9goWEVaAZUu3BtT/m3LVILr/kdx1U7f2SsrCWBUwq8ITLtNbCcekfvqg4eUqCYKaiYk+OfOMmk3NjkqMV/nDeYwpdP3gJSmbHIaYvvS4XxYMx1rVIaPRcQt+Utz/FMicccVv5HvvLJnDOX0d/1hZiZr3zlNF0wYpBZSTxLpsUeEol6i4nk0qEowJaXN8w1TXTF+RzOXtYb02wksWG5zrZv4dKk0rF4mXGflMVk1qztklKP2lTc97wBhsKrp0o9SUmsrlUilzPeS1rGoBocr1d695SCqLRK1W8qhundrz/GqHmw9BHUouzV6ar0OaDcOhUzVNl/GjTFqRlumfFBlJv7SbFK973D3x6uyGzR9pNcKi9cqUAEM5w0Ah/+xZL7bh0XPlSlMM0xjPjcU95rXH7DZzmHlHKdWU7SZ9FZue4PFrrcOXMBmDVkKc6ClbSqCynPmjsHo5H3iKDipHdfxGbwDH0lpiD/gB7s7KLBh4jfEtKoL6EcLBclVa2uXSg24lpU5VwVJh3+S2sQPmCYqOBZxOOAT4vMf1ctw=
+
+before_install:
+- git config --global user.email "junshoong@gmail.com"
+- git config --global user.name "Junshoog"
+- git clone -b generator --quiet --recursive https://${GH_TOKEN}@github.com/${GH_USER}/${GH_REPO}.git generator
+- cd generator
+
+install:
+- pip install -r requirements.txt -q
+
+before_script:
+- git clone -b gh-pages --depth 1 --quiet https://${GH_TOKEN}@github.com/${GH_USER}/${GH_REPO}.git output
+- cd content
+- rm -rf posts
+- git clone -b post --quiet https://${GH_TOKEN}@github.com/${GH_USER}/${GH_REPO}.git posts
+- cd ..
+- git add -A
+- git commit -m "Blog Contents updated by Travis-CI"
+- git push https://${GH_TOKEN}@github.com/${GH_USER}/${GH_REPO}.git generator --quiet
+
+script:
+- make publish
+
+after_success:
+- cd output
+- git add -A
+- git commit -m "Github Pages updated by Travis-CI."
+- git push https://${GH_TOKEN}@github.com/${GH_USER}/${GH_REPO}.git gh-pages --quiet
+
+branches:
+  only:
+  - post
