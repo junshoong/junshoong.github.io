@@ -30,7 +30,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('email', 'junshoong@gmail.com'),
           ('facebook', 'https://www.facebook.com/vaporize93'),
           ('linkedin', 'https://www.linkedin.com/in/junshoong'),
-          ('slideshare', 'https://www.slideshare.net/Vaporize93'),
+          ('slideshare', 'https://www.slideshare.net/junshoong'),
           ('github','https://github.com/junshoong'),
           ('stack-overflow','https://www.stackoverflow.com/users/4466697/junsu-kim'),)
 
