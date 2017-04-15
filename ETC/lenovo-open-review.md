@@ -1,6 +1,5 @@
 Title: [ETC] Lenovo ThinkPad E450 구입 후기
 Date: 2016-03-05
-Modified:
 Category: ETC
 Tags: review, laptop
 Slug: lenovo-open-review

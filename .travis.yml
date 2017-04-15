@@ -22,7 +22,7 @@ before_script:
 - git clone -b gh-pages --depth 1 --quiet https://${GH_TOKEN}@github.com/${GH_USER}/${GH_REPO}.git output
 - cd content
 - rm -rf posts
-- git clone -b post --quiet https://${GH_TOKEN}@github.com/${GH_USER}/${GH_REPO}.git posts
+- git clone -b post --depth 1 --quiet https://${GH_TOKEN}@github.com/${GH_USER}/${GH_REPO}.git posts
 - cd ..
 - git add -A
 - git commit -m "Blog Contents updated by Travis-CI"

@@ -6,6 +6,7 @@ Tags:
 Slug:
 Authors: junshoong
 Summary:
+Status: draft
 
 S3
 
