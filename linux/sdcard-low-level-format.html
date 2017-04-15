@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Junshoong의 기술블로그</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="../theme/css/poole.css" />
+		<link rel="stylesheet" href="../theme/css/hyde.css" />
+		<link rel="stylesheet" href="../theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../theme/css/style.css" />
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0d">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="../images/profile.png">
+                    <p class="sitename"> Junshoong의 기술블로그 </p>
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead"> </p>
+			<p></p>
+		</div>
+		<ul class="sidebar-nav">
+                <li>
+					<a class="sidebar-nav-item" href="mailto:junshoong@gmail.com">
+						<i class="fa fa-envelope"></i>
+                        email
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.facebook.com/vaporize93">
+						<i class="fa fa-facebook"></i>
+                        facebook
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/junshoong">
+						<i class="fa fa-linkedin"></i>
+                        linkedin
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/Vaporize93">
+						<i class="fa fa-slideshare"></i>
+                        slideshare
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://github.com/junshoong">
+						<i class="fa fa-github"></i>
+                        github
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.stackoverflow.com/users/4466697/junsu-kim">
+						<i class="fa fa-stack-overflow"></i>
+                        stack-overflow
+					</a>
+                </li>
+            <li>
+			<a class="sidebar-nav-item" href="">
+				<i class="fa fa-feed"></i>
+                FEED
+			</a>
+            </li>
+		</nav>
+	</div>
+</div>		<div class="content container">
+<div class="post">
+	<h1 class="post-title">[Linux] SD카드 로우레벨 포맷 및 OS 부팅 디스크 만들기</h1>
+	<span class="post-date">2015-08-18, Tue</span>
+	<p>라즈베리 파이에 사용하던 microSD를 포맷하고 새롭게 OS를 설치하려고 한다.</p>
+<div class="highlight"><pre><span></span>$ sudo fdisk -l
+</pre></div>
+
+
+<p>위 명령어로 현재 시스템에서 인식하고 있는 디스크를 확인할 수 있다.</p>
+<p>일반적으로 sda 는 사용하고 있는 하드일 것이고, sdb 나 usb, mmcblk0 등을 확인할 수 있다.</p>
+<p>필자의 경우에는 <code>/dev/mmcblk0</code>였고, 파티션이 분리되어 있어서 <code>/dev/mmcblk0p1</code>,<code>mmcblk0p2</code>로 나뉘어져 있었다.</p>
+<div class="highlight"><pre><span></span>$ sudo umount /dev/mmcblk0*
+</pre></div>
+
+
+<p>(*은 모든 항목을 말한다, mmcblk0*은 mmcblk0로 시작하는 모든 항목이다.)</p>
+<p>('u' mount 다 'un' mount 가 아니다.)</p>
+<p>언마운트 해주는 게 맞는지 잘 모르겠다. 필자의 경우엔 언마운트 후에 작업하려고 하니까 읽기 오류가 나타났다.</p>
+<div class="highlight"><pre><span></span>$ sudo dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>/dev/mmcblk0
+</pre></div>
+
+
+<p>깨끗하게 포맷이 되었으면 iso파일을 집어넣어 보자</p>
+<div class="highlight"><pre><span></span>$ sudo dd <span class="k">if</span><span class="o">=</span>./so.iso <span class="nv">of</span><span class="o">=</span>/dev/mmcblk0
+</pre></div>
+
+
+<p>위 명령어는 현재 디렉토리의 <code>so.iso</code> 파일을 포맷이 완료된 sd카드에 복사하는 것이다.</p>
+<p>위에 <code>dd</code> 명령어 대신에 <code>dcfldd</code>라는 명령어를 대신 사용할 수 있는데, 이는 현재 진행상황을 간단하게 볼 수 있는 이점이 있다.</p>
+<p>작업이 완료되었다. 다시 마운트를 해보면 완료된걸 확인할 수 있다.</p>
+<p>다만 나는 이렇게 했는데 라즈베리 파이에서 부팅이 안된다. 라즈비안 OS는 잘 올라가는걸로 보아 내가 원하는 os는 라즈베리파이와 잘 맞지 않나 보다.</p>
+<h2>참고자료</h2>
+<ul>
+<li><a href="http://blog.daum.net/bagjunggyu/91">Linux Mint(리눅스 민트)와 Ubuntu(우분투)의 터미널에서 usb 시동 디스크 만들기,usb 로우포맷,파티션 나누기(partition),포맷하기(format)</a></li>
+</ul>
+</div>
+		</div>
+	</body>
+</html>

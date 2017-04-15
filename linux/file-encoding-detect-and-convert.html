@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Junshoong의 기술블로그</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="../theme/css/poole.css" />
+		<link rel="stylesheet" href="../theme/css/hyde.css" />
+		<link rel="stylesheet" href="../theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../theme/css/style.css" />
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0d">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="../images/profile.png">
+                    <p class="sitename"> Junshoong의 기술블로그 </p>
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead"> </p>
+			<p></p>
+		</div>
+		<ul class="sidebar-nav">
+                <li>
+					<a class="sidebar-nav-item" href="mailto:junshoong@gmail.com">
+						<i class="fa fa-envelope"></i>
+                        email
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.facebook.com/vaporize93">
+						<i class="fa fa-facebook"></i>
+                        facebook
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/junshoong">
+						<i class="fa fa-linkedin"></i>
+                        linkedin
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/Vaporize93">
+						<i class="fa fa-slideshare"></i>
+                        slideshare
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://github.com/junshoong">
+						<i class="fa fa-github"></i>
+                        github
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.stackoverflow.com/users/4466697/junsu-kim">
+						<i class="fa fa-stack-overflow"></i>
+                        stack-overflow
+					</a>
+                </li>
+            <li>
+			<a class="sidebar-nav-item" href="">
+				<i class="fa fa-feed"></i>
+                FEED
+			</a>
+            </li>
+		</nav>
+	</div>
+</div>		<div class="content container">
+<div class="post">
+	<h1 class="post-title">[Linux] 파일 인코딩 검사 및 인코딩 변환하기</h1>
+	<span class="post-date">2016-09-15, Thu</span>
+	<p>윈도우의 메모장 등에서 작성한 파일은 리눅스에서 볼때 깨져서 보인다. 이런 경우 뿐만아니라 웹상에서 파일을 구한 경우에도 인코딩이 깨진 경우가 종종 있다. 이럴때 해당 파일의 인코딩을 검사하고 인코딩을 변환하는 방법을 알아보자.</p>
+<h2>인코딩 검사</h2>
+<p>인코딩 검사는 <code>chardet</code>라는 좋은 파이썬 패키지가 있다. <code>pip</code>을 통해 간단하게 설치할 수 있다.</p>
+<div class="highlight"><pre><span></span>$ chardet <span class="o">[</span>file<span class="o">]</span>
+</pre></div>
+
+
+<p>결과도 간단하게 나온다.  </p>
+<p><img alt="old.spl: EUC-KR (confidence: 0.99)" src="/images/2016-09-15/01.png"></p>
+<h2>인코딩 변환</h2>
+<p>인코딩 변환은 <code>iconv</code>를 통해서 변환한다. 기본적으로 리눅스에 설치되어 있을 것이다.</p>
+<div class="highlight"><pre><span></span>$ iconv -f EUC-KR -t UTF-8 <span class="o">[</span>input_file<span class="o">]</span> -o <span class="o">[</span>output_file<span class="o">]</span>
+</pre></div>
+
+
+<p>쉘 상에서 따로 메세지가 없으면 성공적으로 변환된 것이다.</p>
+<h2>참고자료</h2>
+<ul>
+<li><a href="http://superuser.com/questions/301552/how-to-auto-detect-text-file-encoding">How to auto detect text file encoding?</a></li>
+<li><a href="http://forum.falinux.com/zbxe/index.php?document_srl=807803">[우분투14.04]윈도우에서 작성한 텍스트 파일의 한글이 깨져서 나올때 팁</a></li>
+</ul>
+</div>
+		</div>
+	</body>
+</html>

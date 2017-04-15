@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Junshoong의 기술블로그</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="../theme/css/poole.css" />
+		<link rel="stylesheet" href="../theme/css/hyde.css" />
+		<link rel="stylesheet" href="../theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../theme/css/style.css" />
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0d">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="../images/profile.png">
+                    <p class="sitename"> Junshoong의 기술블로그 </p>
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead"> </p>
+			<p></p>
+		</div>
+		<ul class="sidebar-nav">
+                <li>
+					<a class="sidebar-nav-item" href="mailto:junshoong@gmail.com">
+						<i class="fa fa-envelope"></i>
+                        email
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.facebook.com/vaporize93">
+						<i class="fa fa-facebook"></i>
+                        facebook
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/junshoong">
+						<i class="fa fa-linkedin"></i>
+                        linkedin
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/Vaporize93">
+						<i class="fa fa-slideshare"></i>
+                        slideshare
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://github.com/junshoong">
+						<i class="fa fa-github"></i>
+                        github
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.stackoverflow.com/users/4466697/junsu-kim">
+						<i class="fa fa-stack-overflow"></i>
+                        stack-overflow
+					</a>
+                </li>
+            <li>
+			<a class="sidebar-nav-item" href="">
+				<i class="fa fa-feed"></i>
+                FEED
+			</a>
+            </li>
+		</nav>
+	</div>
+</div>		<div class="content container">
+<div class="post">
+	<h1 class="post-title">[Linux] elementaryOS ppa repository 삭제하기</h1>
+	<span class="post-date">2016-04-02, Sat</span>
+	<p>여러 프로그램을 받다보면 자연스레 ppa 가 쌓인다. 이러다보면 한번 정리해주고 싶을때가 온다. 일단 설치된 리스트를 확인해보자.</p>
+<div class="highlight"><pre><span></span>ls -al /etc/apt/sources.list.d/
+</pre></div>
+
+
+<p>해당 경로아래 리스트를 확인할 수 있다.
+그럼 지워보자.</p>
+<div class="highlight"><pre><span></span>sudo add-apt-repository --remove ppa:team/name
+</pre></div>
+
+
+<p>저 뒤에 ppa: 뒷부분은 해당 repository의 이름을 넣어주면 된다.
+혹은 GUI 환경에서도 삭제할 수 있다. <code>Applications &gt; Software &amp; Updates &gt; Other Software</code>에서 삭제를 진행하면 된다.</p>
+<p><img alt="Software &amp; Updates 창" src="/images/2016-04-02/01.png"></p>
+<h2>참고링크</h2>
+<p><a href="http://askubuntu.com/questions/148932/how-can-i-get-a-list-of-all-repositories-and-ppas-from-the-command-line-into-an">How can I get a list of all repositories and PPAs from the command line into an install script?</a>
+<a href="http://askubuntu.com/questions/307/how-can-ppas-be-removed">How can PPAs be removed?</a></p>
+</div>
+		</div>
+	</body>
+</html>

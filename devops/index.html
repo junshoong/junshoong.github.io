@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Junshoong의 기술블로그</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="../theme/css/poole.css" />
+		<link rel="stylesheet" href="../theme/css/hyde.css" />
+		<link rel="stylesheet" href="../theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../theme/css/style.css" />
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0d">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="../images/profile.png">
+                    <p class="sitename"> Junshoong의 기술블로그 </p>
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead"> </p>
+			<p></p>
+		</div>
+		<ul class="sidebar-nav">
+                <li>
+					<a class="sidebar-nav-item" href="mailto:junshoong@gmail.com">
+						<i class="fa fa-envelope"></i>
+                        email
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.facebook.com/vaporize93">
+						<i class="fa fa-facebook"></i>
+                        facebook
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/junshoong">
+						<i class="fa fa-linkedin"></i>
+                        linkedin
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/Vaporize93">
+						<i class="fa fa-slideshare"></i>
+                        slideshare
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://github.com/junshoong">
+						<i class="fa fa-github"></i>
+                        github
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.stackoverflow.com/users/4466697/junsu-kim">
+						<i class="fa fa-stack-overflow"></i>
+                        stack-overflow
+					</a>
+                </li>
+            <li>
+			<a class="sidebar-nav-item" href="">
+				<i class="fa fa-feed"></i>
+                FEED
+			</a>
+            </li>
+		</nav>
+	</div>
+</div>		<div class="content container">
+	<div class="posts">
+			<div class="post">
+				<h1 class="post-title" href="../devops/django-with-postgresql#django-with-postgresql">
+					<a href="../devops/django-with-postgresql#django-with-postgresql">[DevOps] ArchLinux에서 Django + PostgreSQL 설정하기</a>
+				</h1>
+				<span class="post-date">2017-01-04, Wed</span>
+				<p>
+					<h1>Django + PostgreSQL</h1>
+<p>django 프로젝트에서 사용하는 DBMS로 <a href="https://www.postgresql.org/">PostgreSQL</a>을 사용하도록 한다. 이 가이드에서는 Arch Linux 기준으로 작성되었다. 일부분은 같은 부분이 있겠지만, 설치나 설정에서 다른 경우는 최 하단에 있는 링크나 구글링을 통해서 찾아보길 바란다.</p>
+<h2>설치</h2>
+<div class="highlight"><pre><span></span>$ sudo aura -Sa postgresql
+</pre></div>
+
+
+<p><code>aura</code>나 <code>pacman</code>으로 <code>postgresql</code> 패키지를 설치한다. </p>
+<h2>설정</h2>
+<div class="highlight"><pre><span></span>$ sudo -i -u postgres
+</pre></div>
+
+
+<p>user를 …</p>
+				</p>
+				<a class="read-more" href="devops/django-with-postgresql">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../devops/django-travis-env#django-travis-env">
+					<a href="../devops/django-travis-env#django-travis-env">[DevOps] travis에서 test시 생기는 데이터베이스 문제</a>
+				</h1>
+				<span class="post-date">2016-07-01, Fri</span>
+				<p>
+					<p>로컬에서는 별 말 없이 통과하던 테스트가 travis 위에서는 아래와 같은 오류를 뱉으며 실패한다.</p>
+<blockquote>
+<p>django.core.exceptions.ImproperlyConfigured: Requested setting DATABASES, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.</p>
+</blockquote>
+<p>읽어보면 <code>DJANGO_SETTINGS_MODULE</code> 환경변수나 <code>settings.configure()</code>를 호출하라는 것 같은데 어떻게 …</p>
+				</p>
+				<a class="read-more" href="devops/django-travis-env">Continue reading »</a>
+			</div>
+	</div>
+	<div class="pagination">
+
+		<span class="pagination-item older">Newer</span>
+
+		<span class="pagination-item newer">Older</span>
+	</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - Editor</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/editor.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2017-04-04T00:00:00+09:00</updated><entry><title>[Editor] atom 에디터의 UI font-size 변경</title><link href="http://blog.junshoong.net/editor/atom-ui-font-size-change" rel="alternate"></link><published>2017-04-04T00:00:00+09:00</published><updated>2017-04-04T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-04:/editor/atom-ui-font-size-change</id><summary type="html">&lt;h2&gt;문제상황&lt;/h2&gt;
+&lt;p&gt;노트북의 화면 해상도가 너무 높아 실제로 보이는 화면의 글씨가 너무 작아서 보기가 불편하다.
+&lt;img alt="변경전" src="/images/2017-04-04/01.png"&gt;&lt;/p&gt;
+&lt;h2&gt;환경&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Atom    : 1.15.0&lt;/li&gt;
+&lt;li&gt;Electron: 1.4.15&lt;/li&gt;
+&lt;li&gt;Chrome  : 53.0.2785.143&lt;/li&gt;
+&lt;li&gt;Node    : 6.5.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;해결&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;~/.atom/styles.less&lt;/code&gt; 파일을 수정해준다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;tree-view&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;tab-bar&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;tab&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;font-size&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;font-size의 값은 적당히 원하는 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;문제상황&lt;/h2&gt;
+&lt;p&gt;노트북의 화면 해상도가 너무 높아 실제로 보이는 화면의 글씨가 너무 작아서 보기가 불편하다.
+&lt;img alt="변경전" src="/images/2017-04-04/01.png"&gt;&lt;/p&gt;
+&lt;h2&gt;환경&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Atom    : 1.15.0&lt;/li&gt;
+&lt;li&gt;Electron: 1.4.15&lt;/li&gt;
+&lt;li&gt;Chrome  : 53.0.2785.143&lt;/li&gt;
+&lt;li&gt;Node    : 6.5.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;해결&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;~/.atom/styles.less&lt;/code&gt; 파일을 수정해준다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;tree-view&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;tab-bar&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;tab&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;font-size&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;font-size의 값은 적당히 원하는 값으로 넣어주면 된다. 파일을 저장하면 atom 에디터의 font-size가 실시간으로 바뀐다. 이러한 방법으로 atom에디터의 거의 모든 부분을 원하는대로 커스터마이징할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="변경후" src="/images/2017-04-04/02.png"&gt;&lt;/p&gt;
+&lt;h2&gt;참고 링크&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/atom/atom/issues/2530"&gt;atom issue #2530 - Anyway to change UI/tab/tree view font size? &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="atom"></category><category term="editor"></category></entry><entry><title>[Editor] (미해결) jedi-vim을 통한 python3 자동완성</title><link href="http://blog.junshoong.net/editor/jedivim-python3" rel="alternate"></link><published>2016-03-07T00:00:00+09:00</published><updated>2016-03-07T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-03-07:/editor/jedivim-python3</id><summary type="html">&lt;p&gt;python3를 vim을 사용해서 코딩을 하는데, 자동완성 기능이 있으면 좋을 것 같아 찾아봤더니 &lt;a href="https://github.com/davidhalter/jedi-vim"&gt;jedi-vim&lt;/a&gt;을 많이 사용한다.&lt;/p&gt;
+&lt;p&gt;Pathogen 과 Vundle 사이에서 문제가 조금 생겼지만, 결국 Vundle을 통해서 jedi-vim을 적용하는데 성공했다. 그런데 조금 알아보니 환경변수에 적용된 기본 python을 기준으로 자동완성을 제공한다. 하지만 시스템에 기본 적용된 python의 버전이 2.7이기 때문에 python3로 자동완성하기 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;python3를 vim을 사용해서 코딩을 하는데, 자동완성 기능이 있으면 좋을 것 같아 찾아봤더니 &lt;a href="https://github.com/davidhalter/jedi-vim"&gt;jedi-vim&lt;/a&gt;을 많이 사용한다.&lt;/p&gt;
+&lt;p&gt;Pathogen 과 Vundle 사이에서 문제가 조금 생겼지만, 결국 Vundle을 통해서 jedi-vim을 적용하는데 성공했다. 그런데 조금 알아보니 환경변수에 적용된 기본 python을 기준으로 자동완성을 제공한다. 하지만 시스템에 기본 적용된 python의 버전이 2.7이기 때문에 python3로 자동완성하기 위해선 설정을 조금 바꿔줘야 한다.&lt;/p&gt;
+&lt;p&gt;그 부분은 &lt;a href="https://github.com/davidhalter/jedi-vim/blob/master/doc/jedi-vim.txt#L479"&gt;설명서&lt;/a&gt;에 내용이 나와 있었다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;~/.vimrc&lt;/code&gt; 파일에 아래 내용을 추가해주면 된다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;let g:jedi#force_py_version = 3
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;하지만 이 부분에서 또 새로운 문제가 발생했다. 16년 3월 7일 현재 열려있는 &lt;a href="https://github.com/davidhalter/jedi-vim/issues/488"&gt;이슈&lt;/a&gt;로, 해당 사항과 동일한 문제가 발생한다. 에러 메세지를 따라가&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;.vim/bundle/jedi-vim/initialize.py&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;이부분에서 문제가 생기는 것 같아 조금 조사해보니.. vim에서 python3랑 호환이 되지 않는 부분이 좀 있는 것 같다.&lt;/p&gt;
+&lt;p&gt;특히 python2 와 3를 병행해서 사용하는 경우에 vim에서는 그 중 한가지만 사용할 수 있도록 지원하는 것 같다.&lt;/p&gt;
+&lt;h3&gt;참고링크&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://askubuntu.com/questions/585237/atwhats-the-easiest-way-to-get-vim-with-python-3-support"&gt;What's the easiest way to get Vim with Python 3 support?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/15801243/how-to-enable-python3-in-vim"&gt;How to enable python3 in vim?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/davidhalter/jedi-vim/issues/526"&gt;jedi-vim issue #526&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/13477264/import-vim-in-python-gives-back-errors"&gt;Import vim in python gives back errors&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;vim 쪽에서도 이 문제로 대화가 진행되고 있다.
+&lt;a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=729924"&gt;Debian Bug report logs - #729924&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;위에서 참고해 보니 &lt;code&gt;pi-rho/dev PPA&lt;/code&gt; 를 추가해서 vim을 업데이트 하면 두가지를 같이 사용할 수 있다고 하는 듯 하다. 그런데 그게 안되더라.. 그래서 위에 있는 askubuntu의 내용을 따라하기로 했다. 그런데 deb package를 build하는 도중에 test87 Failed라며 빌드가 안 되는 것이다. 너무 돌아온 것 같아서 처음으로 돌아가보기로했다. 일단 python명령의 환경변수를 수정해서 python3에 연결시켜보기로했다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nb"&gt;alias&lt;/span&gt; &lt;span class="nv"&gt;python&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;python3
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;이것은 단순히 커맨드에서 "python" 이라고 입력하는걸 :python3"로 입력되도록 하는거라 python기본경로인 &lt;code&gt;/usr/bin/python&lt;/code&gt;의 심볼릭링크 경로를 python3.4로 붙여줬다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo ln -sf /usr/bin/python3.4 /usr/bin/python
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;그랬지만.. vim 에선 여전히 2.7.6 버전으로 돌아가고 있었다.&lt;/p&gt;
+&lt;p&gt;일단 이 문제는 해결되지 않은 채로 남겨둔다..&lt;/p&gt;
+&lt;p&gt;시간나면 Pathogen으로 다시 받아봐야겠다.&lt;/p&gt;
+&lt;p&gt;일단은 이슈 #488 을 Subscribe하고 기다려야겠다.&lt;/p&gt;</content><category term="editor"></category><category term="vim"></category><category term="python"></category></entry><entry><title>[Editor] vim 새 파일 작성시 자동으로 템플릿(구조) 불러오기</title><link href="http://blog.junshoong.net/editor/vim-auto-template" rel="alternate"></link><published>2015-11-23T00:00:00+09:00</published><updated>2015-11-23T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2015-11-23:/editor/vim-auto-template</id><summary type="html">&lt;p&gt;vim으로 html 파일을 만들 때마다 구조를 새로 적어주려니 손목에 통증이 생겼다. 새 파일을 만들 때마다 자동으로 템플릿을 작성해주면 좋겠다 싶어서 한참을 검색했었는데, 검색 키워드를 vim new file format으로 하니 나오 질 않았다. 조금 더 찾다가 vim new file template으로 검색해서 결과를 얻어냈다.&lt;/p&gt;
+&lt;p&gt;홈 디렉터리에 있는 &lt;code&gt;.vimrc&lt;/code&gt;를 열어서 수정하자.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;au …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;vim으로 html 파일을 만들 때마다 구조를 새로 적어주려니 손목에 통증이 생겼다. 새 파일을 만들 때마다 자동으로 템플릿을 작성해주면 좋겠다 싶어서 한참을 검색했었는데, 검색 키워드를 vim new file format으로 하니 나오 질 않았다. 조금 더 찾다가 vim new file template으로 검색해서 결과를 얻어냈다.&lt;/p&gt;
+&lt;p&gt;홈 디렉터리에 있는 &lt;code&gt;.vimrc&lt;/code&gt;를 열어서 수정하자.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;BufNewFile&lt;/span&gt; *.html &lt;span class="m"&gt;0&lt;/span&gt;r &lt;span class="p"&gt;~&lt;/span&gt;&lt;span class="sr"&gt;/.vim/&lt;/span&gt;html.skel
+&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;BufNewFile&lt;/span&gt; *.&lt;span class="k"&gt;sh&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;r &lt;span class="p"&gt;~&lt;/span&gt;&lt;span class="sr"&gt;/.vim/&lt;/span&gt;&lt;span class="k"&gt;sh&lt;/span&gt;.skel
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;그리고 해당 경로에 원하는 형식의 Template를 작성해둔다.&lt;/p&gt;
+&lt;p&gt;html.skel&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; &lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+ &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+         &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+         &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;charset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;utf-8&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+     &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+     &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+ &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;sh.skel&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;앞으로 파일을 만들 때 &lt;code&gt;.html&lt;/code&gt;이나 &lt;code&gt;.sh&lt;/code&gt; 확장자를 가지는 파일은 위와 같은 템플릿을 가지는 걸 확인할 수 있다.&lt;/p&gt;
+&lt;h2&gt;참고자료&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/162617/how-can-i-automatically-add-some-skeleton-code-when-creating-a-new-file-with-vim"&gt;Stackoverflow - How can I automatically add some skeleton code when creating a new file with vim&lt;/a&gt;&lt;/p&gt;</content><category term="editor"></category><category term="vim"></category></entry></feed>

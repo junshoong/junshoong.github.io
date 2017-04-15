@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Junshoong의 기술블로그</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="../theme/css/poole.css" />
+		<link rel="stylesheet" href="../theme/css/hyde.css" />
+		<link rel="stylesheet" href="../theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../theme/css/style.css" />
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0d">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="../images/profile.png">
+                    <p class="sitename"> Junshoong의 기술블로그 </p>
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead"> </p>
+			<p></p>
+		</div>
+		<ul class="sidebar-nav">
+                <li>
+					<a class="sidebar-nav-item" href="mailto:junshoong@gmail.com">
+						<i class="fa fa-envelope"></i>
+                        email
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.facebook.com/vaporize93">
+						<i class="fa fa-facebook"></i>
+                        facebook
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/junshoong">
+						<i class="fa fa-linkedin"></i>
+                        linkedin
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/Vaporize93">
+						<i class="fa fa-slideshare"></i>
+                        slideshare
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://github.com/junshoong">
+						<i class="fa fa-github"></i>
+                        github
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.stackoverflow.com/users/4466697/junsu-kim">
+						<i class="fa fa-stack-overflow"></i>
+                        stack-overflow
+					</a>
+                </li>
+            <li>
+			<a class="sidebar-nav-item" href="">
+				<i class="fa fa-feed"></i>
+                FEED
+			</a>
+            </li>
+		</nav>
+	</div>
+</div>		<div class="content container">
+<div class="post">
+	<h1 class="post-title">[Linux] ThinkPad 랩탑 배터리관리 패키지 (tlp) 설치</h1>
+	<span class="post-date">2016-10-31, Mon</span>
+	<h1>tlp 설치</h1>
+<p>이전에도 사용했던 ThinkPad를 위한 배터리관리 패키지인 <code>tlp</code>를 설치했다. 그냥 설치해두고 잊어버려도 되는 편리한 패키지였는데 리눅스를 새로 설치하는 김에 다시 받았다. 실제로 체감은 잘 모르겠어서 당분간 써보고 통계자료를 뽑아볼 수 있으면 다시 추가하도록 하겠다. 배터리 사용 관련 그래프를 나타내주는 패키지로는 <code>gnome-power-manager</code> 가 있다.</p>
+<div class="highlight"><pre><span></span>$ sudo aura -S tlp
+$ sudo tlp start
+$ sudo aura -S acpi_call
+$ sudo systemctl <span class="nb">enable</span> tlp.service
+$ sudo systemctl <span class="nb">enable</span> tlp-sleep.service
+$ sudo systemctl mask systemd-rfkill.service
+</pre></div>
+
+
+<p>자세한 배터리 정보와 상태를 확인할 수 있다.</p>
+<div class="highlight"><pre><span></span>$ sudo tlp stat
+</pre></div>
+
+
+<p>간결한 상태를 보고 싶으면 아래 명령어도 유용하다.</p>
+<div class="highlight"><pre><span></span>$ upower -d
+</pre></div>
+
+
+<p>배터리 사용 history 그래프는 gnome-power-manager로 볼 수 있다.  </p>
+<div class="highlight"><pre><span></span>$ sudo aura -S gnome-power-manager
+$ gnome-power-statistics
+</pre></div>
+
+
+<p><img alt="gnome-power-statistics" src="/images/2016-10-31/1.png"></p>
+<h1>참고 자료</h1>
+<ul>
+<li><a href="http://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html#arch">tlp 공식 문서 - arch install</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/TLP">ArchWiki - TLP</a></li>
+<li><a href="https://help.gnome.org/users/gnome-power-manager/stable/statistics.html.en">Gnome Help - Gnome Power Manager</a></li>
+<li><a href="https://bbs.archlinux.org/viewtopic.php?id=169195">Arch Forum - Tool for reporting battery stats?</a></li>
+</ul>
+</div>
+		</div>
+	</body>
+</html>

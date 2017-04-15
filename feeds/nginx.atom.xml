@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - Nginx</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/nginx.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2016-01-09T00:00:00+09:00</updated><entry><title>[Nginx] Django+gunicorn 사용환경에서 외부에서 접속하기</title><link href="http://blog.junshoong.net/nginx/nginx-django-gunicorn" rel="alternate"></link><published>2016-01-09T00:00:00+09:00</published><updated>2016-01-09T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-01-09:/nginx/nginx-django-gunicorn</id><summary type="html">&lt;p&gt;이걸로 몇 일 동안 고생을 한지 모르겠다. 집 네트워크의 80번 포트가 공유기 설정으로 열려있어서 웹서버로 사용할 수 있지 않을까 했는데, 집에 있는 서버와 연결이 안된다. DMZ설정도, 포트포워딩으로도... 그래서 결국 8080번 포트를 사용해서 운용을 하려고 하니까, 외부 포트 8080번  - 서버 포트 80번으로 해두니까 테스팅 환경이 외부와 내부가 다르니 또 머리가 아프다 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;이걸로 몇 일 동안 고생을 한지 모르겠다. 집 네트워크의 80번 포트가 공유기 설정으로 열려있어서 웹서버로 사용할 수 있지 않을까 했는데, 집에 있는 서버와 연결이 안된다. DMZ설정도, 포트포워딩으로도... 그래서 결국 8080번 포트를 사용해서 운용을 하려고 하니까, 외부 포트 8080번  - 서버 포트 80번으로 해두니까 테스팅 환경이 외부와 내부가 다르니 또 머리가 아프다.&lt;/p&gt;
+&lt;p&gt;결국 외부 8080 - 내부 8080으로 맞추기로 했는데, 잘 안되더라. gunicorn의 port 설정도 확인해보고, Django도 확인해봤는데, 두 가지를 설정하는 게 아니라 nignx면 충분했다. gunicorn은 소켓으로 연결되어 있기 때문에 port 설정은 따로 해주지 않아도 되는 것 같다.&lt;/p&gt;
+&lt;p&gt;SITENAME은 각자 알아서.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/etc/init/gunicorn-SITENAME.conf&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;description &amp;quot;Gunicorn server for SITENAME&amp;quot;
+
+start on net-device-up
+stop on shutdown
+
+respawn
+
+setuid USER
+chdir /home/USER/sites/SITENAME/source
+
+exec ../virtualenv/bin/gunicorn \
+    --bind unix:/tmp/SITENAME.socket \
+    superlists.wsgi:application
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;/etc/nginx/sites-enable/SITENAME&lt;/code&gt;  // 이 파일은 &lt;code&gt;../sites-available&lt;/code&gt; 쪽 경로의 파일에 링크 되어 있다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;server&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kn"&gt;listen&lt;/span&gt; &lt;span class="mi"&gt;8080&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kn"&gt;server_name&lt;/span&gt; &lt;span class="s"&gt;SITENAME&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="kn"&gt;location&lt;/span&gt; &lt;span class="s"&gt;/static&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="kn"&gt;alias&lt;/span&gt; &lt;span class="s"&gt;/home/USER/sites/SITENAME/static&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;  
+
+    &lt;span class="kn"&gt;location&lt;/span&gt; &lt;span class="s"&gt;/&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="kn"&gt;proxy_set_header&lt;/span&gt; &lt;span class="s"&gt;Host&lt;/span&gt; &lt;span class="nv"&gt;$host:$server_port&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="kn"&gt;proxy_pass&lt;/span&gt; &lt;span class="s"&gt;http://unix:/tmp/SITENAME.socket&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;위에 보면 &lt;code&gt;proxy_set_header Host&lt;/code&gt; 부분이 보인다. 여기서 &lt;code&gt;$host&lt;/code&gt; 만 적어주게 되면 첫 화면은 접속이 잘 되지만, 페이지를 이동하거나 하면 지정해준 포트 부분이 날아간다.&lt;/p&gt;
+&lt;p&gt;예를 들면 이렇다.  &lt;code&gt;www.harveyk.me:8080&lt;/code&gt; 에서 다음 버튼을 눌러 &lt;code&gt;~/next&lt;/code&gt;로 가게 되면 &lt;code&gt;www.harveyk.me/next&lt;/code&gt;로 이동하여 페이지를 찾을 수 없게 된다. 이 부분을 위해 저 라인 뒷 부분에 &lt;code&gt;:$server_port&lt;/code&gt;를 추가해준다. 이러면 포트 부분이 날아가지 않아 정상적으로 작동한다. 외부8080 - 내부8080을 맞췄기 때문에 외부에서 테스트 작업을 하게 되더라도 환경이 달라지지 않는다.&lt;/p&gt;
+&lt;p&gt;참고로 네트워크 내부에서는 내부 ip로만 접속이 가능하도록 되어 있는 경우가 있다. 예를 들면 내부는 &lt;code&gt;192.168.150.150:8080&lt;/code&gt; 이고 외부는 &lt;code&gt;www.harveyk.me:8080&lt;/code&gt;인 경우인데, 이 경우엔 &lt;code&gt;/etc/hosts&lt;/code&gt; 파일을 수정해주면 된다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;192.168.150.150    www.harveyk.me    harveyk
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;이런 식으로 추가해주면 내부에서도 접근이 가능하다. 일부 공유기에서는 라우팅 환경을 조정해서 해주는 경우가 있는데, NIC 성능 이슈가 있다고 한다.&lt;/p&gt;
+&lt;h2&gt;참고링크&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/10168155/nginx-proxy-https-to-http-on-non-standard-port"&gt;http://stackoverflow.com/questions/10168155/nginx-proxy-https-to-http-on-non-standard-port&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://chimera.labs.oreilly.com/books/1234000000754/index.html"&gt;Test-Driven Development with Python&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content><category term="nginx"></category><category term="django"></category><category term="network"></category></entry></feed>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Junshoong의 기술블로그 - Articles by junshoong</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="../theme/css/poole.css" />
+		<link rel="stylesheet" href="../theme/css/hyde.css" />
+		<link rel="stylesheet" href="../theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../theme/css/style.css" />
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0d">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="../images/profile.png">
+                    <p class="sitename"> Junshoong의 기술블로그 </p>
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead"> </p>
+			<p></p>
+		</div>
+		<ul class="sidebar-nav">
+                <li>
+					<a class="sidebar-nav-item" href="mailto:junshoong@gmail.com">
+						<i class="fa fa-envelope"></i>
+                        email
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.facebook.com/vaporize93">
+						<i class="fa fa-facebook"></i>
+                        facebook
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/junshoong">
+						<i class="fa fa-linkedin"></i>
+                        linkedin
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/Vaporize93">
+						<i class="fa fa-slideshare"></i>
+                        slideshare
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://github.com/junshoong">
+						<i class="fa fa-github"></i>
+                        github
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.stackoverflow.com/users/4466697/junsu-kim">
+						<i class="fa fa-stack-overflow"></i>
+                        stack-overflow
+					</a>
+                </li>
+            <li>
+			<a class="sidebar-nav-item" href="">
+				<i class="fa fa-feed"></i>
+                FEED
+			</a>
+            </li>
+		</nav>
+	</div>
+</div>		<div class="content container">
+	<div class="posts">
+			<div class="post">
+				<h1 class="post-title" href="../linux/linux-bundle-exec#linux-bundle-exec">
+					<a href="../linux/linux-bundle-exec#linux-bundle-exec">[Linux] elementaryOS GUI환경에서 *.bundle 파일 실행이 안 될 때</a>
+				</h1>
+				<span class="post-date">2016-03-07, Mon</span>
+				<p>
+					<p>mint에서는 잘 되었던 것 같은데 elementary OS에서는 bundle파일이 클릭으로 실행이 안 된다.<br>
+그냥 터미널을 열고 실행권한을 준다음 실행하면 된다.</p>
+<div class="highlight"><pre><span></span>$ chmod <span class="m">755</span> *.bundle
+$ sudo ./*.bundle
+</pre></div>
+
+
+<p>* 은 파일 이름이다.</p>
+				</p>
+				<a class="read-more" href="linux/linux-bundle-exec">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../linux/linux-elementary-settig#linux-elementary-settig">
+					<a href="../linux/linux-elementary-settig#linux-elementary-settig">[Linux] elementaryOS 초기 설치 셋팅</a>
+				</h1>
+				<span class="post-date">2016-03-07, Mon</span>
+				<p>
+					<div class="highlight"><pre><span></span>$ sudo apt-get update
+$ sudo apt-get install language-selector-gnome uim uim-byeoru vim tmux libreoffice git
+$ sudo add-apt-repository ppa:linrunner/tlp <span class="o">&amp;&amp;</span> sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get install tlp tlp-rdw
+<span class="c1"># (아래는 Thinkpad의 경우)</span>
+$ sudo apt-get install tp-smapi-dkms acpi-call-tools
+$ sudo tlp start
+</pre></div>
+
+
+<p>한글 설정은 <a href="http://bagjunggyu.blogspot.kr/2015/04/elementary-os-freya-stable-release.html">박정규님 블로그</a>를 참고하면 좋겠다. 내 경우는 환경은 영어로 할거라 gnome-language-selector …</p>
+				</p>
+				<a class="read-more" href="linux/linux-elementary-settig">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../linux/lenovo-elementary-os-install#lenovo-elementary-os-install">
+					<a href="../linux/lenovo-elementary-os-install#lenovo-elementary-os-install">[Linux] elementaryOS lenovo e450 FreeDos에 Install</a>
+				</h1>
+				<span class="post-date">2016-03-06, Sun</span>
+				<p>
+					<p>기존에 사용하던 HP430을 떠나보내면서 민트에서 elementary로 갈아타보기로 했다. <a href="https://elementary.io/">공식 홈페이지</a>에서 파일을 받을 수 있다. 금액이 적혀있는데, 구매하고 싶으면 금액을 선택해서 하고, 아니면 custom에 0을 입력하고 받으면 된다.</p>
+<p>한글 입력기 관련 이슈를 설명해둔 <a href="http://bagjunggyu.blogspot.kr/2015/12/2015.html">박정규님 블로그</a>다. 항상 새로운 리눅스를 도전하시는 것 같은데 참고하면 큰 도움이 된다. 아직 해당 사항은 적용해보지 …</p>
+				</p>
+				<a class="read-more" href="linux/lenovo-elementary-os-install">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../etc/lenovo-open-review#lenovo-open-review">
+					<a href="../etc/lenovo-open-review#lenovo-open-review">[ETC] Lenovo ThinkPad E450 구입 후기</a>
+				</h1>
+				<span class="post-date">2016-03-05, Sat</span>
+				<p>
+					<p>다나와를 경유해서 G마켓을 통해 노트북을 구입했다.</p>
+<p>65만원 정도에 구매를 했고, i5, SSHD(Hybrid) 500GB, 4gb, 14inch .. 정도의 사양이다.</p>
+<p><img alt="상자" src="/images/2016-03-05/01.jpg"></p>
+<p>배송은 CJ 대한통운이 했고, 용산에서 충북 옥천HUB를 거쳐 다시 서울로 올라왔다. 혹시 서울쪽에 거주한다면 직수령하는게 나을 수도 있겠다 싶었다.</p>
+<p>배송 상태는 노트북 박스 위에 좀 더 큰 일반 박스를 씌워서 왔다. 박스사이의 …</p>
+				</p>
+				<a class="read-more" href="etc/lenovo-open-review">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../ctf/wargame-login-filtering#wargame-login-filtering">
+					<a href="../ctf/wargame-login-filtering#wargame-login-filtering">[CTF] Wargame - login filtering</a>
+				</h1>
+				<span class="post-date">2016-02-21, Sun</span>
+				<p>
+					<p><a href="http://wargame.kr:8080/login_filtering/">450p - login filtering</a></p>
+<p><img alt="문제 화면" src="/images/2016-02-21/01.png"></p>
+<blockquote>
+<p>I have accounts. but, it's blocked.<br>
+can you login bypass filtering?</p>
+</blockquote>
+<p>내가 계정이 있는데 블록 당했습니다.
+당신은 필터링을 우회해서 로그인할 수 있나요?</p>
+<p>Start를 눌러 들어가면 소스를 볼 수 있는 링크가 제공되어 있다. 들어 가보면 php코드와 html코드가 있고 하단에 블록된 계정명이 적혀있다.</p>
+<p><img alt="소스 주석부분 화면" src="/images/2016-02-21/02.png"></p>
+<p>계정을 두 개 가지고 있는데, guest …</p>
+				</p>
+				<a class="read-more" href="ctf/wargame-login-filtering">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../ctf/wargame-flee-button#wargame-flee-button">
+					<a href="../ctf/wargame-flee-button#wargame-flee-button">[CTF] Wargame - flee button</a>
+				</h1>
+				<span class="post-date">2016-02-20, Sat</span>
+				<p>
+					<p><a href="http://wargame.kr:8080/flee_button/">450p - flee button</a></p>
+<p><img alt="문제 화면" src="/images/2016-02-20/01.png"></p>
+<blockquote>
+<p>click the button!<br>
+i can't catch</p>
+</blockquote>
+<p>flee는 위험한 상황이나 장소로부터 도망치는 걸 말한다. 버튼을 누르면 된다. 일단 Start</p>
+<p><img alt="문제 화면2" src="/images/2016-02-20/02.png"></p>
+<p>검은 화면에 이렇게 적혀있다. 윈도우 + 파폭이나 리눅스 + 크롬에서는 잘 보였는데 왠지 리눅스 + 파이어폭스에선 보이질 않는다. 일단 마우스를 따라다니는 누를 수 없는 버튼이 하나 떠다닌다고 생각하면 될 것 같다. 그럼 …</p>
+				</p>
+				<a class="read-more" href="ctf/wargame-flee-button">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../ctf/wargame-qrcode-puzzle#wargame-qrcode-puzzle">
+					<a href="../ctf/wargame-qrcode-puzzle#wargame-qrcode-puzzle">[CTF] Wargame - QR CODE PUZZLE</a>
+				</h1>
+				<span class="post-date">2016-02-19, Fri</span>
+				<p>
+					<p><a href="http://wargame.kr:8080/qr_code_puzzle/">300p - QR CODE PUZZLE</a></p>
+<p><img alt="문제 화면" src="/images/2016-02-19/01.png"></p>
+<blockquote>
+<p>javascript puzzle challenge<br>
+just enjoy!</p>
+</blockquote>
+<p>자바스크립트로 구현된 퍼즐이다. 즐기라고 적혀 있는데 한 번 들어가 보자.</p>
+<p><img alt="문제 화면2" src="/images/2016-02-19/02.png"></p>
+<p>아... 퍼즐을 좋아하긴 하는데 이건 좀 현기증 나게 생겼다. 뭐 맞춰보고 싶은 사람은 맞춰보자. 맞추기 싫은 사람은 코드를 보자.</p>
+<p><img alt="코드" src="/images/2016-02-19/03.png"></p>
+<p>style의 <code>background-image</code>로 url 경로가 들어있다. 경로를 현재 주소 뒤에 붙여보면 <a href="http://wargame.kr:8080/qr_code_puzzle/img/qr.png">완성된 …</a></p>
+				</p>
+				<a class="read-more" href="ctf/wargame-qrcode-puzzle">Continue reading »</a>
+			</div>
+	</div>
+	<div class="pagination">
+
+		<span class="pagination-item older"><a href="../author/junshoong5.html">Newer</a></span>
+
+		<span class="pagination-item newer"><a href="../author/junshoong7.html">Older</a></span>
+	</div>
+		</div>
+	</body>
+</html>

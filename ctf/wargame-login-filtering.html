@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Junshoong의 기술블로그</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="../theme/css/poole.css" />
+		<link rel="stylesheet" href="../theme/css/hyde.css" />
+		<link rel="stylesheet" href="../theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../theme/css/style.css" />
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0d">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="../images/profile.png">
+                    <p class="sitename"> Junshoong의 기술블로그 </p>
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead"> </p>
+			<p></p>
+		</div>
+		<ul class="sidebar-nav">
+                <li>
+					<a class="sidebar-nav-item" href="mailto:junshoong@gmail.com">
+						<i class="fa fa-envelope"></i>
+                        email
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.facebook.com/vaporize93">
+						<i class="fa fa-facebook"></i>
+                        facebook
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/junshoong">
+						<i class="fa fa-linkedin"></i>
+                        linkedin
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/Vaporize93">
+						<i class="fa fa-slideshare"></i>
+                        slideshare
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://github.com/junshoong">
+						<i class="fa fa-github"></i>
+                        github
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.stackoverflow.com/users/4466697/junsu-kim">
+						<i class="fa fa-stack-overflow"></i>
+                        stack-overflow
+					</a>
+                </li>
+            <li>
+			<a class="sidebar-nav-item" href="">
+				<i class="fa fa-feed"></i>
+                FEED
+			</a>
+            </li>
+		</nav>
+	</div>
+</div>		<div class="content container">
+<div class="post">
+	<h1 class="post-title">[CTF] Wargame - login filtering</h1>
+	<span class="post-date">2016-02-21, Sun</span>
+	<p><a href="http://wargame.kr:8080/login_filtering/">450p - login filtering</a></p>
+<p><img alt="문제 화면" src="/images/2016-02-21/01.png"></p>
+<blockquote>
+<p>I have accounts. but, it's blocked.<br>
+can you login bypass filtering?</p>
+</blockquote>
+<p>내가 계정이 있는데 블록 당했습니다.
+당신은 필터링을 우회해서 로그인할 수 있나요?</p>
+<p>Start를 눌러 들어가면 소스를 볼 수 있는 링크가 제공되어 있다. 들어 가보면 php코드와 html코드가 있고 하단에 블록된 계정명이 적혀있다.</p>
+<p><img alt="소스 주석부분 화면" src="/images/2016-02-21/02.png"></p>
+<p>계정을 두 개 가지고 있는데, guest / guest 계정을 일단 사용해보자.</p>
+<p><img alt="로그인 실패 화면" src="/images/2016-02-21/03.png"></p>
+<p>음.. 역시 계정이 블록되어 있다고 나타난다. 코드를 한 번 살펴보자.</p>
+<div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;view-source&#39;</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nb">show_source</span><span class="p">(</span><span class="no">__FILE__</span><span class="p">);</span>
+    <span class="k">exit</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="cm">/*</span>
+<span class="cm">create table user(</span>
+<span class="cm"> idx int auto_increment primary key,</span>
+<span class="cm"> id char(32),</span>
+<span class="cm"> ps char(32)</span>
+<span class="cm">);</span>
+<span class="cm">*/</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;ps&#39;</span><span class="p">])){</span>
+  <span class="k">include</span><span class="p">(</span><span class="s2">&quot;../lib.php&quot;</span><span class="p">);</span> <span class="c1"># include for auth_code function.</span>
+
+  <span class="nb">mysql_connect</span><span class="p">(</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span><span class="s2">&quot;login_filtering&quot;</span><span class="p">,</span><span class="s2">&quot;login_filtering_pz&quot;</span><span class="p">);</span>
+  <span class="nb">mysql_select_db</span> <span class="p">(</span><span class="s2">&quot;login_filtering&quot;</span><span class="p">);</span>
+  <span class="nb">mysql_query</span><span class="p">(</span><span class="s2">&quot;set names utf8&quot;</span><span class="p">);</span>
+
+  <span class="nv">$key</span> <span class="o">=</span> <span class="nx">auth_code</span><span class="p">(</span><span class="s2">&quot;login filtering&quot;</span><span class="p">);</span>
+
+  <span class="nv">$id</span> <span class="o">=</span> <span class="nb">mysql_real_escape_string</span><span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]));</span>
+  <span class="nv">$ps</span> <span class="o">=</span> <span class="nb">mysql_real_escape_string</span><span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;ps&#39;</span><span class="p">]));</span>
+
+  <span class="nv">$row</span><span class="o">=</span><span class="nb">mysql_fetch_array</span><span class="p">(</span><span class="nb">mysql_query</span><span class="p">(</span><span class="s2">&quot;select * from user where id=&#39;</span><span class="si">$id</span><span class="s2">&#39; and ps=md5(&#39;</span><span class="si">$ps</span><span class="s2">&#39;)&quot;</span><span class="p">));</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])){</span>
+   <span class="k">if</span><span class="p">(</span><span class="nv">$id</span><span class="o">==</span><span class="s1">&#39;guest&#39;</span> <span class="o">||</span> <span class="nv">$id</span><span class="o">==</span><span class="s1">&#39;blueh4g&#39;</span><span class="p">){</span>
+    <span class="k">echo</span> <span class="s2">&quot;your account is blocked&quot;</span><span class="p">;</span>
+   <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">&quot;login ok&quot;</span><span class="o">.</span><span class="s2">&quot;&lt;br /&gt;&quot;</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">&quot;Password : &quot;</span><span class="o">.</span><span class="nv">$key</span><span class="p">;</span>
+   <span class="p">}</span>
+  <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+   <span class="k">echo</span> <span class="s2">&quot;wrong..&quot;</span><span class="p">;</span>
+  <span class="p">}</span>
+ <span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+
+<p>id, ps를 입력하면 시작한다. db 쿼리는 MySQL를 사용한다. <code>mysql_real_escape_string</code> 함수는 기본적인 SQL인젝션에 대항해서 검증을 거치는 함수다.<code>' or ''='</code> 같은 항목을 걸러준다. trim은 앞 뒤 공백을 제거한다. <code>mysql_fetch_array</code> 함수는 추출된 데이터를 배열로 변환해서 저장한다.</p>
+<p><code>$row['id']</code>가 set 되어있고 id가 guest나 blueh4g가 아니면 key를 획득할 수 있다.</p>
+<p>그런데 여기서 중요한 건 입력 받은 <code>$id</code> 값이 guest나 blueh4g만 아니면 된다는 점이다. mysql에서는 컬럼명과 값에 대소문자나 앞 뒤 공백을 신경 쓰지 않는다.</p>
+<p>그럼 아래 쿼리문 실행 결과를 보자.</p>
+<div class="highlight"><pre><span></span><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="k">user</span> <span class="k">where</span> <span class="n">id</span><span class="o">=</span><span class="s1">&#39;guest&#39;</span><span class="p">;</span>
+</pre></div>
+
+
+<p><img alt="쿼리문 실행결과" src="/images/2016-02-21/04.png"></p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="k">user</span> <span class="k">WHERE</span> <span class="n">ID</span><span class="o">=</span><span class="s1">&#39;GUSET&#39;</span><span class="p">;</span>
+</pre></div>
+
+
+<p><img alt="쿼리문 실행결과" src="/images/2016-02-21/05.png"></p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="k">USER</span> <span class="k">WHERE</span> <span class="n">ID</span><span class="o">=</span><span class="s1">&#39;GUSET&#39;</span><span class="p">;</span>
+</pre></div>
+
+
+<p><img alt="쿼리문 실행결과" src="/images/2016-02-21/06.png"></p>
+<p>쓸 일은 없겠지만 이런 식으로 대소문자를 섞어서 사용해도 잘 실행된다.</p>
+<div class="highlight"><pre><span></span><span class="k">sElEcT</span> <span class="o">*</span> <span class="k">FrOm</span> <span class="k">user</span> <span class="k">wHeRe</span> <span class="n">iD</span><span class="o">=</span><span class="s1">&#39;GuEsT &#39;</span><span class="p">;</span>
+</pre></div>
+
+
+<p><img alt="쿼리문 실행결과" src="/images/2016-02-21/07.png"></p>
+<p>위에 스크린샷을 보면 알 수 있듯이 테이블 이름 외에는 대소문자를 구분하지 않고 결과가 나온다.</p>
+<p>이건 자료형이 <code>CHAR</code> 형이나 <code>VARCHAR</code> 형일 경우 그렇고, <code>BINARY</code>, <code>VARBINARY</code> 의 경우는 해당 바이트 값으로 구분하기 때문에 대소문자 구분이 된다.</p>
+<p>아무튼 php에서 id를 검증하는 부분으로 돌아가 보자.</p>
+<div class="highlight"><pre><span></span><span class="err">$</span><span class="n">id</span> <span class="o">=</span> <span class="n">mysql_real_escape_string</span><span class="p">(</span><span class="k">trim</span><span class="p">(</span><span class="err">$</span><span class="n">_POST</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]));</span>
+<span class="err">$</span><span class="n">ps</span> <span class="o">=</span> <span class="n">mysql_real_escape_string</span><span class="p">(</span><span class="k">trim</span><span class="p">(</span><span class="err">$</span><span class="n">_POST</span><span class="p">[</span><span class="s1">&#39;ps&#39;</span><span class="p">]));</span>
+</pre></div>
+
+
+<p>일단 이 부분에서 띄어쓰기나 불순한 의도를 가진 명령들이 걸러진다.</p>
+<div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="err">$</span><span class="n">id</span><span class="o">==</span><span class="s1">&#39;guest&#39;</span> <span class="o">||</span> <span class="err">$</span><span class="n">id</span><span class="o">==</span><span class="s1">&#39;blueh4g&#39;</span><span class="p">)</span><span class="err">{</span>
+</pre></div>
+
+
+<p>그럼 이 부분은 어떨까? 소문자로 이루어진 id 값만 걸러낸다.</p>
+<p>그럼 하나만 대문자로 바꿔보자.</p>
+<p><img alt="로그인 창" src="/images/2016-02-21/08.png"></p>
+<p><img alt="로그인 성공화면" src="/images/2016-02-21/09.png">
+성공했다.</p>
+</div>
+		</div>
+	</body>
+</html>

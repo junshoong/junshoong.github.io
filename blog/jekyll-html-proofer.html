@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Junshoong의 기술블로그</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="../theme/css/poole.css" />
+		<link rel="stylesheet" href="../theme/css/hyde.css" />
+		<link rel="stylesheet" href="../theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../theme/css/style.css" />
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0d">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="../images/profile.png">
+                    <p class="sitename"> Junshoong의 기술블로그 </p>
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead"> </p>
+			<p></p>
+		</div>
+		<ul class="sidebar-nav">
+                <li>
+					<a class="sidebar-nav-item" href="mailto:junshoong@gmail.com">
+						<i class="fa fa-envelope"></i>
+                        email
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.facebook.com/vaporize93">
+						<i class="fa fa-facebook"></i>
+                        facebook
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/junshoong">
+						<i class="fa fa-linkedin"></i>
+                        linkedin
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/Vaporize93">
+						<i class="fa fa-slideshare"></i>
+                        slideshare
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://github.com/junshoong">
+						<i class="fa fa-github"></i>
+                        github
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.stackoverflow.com/users/4466697/junsu-kim">
+						<i class="fa fa-stack-overflow"></i>
+                        stack-overflow
+					</a>
+                </li>
+            <li>
+			<a class="sidebar-nav-item" href="">
+				<i class="fa fa-feed"></i>
+                FEED
+			</a>
+            </li>
+		</nav>
+	</div>
+</div>		<div class="content container">
+<div class="post">
+	<h1 class="post-title">[Blog] html-proofer에 ignore 항목 설정하기</h1>
+	<span class="post-date">2016-08-18, Thu</span>
+	<p>jekyll에서 plugin으로 <code>html-proofer</code>를 통해서 하이퍼링크를 테스트하고 있다. 로컬에서는 터미널에서 간단하게 테스트 해볼 수 있다.</p>
+<div class="highlight"><pre><span></span>$ htmlproofer ./_site
+</pre></div>
+
+
+<p>그런데 travis-ci에서 테스트하는데 <a href="https://travis-ci.org/vaporize93/blog/builds/153172807">문제가 생겼다.</a> 일부 링크에서 travis-ci 환경에서 접속하는걸 <code>robots.txt</code>가 막는 것 같다. 해당 항목을 무시하고 테스트를 하기 위해서 방법을 찾아봤다.</p>
+<p><a href="https://github.com/gjtorikian/html-proofer#configuration">html-proofer의 Github 페이지</a>에서 확인 할 수 있었다. 이를 확인해보면 <code>:url_ignore</code> 옵션을 통해 원하는 항목을 무시할 수 있다.</p>
+<p>[gist:id=779b1c3a7e290de7cdf4a0b935afe7bd,file=Rakefile]</p>
+<p>위와 같이 설정함으로써 example.com이 포함된 링크는 검사를 하지 않는다.</p>
+<p>또한 기존에는 <code>$ bundle exec htmlproofer ./_site</code>로 테스트를 했지만, 해당 스크립트 대신에 <code>$ bundle exec rake test</code>를 통해 해당 항목을 테스트한다.</p>
+<h2>참고링크</h2>
+<ul>
+<li><a href="http://stackoverflow.com/questions/36204602/travis-failing-to-run-rake-with-loaderror-cannot-load-such-file-rspec-core-r">travis failing to run rake with LoadError: cannot load such file — rspec/core/rake_task</a></li>
+<li><a href="http://stackoverflow.com/questions/30114733/loaderror-cannot-load-such-file-rspec-core-rake-task">LoadError: cannot load such file — rspec/core/rake_task</a></li>
+<li><a href="http://stackoverflow.com/questions/14362944/bundle-exec-rake-test-does-nothing">bundle exec rake test does nothing</a></li>
+<li><a href="https://spock.rocks/tech/2016/03/21/basic-jekyll-site-tests.html">Some Jekyll Tests - Logical Solutions blog</a></li>
+</ul>
+</div>
+		</div>
+	</body>
+</html>

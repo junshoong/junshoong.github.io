@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Junshoong의 기술블로그</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="../theme/css/poole.css" />
+		<link rel="stylesheet" href="../theme/css/hyde.css" />
+		<link rel="stylesheet" href="../theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../theme/css/style.css" />
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0d">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="../images/profile.png">
+                    <p class="sitename"> Junshoong의 기술블로그 </p>
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead"> </p>
+			<p></p>
+		</div>
+		<ul class="sidebar-nav">
+                <li>
+					<a class="sidebar-nav-item" href="mailto:junshoong@gmail.com">
+						<i class="fa fa-envelope"></i>
+                        email
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.facebook.com/vaporize93">
+						<i class="fa fa-facebook"></i>
+                        facebook
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/junshoong">
+						<i class="fa fa-linkedin"></i>
+                        linkedin
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/Vaporize93">
+						<i class="fa fa-slideshare"></i>
+                        slideshare
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://github.com/junshoong">
+						<i class="fa fa-github"></i>
+                        github
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.stackoverflow.com/users/4466697/junsu-kim">
+						<i class="fa fa-stack-overflow"></i>
+                        stack-overflow
+					</a>
+                </li>
+            <li>
+			<a class="sidebar-nav-item" href="">
+				<i class="fa fa-feed"></i>
+                FEED
+			</a>
+            </li>
+		</nav>
+	</div>
+</div>		<div class="content container">
+	<div class="posts">
+			<div class="post">
+				<h1 class="post-title" href="../editor/atom-ui-font-size-change#atom-ui-font-size-change">
+					<a href="../editor/atom-ui-font-size-change#atom-ui-font-size-change">[Editor] atom 에디터의 UI font-size 변경</a>
+				</h1>
+				<span class="post-date">2017-04-04, Tue</span>
+				<p>
+					<h2>문제상황</h2>
+<p>노트북의 화면 해상도가 너무 높아 실제로 보이는 화면의 글씨가 너무 작아서 보기가 불편하다.
+<img alt="변경전" src="/images/2017-04-04/01.png"></p>
+<h2>환경</h2>
+<ul>
+<li>Atom    : 1.15.0</li>
+<li>Electron: 1.4.15</li>
+<li>Chrome  : 53.0.2785.143</li>
+<li>Node    : 6.5.0</li>
+</ul>
+<h2>해결</h2>
+<p><code>~/.atom/styles.less</code> 파일을 수정해준다.</p>
+<div class="highlight"><pre><span></span><span class="nt">html</span><span class="o">,</span> <span class="nt">body</span><span class="o">,</span> <span class="p">.</span><span class="nc">tree-view</span><span class="o">,</span> <span class="p">.</span><span class="nc">tab-bar</span> <span class="p">.</span><span class="nc">tab</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>font-size의 값은 적당히 원하는 …</p>
+				</p>
+				<a class="read-more" href="editor/atom-ui-font-size-change">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../editor/jedivim-python3#jedivim-python3">
+					<a href="../editor/jedivim-python3#jedivim-python3">[Editor] (미해결) jedi-vim을 통한 python3 자동완성</a>
+				</h1>
+				<span class="post-date">2016-03-07, Mon</span>
+				<p>
+					<p>python3를 vim을 사용해서 코딩을 하는데, 자동완성 기능이 있으면 좋을 것 같아 찾아봤더니 <a href="https://github.com/davidhalter/jedi-vim">jedi-vim</a>을 많이 사용한다.</p>
+<p>Pathogen 과 Vundle 사이에서 문제가 조금 생겼지만, 결국 Vundle을 통해서 jedi-vim을 적용하는데 성공했다. 그런데 조금 알아보니 환경변수에 적용된 기본 python을 기준으로 자동완성을 제공한다. 하지만 시스템에 기본 적용된 python의 버전이 2.7이기 때문에 python3로 자동완성하기 …</p>
+				</p>
+				<a class="read-more" href="editor/jedivim-python3">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../editor/vim-auto-template#vim-auto-template">
+					<a href="../editor/vim-auto-template#vim-auto-template">[Editor] vim 새 파일 작성시 자동으로 템플릿(구조) 불러오기</a>
+				</h1>
+				<span class="post-date">2015-11-23, Mon</span>
+				<p>
+					<p>vim으로 html 파일을 만들 때마다 구조를 새로 적어주려니 손목에 통증이 생겼다. 새 파일을 만들 때마다 자동으로 템플릿을 작성해주면 좋겠다 싶어서 한참을 검색했었는데, 검색 키워드를 vim new file format으로 하니 나오 질 않았다. 조금 더 찾다가 vim new file template으로 검색해서 결과를 얻어냈다.</p>
+<p>홈 디렉터리에 있는 <code>.vimrc</code>를 열어서 수정하자.</p>
+<div class="highlight"><pre><span></span><span class="k">au …</span></pre></div>
+				</p>
+				<a class="read-more" href="editor/vim-auto-template">Continue reading »</a>
+			</div>
+	</div>
+	<div class="pagination">
+
+		<span class="pagination-item older">Newer</span>
+
+		<span class="pagination-item newer">Older</span>
+	</div>
+		</div>
+	</body>
+</html>

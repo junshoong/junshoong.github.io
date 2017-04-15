@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Junshoong의 기술블로그</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="../theme/css/poole.css" />
+		<link rel="stylesheet" href="../theme/css/hyde.css" />
+		<link rel="stylesheet" href="../theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../theme/css/style.css" />
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0d">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="../images/profile.png">
+                    <p class="sitename"> Junshoong의 기술블로그 </p>
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead"> </p>
+			<p></p>
+		</div>
+		<ul class="sidebar-nav">
+                <li>
+					<a class="sidebar-nav-item" href="mailto:junshoong@gmail.com">
+						<i class="fa fa-envelope"></i>
+                        email
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.facebook.com/vaporize93">
+						<i class="fa fa-facebook"></i>
+                        facebook
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/junshoong">
+						<i class="fa fa-linkedin"></i>
+                        linkedin
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/Vaporize93">
+						<i class="fa fa-slideshare"></i>
+                        slideshare
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://github.com/junshoong">
+						<i class="fa fa-github"></i>
+                        github
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.stackoverflow.com/users/4466697/junsu-kim">
+						<i class="fa fa-stack-overflow"></i>
+                        stack-overflow
+					</a>
+                </li>
+            <li>
+			<a class="sidebar-nav-item" href="">
+				<i class="fa fa-feed"></i>
+                FEED
+			</a>
+            </li>
+		</nav>
+	</div>
+</div>		<div class="content container">
+<div class="post">
+	<h1 class="post-title">[CTF] Wargame - QR CODE PUZZLE</h1>
+	<span class="post-date">2016-02-19, Fri</span>
+	<p><a href="http://wargame.kr:8080/qr_code_puzzle/">300p - QR CODE PUZZLE</a></p>
+<p><img alt="문제 화면" src="/images/2016-02-19/01.png"></p>
+<blockquote>
+<p>javascript puzzle challenge<br>
+just enjoy!</p>
+</blockquote>
+<p>자바스크립트로 구현된 퍼즐이다. 즐기라고 적혀 있는데 한 번 들어가 보자.</p>
+<p><img alt="문제 화면2" src="/images/2016-02-19/02.png"></p>
+<p>아... 퍼즐을 좋아하긴 하는데 이건 좀 현기증 나게 생겼다. 뭐 맞춰보고 싶은 사람은 맞춰보자. 맞추기 싫은 사람은 코드를 보자.</p>
+<p><img alt="코드" src="/images/2016-02-19/03.png"></p>
+<p>style의 <code>background-image</code>로 url 경로가 들어있다. 경로를 현재 주소 뒤에 붙여보면 <a href="http://wargame.kr:8080/qr_code_puzzle/img/qr.png">완성된 이미지</a>를 얻을 수 있다.</p>
+<p>핸드폰이나 <a href="http://webqr.com/">webqr.com</a> 등으로 스캔을 해보자.</p>
+<p><img alt="결과" src="/images/2016-02-19/04.png"></p>
+<p>Flag를 획득했다.</p>
+</div>
+		</div>
+	</body>
+</html>

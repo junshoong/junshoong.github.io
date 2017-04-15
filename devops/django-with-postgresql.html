@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Junshoong의 기술블로그</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="../theme/css/poole.css" />
+		<link rel="stylesheet" href="../theme/css/hyde.css" />
+		<link rel="stylesheet" href="../theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../theme/css/style.css" />
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0d">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="../images/profile.png">
+                    <p class="sitename"> Junshoong의 기술블로그 </p>
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead"> </p>
+			<p></p>
+		</div>
+		<ul class="sidebar-nav">
+                <li>
+					<a class="sidebar-nav-item" href="mailto:junshoong@gmail.com">
+						<i class="fa fa-envelope"></i>
+                        email
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.facebook.com/vaporize93">
+						<i class="fa fa-facebook"></i>
+                        facebook
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/junshoong">
+						<i class="fa fa-linkedin"></i>
+                        linkedin
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/Vaporize93">
+						<i class="fa fa-slideshare"></i>
+                        slideshare
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://github.com/junshoong">
+						<i class="fa fa-github"></i>
+                        github
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.stackoverflow.com/users/4466697/junsu-kim">
+						<i class="fa fa-stack-overflow"></i>
+                        stack-overflow
+					</a>
+                </li>
+            <li>
+			<a class="sidebar-nav-item" href="">
+				<i class="fa fa-feed"></i>
+                FEED
+			</a>
+            </li>
+		</nav>
+	</div>
+</div>		<div class="content container">
+<div class="post">
+	<h1 class="post-title">[DevOps] ArchLinux에서 Django + PostgreSQL 설정하기</h1>
+	<span class="post-date">2017-01-04, Wed</span>
+	<h1>Django + PostgreSQL</h1>
+<p>django 프로젝트에서 사용하는 DBMS로 <a href="https://www.postgresql.org/">PostgreSQL</a>을 사용하도록 한다. 이 가이드에서는 Arch Linux 기준으로 작성되었다. 일부분은 같은 부분이 있겠지만, 설치나 설정에서 다른 경우는 최 하단에 있는 링크나 구글링을 통해서 찾아보길 바란다.</p>
+<h2>설치</h2>
+<div class="highlight"><pre><span></span>$ sudo aura -Sa postgresql
+</pre></div>
+
+
+<p><code>aura</code>나 <code>pacman</code>으로 <code>postgresql</code> 패키지를 설치한다. </p>
+<h2>설정</h2>
+<div class="highlight"><pre><span></span>$ sudo -i -u postgres
+</pre></div>
+
+
+<p>user를 <code>postgres</code>로 바꾼다. </p>
+<blockquote>
+<p>만약 sudo를 사용하지 않는 환경이라면 <code>$ su</code> <code># su - postgres</code> 를 통해 user을 바꾼다.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><span class="o">[</span>postgres<span class="o">]</span>$ initdb --locale <span class="nv">$LANG</span> -E UTF8 -D <span class="s1">&#39;/var/lib/postgres/data&#39;</span>
+</pre></div>
+
+
+<p>앞에 username이 <code>postgres</code>로 바뀐걸 확인할 수 있다.  위 명령어는 DBMS를 초기화 시킨다. 옵션은 아래와 같은 의미를 지닌다.</p>
+<ul>
+<li><code>/etc/locale.conf</code>에 명시되어 있는 설정으로 적용</li>
+<li>encoding으로 <code>UTF8</code>을 사용</li>
+<li>data 저장위치로 <code>/var/lib/postgres/data</code> 위치를 사용</li>
+</ul>
+<div class="highlight"><pre><span></span>$ sudo systemctl start postgresql.service
+</pre></div>
+
+
+<p>service를 실행한다. 만약 부팅시에 자동으로 실행하기 위에서는 <code>systemctl enable postgresql.service</code>를 실행한다.</p>
+<div class="highlight"><pre><span></span><span class="o">[</span>postgres<span class="o">]</span>$ createuser --interactive
+</pre></div>
+
+
+<p>사용자를 새로 만든다. <code>--interactive</code>옵션을 줘서 사용자명과 <code>superuser role</code> 사용 여부를 확인한다.</p>
+<div class="highlight"><pre><span></span><span class="o">[</span>postgres<span class="o">]</span>$ createdb -U &lt;db-username&gt; &lt;dbname&gt;
+</pre></div>
+
+
+<p>데이터베이스를 만든다. <code>&lt;db-username&gt;</code>에는 위에서 <code>createuser</code> 명령을 통해 입력받은 이름을 넣는다. <code>&lt;dbname&gt;</code>에는 원하는 데이터베이스 이름을 입력한다. </p>
+<div class="highlight"><pre><span></span>$ psql -d &lt;dbname&gt;
+</pre></div>
+
+
+<p>일반 사용자로 데이터베이스에 접근한다.</p>
+<h2>Django 설정</h2>
+<p>프로젝트를 새로 작성하는 경우 프로젝트의 <code>settings.py</code>파일의 DB부분을 아래와 같이 수정해준다.</p>
+<p><code>myproject/settings.py</code></p>
+<div class="highlight"><pre><span></span><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.db.backends.postgresql_psycopg2&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;dbname&gt;&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;USER&#39;</span><span class="p">:</span> <span class="s1">&#39;postgres&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PASSWORD&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;HOST&#39;</span><span class="p">:</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PORT&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p><code>USER</code>에 개인적으로 만든 사용자인 <code>&lt;db-username&gt;</code>를 넣어도 되지만 여기서는 기본 계정인 <code>postgres</code>를 넣어두었다. 암호를 따로 지정해주었다면 해당 암호를 넣어준다.</p>
+<div class="highlight"><pre><span></span>$ pip install psycopg2
+</pre></div>
+
+
+<p><code>postgresql_psycopg2</code>를 사용하기 위해서 <code>psycopg2</code>패키지를 받아야한다. 프로젝트의 <code>requirements.txt</code>에 해당 패키지를 추가해 두었다면 <code>$ pip install -r requirements.txt</code> 를 통해서 다른 패키지들과 함께 설치할 수 있다. </p>
+<div class="highlight"><pre><span></span>$ python manage.py migrate
+$ python manage.py runserver
+</pre></div>
+
+
+<p>모든 설정을 마쳤으면 <code>migrate</code>하고 테스트 서버를 구동해본다.</p>
+<h2>참고</h2>
+<ul>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-16-04">우분투 16.04에서 django에 postgresql 설정하기 (영문)</a></li>
+<li><a href="https://djangogirls.gitbooks.io/django-girls-tutorial-extensions/content/optional_postgresql_installation/">PostgreSQL 설치 - Django Girls (영문)</a></li>
+<li><a href="https://jinpark-dg.gitbooks.io/django-girls-extended-tutorial-korean/content/optional_postgresql_installation/index.html">PostgreSQL 설치 - Django Girls (한글)</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/PostgreSQL">PostgreSQL - ArchWiki (영문)</a></li>
+</ul>
+</div>
+		</div>
+	</body>
+</html>

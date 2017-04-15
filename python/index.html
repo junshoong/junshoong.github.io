@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Junshoong의 기술블로그</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="../theme/css/poole.css" />
+		<link rel="stylesheet" href="../theme/css/hyde.css" />
+		<link rel="stylesheet" href="../theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../theme/css/style.css" />
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0d">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="../images/profile.png">
+                    <p class="sitename"> Junshoong의 기술블로그 </p>
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead"> </p>
+			<p></p>
+		</div>
+		<ul class="sidebar-nav">
+                <li>
+					<a class="sidebar-nav-item" href="mailto:junshoong@gmail.com">
+						<i class="fa fa-envelope"></i>
+                        email
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.facebook.com/vaporize93">
+						<i class="fa fa-facebook"></i>
+                        facebook
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/junshoong">
+						<i class="fa fa-linkedin"></i>
+                        linkedin
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/Vaporize93">
+						<i class="fa fa-slideshare"></i>
+                        slideshare
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://github.com/junshoong">
+						<i class="fa fa-github"></i>
+                        github
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.stackoverflow.com/users/4466697/junsu-kim">
+						<i class="fa fa-stack-overflow"></i>
+                        stack-overflow
+					</a>
+                </li>
+            <li>
+			<a class="sidebar-nav-item" href="">
+				<i class="fa fa-feed"></i>
+                FEED
+			</a>
+            </li>
+		</nav>
+	</div>
+</div>		<div class="content container">
+	<div class="posts">
+			<div class="post">
+				<h1 class="post-title" href="../python/selenium3-FireFox50-geckodriver-error-solve#selenium3-FireFox50-geckodriver-error-solve">
+					<a href="../python/selenium3-FireFox50-geckodriver-error-solve#selenium3-FireFox50-geckodriver-error-solve">[Python] selenium 3 + FireFox50 사용시 발생하는 geckodriver관련 에러 해결</a>
+				</h1>
+				<span class="post-date">2017-01-09, Mon</span>
+				<p>
+					<h2>문제</h2>
+<p>selenium과 firefox를 사용해서 테스트를 진행하는 도중 아래와 같은 에러가 발생했다.</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+
+<span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Firefox</span><span class="p">()</span>
+<span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://www.python.org&quot;</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="s1">&#39;Python&#39;</span> <span class="ow">in</span> <span class="n">browser</span><span class="o">.</span><span class="n">title</span>
+
+<span class="n">browser</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>$ python functional_test.py
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;/home/harvey/venvs/dbproject/lib/python3.5/site-packages/selenium/webdriver …</span></pre></div>
+				</p>
+				<a class="read-more" href="python/selenium3-FireFox50-geckodriver-error-solve">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../python/8percent-investlist-bot#8percent-investlist-bot">
+					<a href="../python/8percent-investlist-bot#8percent-investlist-bot">[Python] 8퍼센트 투자목록 출력 슬랙 봇</a>
+				</h1>
+				<span class="post-date">2016-07-09, Sat</span>
+				<p>
+					<p>생각은 대충하고 있었는데 실제로 만든 건 이틀정도 걸린 것 같다. p2p 대부업체인 8percent에 올라오는 투자목록을 긁어와서 알려준다.</p>
+<p>로직은 단순하다. 사용자가 list라고 bot에게 dm을 보내면 beautifulsoup로 투자 목록 페이지의 내용을 정리해서 보여준다.</p>
+<p>아직은 단순하지만 몇가지 더 만들어 볼 수 있지 않을까 싶다. 간단한 정렬이라던지, 원하는 내용만 설정해서 보여주는 식으로 말이다.</p>
+<p>코드와 …</p>
+				</p>
+				<a class="read-more" href="python/8percent-investlist-bot">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../python/python-nosetest#python-nosetest">
+					<a href="../python/python-nosetest#python-nosetest">[Python] nosttest 사용하기</a>
+				</h1>
+				<span class="post-date">2016-06-26, Sun</span>
+				<p>
+					
+				</p>
+				<a class="read-more" href="python/python-nosetest">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../python/pyqt5-install#pyqt5-install">
+					<a href="../python/pyqt5-install#pyqt5-install">[Python] PyQt5 설치</a>
+				</h1>
+				<span class="post-date">2016-02-08, Mon</span>
+				<p>
+					<p>GUI를 해볼까 하면서 Python GUI를 찾아봤다. 리눅스 환경에도 적절하고, 크로스플랫폼 지원도 한다고 하니, 이게 좋겠다 싶어 받기로 했다. 일단 PyQt는 Qt라는 GUI 개발용 프레임워크를 파이썬으로 사용할 수 있게 해주는 거라고 보면 될 것 같다.</p>
+<p><a href="https://ko.wikipedia.org/wiki/Qt_%28%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%29">Qt (프레임 워크) - 위키백과</a></p>
+<p>PyQt는 널리 사용하는 v4와 최신인 v5가 있다. 나는 최신 버전이 좋다. PyQt5를 …</p>
+				</p>
+				<a class="read-more" href="python/pyqt5-install">Continue reading »</a>
+			</div>
+	</div>
+	<div class="pagination">
+
+		<span class="pagination-item older">Newer</span>
+
+		<span class="pagination-item newer">Older</span>
+	</div>
+		</div>
+	</body>
+</html>

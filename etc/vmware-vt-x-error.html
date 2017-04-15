@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Junshoong의 기술블로그</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="../theme/css/poole.css" />
+		<link rel="stylesheet" href="../theme/css/hyde.css" />
+		<link rel="stylesheet" href="../theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../theme/css/style.css" />
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0d">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="../images/profile.png">
+                    <p class="sitename"> Junshoong의 기술블로그 </p>
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead"> </p>
+			<p></p>
+		</div>
+		<ul class="sidebar-nav">
+                <li>
+					<a class="sidebar-nav-item" href="mailto:junshoong@gmail.com">
+						<i class="fa fa-envelope"></i>
+                        email
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.facebook.com/vaporize93">
+						<i class="fa fa-facebook"></i>
+                        facebook
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/junshoong">
+						<i class="fa fa-linkedin"></i>
+                        linkedin
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/Vaporize93">
+						<i class="fa fa-slideshare"></i>
+                        slideshare
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://github.com/junshoong">
+						<i class="fa fa-github"></i>
+                        github
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.stackoverflow.com/users/4466697/junsu-kim">
+						<i class="fa fa-stack-overflow"></i>
+                        stack-overflow
+					</a>
+                </li>
+            <li>
+			<a class="sidebar-nav-item" href="">
+				<i class="fa fa-feed"></i>
+                FEED
+			</a>
+            </li>
+		</nav>
+	</div>
+</div>		<div class="content container">
+<div class="post">
+	<h1 class="post-title">[ETC] 64비트 환경의 Guest OS를 구동시 생기는 문제해결(VT)</h1>
+	<span class="post-date">2015-08-18, Tue</span>
+	<p><img alt="vmware error 화면" src="/images/2015-08-18/01.jpg"></p>
+<p>vmware를 통해서 Security Onion을 설치하려는 데 위와 같은 경고 창이 나타났다.</p>
+<blockquote>
+<p>This virtual machine is configured for 64-bit guest operating systems.<br>
+However, 64-bit operation is not possible.<br>
+This host supports Intel VT-x, but Intel VT-x is disabled.<br>
+...  </p>
+</blockquote>
+<p>그러니까.. 가상머신으로 64비트 게스트OS 돌리려면 호스트가 지원하는 Intel VT-x를 enable 하라는 소리인 것 같은데..</p>
+<p>VT, 뭔가 익숙하다. BIOS에서 본 것 같다. HP 노트북 기준으로 부팅 시 <code>F10</code>을 눌러 BIOS에 접속한다.</p>
+<p><img alt="bios 화면" src="/images/2015-08-18/02.jpg"></p>
+<p>BIOS의 System Configuration에 보니까 Virtualization Technology가 있다. Disabled 되어 있는 부분을 Enable로 수정해준다.</p>
+<p>다시 재부팅해서 vmware를 돌려보자.</p>
+<p><img alt="security Onion 화면" src="/images/2015-08-18/03.png"></p>
+<p>좋아. 정상적으로 잘 부팅되는 걸 확인할 수 있다.</p>
+<p>일부는 여기에서 도움을 얻었다.</p>
+<p><a href="http://vmware.com/info?id=152">http://vmware.com/info?id=152</a></p>
+</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Junshoong의 기술블로그</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="../theme/css/poole.css" />
+		<link rel="stylesheet" href="../theme/css/hyde.css" />
+		<link rel="stylesheet" href="../theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../theme/css/style.css" />
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0d">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="../images/profile.png">
+                    <p class="sitename"> Junshoong의 기술블로그 </p>
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead"> </p>
+			<p></p>
+		</div>
+		<ul class="sidebar-nav">
+                <li>
+					<a class="sidebar-nav-item" href="mailto:junshoong@gmail.com">
+						<i class="fa fa-envelope"></i>
+                        email
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.facebook.com/vaporize93">
+						<i class="fa fa-facebook"></i>
+                        facebook
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/junshoong">
+						<i class="fa fa-linkedin"></i>
+                        linkedin
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/Vaporize93">
+						<i class="fa fa-slideshare"></i>
+                        slideshare
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://github.com/junshoong">
+						<i class="fa fa-github"></i>
+                        github
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.stackoverflow.com/users/4466697/junsu-kim">
+						<i class="fa fa-stack-overflow"></i>
+                        stack-overflow
+					</a>
+                </li>
+            <li>
+			<a class="sidebar-nav-item" href="">
+				<i class="fa fa-feed"></i>
+                FEED
+			</a>
+            </li>
+		</nav>
+	</div>
+</div>		<div class="content container">
+<div class="post">
+	<h1 class="post-title">[Editor] (미해결) jedi-vim을 통한 python3 자동완성</h1>
+	<span class="post-date">2016-03-07, Mon</span>
+	<p>python3를 vim을 사용해서 코딩을 하는데, 자동완성 기능이 있으면 좋을 것 같아 찾아봤더니 <a href="https://github.com/davidhalter/jedi-vim">jedi-vim</a>을 많이 사용한다.</p>
+<p>Pathogen 과 Vundle 사이에서 문제가 조금 생겼지만, 결국 Vundle을 통해서 jedi-vim을 적용하는데 성공했다. 그런데 조금 알아보니 환경변수에 적용된 기본 python을 기준으로 자동완성을 제공한다. 하지만 시스템에 기본 적용된 python의 버전이 2.7이기 때문에 python3로 자동완성하기 위해선 설정을 조금 바꿔줘야 한다.</p>
+<p>그 부분은 <a href="https://github.com/davidhalter/jedi-vim/blob/master/doc/jedi-vim.txt#L479">설명서</a>에 내용이 나와 있었다.</p>
+<p><code>~/.vimrc</code> 파일에 아래 내용을 추가해주면 된다.</p>
+<div class="highlight"><pre><span></span>let g:jedi#force_py_version = 3
+</pre></div>
+
+
+<p>하지만 이 부분에서 또 새로운 문제가 발생했다. 16년 3월 7일 현재 열려있는 <a href="https://github.com/davidhalter/jedi-vim/issues/488">이슈</a>로, 해당 사항과 동일한 문제가 발생한다. 에러 메세지를 따라가</p>
+<p><code>.vim/bundle/jedi-vim/initialize.py</code></p>
+<p>이부분에서 문제가 생기는 것 같아 조금 조사해보니.. vim에서 python3랑 호환이 되지 않는 부분이 좀 있는 것 같다.</p>
+<p>특히 python2 와 3를 병행해서 사용하는 경우에 vim에서는 그 중 한가지만 사용할 수 있도록 지원하는 것 같다.</p>
+<h3>참고링크</h3>
+<ul>
+<li><a href="http://askubuntu.com/questions/585237/atwhats-the-easiest-way-to-get-vim-with-python-3-support">What's the easiest way to get Vim with Python 3 support?</a></li>
+<li><a href="http://stackoverflow.com/questions/15801243/how-to-enable-python3-in-vim">How to enable python3 in vim?</a></li>
+<li><a href="https://github.com/davidhalter/jedi-vim/issues/526">jedi-vim issue #526</a></li>
+<li><a href="http://stackoverflow.com/questions/13477264/import-vim-in-python-gives-back-errors">Import vim in python gives back errors</a></li>
+</ul>
+<p>vim 쪽에서도 이 문제로 대화가 진행되고 있다.
+<a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=729924">Debian Bug report logs - #729924</a></p>
+<p>위에서 참고해 보니 <code>pi-rho/dev PPA</code> 를 추가해서 vim을 업데이트 하면 두가지를 같이 사용할 수 있다고 하는 듯 하다. 그런데 그게 안되더라.. 그래서 위에 있는 askubuntu의 내용을 따라하기로 했다. 그런데 deb package를 build하는 도중에 test87 Failed라며 빌드가 안 되는 것이다. 너무 돌아온 것 같아서 처음으로 돌아가보기로했다. 일단 python명령의 환경변수를 수정해서 python3에 연결시켜보기로했다.</p>
+<div class="highlight"><pre><span></span>$ <span class="nb">alias</span> <span class="nv">python</span><span class="o">=</span>python3
+</pre></div>
+
+
+<p>이것은 단순히 커맨드에서 "python" 이라고 입력하는걸 :python3"로 입력되도록 하는거라 python기본경로인 <code>/usr/bin/python</code>의 심볼릭링크 경로를 python3.4로 붙여줬다.</p>
+<div class="highlight"><pre><span></span>sudo ln -sf /usr/bin/python3.4 /usr/bin/python
+</pre></div>
+
+
+<p>그랬지만.. vim 에선 여전히 2.7.6 버전으로 돌아가고 있었다.</p>
+<p>일단 이 문제는 해결되지 않은 채로 남겨둔다..</p>
+<p>시간나면 Pathogen으로 다시 받아봐야겠다.</p>
+<p>일단은 이슈 #488 을 Subscribe하고 기다려야겠다.</p>
+</div>
+		</div>
+	</body>
+</html>

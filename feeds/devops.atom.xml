@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - DevOps</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/devops.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2017-01-04T00:00:00+09:00</updated><entry><title>[DevOps] ArchLinux에서 Django + PostgreSQL 설정하기</title><link href="http://blog.junshoong.net/devops/django-with-postgresql" rel="alternate"></link><published>2017-01-04T00:00:00+09:00</published><updated>2017-01-04T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-01-04:/devops/django-with-postgresql</id><summary type="html">&lt;h1&gt;Django + PostgreSQL&lt;/h1&gt;
+&lt;p&gt;django 프로젝트에서 사용하는 DBMS로 &lt;a href="https://www.postgresql.org/"&gt;PostgreSQL&lt;/a&gt;을 사용하도록 한다. 이 가이드에서는 Arch Linux 기준으로 작성되었다. 일부분은 같은 부분이 있겠지만, 설치나 설정에서 다른 경우는 최 하단에 있는 링크나 구글링을 통해서 찾아보길 바란다.&lt;/p&gt;
+&lt;h2&gt;설치&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo aura -Sa postgresql
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;aura&lt;/code&gt;나 &lt;code&gt;pacman&lt;/code&gt;으로 &lt;code&gt;postgresql&lt;/code&gt; 패키지를 설치한다. &lt;/p&gt;
+&lt;h2&gt;설정&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo -i -u postgres
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;user를 …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Django + PostgreSQL&lt;/h1&gt;
+&lt;p&gt;django 프로젝트에서 사용하는 DBMS로 &lt;a href="https://www.postgresql.org/"&gt;PostgreSQL&lt;/a&gt;을 사용하도록 한다. 이 가이드에서는 Arch Linux 기준으로 작성되었다. 일부분은 같은 부분이 있겠지만, 설치나 설정에서 다른 경우는 최 하단에 있는 링크나 구글링을 통해서 찾아보길 바란다.&lt;/p&gt;
+&lt;h2&gt;설치&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo aura -Sa postgresql
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;aura&lt;/code&gt;나 &lt;code&gt;pacman&lt;/code&gt;으로 &lt;code&gt;postgresql&lt;/code&gt; 패키지를 설치한다. &lt;/p&gt;
+&lt;h2&gt;설정&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo -i -u postgres
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;user를 &lt;code&gt;postgres&lt;/code&gt;로 바꾼다. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;만약 sudo를 사용하지 않는 환경이라면 &lt;code&gt;$ su&lt;/code&gt; &lt;code&gt;# su - postgres&lt;/code&gt; 를 통해 user을 바꾼다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;postgres&lt;span class="o"&gt;]&lt;/span&gt;$ initdb --locale &lt;span class="nv"&gt;$LANG&lt;/span&gt; -E UTF8 -D &lt;span class="s1"&gt;&amp;#39;/var/lib/postgres/data&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;앞에 username이 &lt;code&gt;postgres&lt;/code&gt;로 바뀐걸 확인할 수 있다.  위 명령어는 DBMS를 초기화 시킨다. 옵션은 아래와 같은 의미를 지닌다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/etc/locale.conf&lt;/code&gt;에 명시되어 있는 설정으로 적용&lt;/li&gt;
+&lt;li&gt;encoding으로 &lt;code&gt;UTF8&lt;/code&gt;을 사용&lt;/li&gt;
+&lt;li&gt;data 저장위치로 &lt;code&gt;/var/lib/postgres/data&lt;/code&gt; 위치를 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo systemctl start postgresql.service
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;service를 실행한다. 만약 부팅시에 자동으로 실행하기 위에서는 &lt;code&gt;systemctl enable postgresql.service&lt;/code&gt;를 실행한다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;postgres&lt;span class="o"&gt;]&lt;/span&gt;$ createuser --interactive
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;사용자를 새로 만든다. &lt;code&gt;--interactive&lt;/code&gt;옵션을 줘서 사용자명과 &lt;code&gt;superuser role&lt;/code&gt; 사용 여부를 확인한다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;postgres&lt;span class="o"&gt;]&lt;/span&gt;$ createdb -U &amp;lt;db-username&amp;gt; &amp;lt;dbname&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;데이터베이스를 만든다. &lt;code&gt;&amp;lt;db-username&amp;gt;&lt;/code&gt;에는 위에서 &lt;code&gt;createuser&lt;/code&gt; 명령을 통해 입력받은 이름을 넣는다. &lt;code&gt;&amp;lt;dbname&amp;gt;&lt;/code&gt;에는 원하는 데이터베이스 이름을 입력한다. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ psql -d &amp;lt;dbname&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;일반 사용자로 데이터베이스에 접근한다.&lt;/p&gt;
+&lt;h2&gt;Django 설정&lt;/h2&gt;
+&lt;p&gt;프로젝트를 새로 작성하는 경우 프로젝트의 &lt;code&gt;settings.py&lt;/code&gt;파일의 DB부분을 아래와 같이 수정해준다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;myproject/settings.py&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;DATABASES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;default&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;ENGINE&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;django.db.backends.postgresql_psycopg2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;NAME&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;lt;dbname&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;USER&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;postgres&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;PASSWORD&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;HOST&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;PORT&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;USER&lt;/code&gt;에 개인적으로 만든 사용자인 &lt;code&gt;&amp;lt;db-username&amp;gt;&lt;/code&gt;를 넣어도 되지만 여기서는 기본 계정인 &lt;code&gt;postgres&lt;/code&gt;를 넣어두었다. 암호를 따로 지정해주었다면 해당 암호를 넣어준다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pip install psycopg2
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;postgresql_psycopg2&lt;/code&gt;를 사용하기 위해서 &lt;code&gt;psycopg2&lt;/code&gt;패키지를 받아야한다. 프로젝트의 &lt;code&gt;requirements.txt&lt;/code&gt;에 해당 패키지를 추가해 두었다면 &lt;code&gt;$ pip install -r requirements.txt&lt;/code&gt; 를 통해서 다른 패키지들과 함께 설치할 수 있다. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python manage.py migrate
+$ python manage.py runserver
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;모든 설정을 마쳤으면 &lt;code&gt;migrate&lt;/code&gt;하고 테스트 서버를 구동해본다.&lt;/p&gt;
+&lt;h2&gt;참고&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-16-04"&gt;우분투 16.04에서 django에 postgresql 설정하기 (영문)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://djangogirls.gitbooks.io/django-girls-tutorial-extensions/content/optional_postgresql_installation/"&gt;PostgreSQL 설치 - Django Girls (영문)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://jinpark-dg.gitbooks.io/django-girls-extended-tutorial-korean/content/optional_postgresql_installation/index.html"&gt;PostgreSQL 설치 - Django Girls (한글)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://wiki.archlinux.org/index.php/PostgreSQL"&gt;PostgreSQL - ArchWiki (영문)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="devops"></category><category term="linus"></category><category term="django"></category><category term="postgresql"></category></entry><entry><title>[DevOps] travis에서 test시 생기는 데이터베이스 문제</title><link href="http://blog.junshoong.net/devops/django-travis-env" rel="alternate"></link><published>2016-07-01T00:00:00+09:00</published><updated>2016-07-01T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-07-01:/devops/django-travis-env</id><summary type="html">&lt;p&gt;로컬에서는 별 말 없이 통과하던 테스트가 travis 위에서는 아래와 같은 오류를 뱉으며 실패한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;django.core.exceptions.ImproperlyConfigured: Requested setting DATABASES, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;읽어보면 &lt;code&gt;DJANGO_SETTINGS_MODULE&lt;/code&gt; 환경변수나 &lt;code&gt;settings.configure()&lt;/code&gt;를 호출하라는 것 같은데 어떻게 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;로컬에서는 별 말 없이 통과하던 테스트가 travis 위에서는 아래와 같은 오류를 뱉으며 실패한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;django.core.exceptions.ImproperlyConfigured: Requested setting DATABASES, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;읽어보면 &lt;code&gt;DJANGO_SETTINGS_MODULE&lt;/code&gt; 환경변수나 &lt;code&gt;settings.configure()&lt;/code&gt;를 호출하라는 것 같은데 어떻게 해야할지 막막하다.&lt;/p&gt;
+&lt;p&gt;여기저기 찾아보다가 해결했다. github에서 아래 &lt;code&gt;env:&lt;/code&gt; 영역과 같이 수정해주면 된다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;language&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;python&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;python&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;3.4&amp;quot;&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;3.5&amp;quot;&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;env&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;DJANGO_SETTINGS_MODULE=[my_project_name].settings&lt;/span&gt;
+
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;install&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;pip&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;install&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;-r&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;requirements.txt&amp;quot;&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;script&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;python manage.py test&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;[my_project_name]&lt;/code&gt; 부분을 &lt;code&gt;settings.py&lt;/code&gt; 파일이 있는 폴더와 일치시키면 된다. 보통은 프로젝트 명으로 되어 있다.&lt;/p&gt;
+&lt;p&gt;수정하고 travis-ci를 확인해보니 초록색이 되었다.&lt;/p&gt;</content><category term="django"></category><category term="travis"></category><category term="python"></category><category term="devops"></category></entry></feed>

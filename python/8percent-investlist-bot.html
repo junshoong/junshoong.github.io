@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Junshoong의 기술블로그</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="../theme/css/poole.css" />
+		<link rel="stylesheet" href="../theme/css/hyde.css" />
+		<link rel="stylesheet" href="../theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../theme/css/style.css" />
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0d">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="../images/profile.png">
+                    <p class="sitename"> Junshoong의 기술블로그 </p>
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead"> </p>
+			<p></p>
+		</div>
+		<ul class="sidebar-nav">
+                <li>
+					<a class="sidebar-nav-item" href="mailto:junshoong@gmail.com">
+						<i class="fa fa-envelope"></i>
+                        email
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.facebook.com/vaporize93">
+						<i class="fa fa-facebook"></i>
+                        facebook
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/junshoong">
+						<i class="fa fa-linkedin"></i>
+                        linkedin
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/Vaporize93">
+						<i class="fa fa-slideshare"></i>
+                        slideshare
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://github.com/junshoong">
+						<i class="fa fa-github"></i>
+                        github
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.stackoverflow.com/users/4466697/junsu-kim">
+						<i class="fa fa-stack-overflow"></i>
+                        stack-overflow
+					</a>
+                </li>
+            <li>
+			<a class="sidebar-nav-item" href="">
+				<i class="fa fa-feed"></i>
+                FEED
+			</a>
+            </li>
+		</nav>
+	</div>
+</div>		<div class="content container">
+<div class="post">
+	<h1 class="post-title">[Python] 8퍼센트 투자목록 출력 슬랙 봇</h1>
+	<span class="post-date">2016-07-09, Sat</span>
+	<p>생각은 대충하고 있었는데 실제로 만든 건 이틀정도 걸린 것 같다. p2p 대부업체인 8percent에 올라오는 투자목록을 긁어와서 알려준다.</p>
+<p>로직은 단순하다. 사용자가 list라고 bot에게 dm을 보내면 beautifulsoup로 투자 목록 페이지의 내용을 정리해서 보여준다.</p>
+<p>아직은 단순하지만 몇가지 더 만들어 볼 수 있지 않을까 싶다. 간단한 정렬이라던지, 원하는 내용만 설정해서 보여주는 식으로 말이다.</p>
+<p>코드와 설치 방법은 <a href="https://github.com/vaporize93/8percent-slack-bot">github</a>에 오픈소스로 올려두었다. 크롤링부분은 생략하고 슬랙 봇 부분을 간단히 살펴보자.</p>
+<div class="highlight"><pre><span></span><span class="n">token</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;SLACK_TOKEN&#39;</span><span class="p">)</span>    <span class="o">//</span> <span class="err">봇의</span> <span class="err">토큰을</span> <span class="err">환경변수에서</span> <span class="err">받아온다</span><span class="o">.</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">SlackClient</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>    <span class="o">//</span> <span class="err">토큰을</span> <span class="err">사용해서</span> <span class="err">슬랙클라이언트</span> <span class="err">객체를</span> <span class="err">만든다</span><span class="o">.</span>
+
+<span class="k">if</span> <span class="n">client</span><span class="o">.</span><span class="n">rtm_connect</span><span class="p">():</span>        <span class="o">//</span> <span class="err">연결을</span> <span class="err">확인한다</span><span class="o">.</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>                    <span class="o">//</span> <span class="err">무한루프를</span> <span class="err">돌면서</span> <span class="err">확인한다</span><span class="o">.</span>
+        <span class="n">last_read</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">rtm_read</span><span class="p">()</span>    <span class="o">//</span> <span class="err">마지막</span> <span class="err">언급된</span> <span class="err">메세지를</span> <span class="err">읽는다</span><span class="o">.</span>
+        <span class="k">if</span> <span class="n">last_read</span><span class="p">:</span>                          <span class="o">//</span> <span class="err">언급된</span> <span class="err">메세지가</span> <span class="err">있으면</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">parsed</span> <span class="o">=</span> <span class="n">last_read</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;text&#39;</span><span class="p">]</span>        <span class="o">//</span> <span class="n">text를</span> <span class="err">긁어오고</span>
+                <span class="n">message_channel</span> <span class="o">=</span> <span class="n">last_read</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>        <span class="o">//</span> <span class="err">채널정보를</span> <span class="err">가져와서</span>
+                <span class="k">if</span> <span class="n">parsed</span> <span class="ow">and</span> <span class="s1">&#39;list&#39;</span> <span class="ow">in</span> <span class="n">parsed</span><span class="p">:</span>            <span class="o">//</span> <span class="n">text안에</span> <span class="n">list가</span> <span class="err">있으면</span>
+                    <span class="n">deals</span> <span class="o">=</span> <span class="n">investments</span><span class="p">()</span>        <span class="o">//</span> <span class="err">투자</span> <span class="err">정보를</span> <span class="err">가져온다</span><span class="o">.</span>
+                    <span class="n">investment_list</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+                    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">deals</span><span class="p">:</span>                    <span class="o">//</span> <span class="err">여기서</span> <span class="err">이쁘게</span> <span class="err">프린트할</span> <span class="err">문장을</span> <span class="err">만들어준다</span><span class="o">.</span>
+                        <span class="n">d</span> <span class="o">=</span> <span class="s2">&quot;{title:&gt;10} {grade:&lt;4} {interest:&gt;8} {duration:&gt;8} {amount:&gt;10} {progress:&gt;5} {status:&gt;5} </span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">d</span><span class="p">)</span>
+                        <span class="n">investment_list</span> <span class="o">+=</span> <span class="n">d</span>
+                    <span class="n">client</span><span class="o">.</span><span class="n">rtm_send_message</span><span class="p">(</span><span class="n">message_channel</span><span class="p">,</span> <span class="n">investment_list</span><span class="p">)</span>        <span class="o">//</span> <span class="err">해당</span> <span class="err">채널에</span> <span class="err">메세지를</span> <span class="err">뿌려준다</span><span class="o">.</span>
+
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">pass</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+		</div>
+	</body>
+</html>
