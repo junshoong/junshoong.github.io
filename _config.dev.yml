@@ -1,3 +1,0 @@
-# this config file is test file for local test
-# bundle exec jekyll serve --config _config.yml,_config.dev.yml
-url: "http://localhost:4000"
