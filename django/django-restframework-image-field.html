@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Junshoong의 기술블로그</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="../theme/css/poole.css" />
+		<link rel="stylesheet" href="../theme/css/hyde.css" />
+		<link rel="stylesheet" href="../theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../theme/css/style.css" />
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0d">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="../images/profile.png">
+                    <p class="sitename"> Junshoong의 기술블로그 </p>
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead"> </p>
+			<p></p>
+		</div>
+		<ul class="sidebar-nav">
+                <li>
+					<a class="sidebar-nav-item" href="mailto:junshoong@gmail.com">
+						<i class="fa fa-envelope"></i>
+                        email
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.facebook.com/vaporize93">
+						<i class="fa fa-facebook"></i>
+                        facebook
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/junshoong">
+						<i class="fa fa-linkedin"></i>
+                        linkedin
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/junshoong">
+						<i class="fa fa-slideshare"></i>
+                        slideshare
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://github.com/junshoong">
+						<i class="fa fa-github"></i>
+                        github
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.stackoverflow.com/users/4466697/junsu-kim">
+						<i class="fa fa-stack-overflow"></i>
+                        stack-overflow
+					</a>
+                </li>
+            <li>
+			<a class="sidebar-nav-item" href="">
+				<i class="fa fa-feed"></i>
+                FEED
+			</a>
+            </li>
+		</nav>
+	</div>
+</div>		<div class="content container">
+<div class="post">
+	<h1 class="post-title">[Django] restframework에서 image 제공하기</h1>
+	<span class="post-date">2017-04-16, Sun</span>
+	<p>drf에서 이미지를 제공하기 위해서는 이미지 Renderer가 별도로 필요하다. 이는 JSONRenderer 등과는 다르게 직접 만들어줘야 한다. </p>
+<p><strong>/myapp/views.py</strong></p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">viewsets</span>
+<span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">renderers</span>
+<span class="kn">from</span> <span class="nn">rest_framework.decorators</span> <span class="kn">import</span> <span class="n">detail_route</span>
+<span class="kn">from</span> <span class="nn">rest_framework.response</span> <span class="kn">import</span> <span class="n">Response</span>
+
+<span class="k">class</span> <span class="nc">JPEGRenderer</span><span class="p">(</span><span class="n">renderers</span><span class="o">.</span><span class="n">BaseRenderer</span><span class="p">):</span>
+    <span class="n">media_type</span> <span class="o">=</span> <span class="s1">&#39;image/jpeg&#39;</span>
+    <span class="n">format</span> <span class="o">=</span> <span class="s1">&#39;jpg&#39;</span>
+    <span class="n">charset</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">render_style</span> <span class="o">=</span> <span class="s1">&#39;binary&#39;</span>
+
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">media_type</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">renderer_context</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">data</span>
+
+<span class="k">class</span> <span class="nc">TestViewSet</span><span class="p">(</span><span class="n">viewsets</span><span class="o">.</span><span class="n">ModelViewSet</span><span class="p">):</span>
+
+    <span class="o">...</span>
+
+    <span class="nd">@detail_route</span><span class="p">(</span><span class="n">renderer_classes</span><span class="o">=</span><span class="p">[</span><span class="n">JPEGRenderer</span><span class="p">])</span>
+    <span class="k">def</span> <span class="nf">image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">obj_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_object</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">obj_name</span><span class="o">.</span><span class="n">image</span><span class="p">)</span>
+</pre></div>
+
+
+<p>이렇게 제공하면 url끝에 ~/image/ 경로로 이미지에 접근할 수 있다.
+그런데 url의 정보는 그대로인것 같은데 이건 serialize에서 수정해주면 될 것같다.</p>
+<p><em>/myapp/serializers.py</em></p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TestSerializer</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">HyperlinkedModelSerializer</span><span class="p">):</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">HyperlinkedIdentityField</span><span class="p">(</span><span class="n">view_name</span><span class="o">=</span><span class="s1">&#39;test-image&#39;</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s1">&#39;html&#39;</span><span class="p">)</span>
+    <span class="o">...</span>
+</pre></div>
+
+
+<p>이런 식으로 제공할 수 있다.</p>
+</div>
+		</div>
+	</body>
+</html>

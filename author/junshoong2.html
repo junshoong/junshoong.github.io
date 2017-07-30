@@ -59,7 +59,7 @@
 					</a>
                 </li>
                 <li>
-					<a class="sidebar-nav-item" href="https://www.slideshare.net/Vaporize93">
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/junshoong">
 						<i class="fa fa-slideshare"></i>
                         slideshare
 					</a>
@@ -87,120 +87,105 @@
 </div>		<div class="content container">
 	<div class="posts">
 			<div class="post">
-				<h1 class="post-title" href="../django/install-mariadb-for-django#install-mariadb-for-django">
-					<a href="../django/install-mariadb-for-django#install-mariadb-for-django">[Django] MariaDB를 사용해서 Django개발 환경 만들기</a>
+				<h1 class="post-title" href="../angular/angular-http-provider#angular-http-provider">
+					<a href="../angular/angular-http-provider#angular-http-provider">[Angular] no provider for Http 에러</a>
 				</h1>
-				<span class="post-date">2016-11-03, Thu</span>
+				<span class="post-date">2017-04-17, Mon</span>
 				<p>
-					<h1>개요</h1>
-<p>django는 기본적으로 sqlite3를 지원한다.<br>
-project/settings.py 를 확인해보면 아래와 같은 부분을 확인할 수 있다.</p>
-<div class="highlight"><pre><span></span><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.db.backends.sqlite3&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">&#39;db.sqlite3&#39;</span><span class="p">),</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+					<p>Uncaught (in promise): No provider for Http! 에러</p>
+				</p>
+				<a class="read-more" href="angular/angular-http-provider">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../django/django-restframework-image-field#django-restframework-image-field">
+					<a href="../django/django-restframework-image-field#django-restframework-image-field">[Django] restframework에서 image 제공하기</a>
+				</h1>
+				<span class="post-date">2017-04-16, Sun</span>
+				<p>
+					<p>DRF에서 image field를 serving 해보자.</p>
+				</p>
+				<a class="read-more" href="django/django-restframework-image-field">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../css/rem-vs-em#rem-vs-em">
+					<a href="../css/rem-vs-em#rem-vs-em">[CSS] rem과 em</a>
+				</h1>
+				<span class="post-date">2017-04-13, Thu</span>
+				<p>
+					<p>rem은 root에, em은 해당 요소의 font-size에 비례한다. 그리고 rem이 권장되는 편이다.</p>
+				</p>
+				<a class="read-more" href="css/rem-vs-em">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../git/use-submodule#use-submodule">
+					<a href="../git/use-submodule#use-submodule">[Git] Submodule 사용하기</a>
+				</h1>
+				<span class="post-date">2017-04-13, Thu</span>
+				<p>
+					<p>git에서 Submodule을 사용해봤다.</p>
+				</p>
+				<a class="read-more" href="git/use-submodule">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../python/lambda-sort#lambda-sort">
+					<a href="../python/lambda-sort#lambda-sort">[Python] lambda를 통한 sort</a>
+				</h1>
+				<span class="post-date">2017-04-12, Wed</span>
+				<p>
+					<p><code>lambda</code>는 익명 함수이다. python 외에도 여러 언어에서 지원하는 expression으로, 짧은 함수를 잠깐 사용할 때 쓸 수 있다.
+가장 기본적으로는 아래와 같이 쓴다.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="mi">9</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<span class="mi">225</span>
 </pre></div>
 
 
-<p><code>sqlite3</code> 대신 <code>mariadb</code>를 사용하는 방법을 알아보도록하자.</p>
-<h1>MariaDB 설치</h1>
-<p>먼저 <code>mariadb</code>를 받는다.</p>
-<div class="highlight"><pre><span></span>$ <span class="c1"># arch linux command (aura 대신 pacman을 사용할 …</span></pre></div>
+<p><code>lambda</code>뒤에 인자를 받고 return 값을 적어준다.
+아래와 같이 사용할 수도 있다.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">sys</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">read</span> <span class="o">=</span> <span class="k">lambda …</span></pre></div>
 				</p>
-				<a class="read-more" href="django/install-mariadb-for-django">Continue reading »</a>
+				<a class="read-more" href="python/lambda-sort">Continue reading »</a>
 			</div>
 			<div class="post">
-				<h1 class="post-title" href="../linux/install-tlp#install-tlp">
-					<a href="../linux/install-tlp#install-tlp">[Linux] ThinkPad 랩탑 배터리관리 패키지 (tlp) 설치</a>
+				<h1 class="post-title" href="../regex/chinese-string-without-special-character-starting#chinese-string-without-special-character-starting">
+					<a href="../regex/chinese-string-without-special-character-starting#chinese-string-without-special-character-starting">[Regex] 특정문자로 시작하지 않는 중국어가 포함된 문자열</a>
 				</h1>
-				<span class="post-date">2016-10-31, Mon</span>
+				<span class="post-date">2017-04-09, Sun</span>
 				<p>
-					<h1>tlp 설치</h1>
-<p>이전에도 사용했던 ThinkPad를 위한 배터리관리 패키지인 <code>tlp</code>를 설치했다. 그냥 설치해두고 잊어버려도 되는 편리한 패키지였는데 리눅스를 새로 설치하는 김에 다시 받았다. 실제로 체감은 잘 모르겠어서 당분간 써보고 통계자료를 뽑아볼 수 있으면 다시 추가하도록 하겠다. 배터리 사용 관련 그래프를 나타내주는 패키지로는 <code>gnome-power-manager</code> 가 있다.</p>
-<div class="highlight"><pre><span></span>$ sudo aura -S tlp
-$ sudo …</pre></div>
-				</p>
-				<a class="read-more" href="linux/install-tlp">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="../linux/install-arch-linux#install-arch-linux">
-					<a href="../linux/install-arch-linux#install-arch-linux">[Linux] Arch linux 설치</a>
-				</h1>
-				<span class="post-date">2016-10-30, Sun</span>
-				<p>
-					<p><img alt="my-arch-linux" src="/images/2016-10-30/1.png"></p>
-<h1>개요</h1>
-<p>27일 저녁부터 <a href="https://www.archlinux.org/">Arch linux</a> 설치를 진행했다. 이전에는 <a href="http://elementary.io/">Elementary OS</a>를 사용했었는데 어느 정도 리눅스에 익숙해지기도 했고 사용하던 HDD를 SSD로 바꾸려고 계속 계획을 해 왔기에 이참에 Arch 를 설치해봤다. 이 기회를 빌어 결심부터 설치까지 여러 도움을 준 <a href="https://youngbin.xyz/">@youngbin</a> 에게 감사한다.</p>
-<h1>Arch linux Download &amp; Write</h1>
-<p>먼저 <a href="https://archlinux.org/download/">Arch linux Downloads 페이지</a>에서 …</p>
-				</p>
-				<a class="read-more" href="linux/install-arch-linux">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="../etc/deview-2016#deview-2016">
-					<a href="../etc/deview-2016#deview-2016">[ETC] deview-2016</a>
-				</h1>
-				<span class="post-date">2016-10-24, Mon</span>
-				<p>
-					<p>그냥 메모용으로만 쭉 정리</p>
-<h1>챗봇 개발을 위한 네이버 랩스 API</h1>
-<p>딥러닝 -&gt; 챗봇
-실제 서비스에 어떻게 구현될까? 챗봇으로.
-AMICA에 대한 얘기를 키노트에서 언급했었는데</p>
-<p>conversation UX 에 대해서 더 깊게 얘기해볼 것</p>
-<p>embient intelligence 서비스</p>
-<p>사용자와 인터랙션하는게 Natual Language Interface.
-잘 안되는 거 아니냐?
-하지만 궁극적으로 가야할 길은 여기라고 봄
-여러 스마트 …</p>
-				</p>
-				<a class="read-more" href="etc/deview-2016">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="../agile/deliberate-practice#deliberate-practice">
-					<a href="../agile/deliberate-practice#deliberate-practice">[Agile] 의도적 수련하기</a>
-				</h1>
-				<span class="post-date">2016-10-02, Sun</span>
-				<p>
-					<h1>개요</h1>
-<p>한참 전에 김창준님의 <a href="http://agile.egloos.com/5749946">"당신이 제자리 걸음인 이유 : 지루하거나 불안하거나"</a>라는 글을 읽었는데 최근 Xpergroup에 올라온 <a href="https://groups.google.com/d/topic/xper/7lCVZ_kfLvM/discussion">어떤 분의 고민</a>을 보고 다시 읽게 되었다. 많은 수업들과 그 수업들의 과제, 그리고 동아리 관리와 여러 overhead들에 치여 시간은 흐르지만 내 실력이나 남는 건 없는 듯한 느낌을 계속 받아 왔다. 이런 와중에 다시 …</p>
-				</p>
-				<a class="read-more" href="agile/deliberate-practice">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="../life/astro-brother#astro-brother">
-					<a href="../life/astro-brother#astro-brother">[Life] 중요한건 할 수 있다는 경험을 얻는 것.</a>
-				</h1>
-				<span class="post-date">2016-09-16, Fri</span>
-				<p>
-					<blockquote>
-<p>중요한건 '할 수 있다'는 경험을 얻는 것.<br>
--이반 톨스토이</p>
-<p>사실은 처음부터 그런 '엄청나게 큰 문' 같은 건 없다. 작은 문이 많이 있을 뿐이야.<br>
--브라이언 J</p>
+					<p><a href="https://github.com/skhu-sss/ssslackbot/blob/master/plugins/filter.py">ssslackbot</a>을 개발 중에 regex가 필요하게 되었다. 전각 느낌표(<code>！</code>)로 시작하지 않는 중국어가 포함된 문자열을 확인해서 걸러내야하는 작업이다.</p>
+<blockquote>
+<p>중국어 자판에서는 전각느낌표를 사용한다. <code>！</code> != <code>!</code></p>
 </blockquote>
-<p>만화책 우주형제를 읽다가 좋은 구절을 얻었다. 좌절되는 경험이나 성과없이 의욕없는 기간이 길어지면 더 이상 변화하고 나아가기 힘들다. 그런 점에 있어서 '할 수 있다'는 경험을 얻는 …</p>
+<p>먼저 중국어 문자열의 범위를 살펴보자. 영어에서는 <code>[a-z]</code>나 <code>[A-Z]</code>등을 사용해서 간단히 거를 수 있다. 한글도 마찬가지로 <code>[ㄱ-힇]</code> 정도로 거른다. 하지만 중국어는 유니코드로 걸러내야한다. <code>[\u4e00-\u9fff]</code>로 표현 …</p>
 				</p>
-				<a class="read-more" href="life/astro-brother">Continue reading »</a>
+				<a class="read-more" href="regex/chinese-string-without-special-character-starting">Continue reading »</a>
 			</div>
 			<div class="post">
-				<h1 class="post-title" href="../linux/file-encoding-detect-and-convert#file-encoding-detect-and-convert">
-					<a href="../linux/file-encoding-detect-and-convert#file-encoding-detect-and-convert">[Linux] 파일 인코딩 검사 및 인코딩 변환하기</a>
+				<h1 class="post-title" href="../pelican/pelican-setup#pelican-setup">
+					<a href="../pelican/pelican-setup#pelican-setup">[Pelican] 설치</a>
 				</h1>
-				<span class="post-date">2016-09-15, Thu</span>
+				<span class="post-date">2017-04-09, Sun</span>
 				<p>
-					<p>윈도우의 메모장 등에서 작성한 파일은 리눅스에서 볼때 깨져서 보인다. 이런 경우 뿐만아니라 웹상에서 파일을 구한 경우에도 인코딩이 깨진 경우가 종종 있다. 이럴때 해당 파일의 인코딩을 검사하고 인코딩을 변환하는 방법을 알아보자.</p>
-<h2>인코딩 검사</h2>
-<p>인코딩 검사는 <code>chardet</code>라는 좋은 파이썬 패키지가 있다. <code>pip</code>을 통해 간단하게 설치할 수 있다.</p>
-<div class="highlight"><pre><span></span>$ chardet <span class="o">[</span>file<span class="o">]</span>
+					<p>pelican 3.7.1을 설치했다.</p>
+<div class="highlight"><pre><span></span>pip install pelican markdown
+pelican-quickstart
 </pre></div>
 
 
-<p>결과도 …</p>
+<p>로 설치를 진행한다.</p>
+<p><a href="https://github.com/getpelican/pelican-themes/tree/master/simple-bootstrap">simple-bootstrap</a> 테마를 적용했다.</p>
+<p>원하는 경로에 테마를 받은 후에 <code>pelicanconf.py</code> 파일에 아래와 같이 적어준다.</p>
+<div class="highlight"><pre><span></span><span class="n">THEME</span> <span class="o">=</span> <span class="s2">&quot;&lt;your_themes_path&gt;/simple-bootstrap&quot;</span>
+</pre></div>
+
+
+<p>make publish 로 배포를 준비할 경우, 이전에 유지되던 디렉터리가 사라져서 난감했다. 이런 경우에는 <code>publishconf.py</code> 파일에 아래와 같이 추가해주자.</p>
+<div class="highlight"><pre><span></span><span class="n">DELETE_OUTPUT_DIRECTORY …</span></pre></div>
 				</p>
-				<a class="read-more" href="linux/file-encoding-detect-and-convert">Continue reading »</a>
+				<a class="read-more" href="pelican/pelican-setup">Continue reading »</a>
 			</div>
 	</div>
 	<div class="pagination">

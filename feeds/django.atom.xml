@@ -1,5 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - Django</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/django.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2016-11-03T00:00:00+09:00</updated><entry><title>[Django] MariaDB를 사용해서 Django개발 환경 만들기</title><link href="http://blog.junshoong.net/django/install-mariadb-for-django" rel="alternate"></link><published>2016-11-03T00:00:00+09:00</published><updated>2016-11-03T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-11-03:/django/install-mariadb-for-django</id><summary type="html">&lt;h1&gt;개요&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - Django</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/django.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2017-04-21T00:00:00+09:00</updated><entry><title>[Django] User에게 권한 부여하기</title><link href="http://blog.junshoong.net/django/set-user-permission" rel="alternate"></link><published>2017-04-21T00:00:00+09:00</published><updated>2017-04-21T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-21:/django/set-user-permission</id><summary type="html">&lt;p&gt;코드 몇줄로 간단하게 권한을 부여할 수 있다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;user&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;testuser&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;perm&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Permission&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;codename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;model.add_model&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;user_permissions&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;perm&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;여기서 주의할 점은 적용되긴하지만 &lt;code&gt;has_perm&lt;/code&gt;등으로 확인하면 해당 권한이 없다고 나온다는 점이다. 이는 캐싱되어 있는 정보때문에 그렇다. 캐시를 지우거나 인스턴스를 새로 불러오면 올바르게 적용된걸 확인할 수 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;코드 몇줄로 간단하게 권한을 부여할 수 있다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;user&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;testuser&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;perm&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Permission&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;codename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;model.add_model&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;user_permissions&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;perm&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;여기서 주의할 점은 적용되긴하지만 &lt;code&gt;has_perm&lt;/code&gt;등으로 확인하면 해당 권한이 없다고 나온다는 점이다. 이는 캐싱되어 있는 정보때문에 그렇다. 캐시를 지우거나 인스턴스를 새로 불러오면 올바르게 적용된걸 확인할 수 있다.
+아래와 같이 해결할 수 있다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;del&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_perm_cache&lt;/span&gt;
+&lt;span class="k"&gt;del&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_user_perm_cache&lt;/span&gt;
+&lt;span class="c1"&gt;# OR&lt;/span&gt;
+&lt;span class="n"&gt;user&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;아래 링크를 참고할 수 있다.
+- &lt;a href="http://stackoverflow.com/questions/42220272/pytest-django-set-user-permissions"&gt;stackoverflow - Pytest-django: set user permissions&lt;/a&gt;&lt;/p&gt;</content><category term="django"></category></entry><entry><title>[Django] serializer의 구현</title><link href="http://blog.junshoong.net/django/serializer-or-view" rel="alternate"></link><published>2017-04-20T00:00:00+09:00</published><updated>2017-04-20T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-20:/django/serializer-or-view</id><summary type="html">&lt;p&gt;DRF에서 create를 구현하는 경우 &lt;code&gt;ViewSet&lt;/code&gt;의 &lt;code&gt;perform_create&lt;/code&gt;를 사용하면 Serializer의 create를 돌지 않는다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;DRF에서 create를 구현하는 경우 &lt;code&gt;ViewSet&lt;/code&gt;의 &lt;code&gt;perform_create&lt;/code&gt;를 사용하면 &lt;code&gt;Serializer&lt;/code&gt;의 &lt;code&gt;create&lt;/code&gt;를 돌지 않는다.&lt;/p&gt;
+&lt;p&gt;어떤 식으로 처리하는게 더 나은지는 모르겠지만.. &lt;code&gt;request&lt;/code&gt;를 처리할 필요가 있으면 view에서 구현해주고, 입력된 데이터인 &lt;code&gt;validated_data&lt;/code&gt;를 처리할 필요가 있으면 serializer에서 구현해주는게 좋은 것 같다. &lt;/p&gt;</content><category term="django"></category><category term="drf"></category></entry><entry><title>[Django] timezone 설정</title><link href="http://blog.junshoong.net/django/timezone-setting" rel="alternate"></link><published>2017-04-19T00:00:00+09:00</published><updated>2017-04-19T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-19:/django/timezone-setting</id><summary type="html">&lt;p&gt;Django에서 기본적인 DateTimeField를 현재 timezone으로 맞추고 싶다.&lt;/p&gt;
+&lt;p&gt;settings.py&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;TIME_ZONE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Asia/Seoul&amp;#39;&lt;/span&gt;
+&lt;span class="c1"&gt;# USE_TZ = True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;여기서 &lt;code&gt;TIME_ZONE&lt;/code&gt;만 수정해주니까 저장되는 값이 달랐다. &lt;code&gt;USE_TZ&lt;/code&gt;도 comment 해주니 정상적으로 입력되었다.
+참고로 Django에서는 &lt;a href="https://www.w3.org/TR/NOTE-datetime"&gt;&lt;code&gt;ISO 8601&lt;/code&gt;&lt;/a&gt; 을 따른다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Django에서 기본적인 DateTimeField를 현재 timezone으로 맞추고 싶다.&lt;/p&gt;
+&lt;p&gt;settings.py&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;TIME_ZONE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Asia/Seoul&amp;#39;&lt;/span&gt;
+&lt;span class="c1"&gt;# USE_TZ = True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;여기서 &lt;code&gt;TIME_ZONE&lt;/code&gt;만 수정해주니까 저장되는 값이 달랐다. &lt;code&gt;USE_TZ&lt;/code&gt;도 comment 해주니 정상적으로 입력되었다.
+참고로 Django에서는 &lt;a href="https://www.w3.org/TR/NOTE-datetime"&gt;&lt;code&gt;ISO 8601&lt;/code&gt;&lt;/a&gt; 을 따른다.&lt;/p&gt;</content><category term="django"></category><category term="timezone"></category></entry><entry><title>[Django] restframework에서 image 제공하기</title><link href="http://blog.junshoong.net/django/django-restframework-image-field" rel="alternate"></link><published>2017-04-16T00:00:00+09:00</published><updated>2017-04-17T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-16:/django/django-restframework-image-field</id><summary type="html">&lt;p&gt;DRF에서 image field를 serving 해보자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;drf에서 이미지를 제공하기 위해서는 이미지 Renderer가 별도로 필요하다. 이는 JSONRenderer 등과는 다르게 직접 만들어줘야 한다. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;/myapp/views.py&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;rest_framework&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;viewsets&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;rest_framework&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;renderers&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;rest_framework.decorators&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;detail_route&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;rest_framework.response&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Response&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;JPEGRenderer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;renderers&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;BaseRenderer&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;media_type&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;image/jpeg&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;format&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;jpg&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;charset&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;
+    &lt;span class="n"&gt;render_style&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;binary&amp;#39;&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;render&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;media_type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;renderer_context&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;TestViewSet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;viewsets&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ModelViewSet&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+
+    &lt;span class="o"&gt;...&lt;/span&gt;
+
+    &lt;span class="nd"&gt;@detail_route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;renderer_classes&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;JPEGRenderer&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;image&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;obj_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_object&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Response&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;obj_name&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;이렇게 제공하면 url끝에 ~/image/ 경로로 이미지에 접근할 수 있다.
+그런데 url의 정보는 그대로인것 같은데 이건 serialize에서 수정해주면 될 것같다.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;/myapp/serializers.py&lt;/em&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;TestSerializer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;serializer&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;HyperlinkedModelSerializer&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;image&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;serializers&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;HyperlinkedIdentityField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;view_name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;test-image&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;html&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;이런 식으로 제공할 수 있다.&lt;/p&gt;</content><category term="django"></category><category term="rest"></category></entry><entry><title>[Django] MariaDB를 사용해서 Django개발 환경 만들기</title><link href="http://blog.junshoong.net/django/install-mariadb-for-django" rel="alternate"></link><published>2016-11-03T00:00:00+09:00</published><updated>2016-11-03T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-11-03:/django/install-mariadb-for-django</id><summary type="html">&lt;h1&gt;개요&lt;/h1&gt;
 &lt;p&gt;django는 기본적으로 sqlite3를 지원한다.&lt;br&gt;
 project/settings.py 를 확인해보면 아래와 같은 부분을 확인할 수 있다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;DATABASES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Junshoong의 기술블로그</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="../theme/css/poole.css" />
+		<link rel="stylesheet" href="../theme/css/hyde.css" />
+		<link rel="stylesheet" href="../theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../theme/css/style.css" />
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0d">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="../images/profile.png">
+                    <p class="sitename"> Junshoong의 기술블로그 </p>
+				</a>
+			</h1>
+			<p class="lead"></p>
+			<p class="lead"> </p>
+			<p></p>
+		</div>
+		<ul class="sidebar-nav">
+                <li>
+					<a class="sidebar-nav-item" href="mailto:junshoong@gmail.com">
+						<i class="fa fa-envelope"></i>
+                        email
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.facebook.com/vaporize93">
+						<i class="fa fa-facebook"></i>
+                        facebook
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/junshoong">
+						<i class="fa fa-linkedin"></i>
+                        linkedin
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/junshoong">
+						<i class="fa fa-slideshare"></i>
+                        slideshare
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://github.com/junshoong">
+						<i class="fa fa-github"></i>
+                        github
+					</a>
+                </li>
+                <li>
+					<a class="sidebar-nav-item" href="https://www.stackoverflow.com/users/4466697/junsu-kim">
+						<i class="fa fa-stack-overflow"></i>
+                        stack-overflow
+					</a>
+                </li>
+            <li>
+			<a class="sidebar-nav-item" href="">
+				<i class="fa fa-feed"></i>
+                FEED
+			</a>
+            </li>
+		</nav>
+	</div>
+</div>		<div class="content container">
+<div class="post">
+	<h1 class="post-title">[Pelican] 설치</h1>
+	<span class="post-date">2017-04-09, Sun</span>
+	<p>pelican 3.7.1을 설치했다.</p>
+<div class="highlight"><pre><span></span>pip install pelican markdown
+pelican-quickstart
+</pre></div>
+
+
+<p>로 설치를 진행한다.</p>
+<p><a href="https://github.com/getpelican/pelican-themes/tree/master/simple-bootstrap">simple-bootstrap</a> 테마를 적용했다.</p>
+<p>원하는 경로에 테마를 받은 후에 <code>pelicanconf.py</code> 파일에 아래와 같이 적어준다.</p>
+<div class="highlight"><pre><span></span><span class="n">THEME</span> <span class="o">=</span> <span class="s2">&quot;&lt;your_themes_path&gt;/simple-bootstrap&quot;</span>
+</pre></div>
+
+
+<p>make publish 로 배포를 준비할 경우, 이전에 유지되던 디렉터리가 사라져서 난감했다. 이런 경우에는 <code>publishconf.py</code> 파일에 아래와 같이 추가해주자.</p>
+<div class="highlight"><pre><span></span><span class="n">DELETE_OUTPUT_DIRECTORY</span> <span class="o">=</span> <span class="bp">False</span>
+</pre></div>
+</div>
+		</div>
+	</body>
+</html>

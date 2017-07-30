@@ -59,7 +59,7 @@
 					</a>
                 </li>
                 <li>
-					<a class="sidebar-nav-item" href="https://www.slideshare.net/Vaporize93">
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/junshoong">
 						<i class="fa fa-slideshare"></i>
                         slideshare
 					</a>
@@ -87,117 +87,120 @@
 </div>		<div class="content container">
 	<div class="posts">
 			<div class="post">
-				<h1 class="post-title" href="../linux/firefox-minor-upgrade-with-apt#firefox-minor-upgrade-with-apt">
-					<a href="../linux/firefox-minor-upgrade-with-apt#firefox-minor-upgrade-with-apt">[Linux] apt 패키지 관리 도구로 파이어폭스 마이너 버전 업그레이드</a>
+				<h1 class="post-title" href="../django/install-mariadb-for-django#install-mariadb-for-django">
+					<a href="../django/install-mariadb-for-django#install-mariadb-for-django">[Django] MariaDB를 사용해서 Django개발 환경 만들기</a>
 				</h1>
-				<span class="post-date">2016-07-26, Tue</span>
+				<span class="post-date">2016-11-03, Thu</span>
 				<p>
-					<h1>배경</h1>
-<p>django를 테스트하는데 selenium에서 firefox를 열 때 에러가 발생한다. <a href="https://github.com/SeleniumHQ/selenium/issues/2110">(관련이슈)</a></p>
-<p>확인해보니 FF47.0에서 공통으로 발생하는 문제이고, 47.0.1에서 fix되었다.</p>
-<p>기존에 사용하던 파이어폭스는 기본 ppa저장소에서 제공되는걸 받았었는데, 공식 홈페이지에 가니 tar 확장자로만 제공하고 있다. apt-get 을 사용해서 관리하고 싶은데.. 하며 찾아봤더니 방법을 찾았다.</p>
-<h1>업그레이드</h1>
-<p><a href="https://support.mozilla.org/en-US/kb/install-firefox-linux">파이어폭스설치 관련페이지 지원페이지</a> 중간쯤에 보면 Installing …</p>
-				</p>
-				<a class="read-more" href="linux/firefox-minor-upgrade-with-apt">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="../life/driving-license-tip#driving-license-tip">
-					<a href="../life/driving-license-tip#driving-license-tip">[Life] 1종보통 도로주행관련 정보</a>
-				</h1>
-				<span class="post-date">2016-07-14, Thu</span>
-				<p>
-					<p>쉬운 운전면허 시험의 막바지라고 한다.
-작년엔 여러모로 시간이 안 되어서 필기만 치고 말았었는데 이번엔 다시 시험을 치게 되었다. 1종보통으로 학원에서 수강하는데 이게.. 기능은 쉬우니까 넘어가고, 주행 6시간 교육 후 시험이다보니까 촉박하다. 게다가 주행 6시간동안 강사가 많은 걸 알려주지는 않으니 개인적인 노력이 많이 필요하다.</p>
-<p>여기 조금 메모 겸 공유 겸 적어둔다 …</p>
-				</p>
-				<a class="read-more" href="life/driving-license-tip">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="../python/8percent-investlist-bot#8percent-investlist-bot">
-					<a href="../python/8percent-investlist-bot#8percent-investlist-bot">[Python] 8퍼센트 투자목록 출력 슬랙 봇</a>
-				</h1>
-				<span class="post-date">2016-07-09, Sat</span>
-				<p>
-					<p>생각은 대충하고 있었는데 실제로 만든 건 이틀정도 걸린 것 같다. p2p 대부업체인 8percent에 올라오는 투자목록을 긁어와서 알려준다.</p>
-<p>로직은 단순하다. 사용자가 list라고 bot에게 dm을 보내면 beautifulsoup로 투자 목록 페이지의 내용을 정리해서 보여준다.</p>
-<p>아직은 단순하지만 몇가지 더 만들어 볼 수 있지 않을까 싶다. 간단한 정렬이라던지, 원하는 내용만 설정해서 보여주는 식으로 말이다.</p>
-<p>코드와 …</p>
-				</p>
-				<a class="read-more" href="python/8percent-investlist-bot">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="../linux/firefox-flash-plug-in-update#firefox-flash-plug-in-update">
-					<a href="../linux/firefox-flash-plug-in-update#firefox-flash-plug-in-update">[Linux] FireFox에서 flash plugin 업데이트</a>
-				</h1>
-				<span class="post-date">2016-07-06, Wed</span>
-				<p>
-					<p>답은 역시 <a href="https://support.mozilla.org/ko/kb/install-flash-plugin-view-videos-animations-games">공식홈페이지</a>에서 찾을 수 있었다. 아래와 같이 진행하도록 한다.</p>
-<ul>
-<li>
-<p><a href="https://get.adobe.com/kr/flashplayer/">flashplayer 공식홈페이지</a>에서 왼쪽 하단에서 다운로드를 선택해  tar.gz 로 된 압축파일을 받는다.</p>
-</li>
-<li>
-<p>압축파일을 푼다.</p>
-</li>
-</ul>
-<div class="highlight"><pre><span></span>tar -zxvf install_flash_player_###.tar.gz
+					<h1>개요</h1>
+<p>django는 기본적으로 sqlite3를 지원한다.<br>
+project/settings.py 를 확인해보면 아래와 같은 부분을 확인할 수 있다.</p>
+<div class="highlight"><pre><span></span><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.db.backends.sqlite3&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">&#39;db.sqlite3&#39;</span><span class="p">),</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 
 
-<ul>
-<li>압축을 풀어낸 폴더 내부에 있는 libflashplayer.so 파일을 firefox의 plugin 디렉터리에 넣는다.  </li>
-</ul>
-<div class="highlight"><pre><span></span>sudo cp libflashplayer.so /usr/lib/firefox-addons …</pre></div>
+<p><code>sqlite3</code> 대신 <code>mariadb</code>를 사용하는 방법을 알아보도록하자.</p>
+<h1>MariaDB 설치</h1>
+<p>먼저 <code>mariadb</code>를 받는다.</p>
+<div class="highlight"><pre><span></span>$ <span class="c1"># arch linux command (aura 대신 pacman을 사용할 …</span></pre></div>
 				</p>
-				<a class="read-more" href="linux/firefox-flash-plug-in-update">Continue reading »</a>
+				<a class="read-more" href="django/install-mariadb-for-django">Continue reading »</a>
 			</div>
 			<div class="post">
-				<h1 class="post-title" href="../git/git-push-with-new-branch#git-push-with-new-branch">
-					<a href="../git/git-push-with-new-branch#git-push-with-new-branch">[Git] 원격지에 새 branch를 만들며 push하기</a>
+				<h1 class="post-title" href="../linux/install-tlp#install-tlp">
+					<a href="../linux/install-tlp#install-tlp">[Linux] ThinkPad 랩탑 배터리관리 패키지 (tlp) 설치</a>
 				</h1>
-				<span class="post-date">2016-07-03, Sun</span>
+				<span class="post-date">2016-10-31, Mon</span>
+				<p>
+					<h1>tlp 설치</h1>
+<p>이전에도 사용했던 ThinkPad를 위한 배터리관리 패키지인 <code>tlp</code>를 설치했다. 그냥 설치해두고 잊어버려도 되는 편리한 패키지였는데 리눅스를 새로 설치하는 김에 다시 받았다. 실제로 체감은 잘 모르겠어서 당분간 써보고 통계자료를 뽑아볼 수 있으면 다시 추가하도록 하겠다. 배터리 사용 관련 그래프를 나타내주는 패키지로는 <code>gnome-power-manager</code> 가 있다.</p>
+<div class="highlight"><pre><span></span>$ sudo aura -S tlp
+$ sudo …</pre></div>
+				</p>
+				<a class="read-more" href="linux/install-tlp">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../linux/install-arch-linux#install-arch-linux">
+					<a href="../linux/install-arch-linux#install-arch-linux">[Linux] Arch linux 설치</a>
+				</h1>
+				<span class="post-date">2016-10-30, Sun</span>
+				<p>
+					<p><img alt="my-arch-linux" src="/images/2016-10-30/1.png"></p>
+<h1>개요</h1>
+<p>27일 저녁부터 <a href="https://www.archlinux.org/">Arch linux</a> 설치를 진행했다. 이전에는 <a href="http://elementary.io/">Elementary OS</a>를 사용했었는데 어느 정도 리눅스에 익숙해지기도 했고 사용하던 HDD를 SSD로 바꾸려고 계속 계획을 해 왔기에 이참에 Arch 를 설치해봤다. 이 기회를 빌어 결심부터 설치까지 여러 도움을 준 <a href="https://youngbin.xyz/">@youngbin</a> 에게 감사한다.</p>
+<h1>Arch linux Download &amp; Write</h1>
+<p>먼저 <a href="https://archlinux.org/download/">Arch linux Downloads 페이지</a>에서 …</p>
+				</p>
+				<a class="read-more" href="linux/install-arch-linux">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../etc/deview-2016#deview-2016">
+					<a href="../etc/deview-2016#deview-2016">[ETC] deview-2016</a>
+				</h1>
+				<span class="post-date">2016-10-24, Mon</span>
+				<p>
+					<p>그냥 메모용으로만 쭉 정리</p>
+<h1>챗봇 개발을 위한 네이버 랩스 API</h1>
+<p>딥러닝 -&gt; 챗봇
+실제 서비스에 어떻게 구현될까? 챗봇으로.
+AMICA에 대한 얘기를 키노트에서 언급했었는데</p>
+<p>conversation UX 에 대해서 더 깊게 얘기해볼 것</p>
+<p>embient intelligence 서비스</p>
+<p>사용자와 인터랙션하는게 Natual Language Interface.
+잘 안되는 거 아니냐?
+하지만 궁극적으로 가야할 길은 여기라고 봄
+여러 스마트 …</p>
+				</p>
+				<a class="read-more" href="etc/deview-2016">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../agile/deliberate-practice#deliberate-practice">
+					<a href="../agile/deliberate-practice#deliberate-practice">[Agile] 의도적 수련하기</a>
+				</h1>
+				<span class="post-date">2016-10-02, Sun</span>
+				<p>
+					<h1>개요</h1>
+<p>한참 전에 김창준님의 <a href="http://agile.egloos.com/5749946">"당신이 제자리 걸음인 이유 : 지루하거나 불안하거나"</a>라는 글을 읽었는데 최근 Xpergroup에 올라온 <a href="https://groups.google.com/d/topic/xper/7lCVZ_kfLvM/discussion">어떤 분의 고민</a>을 보고 다시 읽게 되었다. 많은 수업들과 그 수업들의 과제, 그리고 동아리 관리와 여러 overhead들에 치여 시간은 흐르지만 내 실력이나 남는 건 없는 듯한 느낌을 계속 받아 왔다. 이런 와중에 다시 …</p>
+				</p>
+				<a class="read-more" href="agile/deliberate-practice">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../life/astro-brother#astro-brother">
+					<a href="../life/astro-brother#astro-brother">[Life] 중요한건 할 수 있다는 경험을 얻는 것.</a>
+				</h1>
+				<span class="post-date">2016-09-16, Fri</span>
 				<p>
 					<blockquote>
-<p>local : master, test<br>
-origin: master</p>
+<p>중요한건 '할 수 있다'는 경험을 얻는 것.<br>
+-이반 톨스토이</p>
+<p>사실은 처음부터 그런 '엄청나게 큰 문' 같은 건 없다. 작은 문이 많이 있을 뿐이야.<br>
+-브라이언 J</p>
 </blockquote>
-<p>의 상태에서 master는 서로 같은 시점에 있다. 여기서 local에 test를 만들어 작업하다가 원격지에도 test와 일치하는 새 branch를 만들어 관리하고 싶다.
-이런 경우 아래와 같이 처리한다.
-로컬저장소의 위치에서</p>
-<div class="highlight"><pre><span></span>$ git push origin <span class="nb">test</span>
+<p>만화책 우주형제를 읽다가 좋은 구절을 얻었다. 좌절되는 경험이나 성과없이 의욕없는 기간이 길어지면 더 이상 변화하고 나아가기 힘들다. 그런 점에 있어서 '할 수 있다'는 경험을 얻는 …</p>
+				</p>
+				<a class="read-more" href="life/astro-brother">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../linux/file-encoding-detect-and-convert#file-encoding-detect-and-convert">
+					<a href="../linux/file-encoding-detect-and-convert#file-encoding-detect-and-convert">[Linux] 파일 인코딩 검사 및 인코딩 변환하기</a>
+				</h1>
+				<span class="post-date">2016-09-15, Thu</span>
+				<p>
+					<p>윈도우의 메모장 등에서 작성한 파일은 리눅스에서 볼때 깨져서 보인다. 이런 경우 뿐만아니라 웹상에서 파일을 구한 경우에도 인코딩이 깨진 경우가 종종 있다. 이럴때 해당 파일의 인코딩을 검사하고 인코딩을 변환하는 방법을 알아보자.</p>
+<h2>인코딩 검사</h2>
+<p>인코딩 검사는 <code>chardet</code>라는 좋은 파이썬 패키지가 있다. <code>pip</code>을 통해 간단하게 설치할 수 있다.</p>
+<div class="highlight"><pre><span></span>$ chardet <span class="o">[</span>file<span class="o">]</span>
 </pre></div>
 
 
-<p>를 입력한다. origin은 원격 저장소이름이고, test는 원하는 branch 이름이다. 성공하고나면 하단에</p>
-<blockquote>
-<p>* [new branch]   test …</p></blockquote>
+<p>결과도 …</p>
 				</p>
-				<a class="read-more" href="git/git-push-with-new-branch">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="../devops/django-travis-env#django-travis-env">
-					<a href="../devops/django-travis-env#django-travis-env">[DevOps] travis에서 test시 생기는 데이터베이스 문제</a>
-				</h1>
-				<span class="post-date">2016-07-01, Fri</span>
-				<p>
-					<p>로컬에서는 별 말 없이 통과하던 테스트가 travis 위에서는 아래와 같은 오류를 뱉으며 실패한다.</p>
-<blockquote>
-<p>django.core.exceptions.ImproperlyConfigured: Requested setting DATABASES, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.</p>
-</blockquote>
-<p>읽어보면 <code>DJANGO_SETTINGS_MODULE</code> 환경변수나 <code>settings.configure()</code>를 호출하라는 것 같은데 어떻게 …</p>
-				</p>
-				<a class="read-more" href="devops/django-travis-env">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="../python/python-nosetest#python-nosetest">
-					<a href="../python/python-nosetest#python-nosetest">[Python] nosttest 사용하기</a>
-				</h1>
-				<span class="post-date">2016-06-26, Sun</span>
-				<p>
-					
-				</p>
-				<a class="read-more" href="python/python-nosetest">Continue reading »</a>
+				<a class="read-more" href="linux/file-encoding-detect-and-convert">Continue reading »</a>
 			</div>
 	</div>
 	<div class="pagination">

@@ -59,7 +59,7 @@
 					</a>
                 </li>
                 <li>
-					<a class="sidebar-nav-item" href="https://www.slideshare.net/Vaporize93">
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/junshoong">
 						<i class="fa fa-slideshare"></i>
                         slideshare
 					</a>
@@ -87,123 +87,117 @@
 </div>		<div class="content container">
 	<div class="posts">
 			<div class="post">
-				<h1 class="post-title" href="../linux/linux-bundle-exec#linux-bundle-exec">
-					<a href="../linux/linux-bundle-exec#linux-bundle-exec">[Linux] elementaryOS GUI환경에서 *.bundle 파일 실행이 안 될 때</a>
+				<h1 class="post-title" href="../linux/firefox-minor-upgrade-with-apt#firefox-minor-upgrade-with-apt">
+					<a href="../linux/firefox-minor-upgrade-with-apt#firefox-minor-upgrade-with-apt">[Linux] apt 패키지 관리 도구로 파이어폭스 마이너 버전 업그레이드</a>
 				</h1>
-				<span class="post-date">2016-03-07, Mon</span>
+				<span class="post-date">2016-07-26, Tue</span>
 				<p>
-					<p>mint에서는 잘 되었던 것 같은데 elementary OS에서는 bundle파일이 클릭으로 실행이 안 된다.<br>
-그냥 터미널을 열고 실행권한을 준다음 실행하면 된다.</p>
-<div class="highlight"><pre><span></span>$ chmod <span class="m">755</span> *.bundle
-$ sudo ./*.bundle
+					<h1>배경</h1>
+<p>django를 테스트하는데 selenium에서 firefox를 열 때 에러가 발생한다. <a href="https://github.com/SeleniumHQ/selenium/issues/2110">(관련이슈)</a></p>
+<p>확인해보니 FF47.0에서 공통으로 발생하는 문제이고, 47.0.1에서 fix되었다.</p>
+<p>기존에 사용하던 파이어폭스는 기본 ppa저장소에서 제공되는걸 받았었는데, 공식 홈페이지에 가니 tar 확장자로만 제공하고 있다. apt-get 을 사용해서 관리하고 싶은데.. 하며 찾아봤더니 방법을 찾았다.</p>
+<h1>업그레이드</h1>
+<p><a href="https://support.mozilla.org/en-US/kb/install-firefox-linux">파이어폭스설치 관련페이지 지원페이지</a> 중간쯤에 보면 Installing …</p>
+				</p>
+				<a class="read-more" href="linux/firefox-minor-upgrade-with-apt">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../life/driving-license-tip#driving-license-tip">
+					<a href="../life/driving-license-tip#driving-license-tip">[Life] 1종보통 도로주행관련 정보</a>
+				</h1>
+				<span class="post-date">2016-07-14, Thu</span>
+				<p>
+					<p>쉬운 운전면허 시험의 막바지라고 한다.
+작년엔 여러모로 시간이 안 되어서 필기만 치고 말았었는데 이번엔 다시 시험을 치게 되었다. 1종보통으로 학원에서 수강하는데 이게.. 기능은 쉬우니까 넘어가고, 주행 6시간 교육 후 시험이다보니까 촉박하다. 게다가 주행 6시간동안 강사가 많은 걸 알려주지는 않으니 개인적인 노력이 많이 필요하다.</p>
+<p>여기 조금 메모 겸 공유 겸 적어둔다 …</p>
+				</p>
+				<a class="read-more" href="life/driving-license-tip">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../python/8percent-investlist-bot#8percent-investlist-bot">
+					<a href="../python/8percent-investlist-bot#8percent-investlist-bot">[Python] 8퍼센트 투자목록 출력 슬랙 봇</a>
+				</h1>
+				<span class="post-date">2016-07-09, Sat</span>
+				<p>
+					<p>생각은 대충하고 있었는데 실제로 만든 건 이틀정도 걸린 것 같다. p2p 대부업체인 8percent에 올라오는 투자목록을 긁어와서 알려준다.</p>
+<p>로직은 단순하다. 사용자가 list라고 bot에게 dm을 보내면 beautifulsoup로 투자 목록 페이지의 내용을 정리해서 보여준다.</p>
+<p>아직은 단순하지만 몇가지 더 만들어 볼 수 있지 않을까 싶다. 간단한 정렬이라던지, 원하는 내용만 설정해서 보여주는 식으로 말이다.</p>
+<p>코드와 …</p>
+				</p>
+				<a class="read-more" href="python/8percent-investlist-bot">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../linux/firefox-flash-plug-in-update#firefox-flash-plug-in-update">
+					<a href="../linux/firefox-flash-plug-in-update#firefox-flash-plug-in-update">[Linux] FireFox에서 flash plugin 업데이트</a>
+				</h1>
+				<span class="post-date">2016-07-06, Wed</span>
+				<p>
+					<p>답은 역시 <a href="https://support.mozilla.org/ko/kb/install-flash-plugin-view-videos-animations-games">공식홈페이지</a>에서 찾을 수 있었다. 아래와 같이 진행하도록 한다.</p>
+<ul>
+<li>
+<p><a href="https://get.adobe.com/kr/flashplayer/">flashplayer 공식홈페이지</a>에서 왼쪽 하단에서 다운로드를 선택해  tar.gz 로 된 압축파일을 받는다.</p>
+</li>
+<li>
+<p>압축파일을 푼다.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span>tar -zxvf install_flash_player_###.tar.gz
 </pre></div>
 
 
-<p>* 은 파일 이름이다.</p>
+<ul>
+<li>압축을 풀어낸 폴더 내부에 있는 libflashplayer.so 파일을 firefox의 plugin 디렉터리에 넣는다.  </li>
+</ul>
+<div class="highlight"><pre><span></span>sudo cp libflashplayer.so /usr/lib/firefox-addons …</pre></div>
 				</p>
-				<a class="read-more" href="linux/linux-bundle-exec">Continue reading »</a>
+				<a class="read-more" href="linux/firefox-flash-plug-in-update">Continue reading »</a>
 			</div>
 			<div class="post">
-				<h1 class="post-title" href="../linux/linux-elementary-settig#linux-elementary-settig">
-					<a href="../linux/linux-elementary-settig#linux-elementary-settig">[Linux] elementaryOS 초기 설치 셋팅</a>
+				<h1 class="post-title" href="../git/git-push-with-new-branch#git-push-with-new-branch">
+					<a href="../git/git-push-with-new-branch#git-push-with-new-branch">[Git] 원격지에 새 branch를 만들며 push하기</a>
 				</h1>
-				<span class="post-date">2016-03-07, Mon</span>
+				<span class="post-date">2016-07-03, Sun</span>
 				<p>
-					<div class="highlight"><pre><span></span>$ sudo apt-get update
-$ sudo apt-get install language-selector-gnome uim uim-byeoru vim tmux libreoffice git
-$ sudo add-apt-repository ppa:linrunner/tlp <span class="o">&amp;&amp;</span> sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get install tlp tlp-rdw
-<span class="c1"># (아래는 Thinkpad의 경우)</span>
-$ sudo apt-get install tp-smapi-dkms acpi-call-tools
-$ sudo tlp start
+					<blockquote>
+<p>local : master, test<br>
+origin: master</p>
+</blockquote>
+<p>의 상태에서 master는 서로 같은 시점에 있다. 여기서 local에 test를 만들어 작업하다가 원격지에도 test와 일치하는 새 branch를 만들어 관리하고 싶다.
+이런 경우 아래와 같이 처리한다.
+로컬저장소의 위치에서</p>
+<div class="highlight"><pre><span></span>$ git push origin <span class="nb">test</span>
 </pre></div>
 
 
-<p>한글 설정은 <a href="http://bagjunggyu.blogspot.kr/2015/04/elementary-os-freya-stable-release.html">박정규님 블로그</a>를 참고하면 좋겠다. 내 경우는 환경은 영어로 할거라 gnome-language-selector …</p>
-				</p>
-				<a class="read-more" href="linux/linux-elementary-settig">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="../linux/lenovo-elementary-os-install#lenovo-elementary-os-install">
-					<a href="../linux/lenovo-elementary-os-install#lenovo-elementary-os-install">[Linux] elementaryOS lenovo e450 FreeDos에 Install</a>
-				</h1>
-				<span class="post-date">2016-03-06, Sun</span>
-				<p>
-					<p>기존에 사용하던 HP430을 떠나보내면서 민트에서 elementary로 갈아타보기로 했다. <a href="https://elementary.io/">공식 홈페이지</a>에서 파일을 받을 수 있다. 금액이 적혀있는데, 구매하고 싶으면 금액을 선택해서 하고, 아니면 custom에 0을 입력하고 받으면 된다.</p>
-<p>한글 입력기 관련 이슈를 설명해둔 <a href="http://bagjunggyu.blogspot.kr/2015/12/2015.html">박정규님 블로그</a>다. 항상 새로운 리눅스를 도전하시는 것 같은데 참고하면 큰 도움이 된다. 아직 해당 사항은 적용해보지 …</p>
-				</p>
-				<a class="read-more" href="linux/lenovo-elementary-os-install">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="../etc/lenovo-open-review#lenovo-open-review">
-					<a href="../etc/lenovo-open-review#lenovo-open-review">[ETC] Lenovo ThinkPad E450 구입 후기</a>
-				</h1>
-				<span class="post-date">2016-03-05, Sat</span>
-				<p>
-					<p>다나와를 경유해서 G마켓을 통해 노트북을 구입했다.</p>
-<p>65만원 정도에 구매를 했고, i5, SSHD(Hybrid) 500GB, 4gb, 14inch .. 정도의 사양이다.</p>
-<p><img alt="상자" src="/images/2016-03-05/01.jpg"></p>
-<p>배송은 CJ 대한통운이 했고, 용산에서 충북 옥천HUB를 거쳐 다시 서울로 올라왔다. 혹시 서울쪽에 거주한다면 직수령하는게 나을 수도 있겠다 싶었다.</p>
-<p>배송 상태는 노트북 박스 위에 좀 더 큰 일반 박스를 씌워서 왔다. 박스사이의 …</p>
-				</p>
-				<a class="read-more" href="etc/lenovo-open-review">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="../ctf/wargame-login-filtering#wargame-login-filtering">
-					<a href="../ctf/wargame-login-filtering#wargame-login-filtering">[CTF] Wargame - login filtering</a>
-				</h1>
-				<span class="post-date">2016-02-21, Sun</span>
-				<p>
-					<p><a href="http://wargame.kr:8080/login_filtering/">450p - login filtering</a></p>
-<p><img alt="문제 화면" src="/images/2016-02-21/01.png"></p>
+<p>를 입력한다. origin은 원격 저장소이름이고, test는 원하는 branch 이름이다. 성공하고나면 하단에</p>
 <blockquote>
-<p>I have accounts. but, it's blocked.<br>
-can you login bypass filtering?</p>
-</blockquote>
-<p>내가 계정이 있는데 블록 당했습니다.
-당신은 필터링을 우회해서 로그인할 수 있나요?</p>
-<p>Start를 눌러 들어가면 소스를 볼 수 있는 링크가 제공되어 있다. 들어 가보면 php코드와 html코드가 있고 하단에 블록된 계정명이 적혀있다.</p>
-<p><img alt="소스 주석부분 화면" src="/images/2016-02-21/02.png"></p>
-<p>계정을 두 개 가지고 있는데, guest …</p>
+<p>* [new branch]   test …</p></blockquote>
 				</p>
-				<a class="read-more" href="ctf/wargame-login-filtering">Continue reading »</a>
+				<a class="read-more" href="git/git-push-with-new-branch">Continue reading »</a>
 			</div>
 			<div class="post">
-				<h1 class="post-title" href="../ctf/wargame-flee-button#wargame-flee-button">
-					<a href="../ctf/wargame-flee-button#wargame-flee-button">[CTF] Wargame - flee button</a>
+				<h1 class="post-title" href="../devops/django-travis-env#django-travis-env">
+					<a href="../devops/django-travis-env#django-travis-env">[DevOps] travis에서 test시 생기는 데이터베이스 문제</a>
 				</h1>
-				<span class="post-date">2016-02-20, Sat</span>
+				<span class="post-date">2016-07-01, Fri</span>
 				<p>
-					<p><a href="http://wargame.kr:8080/flee_button/">450p - flee button</a></p>
-<p><img alt="문제 화면" src="/images/2016-02-20/01.png"></p>
+					<p>로컬에서는 별 말 없이 통과하던 테스트가 travis 위에서는 아래와 같은 오류를 뱉으며 실패한다.</p>
 <blockquote>
-<p>click the button!<br>
-i can't catch</p>
+<p>django.core.exceptions.ImproperlyConfigured: Requested setting DATABASES, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.</p>
 </blockquote>
-<p>flee는 위험한 상황이나 장소로부터 도망치는 걸 말한다. 버튼을 누르면 된다. 일단 Start</p>
-<p><img alt="문제 화면2" src="/images/2016-02-20/02.png"></p>
-<p>검은 화면에 이렇게 적혀있다. 윈도우 + 파폭이나 리눅스 + 크롬에서는 잘 보였는데 왠지 리눅스 + 파이어폭스에선 보이질 않는다. 일단 마우스를 따라다니는 누를 수 없는 버튼이 하나 떠다닌다고 생각하면 될 것 같다. 그럼 …</p>
+<p>읽어보면 <code>DJANGO_SETTINGS_MODULE</code> 환경변수나 <code>settings.configure()</code>를 호출하라는 것 같은데 어떻게 …</p>
 				</p>
-				<a class="read-more" href="ctf/wargame-flee-button">Continue reading »</a>
+				<a class="read-more" href="devops/django-travis-env">Continue reading »</a>
 			</div>
 			<div class="post">
-				<h1 class="post-title" href="../ctf/wargame-qrcode-puzzle#wargame-qrcode-puzzle">
-					<a href="../ctf/wargame-qrcode-puzzle#wargame-qrcode-puzzle">[CTF] Wargame - QR CODE PUZZLE</a>
+				<h1 class="post-title" href="../python/python-nosetest#python-nosetest">
+					<a href="../python/python-nosetest#python-nosetest">[Python] nosttest 사용하기</a>
 				</h1>
-				<span class="post-date">2016-02-19, Fri</span>
+				<span class="post-date">2016-06-26, Sun</span>
 				<p>
-					<p><a href="http://wargame.kr:8080/qr_code_puzzle/">300p - QR CODE PUZZLE</a></p>
-<p><img alt="문제 화면" src="/images/2016-02-19/01.png"></p>
-<blockquote>
-<p>javascript puzzle challenge<br>
-just enjoy!</p>
-</blockquote>
-<p>자바스크립트로 구현된 퍼즐이다. 즐기라고 적혀 있는데 한 번 들어가 보자.</p>
-<p><img alt="문제 화면2" src="/images/2016-02-19/02.png"></p>
-<p>아... 퍼즐을 좋아하긴 하는데 이건 좀 현기증 나게 생겼다. 뭐 맞춰보고 싶은 사람은 맞춰보자. 맞추기 싫은 사람은 코드를 보자.</p>
-<p><img alt="코드" src="/images/2016-02-19/03.png"></p>
-<p>style의 <code>background-image</code>로 url 경로가 들어있다. 경로를 현재 주소 뒤에 붙여보면 <a href="http://wargame.kr:8080/qr_code_puzzle/img/qr.png">완성된 …</a></p>
+					
 				</p>
-				<a class="read-more" href="ctf/wargame-qrcode-puzzle">Continue reading »</a>
+				<a class="read-more" href="python/python-nosetest">Continue reading »</a>
 			</div>
 	</div>
 	<div class="pagination">

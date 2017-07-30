@@ -59,7 +59,7 @@
 					</a>
                 </li>
                 <li>
-					<a class="sidebar-nav-item" href="https://www.slideshare.net/Vaporize93">
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/junshoong">
 						<i class="fa fa-slideshare"></i>
                         slideshare
 					</a>
@@ -87,113 +87,102 @@
 </div>		<div class="content container">
 	<div class="posts">
 			<div class="post">
-				<h1 class="post-title" href="./etc/svkorean2016-conference-review#svkorean2016-conference-review">
-					<a href="./etc/svkorean2016-conference-review#svkorean2016-conference-review">[ETC] 실리콘밸리의 한국인 2016 컨퍼런스 참가 후기</a>
+				<h1 class="post-title" href="./django/django-image-upload#django-image-upload">
+					<a href="./django/django-image-upload#django-image-upload">[Django] ImageField 업로드문제</a>
 				</h1>
-				<span class="post-date">2016-04-13, Wed</span>
+				<span class="post-date">2016-09-09, Fri</span>
 				<p>
-					<p><a href="http://startupall.kr/">스타트업 얼라이언스</a>에서 주최한 <a href="http://startupall.kr/svkorean-2016/">실리콘밸리의 한국인 2016</a> 에 갔다왔다. 컨퍼런스 소식은 처음에 스타트업 얼라이언스의 센터장을 맡고 계신 <a href="https://estimastory.com/">임정욱님의 블로그</a>에서 소식을 들었고, 행사는 분당 네이버 그린팩토리 2층 커넥트홀에서 진행되었다. 행사는 오전 10시부터 오후 6시까지 진행되었고 온오프믹스를 통해 참가하면서 참가비는 만원이었다. VC나 창업자와 같은 여러 스피커들이 발표를 했었는데 사진과 일부 내용을 …</p>
+					<p>Django의 ImageFile를 만들어서 서버에 업로드를 하는데 계속해서 아래와 같은 메세지가 나타났다.  </p>
+<blockquote>
+<p>This field is required.</p>
+</blockquote>
+<p>admin 페이지에서 업로드할때는 문제가 없는데 직접 구현해둔 곳에서만 문제가 발생한다. 여러가지를 추측해봤는데 결국 Templates 문제였다. 여기서 참고를 위해 코드 일부를 첨부한다.
+일단 <code>models.py</code>를 보자.  </p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Image</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">50 …</span></pre></div>
 				</p>
-				<a class="read-more" href="etc/svkorean2016-conference-review">Continue reading »</a>
+				<a class="read-more" href="django/django-image-upload">Continue reading »</a>
 			</div>
 			<div class="post">
-				<h1 class="post-title" href="./linux/ppa-remove#ppa-remove">
-					<a href="./linux/ppa-remove#ppa-remove">[Linux] elementaryOS ppa repository 삭제하기</a>
+				<h1 class="post-title" href="./blog/jekyll-liquid-django-template#jekyll-liquid-django-template">
+					<a href="./blog/jekyll-liquid-django-template#jekyll-liquid-django-template">[Blog] jekyll에 django template 입력시 생기는 liquid 문제</a>
 				</h1>
-				<span class="post-date">2016-04-02, Sat</span>
+				<span class="post-date">2016-09-09, Fri</span>
 				<p>
-					<p>여러 프로그램을 받다보면 자연스레 ppa 가 쌓인다. 이러다보면 한번 정리해주고 싶을때가 온다. 일단 설치된 리스트를 확인해보자.</p>
-<div class="highlight"><pre><span></span>ls -al /etc/apt/sources.list.d/
+					<p>jekyll에서 code highlight 등을 하는데 도움을 주는 <code>{% syntax %}</code> 형식의 태그는 마크다운파일에 그대로 입력하면</p>
+<blockquote>
+<p>Liquid Exception: Liquid syntax error (line n): Unknown tag 'xxx' in /home/harvey/blog/text.md<br>
+jekyll 3.1.6 | Error:  Liquid syntax error (line n): Unknown tag 'xxx'  </p>
+</blockquote>
+<p>와 같은 오류를 내면서 해석을 해주지 못한다.
+같은 …</p>
+				</p>
+				<a class="read-more" href="blog/jekyll-liquid-django-template">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="./shell/linux-rename-usage#linux-rename-usage">
+					<a href="./shell/linux-rename-usage#linux-rename-usage">[Shell] rename을 사용하여 여러 파일의 이름을 한번에 변경하는 방법</a>
+				</h1>
+				<span class="post-date">2016-09-05, Mon</span>
+				<p>
+					<p>리눅스에서는 일반적으로 <code>mv</code>를 사용해서 파일명을 변경한다. 하지만 여러 파일의 이름을 변경하기 위해서 <code>rename</code>을 사용하기도 하는데, 이를 좀 살펴보자.</p>
+<div class="highlight"><pre><span></span>$ man rename
 </pre></div>
 
 
-<p>해당 경로아래 리스트를 확인할 수 있다.
-그럼 지워보자.</p>
-<div class="highlight"><pre><span></span>sudo add-apt-repository --remove ppa:team/name
+<p>이렇게 쳐보면 매뉴얼이 나오고 상단을 보면<code>Perl Programmers Reference Guide</code>라는 글자가 있다. rename은 perl의 표현식으로 파일명을 변경해준다.</p>
+<div class="highlight"><pre><span></span>$ rename <span class="s1">&#39;s/[변경 전 문자]/[변경 후 문자]/&#39;</span> <span class="o">[</span>변경할 파일 …</pre></div>
+				</p>
+				<a class="read-more" href="shell/linux-rename-usage">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="./blog/jekyll-html-proofer#jekyll-html-proofer">
+					<a href="./blog/jekyll-html-proofer#jekyll-html-proofer">[Blog] html-proofer에 ignore 항목 설정하기</a>
+				</h1>
+				<span class="post-date">2016-08-18, Thu</span>
+				<p>
+					<p>jekyll에서 plugin으로 <code>html-proofer</code>를 통해서 하이퍼링크를 테스트하고 있다. 로컬에서는 터미널에서 간단하게 테스트 해볼 수 있다.</p>
+<div class="highlight"><pre><span></span>$ htmlproofer ./_site
 </pre></div>
 
 
-<p>저 뒤에 ppa: 뒷부분은 해당 repository의 이름을 넣어주면 된다.
-혹은 GUI 환경에서도 삭제할 …</p>
+<p>그런데 travis-ci에서 테스트하는데 <a href="https://travis-ci.org/vaporize93/blog/builds/153172807">문제가 생겼다.</a> 일부 링크에서 travis-ci 환경에서 접속하는걸 <code>robots.txt</code>가 막는 것 같다. 해당 항목을 무시하고 테스트를 하기 위해서 방법을 찾아봤다.</p>
+<p><a href="https://github.com/gjtorikian/html-proofer#configuration">html-proofer의 Github 페이지</a>에서 확인 할 수 있었다. 이를 …</p>
 				</p>
-				<a class="read-more" href="linux/ppa-remove">Continue reading »</a>
+				<a class="read-more" href="blog/jekyll-html-proofer">Continue reading »</a>
 			</div>
 			<div class="post">
-				<h1 class="post-title" href="./etc/coding-convention#coding-convention">
-					<a href="./etc/coding-convention#coding-convention">[ETC] 코딩 컨벤션에 관해</a>
+				<h1 class="post-title" href="./blog/new-blog#new-blog">
+					<a href="./blog/new-blog#new-blog">[Blog] 기술 블로그 오픈</a>
 				</h1>
-				<span class="post-date">2016-03-22, Tue</span>
+				<span class="post-date">2016-08-11, Thu</span>
 				<p>
-					<p>코딩 컨벤션은 팀 작업을 할 때 서로를 위한 장치이다. 코딩 스타일이라고도 할 수 있는데, 간단히 말하면 들여쓰기나 줄바꿈의 양, 메소드를 헝가리안 표기법으로 할 지 카멜케이스로 할지... 그런 여러 스타일을 팀 내부적으로 정해둔 것이다.</p>
-<p>당연히 프로그래밍 언어마다, 회사마다, 팀마다 다르게 적용될 수 있다.</p>
-<p>여기 몇가지 링크에서 그런 코딩 컨벤션의 예를 볼 …</p>
+					<p>기존에 있었던 <a href="http://harveyk.me">티스토리 블로그</a>를 정리하고 정적 웹사이트 생성 도구인 <a href="https://jekyllrb.com/">Jekyll</a>을 사용한 <a href="https://pages.github.com/">GitHub Pages</a>로 넘어오기로 했다. 티스토리도 무척 좋지만 <code>code highlight</code>나 좀 더 유연하게 페이지를 작성하기 위해서 개편을 벼르던 참에 여타 다른 블로그들에 자극을 받기도 해서 결심했다. 이전 작업도 만만치 않을거라 예상되지만 아직 방학 중일 때 좀 …</p>
 				</p>
-				<a class="read-more" href="etc/coding-convention">Continue reading »</a>
+				<a class="read-more" href="blog/new-blog">Continue reading »</a>
 			</div>
 			<div class="post">
-				<h1 class="post-title" href="./linux/linux-notify-close#linux-notify-close">
-					<a href="./linux/linux-notify-close#linux-notify-close">[Linux] elementaryOS critical notify-send 알림 없애기</a>
+				<h1 class="post-title" href="./linux/linux-hwp-open#linux-hwp-open">
+					<a href="./linux/linux-hwp-open#linux-hwp-open">[Linux] 리눅스에서 한글포맷 열기</a>
 				</h1>
-				<span class="post-date">2016-03-10, Thu</span>
+				<span class="post-date">2016-08-10, Wed</span>
 				<p>
-					<p>터미널에서</p>
-<div class="highlight"><pre><span></span>$ notify-send -u critical <span class="s2">&quot;Test Notification&quot;</span>
-</pre></div>
-
-
-<p>과 같이 입력하면 알림 창이 자동으로 사라지지 않는다.</p>
-<p>이때 알림창 위에 마우스 포인터를 올려주면 X 버튼이 나타나서 알림을 끌 수 있다.</p>
-<p>하지만 어떤 프로그램의 창 위에서는 알림창 위에 마우스 포인터를 올려도 x 버튼이 나타나지 않는다. 이때는 바탕화면으로 가서 마우스를 올리면 x 버튼이 나타난다.</p>
-<p>Type …</p>
+					<p>리눅스에서는 한글 포맷(.hwp)을 여는게 여간 힘든게 아니다.</p>
+<p>작년 상반기까지만 해도 <a href="http://www.hancom.com/">한글과컴퓨터</a>(이하 한컴)에서 공식뷰어를 제공해줘서 잘 쓰고 있었는데, 어느순간 조용히 넷피스24로 전환되어 웹에서만 볼 수 있게 되었다. 그래서 개인적으로 만들어서 사용하고 있는 뷰어가 있나 찾아다녔다. 하지만 오늘 이런 기사를 봤다. <a href="http://www.etnews.com/20160810000093">"리눅스에서 한글(hwp)파일 연다...한컴 '한컴오피스 …</a></p>
 				</p>
-				<a class="read-more" href="linux/linux-notify-close">Continue reading »</a>
+				<a class="read-more" href="linux/linux-hwp-open">Continue reading »</a>
 			</div>
 			<div class="post">
-				<h1 class="post-title" href="./linux/eclipse-freeze-linux#eclipse-freeze-linux">
-					<a href="./linux/eclipse-freeze-linux#eclipse-freeze-linux">[Linux] eclipse 실행시 시스템이 멈추는 현상</a>
+				<h1 class="post-title" href="./life/try-hard-way#try-hard-way">
+					<a href="./life/try-hard-way#try-hard-way">[Life] 어려운 것 선택하기</a>
 				</h1>
-				<span class="post-date">2016-03-08, Tue</span>
+				<span class="post-date">2016-08-07, Sun</span>
 				<p>
-					<p>eclipse 실행시 OS가 굳어버리는 문제가 있다.</p>
-<p>GTK 버전 관련 이슈라고 한다.</p>
-<p>실행 파일이 있는 디렉터리를 확인해보면 <code>eclipse.ini</code> 라는 설정 파일을 볼 수 있다.</p>
-<p>그 eclipse.ini 의 내용에 아래 항목을 추가한다.</p>
-<div class="highlight"><pre><span></span><span class="na">-launcher.GTK_version</span>
-<span class="na">2</span>
-</pre></div>
-
-
-<p>다만 추가할 때 <code>--launcher.appendVmargs</code>의 윗줄에 추가해야 한다.</p>
-<p>이후 실행하면 정상적으로 구동되는 걸 볼 …</p>
+					<p>폴 그레이엄의 <code>해커와 화가</code>를 읽다가 자극이 되는 구절이 있어서 적어본다.</p>
+<blockquote>
+<p>두 개의 선택이 있다면 어려운 것을 선택하라. 밖에서 달리기를 하는 것과 집에 앉아서 TV를 보는 것 사이에서 선택해야 한다면 나가서 달리기를 해라. 두 개의 선택이 있고 그 중 하나가 더 어려운 경우에 상대적으로 쉬운 것이 선택지로 떠오르는 이유는 대개 …</p></blockquote>
 				</p>
-				<a class="read-more" href="linux/eclipse-freeze-linux">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="./linux/linux-terminal-configuration#linux-terminal-configuration">
-					<a href="./linux/linux-terminal-configuration#linux-terminal-configuration">[Linux] elementaryOS 터미널 속성 수정하기</a>
-				</h1>
-				<span class="post-date">2016-03-08, Tue</span>
-				<p>
-					<p>Elementary OS는 Pantheon-terminal 을 사용한다. Pantheon-termainal은 따로 속성을 수정하는 도구를 제공하진 않고 있어서 dconf editor 등으로 속성값은 변경해야 한다. 일단 해당 툴을 받아야 한다. 터미널을 열고 아래를 입력해서 dconf-tools를 설치한다.</p>
-<div class="highlight"><pre><span></span>$ sudo apt-get install dconf-tools
-</pre></div>
-
-
-<p>그리고 슬링샷(<code>Alt</code>+<code>F2</code>)을 열어서 <code>dconf editor</code>를 찾아서 연다.</p>
-<p><code>org -&gt; pantheon -&gt; terminal -&gt; settings</code> 로 …</p>
-				</p>
-				<a class="read-more" href="linux/linux-terminal-configuration">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="./editor/jedivim-python3#jedivim-python3">
-					<a href="./editor/jedivim-python3#jedivim-python3">[Editor] (미해결) jedi-vim을 통한 python3 자동완성</a>
-				</h1>
-				<span class="post-date">2016-03-07, Mon</span>
-				<p>
-					<p>python3를 vim을 사용해서 코딩을 하는데, 자동완성 기능이 있으면 좋을 것 같아 찾아봤더니 <a href="https://github.com/davidhalter/jedi-vim">jedi-vim</a>을 많이 사용한다.</p>
-<p>Pathogen 과 Vundle 사이에서 문제가 조금 생겼지만, 결국 Vundle을 통해서 jedi-vim을 적용하는데 성공했다. 그런데 조금 알아보니 환경변수에 적용된 기본 python을 기준으로 자동완성을 제공한다. 하지만 시스템에 기본 적용된 python의 버전이 2.7이기 때문에 python3로 자동완성하기 …</p>
-				</p>
-				<a class="read-more" href="editor/jedivim-python3">Continue reading »</a>
+				<a class="read-more" href="life/try-hard-way">Continue reading »</a>
 			</div>
 	</div>
 	<div class="pagination">

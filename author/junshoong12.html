@@ -59,7 +59,7 @@
 					</a>
                 </li>
                 <li>
-					<a class="sidebar-nav-item" href="https://www.slideshare.net/Vaporize93">
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/junshoong">
 						<i class="fa fa-slideshare"></i>
                         slideshare
 					</a>
@@ -87,118 +87,111 @@
 </div>		<div class="content container">
 	<div class="posts">
 			<div class="post">
-				<h1 class="post-title" href="../life/laos-travel-review-02#laos-travel-review-02">
-					<a href="../life/laos-travel-review-02#laos-travel-review-02">[Life] 8박 9일 라오스 여행기 - 둘째날(라오에어라인, 루앙프라방, 수영장)</a>
+				<h1 class="post-title" href="../life/laos-travel-review-09#laos-travel-review-09">
+					<a href="../life/laos-travel-review-09#laos-travel-review-09">[Life] 8박 9일 라오스 여행기 - 아홉째날(방비엥, 모터보트, 비엔티안, 짜뚜싸이, 탓루앙)</a>
 				</h1>
-				<span class="post-date">2015-08-24, Mon</span>
+				<span class="post-date">2015-11-08, Sun</span>
 				<p>
-					<p>날이 밝았다. 어제 밤새 고통이었던 망고 알레르기는 좀 나아졌다. 아직 조금 느낌이 있긴 했는데, 약을 먹을 정도는 아니었다.</p>
-<p><img alt="썽태우" src="/images/2015-08-24/laos02-01.jpg"></p>
-<p>국내선을 타고 바로 루앙프라방으로 갈 계획이었기 때문에 근처에 서있던 썽태우를 타고 갔다. 가격은 2인 50,000Kip을 받았다. 국내선 공항도 국제선 공항과 붙어 있기 때문에 어제 갔던 공항으로 다시 간 셈이다. 공항에 있는 …</p>
+					<p>후기를 작성 한지도 이제 2개월이 넘었다. 여행을 다녀온 지는 5개월이 다 되어간다. 여행의 마지막 날인 만큼 아쉬움이 많이 남기에 사진도 많이 있었다.</p>
+<p>방비엥의 마지막 아침이 밝았다. 이 풍경은 계속 봐도 계속 감탄하게 된다. 아침이라 그런지 안개가 많이 깔려있다.</p>
+<p><img alt="남쏭강 전경" src="/images/2015-11-08/laos09-01.jpg"></p>
+<p><img alt="남쏭강 전경2" src="/images/2015-11-08/laos09-02.jpg"></p>
+<p>모터 보트를 탔다.
+가격은 좀 나갔지만 마지막 날 아침을 즐기기엔 아깝지 않았다 …</p>
 				</p>
-				<a class="read-more" href="life/laos-travel-review-02">Continue reading »</a>
+				<a class="read-more" href="life/laos-travel-review-09">Continue reading »</a>
 			</div>
 			<div class="post">
-				<h1 class="post-title" href="../linux/sdcard-low-level-format#sdcard-low-level-format">
-					<a href="../linux/sdcard-low-level-format#sdcard-low-level-format">[Linux] SD카드 로우레벨 포맷 및 OS 부팅 디스크 만들기</a>
+				<h1 class="post-title" href="../life/laos-travel-review-08#laos-travel-review-08">
+					<a href="../life/laos-travel-review-08#laos-travel-review-08">[Life] 8박 9일 라오스 여행기 - 여덟째날(방비엥, 방비엥시장, 탐짱동굴)</a>
 				</h1>
-				<span class="post-date">2015-08-18, Tue</span>
+				<span class="post-date">2015-10-31, Sat</span>
 				<p>
-					<p>라즈베리 파이에 사용하던 microSD를 포맷하고 새롭게 OS를 설치하려고 한다.</p>
-<div class="highlight"><pre><span></span>$ sudo fdisk -l
+					<p>새로운 숙소로 이사도 하고, 방비엥 시장도 구경하기 위해 아침 일찍 일어났다. 시장이 생각보다 거리가 멀다고 해서 자전거를 빌렸다. 두 대에 25,000Kip. 시장은 큰 길을 따라 쭉 내려가면 되는데 숙소 근처에서 큰 삼거리길로 나와 왼쪽으로 꺾으면 된다. 가는 길에 몽키 바나나를 구워 팔길래 두 개를 사서 하나는 먹고 하나는 떨어뜨렸다 …</p>
+				</p>
+				<a class="read-more" href="life/laos-travel-review-08">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../shell/linux-tar#linux-tar">
+					<a href="../shell/linux-tar#linux-tar">[Shell] tar 명령어로 압축하기/압축풀기</a>
+				</h1>
+				<span class="post-date">2015-10-20, Tue</span>
+				<p>
+					<div class="highlight"><pre><span></span><span class="nv">$tar</span> -zcvf 압축.tar.gz *
 </pre></div>
 
 
-<p>위 명령어로 현재 시스템에서 인식하고 있는 디스크를 확인할 수 있다.</p>
-<p>일반적으로 sda 는 사용하고 있는 하드일 것이고, sdb 나 usb, mmcblk0 등을 확인할 수 있다.</p>
-<p>필자의 경우에는 <code>/dev/mmcblk0</code>였고, 파티션이 분리되어 있어서 <code>/dev/mmcblk0p1</code>,<code>mmcblk0p2</code>로 나뉘어져 …</p>
-				</p>
-				<a class="read-more" href="linux/sdcard-low-level-format">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="../etc/vmware-vt-x-error#vmware-vt-x-error">
-					<a href="../etc/vmware-vt-x-error#vmware-vt-x-error">[ETC] 64비트 환경의 Guest OS를 구동시 생기는 문제해결(VT)</a>
-				</h1>
-				<span class="post-date">2015-08-18, Tue</span>
-				<p>
-					<p><img alt="vmware error 화면" src="/images/2015-08-18/01.jpg"></p>
-<p>vmware를 통해서 Security Onion을 설치하려는 데 위와 같은 경고 창이 나타났다.</p>
+<p>이러면 현재 디렉토리에 있는 모든 파일을 압축한다.</p>
+<div class="highlight"><pre><span></span>$ tar -zxvf 압축.tar.gz
+</pre></div>
+
+
+<p>이러면 알아서 풀린다.</p>
+<p>여기서 tar 명령어의 옵션을 살펴보자</p>
 <blockquote>
-<p>This virtual machine is configured for 64-bit guest operating systems.<br>
-However, 64-bit operation is not possible.<br>
-This host supports Intel VT-x, but Intel VT-x is disabled.<br>
-...  </p>
-</blockquote>
-<p>그러니까.. 가상머신으로 64비트 게스트OS 돌리려면 호스트가 지원하는 Intel VT-x를 enable 하라는 소리인 것 …</p>
+<p>-z  gzip gunzip을 사용해서 압축하고 압축을 해제한다.<br>
+-c 파일을 모은다. create<br>
+-x 파일을 푼다. extract<br>
+-v 진행 상황을 본다. verbose<br>
+-f 입/출력을 파일로 지정해준다 …</p></blockquote>
 				</p>
-				<a class="read-more" href="etc/vmware-vt-x-error">Continue reading »</a>
+				<a class="read-more" href="shell/linux-tar">Continue reading »</a>
 			</div>
 			<div class="post">
-				<h1 class="post-title" href="../linux/md5-sha1-checksum#md5-sha1-checksum">
-					<a href="../linux/md5-sha1-checksum#md5-sha1-checksum">[Linux] MD5, SHA1 체크섬 확인하기</a>
+				<h1 class="post-title" href="../etc/opentechnet#opentechnet">
+					<a href="../etc/opentechnet#opentechnet">[ETC] 제 81회 Open Technet 후기</a>
 				</h1>
-				<span class="post-date">2015-07-08, Wed</span>
+				<span class="post-date">2015-10-17, Sat</span>
 				<p>
-					<p>카테고리 구분은 linux에 넣으려고 했지만 아무래도 리눅스보다는 보안 관련인 것 같아서 새로 카테고리를 만들었다.</p>
-<p>트리구조는 분류하긴 좋지만 분류할때마다 고민하게 되는 것 같다.</p>
-<p>오늘은 리눅스민트에서 md5와 sha1의 checksum을 확인하는 방법을 알아보자.</p>
-<p>그 일례로 vmware player를 들어보자. <a href="https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/7_0">vmware 사이트의 다운로드 페이지</a>를 확인해보면 아래와 같은 모습을 볼 수 있다.</p>
-<p><img alt="vmware 다운로드 페이지 화면" src="/images/2015-07-08/01.png"></p>
-<p>하단에 보면 <code>CHECKSUMS …</code></p>
+					<p>10월 16일 금요일에 열린 제 81회 Open Technet에 갔다가 왔다. 전에 갔던 국제 과학 창의 컨퍼런스 이후 첫 행사 참여였다. 무료인 점, 금요일에 시간이 비는 점, 경품이 있는 점, 그리고 관심이 있던 주제여서 등록을 하고 갔다.</p>
+<p>일단 사전 몇 장..</p>
+<p><img alt="컨퍼런스 사진1" src="/images/2015-10-17/01.jpg"><br>
+<img alt="컨퍼런스 사진2" src="/images/2015-10-17/02.jpg"><br>
+<img alt="컨퍼런스 사진3" src="/images/2015-10-17/03.jpg">  </p>
+<p>생각보다 중, 장년층의 참여자들이 많았었다. 뭐.. 내용도 그렇게 젊은 층을 …</p>
 				</p>
-				<a class="read-more" href="linux/md5-sha1-checksum">Continue reading »</a>
+				<a class="read-more" href="etc/opentechnet">Continue reading »</a>
 			</div>
 			<div class="post">
-				<h1 class="post-title" href="../etc/firefox-language-pack-config#firefox-language-pack-config">
-					<a href="../etc/firefox-language-pack-config#firefox-language-pack-config">[ETC] 파이어폭스 언어팩 적용하기</a>
+				<h1 class="post-title" href="../game/monument-valley-review#monument-valley-review">
+					<a href="../game/monument-valley-review#monument-valley-review">[Game] Monument Valley 클리어</a>
 				</h1>
-				<span class="post-date">2015-01-28, Wed</span>
+				<span class="post-date">2015-10-12, Mon</span>
 				<p>
-					<p><em>deprecate</em></p>
-<blockquote>
-<p>이글은 윈도우 기준으로 작성되었습니다.<br>
-현재(16.08.24) 언어팩은 제공되고 있지 않습니다.  </p>
-</blockquote>
-<p>파이어폭스는 처음 받을 때 언어를 선택해서 받아야 하므로 새로운 언어로 변경하기 위해서는 파이어폭스를 다시 설치해야한다.</p>
-<p>그런데 재설치를 하지 않고서 파이어폭스 언어팩을 받으려면 xpi 파일을 받아와야한다. 현재 최신버전에 따른 언어팩은 따로 지원해주지 않는다.
-<a href="http://download.cdn.mozilla.net/pub/mozilla.org/firefox/releases/">여기서</a> 원하는 버전에 접속한 후 …</p>
+					<p>구글 Play 스토어에서 처음 봤던 모뉴먼트 밸리가 Amazon Underground에서 무료로 풀렸다.</p>
+<p>3.99달러 / 4000원 이라는 돈을 주고 사도 아깝지 않았겠지만 여러모로 여건이 안되어서 미뤄 두었던 게임이었다.</p>
+<p>소식을 듣자마자 아마존 언더그라운드어플을 깔고, 얼른 받아서 플레이 했다.</p>
+<p>결과는 대 만족</p>
+<p>퍼즐 게임을 좋아하는 것도 있지만 스토리나 한글화도 괜찮았던 거 같고, 무엇보다 배경이 …</p>
 				</p>
-				<a class="read-more" href="etc/firefox-language-pack-config">Continue reading »</a>
+				<a class="read-more" href="game/monument-valley-review">Continue reading »</a>
 			</div>
 			<div class="post">
-				<h1 class="post-title" href="../life/suji-library-seat-view#suji-library-seat-view">
-					<a href="../life/suji-library-seat-view#suji-library-seat-view">[Life] 용인 수지도서관 좌석 배정 확인 사이트</a>
+				<h1 class="post-title" href="../life/zaiper-integration#zaiper-integration">
+					<a href="../life/zaiper-integration#zaiper-integration">[Life] Trello와 Wunderlist 연동해서 사용하기</a>
 				</h1>
-				<span class="post-date">2015-01-21, Wed</span>
+				<span class="post-date">2015-10-07, Wed</span>
 				<p>
-					<p>중고등학교때 한창 용인 수지구에 있는 수지도서관을 많이 다녔었습니다.</p>
-<p>수지도서관은 열람실의 좌석을 배정받아서 입장하는데요, 그 때문에 항상 개방시간 전에 가서 줄을 서서 좌석을 배정받곤 했습니다.</p>
-<p>평일이나 주말이나 항상 좌석을 배정 받으려면 기다려야 했었거든요.</p>
-<p>또 더 중요한건 좌석배정 예약을 해두고 차례가 왔는데 배정을 못받으면 취소되기도 했습니다. 그래서 어딜 가지 못하고 2층 대기실에서 …</p>
+					<p>요즘 개인 To-do List 관리는 <a href="https://www.wunderlist.com/">Wunderlist</a>(분더리스트는 아마 독일 쪽에서 시작한 것 같다. 그래서 발음이..)를 활용하고 있는데, 무척 유용하게 잘 쓰고 있다. 그런데 다른 사람들과 업무 공유를 <a href="https://trello.com/">Trello</a>(트렐로)를 사용하게 되었는데 할일은 계속 쌓여가는데 일일이 확인해서 추가하자니 점점 귀찮아 졌다. 그래서 둘을 연동할 방법을 찾고 있었는데, 처음엔 둘다 …</p>
 				</p>
-				<a class="read-more" href="life/suji-library-seat-view">Continue reading »</a>
+				<a class="read-more" href="life/zaiper-integration">Continue reading »</a>
 			</div>
 			<div class="post">
-				<h1 class="post-title" href="../life/google-play-account-card-error#google-play-account-card-error">
-					<a href="../life/google-play-account-card-error#google-play-account-card-error">[Life] 구글 플레이 월렛 결제수단 등록오류 관련 팁</a>
+				<h1 class="post-title" href="../life/laos-travel-review-06#laos-travel-review-06">
+					<a href="../life/laos-travel-review-06#laos-travel-review-06">[Life] 8박 9일 라오스 여행기 - 여섯째날(방비엥, 동굴튜빙, 카약, 사쿠라바)</a>
 				</h1>
-				<span class="post-date">2014-12-27, Sat</span>
+				<span class="post-date">2015-10-06, Tue</span>
 				<p>
-					<p><img alt="신용카드 및 직불카드 등록 이미지" src="/images/2014-12-27/01.png"></p>
-<p>KB국민체크카드를 쓰고 있는데 결제카드로 등록하려니</p>
-<p><em>"해외이용거절:한도초과"</em></p>
-<p>라는 문자가 날아왔다.</p>
-<p>분명 카드 만들때 한도 없게 했던거 같아서 왜 안되나 국민은행에 직접 찾아가봤다.</p>
-<p>상담을 통해 얻게된 결론은 "가승인" 가승인이라고 하면 처음 결제 수단으로 카드를 등록할 때 1달러라던지, 1000원이라던지 일정금액을 출금하고 다시 출금 취소하면서 카드를 승인하는걸 말한다. 알고봤더니 카드에는 겨우 1000원정도의 금액뿐이었고 …</p>
+					<p>방비엥에서 맞는 첫 아침이다. 루앙프라방에서는 하루 종일 더웠는데, 방비엥은 구름이 끼고 좀 선선한 날씨였다. 어제 투어리스트에서 미리 예약한 동굴 튜빙과 카약을 하러 서둘러 나왔다. ( 둘이 합쳐 2인 180,000Kip 이었다.) 원래 200,000Kip이었던것 같은데, 흥정했다. 여긴 흥정이 되었던 곳이었고, 가격대가 고정되어 있는 건 아니라서 흥정이 힘들 수도 있다. 여행자 거리에서 …</p>
 				</p>
-				<a class="read-more" href="life/google-play-account-card-error">Continue reading »</a>
+				<a class="read-more" href="life/laos-travel-review-06">Continue reading »</a>
 			</div>
 	</div>
 	<div class="pagination">
 
 		<span class="pagination-item older"><a href="../author/junshoong11.html">Newer</a></span>
 
-		<span class="pagination-item newer">Older</span>
+		<span class="pagination-item newer"><a href="../author/junshoong13.html">Older</a></span>
 	</div>
 		</div>
 	</body>

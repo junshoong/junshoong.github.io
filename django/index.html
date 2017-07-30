@@ -59,7 +59,7 @@
 					</a>
                 </li>
                 <li>
-					<a class="sidebar-nav-item" href="https://www.slideshare.net/Vaporize93">
+					<a class="sidebar-nav-item" href="https://www.slideshare.net/junshoong">
 						<i class="fa fa-slideshare"></i>
                         slideshare
 					</a>
@@ -86,6 +86,61 @@
 	</div>
 </div>		<div class="content container">
 	<div class="posts">
+			<div class="post">
+				<h1 class="post-title" href="../django/set-user-permission#set-user-permission">
+					<a href="../django/set-user-permission#set-user-permission">[Django] User에게 권한 부여하기</a>
+				</h1>
+				<span class="post-date">2017-04-21, Fri</span>
+				<p>
+					<p>코드 몇줄로 간단하게 권한을 부여할 수 있다.</p>
+<div class="highlight"><pre><span></span><span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s1">&#39;testuser&#39;</span><span class="p">)</span>
+<span class="n">perm</span> <span class="o">=</span> <span class="n">Permission</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">codename</span><span class="o">=</span><span class="s1">&#39;model.add_model&#39;</span><span class="p">)</span>
+<span class="n">user</span><span class="o">.</span><span class="n">user_permissions</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">perm</span><span class="p">)</span>
+</pre></div>
+
+
+<p>여기서 주의할 점은 적용되긴하지만 <code>has_perm</code>등으로 확인하면 해당 권한이 없다고 나온다는 점이다. 이는 캐싱되어 있는 정보때문에 그렇다. 캐시를 지우거나 인스턴스를 새로 불러오면 올바르게 적용된걸 확인할 수 …</p>
+				</p>
+				<a class="read-more" href="django/set-user-permission">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../django/serializer-or-view#serializer-or-view">
+					<a href="../django/serializer-or-view#serializer-or-view">[Django] serializer의 구현</a>
+				</h1>
+				<span class="post-date">2017-04-20, Thu</span>
+				<p>
+					<p>DRF에서 create를 구현하는 경우 <code>ViewSet</code>의 <code>perform_create</code>를 사용하면 Serializer의 create를 돌지 않는다.</p>
+				</p>
+				<a class="read-more" href="django/serializer-or-view">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../django/timezone-setting#timezone-setting">
+					<a href="../django/timezone-setting#timezone-setting">[Django] timezone 설정</a>
+				</h1>
+				<span class="post-date">2017-04-19, Wed</span>
+				<p>
+					<p>Django에서 기본적인 DateTimeField를 현재 timezone으로 맞추고 싶다.</p>
+<p>settings.py</p>
+<div class="highlight"><pre><span></span><span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="s1">&#39;Asia/Seoul&#39;</span>
+<span class="c1"># USE_TZ = True</span>
+</pre></div>
+
+
+<p>여기서 <code>TIME_ZONE</code>만 수정해주니까 저장되는 값이 달랐다. <code>USE_TZ</code>도 comment 해주니 정상적으로 입력되었다.
+참고로 Django에서는 <a href="https://www.w3.org/TR/NOTE-datetime"><code>ISO 8601</code></a> 을 따른다.</p>
+				</p>
+				<a class="read-more" href="django/timezone-setting">Continue reading »</a>
+			</div>
+			<div class="post">
+				<h1 class="post-title" href="../django/django-restframework-image-field#django-restframework-image-field">
+					<a href="../django/django-restframework-image-field#django-restframework-image-field">[Django] restframework에서 image 제공하기</a>
+				</h1>
+				<span class="post-date">2017-04-16, Sun</span>
+				<p>
+					<p>DRF에서 image field를 serving 해보자.</p>
+				</p>
+				<a class="read-more" href="django/django-restframework-image-field">Continue reading »</a>
+			</div>
 			<div class="post">
 				<h1 class="post-title" href="../django/install-mariadb-for-django#install-mariadb-for-django">
 					<a href="../django/install-mariadb-for-django#install-mariadb-for-django">[Django] MariaDB를 사용해서 Django개발 환경 만들기</a>
