@@ -1,3 +1,6 @@
 [submodule "theme/pelican-hyde"]
 	path = theme/pelican-hyde
 	url = https://github.com/junshoong/pelican-hyde.git
+[submodule "theme/cared"]
+	path = theme/cared
+	url = https://github.com/junshoong/cared.git

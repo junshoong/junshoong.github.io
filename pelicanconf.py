@@ -40,7 +40,7 @@ DEFAULT_PAGINATION = 7
 RELATIVE_URLS = True
 
 # Theme
-THEME = "theme/pelican-hyde"
+THEME = "theme/cared"
 DEFAULT_DATE_FORMAT = '%Y-%m-%d, %a'
 
 # Url settings, remove '.html'
