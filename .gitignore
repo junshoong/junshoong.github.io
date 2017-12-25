@@ -1,2 +1,4 @@
 .gitignore
 theme/
+__pycache__/
+output/
