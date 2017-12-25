@@ -1,6 +1,5 @@
 Title: [Mac] Touchbar 엑셀 셀 수정 단축키
 Date: 2017-12-03
-Modified: 
 Category: Mac
 Tags: mac, excel, touchbar
 Slug: excel-cell-modify
