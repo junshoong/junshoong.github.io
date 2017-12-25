@@ -35,6 +35,7 @@ SOCIAL = (('email', 'junshoong@gmail.com'),
           ('stack-overflow','https://www.stackoverflow.com/users/4466697/junsu-kim'),)
 
 DEFAULT_PAGINATION = 7
+SUMMARY_MAX_LENGTH = 20
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
@@ -64,3 +65,9 @@ AUTHOR_SAVE_AS = AUTHOR_URL+'.html'
 
 # Profile Settings
 PROFILE_IMAGE = 'profile.png'
+
+# Pagination
+PAGINATION_PATTERNS = (
+    (1, '{base_name}/', '{base_name}/index.html'),
+    (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
+)
