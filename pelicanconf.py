@@ -45,23 +45,25 @@ THEME = "theme/cared"
 DEFAULT_DATE_FORMAT = '%Y-%m-%d, %a'
 
 # Url settings, remove '.html'
-ARCHIVE_URL = '{archive}'
-ARCHIVE_SAVE_AS = ARCHIVE_URL+'.html'
+#ARCHIVE_URL = '{archive}'
+#ARCHIVE_SAVE_AS = ARCHIVE_URL+'.html'
 
-ARTICLE_URL = '{category}/{slug}'
-ARTICLE_SAVE_AS = ARTICLE_URL+'.html'
+ARTICLE_URL = '{category}/{slug}/'
+ARTICLE_SAVE_AS = ARTICLE_URL+'index.html'
 
-PAGE_URL = '{slug}'
-PAGE_SAVE_AS = PAGE_URL+'/index.html'
+PAGE_URL = '{slug}/'
+PAGE_SAVE_AS = PAGE_URL+'index.html'
 
-CATEGORY_URL = '{slug}/index'
-CATEGORY_SAVE_AS = CATEGORY_URL+'.html'
+CATEGORY_URL = '{slug}/'
+CATEGORY_SAVE_AS = CATEGORY_URL+'index.html'
 
-TAG_URL = 'tag/{slug}'
-TAG_SAVE_AS = TAG_URL+'.html'
+TAG_URL = 'tag/{slug}/'
+TAG_SAVE_AS = TAG_URL+'index.html'
+TAGS_URL = 'tags/'
+TAGS_SAVE_AS = 'tags/index.html'
 
-AUTHOR_URL = 'author/{slug}'
-AUTHOR_SAVE_AS = AUTHOR_URL+'.html'
+AUTHOR_URL = 'author/{slug}/'
+AUTHOR_SAVE_AS = AUTHOR_URL+'index.html'
 
 # Profile Settings
 PROFILE_IMAGE = 'profile.png'
@@ -69,5 +71,5 @@ PROFILE_IMAGE = 'profile.png'
 # Pagination
 PAGINATION_PATTERNS = (
     (1, '{base_name}/', '{base_name}/index.html'),
-    (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
+    (2, '{base_name}/{number}/', '{base_name}/{number}/index.html'),
 )
