@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - Django</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/django.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2017-04-21T00:00:00+09:00</updated><entry><title>[Django] User에게 권한 부여하기</title><link href="http://blog.junshoong.net/django/set-user-permission" rel="alternate"></link><published>2017-04-21T00:00:00+09:00</published><updated>2017-04-21T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-21:/django/set-user-permission</id><summary type="html">&lt;p&gt;코드 몇줄로 간단하게 권한을 부여할 수 있다.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - Django</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/django.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2017-04-21T00:00:00+09:00</updated><entry><title>[Django] User에게 권한 부여하기</title><link href="http://blog.junshoong.net/django/set-user-permission/" rel="alternate"></link><published>2017-04-21T00:00:00+09:00</published><updated>2017-04-21T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-21:/django/set-user-permission/</id><summary type="html">&lt;p&gt;코드 몇줄로 간단하게 권한을 부여할 수 있다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;user&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;testuser&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;perm&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Permission&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;codename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;model.add_model&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;user_permissions&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;perm&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;여기서 주의할 점은 적용되긴하지만 &lt;code&gt;has_perm&lt;/code&gt;등으로 확인하면 해당 권한이 없다고 나온다는 점이다. 이는 캐싱되어 있는 정보때문에 그렇다. 캐시를 지우거나 인스턴스를 새로 불러오면 올바르게 적용된걸 확인할 수 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;코드 몇줄로 간단하게 권한을 부여할 수 있다.&lt;/p&gt;
+&lt;span class="n"&gt;perm&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Permission&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;codename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;model.add_model …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;코드 몇줄로 간단하게 권한을 부여할 수 있다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;user&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;testuser&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;perm&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Permission&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;codename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;model.add_model&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;user_permissions&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;perm&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -23,8 +18,15 @@
 
 
 &lt;p&gt;아래 링크를 참고할 수 있다.
-- &lt;a href="http://stackoverflow.com/questions/42220272/pytest-django-set-user-permissions"&gt;stackoverflow - Pytest-django: set user permissions&lt;/a&gt;&lt;/p&gt;</content><category term="django"></category></entry><entry><title>[Django] serializer의 구현</title><link href="http://blog.junshoong.net/django/serializer-or-view" rel="alternate"></link><published>2017-04-20T00:00:00+09:00</published><updated>2017-04-20T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-20:/django/serializer-or-view</id><summary type="html">&lt;p&gt;DRF에서 create를 구현하는 경우 &lt;code&gt;ViewSet&lt;/code&gt;의 &lt;code&gt;perform_create&lt;/code&gt;를 사용하면 Serializer의 create를 돌지 않는다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;DRF에서 create를 구현하는 경우 &lt;code&gt;ViewSet&lt;/code&gt;의 &lt;code&gt;perform_create&lt;/code&gt;를 사용하면 &lt;code&gt;Serializer&lt;/code&gt;의 &lt;code&gt;create&lt;/code&gt;를 돌지 않는다.&lt;/p&gt;
-&lt;p&gt;어떤 식으로 처리하는게 더 나은지는 모르겠지만.. &lt;code&gt;request&lt;/code&gt;를 처리할 필요가 있으면 view에서 구현해주고, 입력된 데이터인 &lt;code&gt;validated_data&lt;/code&gt;를 처리할 필요가 있으면 serializer에서 구현해주는게 좋은 것 같다. &lt;/p&gt;</content><category term="django"></category><category term="drf"></category></entry><entry><title>[Django] timezone 설정</title><link href="http://blog.junshoong.net/django/timezone-setting" rel="alternate"></link><published>2017-04-19T00:00:00+09:00</published><updated>2017-04-19T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-19:/django/timezone-setting</id><summary type="html">&lt;p&gt;Django에서 기본적인 DateTimeField를 현재 timezone으로 맞추고 싶다.&lt;/p&gt;
+- &lt;a href="http://stackoverflow.com/questions/42220272/pytest-django-set-user-permissions"&gt;stackoverflow - Pytest-django: set user permissions&lt;/a&gt;&lt;/p&gt;</content><category term="django"></category></entry><entry><title>[Django] serializer의 구현</title><link href="http://blog.junshoong.net/django/serializer-or-view/" rel="alternate"></link><published>2017-04-20T00:00:00+09:00</published><updated>2017-04-20T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-20:/django/serializer-or-view/</id><summary type="html">&lt;p&gt;DRF에서 create를 구현하는 경우 &lt;code&gt;ViewSet&lt;/code&gt;의 &lt;code&gt;perform_create&lt;/code&gt;를 사용하면 Serializer의 create를 돌지 않는다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;DRF에서 create를 구현하는 경우 &lt;code&gt;ViewSet&lt;/code&gt;의 &lt;code&gt;perform_create&lt;/code&gt;를 사용하면 &lt;code&gt;Serializer&lt;/code&gt;의 &lt;code&gt;create&lt;/code&gt;를 돌지 않는다.&lt;/p&gt;
+&lt;p&gt;어떤 식으로 처리하는게 더 나은지는 모르겠지만.. &lt;code&gt;request&lt;/code&gt;를 처리할 필요가 있으면 view에서 구현해주고, 입력된 데이터인 &lt;code&gt;validated_data&lt;/code&gt;를 처리할 필요가 있으면 serializer에서 구현해주는게 좋은 것 같다. &lt;/p&gt;</content><category term="django"></category><category term="drf"></category></entry><entry><title>[Django] timezone 설정</title><link href="http://blog.junshoong.net/django/timezone-setting/" rel="alternate"></link><published>2017-04-19T00:00:00+09:00</published><updated>2017-04-19T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-19:/django/timezone-setting/</id><summary type="html">&lt;p&gt;Django에서 기본적인 DateTimeField를 현재 timezone으로 맞추고 싶다.&lt;/p&gt;
+&lt;p&gt;settings.py&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;TIME_ZONE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Asia/Seoul&amp;#39;&lt;/span&gt;
+&lt;span class="c1"&gt;# USE_TZ = True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;여기서 &lt;code&gt;TIME_ZONE&lt;/code&gt;만 수정해주니까 저장되는 값이 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Django에서 기본적인 DateTimeField를 현재 timezone으로 맞추고 싶다.&lt;/p&gt;
 &lt;p&gt;settings.py&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;TIME_ZONE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Asia/Seoul&amp;#39;&lt;/span&gt;
 &lt;span class="c1"&gt;# USE_TZ = True&lt;/span&gt;
@@ -32,15 +34,7 @@
 
 
 &lt;p&gt;여기서 &lt;code&gt;TIME_ZONE&lt;/code&gt;만 수정해주니까 저장되는 값이 달랐다. &lt;code&gt;USE_TZ&lt;/code&gt;도 comment 해주니 정상적으로 입력되었다.
-참고로 Django에서는 &lt;a href="https://www.w3.org/TR/NOTE-datetime"&gt;&lt;code&gt;ISO 8601&lt;/code&gt;&lt;/a&gt; 을 따른다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Django에서 기본적인 DateTimeField를 현재 timezone으로 맞추고 싶다.&lt;/p&gt;
-&lt;p&gt;settings.py&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;TIME_ZONE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Asia/Seoul&amp;#39;&lt;/span&gt;
-&lt;span class="c1"&gt;# USE_TZ = True&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;여기서 &lt;code&gt;TIME_ZONE&lt;/code&gt;만 수정해주니까 저장되는 값이 달랐다. &lt;code&gt;USE_TZ&lt;/code&gt;도 comment 해주니 정상적으로 입력되었다.
-참고로 Django에서는 &lt;a href="https://www.w3.org/TR/NOTE-datetime"&gt;&lt;code&gt;ISO 8601&lt;/code&gt;&lt;/a&gt; 을 따른다.&lt;/p&gt;</content><category term="django"></category><category term="timezone"></category></entry><entry><title>[Django] restframework에서 image 제공하기</title><link href="http://blog.junshoong.net/django/django-restframework-image-field" rel="alternate"></link><published>2017-04-16T00:00:00+09:00</published><updated>2017-04-17T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-16:/django/django-restframework-image-field</id><summary type="html">&lt;p&gt;DRF에서 image field를 serving 해보자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;drf에서 이미지를 제공하기 위해서는 이미지 Renderer가 별도로 필요하다. 이는 JSONRenderer 등과는 다르게 직접 만들어줘야 한다. &lt;/p&gt;
+참고로 Django에서는 &lt;a href="https://www.w3.org/TR/NOTE-datetime"&gt;&lt;code&gt;ISO 8601&lt;/code&gt;&lt;/a&gt; 을 따른다.&lt;/p&gt;</content><category term="django"></category><category term="timezone"></category></entry><entry><title>[Django] restframework에서 image 제공하기</title><link href="http://blog.junshoong.net/django/django-restframework-image-field/" rel="alternate"></link><published>2017-04-16T00:00:00+09:00</published><updated>2017-04-17T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-16:/django/django-restframework-image-field/</id><summary type="html">&lt;p&gt;DRF에서 image field를 serving 해보자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;drf에서 이미지를 제공하기 위해서는 이미지 Renderer가 별도로 필요하다. 이는 JSONRenderer 등과는 다르게 직접 만들어줘야 한다. &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;/myapp/views.py&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;rest_framework&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;viewsets&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;rest_framework&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;renderers&lt;/span&gt;
@@ -76,22 +70,12 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;이런 식으로 제공할 수 있다.&lt;/p&gt;</content><category term="django"></category><category term="rest"></category></entry><entry><title>[Django] MariaDB를 사용해서 Django개발 환경 만들기</title><link href="http://blog.junshoong.net/django/install-mariadb-for-django" rel="alternate"></link><published>2016-11-03T00:00:00+09:00</published><updated>2016-11-03T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-11-03:/django/install-mariadb-for-django</id><summary type="html">&lt;h1&gt;개요&lt;/h1&gt;
+&lt;p&gt;이런 식으로 제공할 수 있다.&lt;/p&gt;</content><category term="django"></category><category term="rest"></category></entry><entry><title>[Django] MariaDB를 사용해서 Django개발 환경 만들기</title><link href="http://blog.junshoong.net/django/install-mariadb-for-django/" rel="alternate"></link><published>2016-11-03T00:00:00+09:00</published><updated>2016-11-03T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-11-03:/django/install-mariadb-for-django/</id><summary type="html">&lt;h1&gt;개요&lt;/h1&gt;
 &lt;p&gt;django는 기본적으로 sqlite3를 지원한다.&lt;br&gt;
 project/settings.py 를 확인해보면 아래와 같은 부분을 확인할 수 있다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;DATABASES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="s1"&gt;&amp;#39;default&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="s1"&gt;&amp;#39;ENGINE&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;django.db.backends.sqlite3&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="s1"&gt;&amp;#39;NAME&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BASE_DIR&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;db.sqlite3&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;code&gt;sqlite3&lt;/code&gt; 대신 &lt;code&gt;mariadb&lt;/code&gt;를 사용하는 방법을 알아보도록하자.&lt;/p&gt;
-&lt;h1&gt;MariaDB 설치&lt;/h1&gt;
-&lt;p&gt;먼저 &lt;code&gt;mariadb&lt;/code&gt;를 받는다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="c1"&gt;# arch linux command (aura 대신 pacman을 사용할 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h1&gt;개요&lt;/h1&gt;
+        &lt;span class="s1"&gt;&amp;#39;ENGINE&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;django …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h1&gt;개요&lt;/h1&gt;
 &lt;p&gt;django는 기본적으로 sqlite3를 지원한다.&lt;br&gt;
 project/settings.py 를 확인해보면 아래와 같은 부분을 확인할 수 있다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;DATABASES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -224,14 +208,11 @@ Enter password:
 &lt;li&gt;&lt;a href="http://zafertop.tistory.com/2"&gt;블로그 몽개구리 - Django 에 MySQL 혹은 MariaDB 연동하기&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://kwon37xi.egloos.com/1634694"&gt;블로그 권남 - MySQL 기본 명령어 정리&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://darkhorizon.tistory.com/313"&gt;블로그 너머 - DB TABLE 목록 조회&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="django"></category><category term="mariadb"></category><category term="database"></category><category term="devops"></category></entry><entry><title>[Django] ImageField 업로드문제</title><link href="http://blog.junshoong.net/django/django-image-upload" rel="alternate"></link><published>2016-09-09T00:00:00+09:00</published><updated>2016-09-09T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-09-09:/django/django-image-upload</id><summary type="html">&lt;p&gt;Django의 ImageFile를 만들어서 서버에 업로드를 하는데 계속해서 아래와 같은 메세지가 나타났다.  &lt;/p&gt;
+&lt;/ul&gt;</content><category term="django"></category><category term="mariadb"></category><category term="database"></category><category term="devops"></category></entry><entry><title>[Django] ImageField 업로드문제</title><link href="http://blog.junshoong.net/django/django-image-upload/" rel="alternate"></link><published>2016-09-09T00:00:00+09:00</published><updated>2016-09-09T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-09-09:/django/django-image-upload/</id><summary type="html">&lt;p&gt;Django의 ImageFile를 만들어서 서버에 업로드를 하는데 계속해서 아래와 같은 메세지가 나타났다.  &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This field is required.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;admin 페이지에서 업로드할때는 문제가 없는데 직접 구현해둔 곳에서만 문제가 발생한다. 여러가지를 추측해봤는데 결국 Templates 문제였다. 여기서 참고를 위해 코드 일부를 첨부한다.
-일단 &lt;code&gt;models.py&lt;/code&gt;를 보자.  &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Image&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Model&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CharField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;max_length&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;50 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Django의 ImageFile를 만들어서 서버에 업로드를 하는데 계속해서 아래와 같은 메세지가 나타났다.  &lt;/p&gt;
+&lt;p&gt;admin 페이지에서 업로드할때는 문제가 없는데 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Django의 ImageFile를 만들어서 서버에 업로드를 하는데 계속해서 아래와 같은 메세지가 나타났다.  &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This field is required.&lt;/p&gt;
 &lt;/blockquote&gt;

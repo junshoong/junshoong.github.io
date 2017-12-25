@@ -1,141 +1,59 @@
 <!DOCTYPE html>
 <html lang="ko">
-	<head>
-		<link href="http://gmpg.org/xfn/11" rel="profile">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Junshoong의 기술블로그</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="../theme/css/style.css" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+    </head>
 
-		<!-- Enable responsiveness on mobile devices-->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-		<title>Junshoong의 기술블로그</title>
-
-		<!-- CSS -->
-		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
-		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
-
-		<link rel="stylesheet" href="../theme/css/poole.css" />
-		<link rel="stylesheet" href="../theme/css/hyde.css" />
-		<link rel="stylesheet" href="../theme/css/syntax.css" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="../theme/css/style.css" />
-
-		<!-- RSS -->
-		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
-	</head>
-
-	<body class="theme-base-0d">
-<div class="sidebar">
-	<div class="container sidebar-sticky">
-		<div class="sidebar-about">
-
-			<h1>
-				<a href="/">
-					<img class="profile-picture" src="../images/profile.png">
-                    <p class="sitename"> Junshoong의 기술블로그 </p>
-				</a>
-			</h1>
-			<p class="lead"></p>
-			<p class="lead"> </p>
-			<p></p>
-		</div>
-		<ul class="sidebar-nav">
-                <li>
-					<a class="sidebar-nav-item" href="mailto:junshoong@gmail.com">
-						<i class="fa fa-envelope"></i>
-                        email
-					</a>
-                </li>
-                <li>
-					<a class="sidebar-nav-item" href="https://www.facebook.com/vaporize93">
-						<i class="fa fa-facebook"></i>
-                        facebook
-					</a>
-                </li>
-                <li>
-					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/junshoong">
-						<i class="fa fa-linkedin"></i>
-                        linkedin
-					</a>
-                </li>
-                <li>
-					<a class="sidebar-nav-item" href="https://www.slideshare.net/junshoong">
-						<i class="fa fa-slideshare"></i>
-                        slideshare
-					</a>
-                </li>
-                <li>
-					<a class="sidebar-nav-item" href="https://github.com/junshoong">
-						<i class="fa fa-github"></i>
-                        github
-					</a>
-                </li>
-                <li>
-					<a class="sidebar-nav-item" href="https://www.stackoverflow.com/users/4466697/junsu-kim">
-						<i class="fa fa-stack-overflow"></i>
-                        stack-overflow
-					</a>
-                </li>
-            <li>
-			<a class="sidebar-nav-item" href="">
-				<i class="fa fa-feed"></i>
-                FEED
-			</a>
-            </li>
-		</nav>
-	</div>
-</div>		<div class="content container">
-	<div class="posts">
-			<div class="post">
-				<h1 class="post-title" href="../python/import-module-function#import-module-function">
-					<a href="../python/import-module-function#import-module-function">[Python]import_module을 사용해서 import 하기</a>
-				</h1>
-				<span class="post-date">2017-05-01, Mon</span>
-				<p>
-					<p>python에서 숫자 등으로 시작하는 패키지를 import 할때는 주의해야한다.</p>
+    <body>
+        <div class="container-fluid">
+<div class="row justify-content-start sticky-top header">
+    <div class="col-1 header-img">
+        <img class="profile-img" src="../images/profile.png">
+    </div>
+    <div class="col header-title">
+        <h2 class="sitename"><a href=".."> Junshoong의 기술블로그 </a></h2>
+    </div>
+</div>            <div class="row justify-content-around">
+                <div class="col-md-8 content">
+<div class="posts">
+    <div class="post">
+        <h1 class="post-title">
+            <a href="../python/import-module-function/">[Python]import_module을 사용해서 import 하기</a>
+        </h1>
+        <span class="post-date">2017-05-01, Mon</span>
+        <p>
+        <p>python에서 숫자 등으로 시작하는 패키지를 import 할때는 주의해야한다.</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="mi">1234</span>
 <span class="kn">from</span> <span class="mi">1234</span> <span class="kn">import</span> <span class="nn">abc</span>
 </pre></div>
 
 
-<p>위와 같이 숫자로 된 파일은 에러를 뱉을 뿐 import 되지 않는다.
-그럴 땐 아래와 같이 한다.</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">importlib</span>
-
-<span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="s1">&#39;1234&#39;</span><span class="p">)</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="s1">&#39;1234&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">abc</span><span class="p">()</span>
-</pre></div>
-
-
-<p>위와 같은 작업으로 import를 진행할 수 있다.</p>
-<p>참고링크
-- <a href="https://docs.python.org/3/library/importlib.html#importlib.import_module">python …</a></p>
-				</p>
-				<a class="read-more" href="python/import-module-function">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="../python/asyncronous-http-request#asyncronous-http-request">
-					<a href="../python/asyncronous-http-request#asyncronous-http-request">[Python] http 요청을 비동기로하기</a>
-				</h1>
-				<span class="post-date">2017-04-26, Wed</span>
-				<p>
-					<p>http 요청으로 간단한 스크래핑 작업을 하는데 요청 갯수가 일곱개 정도 되니 시간이 오래걸린다.</p>
-<p><code>asyncio</code>와 <code>aiohttp</code>를 사용해서 속도를 높여보자.</p>
-<p>[gist:id=6c7db753f49f4720473b34147abc3b6c,file=requests_test.py]</p>
-<p>위 코드는 <code>http://example.com</code>에 http get을 20회 실행하는 코드다.
-timeit을 이용해서 시간을 확인해보니 6~7초정도 걸렸다.</p>
-<p>[gist:id=6c7db753f49f4720473b34147abc3b6c,file=aiohttp_test.py …</p>
-				</p>
-				<a class="read-more" href="python/asyncronous-http-request">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="../python/time-check#time-check">
-					<a href="../python/time-check#time-check">[Python] 프로그램 시간 체크하기</a>
-				</h1>
-				<span class="post-date">2017-04-26, Wed</span>
-				<p>
-					<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">timeit</span>
+<p>위와 같이 숫자로 된 파일은 에러를 …</p>
+        </p>
+    </div>
+    <div class="post">
+        <h1 class="post-title">
+            <a href="../python/asyncronous-http-request/">[Python] http 요청을 비동기로하기</a>
+        </h1>
+        <span class="post-date">2017-04-26, Wed</span>
+        <p>
+        <p>http 요청으로 간단한 스크래핑 작업을 하는데 요청 갯수가 일곱개 정도 되니 시간이 오래걸린다.</p>
+<p><code>asyncio</code>와 <code>aiohttp</code>를 사용해서 속도를 높여보자 …</p>
+        </p>
+    </div>
+    <div class="post">
+        <h1 class="post-title">
+            <a href="../python/time-check/">[Python] 프로그램 시간 체크하기</a>
+        </h1>
+        <span class="post-date">2017-04-26, Wed</span>
+        <p>
+        <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">timeit</span>
 
 <span class="n">s</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
 
@@ -146,91 +64,165 @@ timeit을 이용해서 시간을 확인해보니 6~7초정도 걸렸다.</p>
 </pre></div>
 
 
-<p>위와 같이 특정 처리에 걸린 시간을 확인할 수 있다.</p>
-				</p>
-				<a class="read-more" href="python/time-check">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="../python/lambda-sort#lambda-sort">
-					<a href="../python/lambda-sort#lambda-sort">[Python] lambda를 통한 sort</a>
-				</h1>
-				<span class="post-date">2017-04-12, Wed</span>
-				<p>
-					<p><code>lambda</code>는 익명 함수이다. python 외에도 여러 언어에서 지원하는 expression으로, 짧은 함수를 잠깐 사용할 때 쓸 수 있다.
-가장 기본적으로는 아래와 같이 쓴다.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="mi">9</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
-<span class="mi">225</span>
-</pre></div>
-
-
-<p><code>lambda</code>뒤에 인자를 받고 return 값을 적어준다.
-아래와 같이 사용할 수도 있다.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">sys</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">read</span> <span class="o">=</span> <span class="k">lambda …</span></pre></div>
-				</p>
-				<a class="read-more" href="python/lambda-sort">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="../python/selenium3-FireFox50-geckodriver-error-solve#selenium3-FireFox50-geckodriver-error-solve">
-					<a href="../python/selenium3-FireFox50-geckodriver-error-solve#selenium3-FireFox50-geckodriver-error-solve">[Python] selenium 3 + FireFox50 사용시 발생하는 geckodriver관련 에러 해결</a>
-				</h1>
-				<span class="post-date">2017-01-09, Mon</span>
-				<p>
-					<h2>문제</h2>
+<p>위와 같이 특정 처리에 걸린 시간을 확인할 수 …</p>
+        </p>
+    </div>
+    <div class="post">
+        <h1 class="post-title">
+            <a href="../python/lambda-sort/">[Python] lambda를 통한 sort</a>
+        </h1>
+        <span class="post-date">2017-04-12, Wed</span>
+        <p>
+        <p><code>lambda</code>는 익명 함수이다. python 외에도 여러 언어에서 지원하는 expression으로, 짧은 함수를 잠깐 사용할 때 쓸 수 있다.
+가장 기본적으로는 …</p>
+        </p>
+    </div>
+    <div class="post">
+        <h1 class="post-title">
+            <a href="../python/selenium3-FireFox50-geckodriver-error-solve/">[Python] selenium 3 + FireFox50 사용시 발생하는 geckodriver관련 에러 해결</a>
+        </h1>
+        <span class="post-date">2017-01-09, Mon</span>
+        <p>
+        <h2>문제</h2>
 <p>selenium과 firefox를 사용해서 테스트를 진행하는 도중 아래와 같은 에러가 발생했다.</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
 
 <span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Firefox</span><span class="p">()</span>
-<span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://www.python.org&quot;</span><span class="p">)</span>
-
-<span class="k">assert</span> <span class="s1">&#39;Python&#39;</span> <span class="ow">in</span> <span class="n">browser</span><span class="o">.</span><span class="n">title</span>
-
-<span class="n">browser</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
-</pre></div>
-
-
-<div class="highlight"><pre><span></span>$ python functional_test.py
-</pre></div>
-
-
-<div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">&quot;/home/harvey/venvs/dbproject/lib/python3.5/site-packages/selenium/webdriver …</span></pre></div>
-				</p>
-				<a class="read-more" href="python/selenium3-FireFox50-geckodriver-error-solve">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="../python/8percent-investlist-bot#8percent-investlist-bot">
-					<a href="../python/8percent-investlist-bot#8percent-investlist-bot">[Python] 8퍼센트 투자목록 출력 슬랙 봇</a>
-				</h1>
-				<span class="post-date">2016-07-09, Sat</span>
-				<p>
-					<p>생각은 대충하고 있었는데 실제로 만든 건 이틀정도 걸린 것 같다. p2p 대부업체인 8percent에 올라오는 투자목록을 긁어와서 알려준다.</p>
-<p>로직은 단순하다. 사용자가 list라고 bot에게 dm을 보내면 beautifulsoup로 투자 목록 페이지의 내용을 정리해서 보여준다.</p>
-<p>아직은 단순하지만 몇가지 더 만들어 볼 수 있지 않을까 싶다. 간단한 정렬이라던지, 원하는 내용만 설정해서 보여주는 식으로 말이다.</p>
-<p>코드와 …</p>
-				</p>
-				<a class="read-more" href="python/8percent-investlist-bot">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="../python/python-nosetest#python-nosetest">
-					<a href="../python/python-nosetest#python-nosetest">[Python] nosttest 사용하기</a>
-				</h1>
-				<span class="post-date">2016-06-26, Sun</span>
-				<p>
-					
-				</p>
-				<a class="read-more" href="python/python-nosetest">Continue reading »</a>
-			</div>
-	</div>
-	<div class="pagination">
-
-		<span class="pagination-item older">Newer</span>
-
-		<span class="pagination-item newer"><a href="../python/index2.html">Older</a></span>
-	</div>
-		</div>
-	</body>
+<span class="n">browser</span><span class="o">.</span><span class="n">get …</span></pre></div>
+        </p>
+    </div>
+    <div class="post">
+        <h1 class="post-title">
+            <a href="../python/8percent-investlist-bot/">[Python] 8퍼센트 투자목록 출력 슬랙 봇</a>
+        </h1>
+        <span class="post-date">2016-07-09, Sat</span>
+        <p>
+        <p>생각은 대충하고 있었는데 실제로 만든 건 이틀정도 걸린 것 같다. p2p 대부업체인 8percent에 올라오는 투자목록을 긁어와서 알려준다.</p>
+<p>로직은 단순하다. 사용자가 …</p>
+        </p>
+    </div>
+    <div class="post">
+        <h1 class="post-title">
+            <a href="../python/python-nosetest/">[Python] nosttest 사용하기</a>
+        </h1>
+        <span class="post-date">2016-06-26, Sun</span>
+        <p>
+        
+        </p>
+    </div>
+</div>
+    <p class="paginator">
+        1 / 2
+            <a href="../python/2/">&raquo;</a>
+    </p>
+                </div>
+<div class="col-md-3 sidebar">
+    <div class="list-group category">
+        <div class="list-group-item list-group-item-primary"> Category </div>
+        <a class="list-group-item list-group-item-action category-item" href="../agile/">
+            Agile
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../angular/">
+            Angular
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../blog/">
+            Blog
+            <span class="category-item-count">(3)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../book/">
+            Book
+            <span class="category-item-count">(3)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../css/">
+            CSS
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../ctf/">
+            CTF
+            <span class="category-item-count">(4)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../devops/">
+            DevOps
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../django/">
+            Django
+            <span class="category-item-count">(6)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../docker/">
+            Docker
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../editor/">
+            Editor
+            <span class="category-item-count">(3)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../english/">
+            English
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../etc/">
+            ETC
+            <span class="category-item-count">(11)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../game/">
+            Game
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../git/">
+            Git
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../life/">
+            Life
+            <span class="category-item-count">(21)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../linux/">
+            Linux
+            <span class="category-item-count">(19)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../mac/">
+            Mac
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../movie/">
+            Movie
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../nginx/">
+            Nginx
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../pelican/">
+            Pelican
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../python/">
+            Python
+            <span class="category-item-count">(8)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../regex/">
+            Regex
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../shell/">
+            Shell
+            <span class="category-item-count">(2)</span>
+        </a> 
+    </div>
+    <div class="list-group social">
+        <div class="list-group-item list-group-item-primary"> Social </div>
+        <a class="list-group-item list-group-item-action" href="mailto:junshoong@gmail.com"> email </a>
+        <a class="list-group-item list-group-item-action" href="https://www.facebook.com/vaporize93"> facebook </a>
+        <a class="list-group-item list-group-item-action" href="https://www.linkedin.com/in/junshoong"> linkedin </a>
+        <a class="list-group-item list-group-item-action" href="https://www.slideshare.net/junshoong"> slideshare </a>
+        <a class="list-group-item list-group-item-action" href="https://github.com/junshoong"> github </a>
+        <a class="list-group-item list-group-item-action" href="https://www.stackoverflow.com/users/4466697/junsu-kim"> stack-overflow </a>
+        <a class="list-group-item list-group-item-action" href=""> FEED </a>
+    </div>
+</div>            </div>
+        </div>
+    </body>
 </html>

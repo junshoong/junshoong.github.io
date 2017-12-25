@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - Editor</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/editor.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2017-04-04T00:00:00+09:00</updated><entry><title>[Editor] atom 에디터의 UI font-size 변경</title><link href="http://blog.junshoong.net/editor/atom-ui-font-size-change" rel="alternate"></link><published>2017-04-04T00:00:00+09:00</published><updated>2017-04-04T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-04:/editor/atom-ui-font-size-change</id><summary type="html">&lt;h2&gt;문제상황&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - Editor</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/editor.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2017-04-04T00:00:00+09:00</updated><entry><title>[Editor] atom 에디터의 UI font-size 변경</title><link href="http://blog.junshoong.net/editor/atom-ui-font-size-change/" rel="alternate"></link><published>2017-04-04T00:00:00+09:00</published><updated>2017-04-04T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-04:/editor/atom-ui-font-size-change/</id><summary type="html">&lt;h2&gt;문제상황&lt;/h2&gt;
 &lt;p&gt;노트북의 화면 해상도가 너무 높아 실제로 보이는 화면의 글씨가 너무 작아서 보기가 불편하다.
 &lt;img alt="변경전" src="/images/2017-04-04/01.png"&gt;&lt;/p&gt;
 &lt;h2&gt;환경&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Atom    : 1.15.0&lt;/li&gt;
-&lt;li&gt;Electron: 1.4.15&lt;/li&gt;
-&lt;li&gt;Chrome  : 53.0.2785.143&lt;/li&gt;
-&lt;li&gt;Node    : 6.5.0&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;해결&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;~/.atom/styles.less&lt;/code&gt; 파일을 수정해준다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;tree-view&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;tab-bar&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;tab&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="k"&gt;font-size&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;font-size의 값은 적당히 원하는 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;문제상황&lt;/h2&gt;
+&lt;li&gt;Electron …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h2&gt;문제상황&lt;/h2&gt;
 &lt;p&gt;노트북의 화면 해상도가 너무 높아 실제로 보이는 화면의 글씨가 너무 작아서 보기가 불편하다.
 &lt;img alt="변경전" src="/images/2017-04-04/01.png"&gt;&lt;/p&gt;
 &lt;h2&gt;환경&lt;/h2&gt;
@@ -40,8 +28,8 @@
 &lt;h2&gt;참고 링크&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/atom/atom/issues/2530"&gt;atom issue #2530 - Anyway to change UI/tab/tree view font size? &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="atom"></category><category term="editor"></category></entry><entry><title>[Editor] (미해결) jedi-vim을 통한 python3 자동완성</title><link href="http://blog.junshoong.net/editor/jedivim-python3" rel="alternate"></link><published>2016-03-07T00:00:00+09:00</published><updated>2016-03-07T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-03-07:/editor/jedivim-python3</id><summary type="html">&lt;p&gt;python3를 vim을 사용해서 코딩을 하는데, 자동완성 기능이 있으면 좋을 것 같아 찾아봤더니 &lt;a href="https://github.com/davidhalter/jedi-vim"&gt;jedi-vim&lt;/a&gt;을 많이 사용한다.&lt;/p&gt;
-&lt;p&gt;Pathogen 과 Vundle 사이에서 문제가 조금 생겼지만, 결국 Vundle을 통해서 jedi-vim을 적용하는데 성공했다. 그런데 조금 알아보니 환경변수에 적용된 기본 python을 기준으로 자동완성을 제공한다. 하지만 시스템에 기본 적용된 python의 버전이 2.7이기 때문에 python3로 자동완성하기 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;python3를 vim을 사용해서 코딩을 하는데, 자동완성 기능이 있으면 좋을 것 같아 찾아봤더니 &lt;a href="https://github.com/davidhalter/jedi-vim"&gt;jedi-vim&lt;/a&gt;을 많이 사용한다.&lt;/p&gt;
+&lt;/ul&gt;</content><category term="atom"></category><category term="editor"></category></entry><entry><title>[Editor] (미해결) jedi-vim을 통한 python3 자동완성</title><link href="http://blog.junshoong.net/editor/jedivim-python3/" rel="alternate"></link><published>2016-03-07T00:00:00+09:00</published><updated>2016-03-07T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-03-07:/editor/jedivim-python3/</id><summary type="html">&lt;p&gt;python3를 vim을 사용해서 코딩을 하는데, 자동완성 기능이 있으면 좋을 것 같아 찾아봤더니 &lt;a href="https://github.com/davidhalter/jedi-vim"&gt;jedi-vim&lt;/a&gt;을 많이 사용한다.&lt;/p&gt;
+&lt;p&gt;Pathogen 과 Vundle 사이에서 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;python3를 vim을 사용해서 코딩을 하는데, 자동완성 기능이 있으면 좋을 것 같아 찾아봤더니 &lt;a href="https://github.com/davidhalter/jedi-vim"&gt;jedi-vim&lt;/a&gt;을 많이 사용한다.&lt;/p&gt;
 &lt;p&gt;Pathogen 과 Vundle 사이에서 문제가 조금 생겼지만, 결국 Vundle을 통해서 jedi-vim을 적용하는데 성공했다. 그런데 조금 알아보니 환경변수에 적용된 기본 python을 기준으로 자동완성을 제공한다. 하지만 시스템에 기본 적용된 python의 버전이 2.7이기 때문에 python3로 자동완성하기 위해선 설정을 조금 바꿔줘야 한다.&lt;/p&gt;
 &lt;p&gt;그 부분은 &lt;a href="https://github.com/davidhalter/jedi-vim/blob/master/doc/jedi-vim.txt#L479"&gt;설명서&lt;/a&gt;에 내용이 나와 있었다.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;~/.vimrc&lt;/code&gt; 파일에 아래 내용을 추가해주면 된다.&lt;/p&gt;
@@ -75,9 +63,7 @@
 &lt;p&gt;그랬지만.. vim 에선 여전히 2.7.6 버전으로 돌아가고 있었다.&lt;/p&gt;
 &lt;p&gt;일단 이 문제는 해결되지 않은 채로 남겨둔다..&lt;/p&gt;
 &lt;p&gt;시간나면 Pathogen으로 다시 받아봐야겠다.&lt;/p&gt;
-&lt;p&gt;일단은 이슈 #488 을 Subscribe하고 기다려야겠다.&lt;/p&gt;</content><category term="editor"></category><category term="vim"></category><category term="python"></category></entry><entry><title>[Editor] vim 새 파일 작성시 자동으로 템플릿(구조) 불러오기</title><link href="http://blog.junshoong.net/editor/vim-auto-template" rel="alternate"></link><published>2015-11-23T00:00:00+09:00</published><updated>2015-11-23T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2015-11-23:/editor/vim-auto-template</id><summary type="html">&lt;p&gt;vim으로 html 파일을 만들 때마다 구조를 새로 적어주려니 손목에 통증이 생겼다. 새 파일을 만들 때마다 자동으로 템플릿을 작성해주면 좋겠다 싶어서 한참을 검색했었는데, 검색 키워드를 vim new file format으로 하니 나오 질 않았다. 조금 더 찾다가 vim new file template으로 검색해서 결과를 얻어냈다.&lt;/p&gt;
-&lt;p&gt;홈 디렉터리에 있는 &lt;code&gt;.vimrc&lt;/code&gt;를 열어서 수정하자.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;au …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;vim으로 html 파일을 만들 때마다 구조를 새로 적어주려니 손목에 통증이 생겼다. 새 파일을 만들 때마다 자동으로 템플릿을 작성해주면 좋겠다 싶어서 한참을 검색했었는데, 검색 키워드를 vim new file format으로 하니 나오 질 않았다. 조금 더 찾다가 vim new file template으로 검색해서 결과를 얻어냈다.&lt;/p&gt;
+&lt;p&gt;일단은 이슈 #488 을 Subscribe하고 기다려야겠다.&lt;/p&gt;</content><category term="editor"></category><category term="vim"></category><category term="python"></category></entry><entry><title>[Editor] vim 새 파일 작성시 자동으로 템플릿(구조) 불러오기</title><link href="http://blog.junshoong.net/editor/vim-auto-template/" rel="alternate"></link><published>2015-11-23T00:00:00+09:00</published><updated>2015-11-23T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2015-11-23:/editor/vim-auto-template/</id><summary type="html">&lt;p&gt;vim으로 html 파일을 만들 때마다 구조를 새로 적어주려니 손목에 통증이 생겼다. 새 파일을 만들 때마다 자동으로 템플릿을 작성해주면 좋겠다 싶어서 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;vim으로 html 파일을 만들 때마다 구조를 새로 적어주려니 손목에 통증이 생겼다. 새 파일을 만들 때마다 자동으로 템플릿을 작성해주면 좋겠다 싶어서 한참을 검색했었는데, 검색 키워드를 vim new file format으로 하니 나오 질 않았다. 조금 더 찾다가 vim new file template으로 검색해서 결과를 얻어냈다.&lt;/p&gt;
 &lt;p&gt;홈 디렉터리에 있는 &lt;code&gt;.vimrc&lt;/code&gt;를 열어서 수정하자.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;BufNewFile&lt;/span&gt; *.html &lt;span class="m"&gt;0&lt;/span&gt;r &lt;span class="p"&gt;~&lt;/span&gt;&lt;span class="sr"&gt;/.vim/&lt;/span&gt;html.skel
 &lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;BufNewFile&lt;/span&gt; *.&lt;span class="k"&gt;sh&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;r &lt;span class="p"&gt;~&lt;/span&gt;&lt;span class="sr"&gt;/.vim/&lt;/span&gt;&lt;span class="k"&gt;sh&lt;/span&gt;.skel

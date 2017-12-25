@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Junshoong의 기술블로그</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="../../theme/css/style.css" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+    </head>
+
+    <body>
+        <div class="container-fluid">
+<div class="row justify-content-start sticky-top header">
+    <div class="col-1 header-img">
+        <img class="profile-img" src="../../images/profile.png">
+    </div>
+    <div class="col header-title">
+        <h2 class="sitename"><a href="../.."> Junshoong의 기술블로그 </a></h2>
+    </div>
+</div>            <div class="row justify-content-around">
+                <div class="col-md-8 content">
+<div class="post">
+    <h1 class="post-title">[Linux] MD5, SHA1 체크섬 확인하기</h1>
+    <span class="post-date">2015-07-08, Wed</span>
+    <p>카테고리 구분은 linux에 넣으려고 했지만 아무래도 리눅스보다는 보안 관련인 것 같아서 새로 카테고리를 만들었다.</p>
+<p>트리구조는 분류하긴 좋지만 분류할때마다 고민하게 되는 것 같다.</p>
+<p>오늘은 리눅스민트에서 md5와 sha1의 checksum을 확인하는 방법을 알아보자.</p>
+<p>그 일례로 vmware player를 들어보자. <a href="https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/7_0">vmware 사이트의 다운로드 페이지</a>를 확인해보면 아래와 같은 모습을 볼 수 있다.</p>
+<p><img alt="vmware 다운로드 페이지 화면" src="/images/2015-07-08/01.png"></p>
+<p>하단에 보면 <code>CHECKSUMS</code> 라고 적혀있고 <code>MD5SUM</code>, <code>SHA1SUM</code>이라고 적혀있다. 이건 이 파일의 내용을 해당 알고리즘을 통해서 변조한 해쉬값을 나타낸다.</p>
+<p>MD5나 SHA1 알고리즘에 대한 정보는 국내 위키에도 잘 나와있다.</p>
+<p>간단하게 말하면 웹상에 올라온 파일과 내가 받은 파일이 일치하는지 확인하는게 목적인 값이라고 생각하면 된다.</p>
+<p>만약 중간에 파일에 악성코드등의 추가로 인해 파일이 변조가 된다면 저 해시값이 변하게 된다. 그래서 리눅스 터미널에서 간단하게 확인을 해보도록 하자.</p>
+<p>다운로드받은 위치에서 마우스 오른쪽 버튼을 눌러 "이 위치로 터미널 열기"를 통해 터미널을 열어주고 아래 키워드를 입력한다.</p>
+<div class="highlight"><pre><span></span>$ openssl dgst -md5 VMware-Player-7.1.2-2780323.x86_64.bundle
+</pre></div>
+
+
+<p>openssl dgst 는 자료에 있는 정보를 코드로 변환시켜준다고 생각하면 될 것 같다.</p>
+<p>openssl 명령과 관련된 자세한 내용은 <a href="https://www.openssl.org/docs/apps/openssl.html">여기</a>서 확인 가능하다.</p>
+<p>위 메세지를 실행하면 아래와 같이 나온다.</p>
+<p>MD5값도, SHA1값도 웹사이트에 올라온 값과 동일하다는 것을 알 수 있다. 이 파일엔 변조가 없을 것으로 추정할 수 있다.</p>
+<p>물론 파일이 다르고 해시값이 같은 경우가 있을 수 있고, 그걸 해시 충돌이라고 한다. 그래서 보안을 목적으로는 MD5나 SHA1을 권장하지 않는다고 한다.</p>
+<p>하지만 이런 간단한 파일 변조를 확인하는데는 큰 무리가 없어서 널리 사용하는것 같다.</p>
+<p>+</p>
+<p><em>2015.08.18 추가</em></p>
+<p>간단한 명령어가 있었다.</p>
+<div class="highlight"><pre><span></span>$ md5sum <span class="o">[</span>file<span class="o">]</span>
+</pre></div>
+
+
+<p>마찬가지로</p>
+<div class="highlight"><pre><span></span>$ sha1sum <span class="o">[</span>file<span class="o">]</span>
+</pre></div>
+
+
+<p>자세한 사항은 해당 명렁어의 도움말을 참고!</p>
+</div>
+                </div>
+<div class="col-md-3 sidebar">
+    <div class="list-group category">
+        <div class="list-group-item list-group-item-primary"> Category </div>
+        <a class="list-group-item list-group-item-action category-item" href="../../agile/">
+            Agile
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../angular/">
+            Angular
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../blog/">
+            Blog
+            <span class="category-item-count">(3)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../book/">
+            Book
+            <span class="category-item-count">(3)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../css/">
+            CSS
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../ctf/">
+            CTF
+            <span class="category-item-count">(4)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../devops/">
+            DevOps
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../django/">
+            Django
+            <span class="category-item-count">(6)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../docker/">
+            Docker
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../editor/">
+            Editor
+            <span class="category-item-count">(3)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../english/">
+            English
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../etc/">
+            ETC
+            <span class="category-item-count">(11)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../game/">
+            Game
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../git/">
+            Git
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../life/">
+            Life
+            <span class="category-item-count">(21)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../linux/">
+            Linux
+            <span class="category-item-count">(19)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../mac/">
+            Mac
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../movie/">
+            Movie
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../nginx/">
+            Nginx
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../pelican/">
+            Pelican
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../python/">
+            Python
+            <span class="category-item-count">(8)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../regex/">
+            Regex
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../shell/">
+            Shell
+            <span class="category-item-count">(2)</span>
+        </a> 
+    </div>
+    <div class="list-group social">
+        <div class="list-group-item list-group-item-primary"> Social </div>
+        <a class="list-group-item list-group-item-action" href="mailto:junshoong@gmail.com"> email </a>
+        <a class="list-group-item list-group-item-action" href="https://www.facebook.com/vaporize93"> facebook </a>
+        <a class="list-group-item list-group-item-action" href="https://www.linkedin.com/in/junshoong"> linkedin </a>
+        <a class="list-group-item list-group-item-action" href="https://www.slideshare.net/junshoong"> slideshare </a>
+        <a class="list-group-item list-group-item-action" href="https://github.com/junshoong"> github </a>
+        <a class="list-group-item list-group-item-action" href="https://www.stackoverflow.com/users/4466697/junsu-kim"> stack-overflow </a>
+        <a class="list-group-item list-group-item-action" href=""> FEED </a>
+    </div>
+</div>            </div>
+        </div>
+    </body>
+</html>

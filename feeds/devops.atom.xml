@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - DevOps</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/devops.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2017-01-04T00:00:00+09:00</updated><entry><title>[DevOps] ArchLinux에서 Django + PostgreSQL 설정하기</title><link href="http://blog.junshoong.net/devops/django-with-postgresql" rel="alternate"></link><published>2017-01-04T00:00:00+09:00</published><updated>2017-01-04T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-01-04:/devops/django-with-postgresql</id><summary type="html">&lt;h1&gt;Django + PostgreSQL&lt;/h1&gt;
-&lt;p&gt;django 프로젝트에서 사용하는 DBMS로 &lt;a href="https://www.postgresql.org/"&gt;PostgreSQL&lt;/a&gt;을 사용하도록 한다. 이 가이드에서는 Arch Linux 기준으로 작성되었다. 일부분은 같은 부분이 있겠지만, 설치나 설정에서 다른 경우는 최 하단에 있는 링크나 구글링을 통해서 찾아보길 바란다.&lt;/p&gt;
-&lt;h2&gt;설치&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo aura -Sa postgresql
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;code&gt;aura&lt;/code&gt;나 &lt;code&gt;pacman&lt;/code&gt;으로 &lt;code&gt;postgresql&lt;/code&gt; 패키지를 설치한다. &lt;/p&gt;
-&lt;h2&gt;설정&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo -i -u postgres
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;user를 …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Django + PostgreSQL&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - DevOps</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/devops.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2017-01-04T00:00:00+09:00</updated><entry><title>[DevOps] ArchLinux에서 Django + PostgreSQL 설정하기</title><link href="http://blog.junshoong.net/devops/django-with-postgresql/" rel="alternate"></link><published>2017-01-04T00:00:00+09:00</published><updated>2017-01-04T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-01-04:/devops/django-with-postgresql/</id><summary type="html">&lt;h1&gt;Django + PostgreSQL&lt;/h1&gt;
+&lt;p&gt;django 프로젝트에서 사용하는 DBMS로 &lt;a href="https://www.postgresql.org/"&gt;PostgreSQL&lt;/a&gt;을 사용하도록 한다. 이 가이드에서는 Arch Linux 기준으로 작성되었다. 일부분은 같은 부분이 있겠지만 …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Django + PostgreSQL&lt;/h1&gt;
 &lt;p&gt;django 프로젝트에서 사용하는 DBMS로 &lt;a href="https://www.postgresql.org/"&gt;PostgreSQL&lt;/a&gt;을 사용하도록 한다. 이 가이드에서는 Arch Linux 기준으로 작성되었다. 일부분은 같은 부분이 있겠지만, 설치나 설정에서 다른 경우는 최 하단에 있는 링크나 구글링을 통해서 찾아보길 바란다.&lt;/p&gt;
 &lt;h2&gt;설치&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo aura -Sa postgresql
@@ -93,11 +81,9 @@ $ python manage.py runserver
 &lt;li&gt;&lt;a href="https://djangogirls.gitbooks.io/django-girls-tutorial-extensions/content/optional_postgresql_installation/"&gt;PostgreSQL 설치 - Django Girls (영문)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://jinpark-dg.gitbooks.io/django-girls-extended-tutorial-korean/content/optional_postgresql_installation/index.html"&gt;PostgreSQL 설치 - Django Girls (한글)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://wiki.archlinux.org/index.php/PostgreSQL"&gt;PostgreSQL - ArchWiki (영문)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="devops"></category><category term="linus"></category><category term="django"></category><category term="postgresql"></category></entry><entry><title>[DevOps] travis에서 test시 생기는 데이터베이스 문제</title><link href="http://blog.junshoong.net/devops/django-travis-env" rel="alternate"></link><published>2016-07-01T00:00:00+09:00</published><updated>2016-07-01T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-07-01:/devops/django-travis-env</id><summary type="html">&lt;p&gt;로컬에서는 별 말 없이 통과하던 테스트가 travis 위에서는 아래와 같은 오류를 뱉으며 실패한다.&lt;/p&gt;
+&lt;/ul&gt;</content><category term="devops"></category><category term="linus"></category><category term="django"></category><category term="postgresql"></category></entry><entry><title>[DevOps] travis에서 test시 생기는 데이터베이스 문제</title><link href="http://blog.junshoong.net/devops/django-travis-env/" rel="alternate"></link><published>2016-07-01T00:00:00+09:00</published><updated>2016-07-01T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-07-01:/devops/django-travis-env/</id><summary type="html">&lt;p&gt;로컬에서는 별 말 없이 통과하던 테스트가 travis 위에서는 아래와 같은 오류를 뱉으며 실패한다.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;django.core.exceptions.ImproperlyConfigured: Requested setting DATABASES, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;읽어보면 &lt;code&gt;DJANGO_SETTINGS_MODULE&lt;/code&gt; 환경변수나 &lt;code&gt;settings.configure()&lt;/code&gt;를 호출하라는 것 같은데 어떻게 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;로컬에서는 별 말 없이 통과하던 테스트가 travis 위에서는 아래와 같은 오류를 뱉으며 실패한다.&lt;/p&gt;
+&lt;p&gt;django.core.exceptions.ImproperlyConfigured: Requested setting DATABASES …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;로컬에서는 별 말 없이 통과하던 테스트가 travis 위에서는 아래와 같은 오류를 뱉으며 실패한다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;django.core.exceptions.ImproperlyConfigured: Requested setting DATABASES, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.&lt;/p&gt;
 &lt;/blockquote&gt;

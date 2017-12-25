@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Junshoong의 기술블로그</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="../theme/css/style.css" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+    </head>
+
+    <body>
+        <div class="container-fluid">
+<div class="row justify-content-start sticky-top header">
+    <div class="col-1 header-img">
+        <img class="profile-img" src="../images/profile.png">
+    </div>
+    <div class="col header-title">
+        <h2 class="sitename"><a href=".."> Junshoong의 기술블로그 </a></h2>
+    </div>
+</div>            <div class="row justify-content-around">
+                <div class="col-md-8 content">
+<div class="posts">
+    <div class="post">
+        <h1 class="post-title">
+            <a href="../django/timezone-setting/">[Django] timezone 설정</a>
+        </h1>
+        <span class="post-date">2017-04-19, Wed</span>
+        <p>
+        <p>Django에서 기본적인 DateTimeField를 현재 timezone으로 맞추고 싶다.</p>
+<p>settings.py</p>
+<div class="highlight"><pre><span></span><span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="s1">&#39;Asia/Seoul&#39;</span>
+<span class="c1"># USE_TZ = True</span>
+</pre></div>
+
+
+<p>여기서 <code>TIME_ZONE</code>만 수정해주니까 저장되는 값이 …</p>
+        </p>
+    </div>
+    <div class="post">
+        <h1 class="post-title">
+            <a href="../angular/angular-http-provider/">[Angular] no provider for Http 에러</a>
+        </h1>
+        <span class="post-date">2017-04-17, Mon</span>
+        <p>
+        <p>Uncaught (in promise): No provider for Http! 에러</p>
+        </p>
+    </div>
+    <div class="post">
+        <h1 class="post-title">
+            <a href="../django/django-restframework-image-field/">[Django] restframework에서 image 제공하기</a>
+        </h1>
+        <span class="post-date">2017-04-16, Sun</span>
+        <p>
+        <p>DRF에서 image field를 serving 해보자.</p>
+        </p>
+    </div>
+    <div class="post">
+        <h1 class="post-title">
+            <a href="../css/rem-vs-em/">[CSS] rem과 em</a>
+        </h1>
+        <span class="post-date">2017-04-13, Thu</span>
+        <p>
+        <p>rem은 root에, em은 해당 요소의 font-size에 비례한다. 그리고 rem이 권장되는 편이다.</p>
+        </p>
+    </div>
+    <div class="post">
+        <h1 class="post-title">
+            <a href="../git/use-submodule/">[Git] Submodule 사용하기</a>
+        </h1>
+        <span class="post-date">2017-04-13, Thu</span>
+        <p>
+        <p>git에서 Submodule을 사용해봤다.</p>
+        </p>
+    </div>
+    <div class="post">
+        <h1 class="post-title">
+            <a href="../python/lambda-sort/">[Python] lambda를 통한 sort</a>
+        </h1>
+        <span class="post-date">2017-04-12, Wed</span>
+        <p>
+        <p><code>lambda</code>는 익명 함수이다. python 외에도 여러 언어에서 지원하는 expression으로, 짧은 함수를 잠깐 사용할 때 쓸 수 있다.
+가장 기본적으로는 …</p>
+        </p>
+    </div>
+    <div class="post">
+        <h1 class="post-title">
+            <a href="../regex/chinese-string-without-special-character-starting/">[Regex] 특정문자로 시작하지 않는 중국어가 포함된 문자열</a>
+        </h1>
+        <span class="post-date">2017-04-09, Sun</span>
+        <p>
+        <p><a href="https://github.com/skhu-sss/ssslackbot/blob/master/plugins/filter.py">ssslackbot</a>을 개발 중에 regex가 필요하게 되었다. 전각 느낌표(<code>！</code>)로 시작하지 않는 중국어가 포함된 문자열을 확인해서 걸러내야하는 작업이다.</p>
+<blockquote>
+<p>중국어 자판에서는 …</p></blockquote>
+        </p>
+    </div>
+</div>
+    <p class="paginator">
+            <a href="../">&laquo;</a>
+        2 / 15
+            <a href="../3/">&raquo;</a>
+    </p>
+                </div>
+<div class="col-md-3 sidebar">
+    <div class="list-group category">
+        <div class="list-group-item list-group-item-primary"> Category </div>
+        <a class="list-group-item list-group-item-action category-item" href="../agile/">
+            Agile
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../angular/">
+            Angular
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../blog/">
+            Blog
+            <span class="category-item-count">(3)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../book/">
+            Book
+            <span class="category-item-count">(3)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../css/">
+            CSS
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../ctf/">
+            CTF
+            <span class="category-item-count">(4)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../devops/">
+            DevOps
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../django/">
+            Django
+            <span class="category-item-count">(6)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../docker/">
+            Docker
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../editor/">
+            Editor
+            <span class="category-item-count">(3)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../english/">
+            English
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../etc/">
+            ETC
+            <span class="category-item-count">(11)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../game/">
+            Game
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../git/">
+            Git
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../life/">
+            Life
+            <span class="category-item-count">(21)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../linux/">
+            Linux
+            <span class="category-item-count">(19)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../mac/">
+            Mac
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../movie/">
+            Movie
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../nginx/">
+            Nginx
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../pelican/">
+            Pelican
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../python/">
+            Python
+            <span class="category-item-count">(8)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../regex/">
+            Regex
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../shell/">
+            Shell
+            <span class="category-item-count">(2)</span>
+        </a> 
+    </div>
+    <div class="list-group social">
+        <div class="list-group-item list-group-item-primary"> Social </div>
+        <a class="list-group-item list-group-item-action" href="mailto:junshoong@gmail.com"> email </a>
+        <a class="list-group-item list-group-item-action" href="https://www.facebook.com/vaporize93"> facebook </a>
+        <a class="list-group-item list-group-item-action" href="https://www.linkedin.com/in/junshoong"> linkedin </a>
+        <a class="list-group-item list-group-item-action" href="https://www.slideshare.net/junshoong"> slideshare </a>
+        <a class="list-group-item list-group-item-action" href="https://github.com/junshoong"> github </a>
+        <a class="list-group-item list-group-item-action" href="https://www.stackoverflow.com/users/4466697/junsu-kim"> stack-overflow </a>
+        <a class="list-group-item list-group-item-action" href=""> FEED </a>
+    </div>
+</div>            </div>
+        </div>
+    </body>
+</html>

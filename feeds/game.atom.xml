@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - Game</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/game.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2016-02-18T00:00:00+09:00</updated><entry><title>[Game] 안드로이드 게임 Alto's Adventure</title><link href="http://blog.junshoong.net/game/altos-adventure-review" rel="alternate"></link><published>2016-02-18T00:00:00+09:00</published><updated>2016-02-18T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-02-18:/game/altos-adventure-review</id><summary type="html">&lt;p&gt;플레이 스토어에 재미 있는 게임이 하나 눈에 띄어서 받아보았다.&lt;/p&gt;
-&lt;p&gt;이름은 Alto's Adventure. 알토의 모험이다. 간단하게 원터치로 즐길 수 있는 게임으로 누르면 점프하고, 누르고 있으면 돈다.&lt;/p&gt;
-&lt;p&gt;그런데 재미있다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="게임 첫 화면" src="/images/2016-02-18/alto01.png"&gt;&lt;/p&gt;
-&lt;p&gt;게임 첫 화면, ALTO's ADVENTURE 라고 적혀있다.&lt;/p&gt;
-&lt;p&gt;산에 눈도 오고 손 그림자인지 라마같이 생긴 애도 그려져 있다. 산에서 탐험하는 건가 보다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="게임 시작 화면" src="/images/2016-02-18/alto02.png"&gt;&lt;/p&gt;
-&lt;p&gt;게임 시작 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;플레이 스토어에 재미 있는 게임이 하나 눈에 띄어서 받아보았다.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - Game</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/game.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2016-02-18T00:00:00+09:00</updated><entry><title>[Game] 안드로이드 게임 Alto's Adventure</title><link href="http://blog.junshoong.net/game/altos-adventure-review/" rel="alternate"></link><published>2016-02-18T00:00:00+09:00</published><updated>2016-02-18T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-02-18:/game/altos-adventure-review/</id><summary type="html">&lt;p&gt;플레이 스토어에 재미 있는 게임이 하나 눈에 띄어서 받아보았다.&lt;/p&gt;
+&lt;p&gt;이름은 Alto's Adventure. 알토의 모험이다. 간단하게 원터치로 즐길 수 있는 게임으로 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;플레이 스토어에 재미 있는 게임이 하나 눈에 띄어서 받아보았다.&lt;/p&gt;
 &lt;p&gt;이름은 Alto's Adventure. 알토의 모험이다. 간단하게 원터치로 즐길 수 있는 게임으로 누르면 점프하고, 누르고 있으면 돈다.&lt;/p&gt;
 &lt;p&gt;그런데 재미있다.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="게임 첫 화면" src="/images/2016-02-18/alto01.png"&gt;&lt;/p&gt;
@@ -32,11 +26,8 @@
 &lt;p&gt;인앱 결제도 거의 없는 것 같다.&lt;/p&gt;
 &lt;p&gt;참고로 데이터가 상당히 소모 된다. 설치하고 며칠 지나지 않아 500MB가 소모 되었다. 왠지 데이터가 일찍 달았다 싶더니 이것 때문이었다(...)&lt;/p&gt;
 &lt;p&gt;데이터를 켜두지 않아도 게임이 되긴 한다. 아마도 게임 한 데이터를 모두 서버로 보내는 듯 싶다. 더불어서 동영상 보기를 통해 게임을 이어서 할 수 있는 듯 싶다. 그런데 이게 데이터가 꺼져 있어도 영상이 재생된다... 아마 게임을 하면서 영상을 미리 받아두나 보다, 데이터에 민감한 사람은 끄고 하거나 와이파이를 연결하자.&lt;/p&gt;
-&lt;p&gt;오랜만에 신나는 게임을 받아서 즐겁게 플레이 하고 있다. 앱스토어에는 있는지 잘 모르겠고, 윈도우 폰 스토어에서는 못 받는 것 같다.&lt;/p&gt;</content><category term="game"></category><category term="review"></category></entry><entry><title>[Game] Monument Valley 클리어</title><link href="http://blog.junshoong.net/game/monument-valley-review" rel="alternate"></link><published>2015-10-12T00:00:00+09:00</published><updated>2015-10-12T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2015-10-12:/game/monument-valley-review</id><summary type="html">&lt;p&gt;구글 Play 스토어에서 처음 봤던 모뉴먼트 밸리가 Amazon Underground에서 무료로 풀렸다.&lt;/p&gt;
-&lt;p&gt;3.99달러 / 4000원 이라는 돈을 주고 사도 아깝지 않았겠지만 여러모로 여건이 안되어서 미뤄 두었던 게임이었다.&lt;/p&gt;
-&lt;p&gt;소식을 듣자마자 아마존 언더그라운드어플을 깔고, 얼른 받아서 플레이 했다.&lt;/p&gt;
-&lt;p&gt;결과는 대 만족&lt;/p&gt;
-&lt;p&gt;퍼즐 게임을 좋아하는 것도 있지만 스토리나 한글화도 괜찮았던 거 같고, 무엇보다 배경이 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;구글 Play 스토어에서 처음 봤던 모뉴먼트 밸리가 Amazon Underground에서 무료로 풀렸다.&lt;/p&gt;
+&lt;p&gt;오랜만에 신나는 게임을 받아서 즐겁게 플레이 하고 있다. 앱스토어에는 있는지 잘 모르겠고, 윈도우 폰 스토어에서는 못 받는 것 같다.&lt;/p&gt;</content><category term="game"></category><category term="review"></category></entry><entry><title>[Game] Monument Valley 클리어</title><link href="http://blog.junshoong.net/game/monument-valley-review/" rel="alternate"></link><published>2015-10-12T00:00:00+09:00</published><updated>2015-10-12T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2015-10-12:/game/monument-valley-review/</id><summary type="html">&lt;p&gt;구글 Play 스토어에서 처음 봤던 모뉴먼트 밸리가 Amazon Underground에서 무료로 풀렸다.&lt;/p&gt;
+&lt;p&gt;3.99달러 / 4000원 이라는 돈을 주고 사도 아깝지 않았겠지만 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;구글 Play 스토어에서 처음 봤던 모뉴먼트 밸리가 Amazon Underground에서 무료로 풀렸다.&lt;/p&gt;
 &lt;p&gt;3.99달러 / 4000원 이라는 돈을 주고 사도 아깝지 않았겠지만 여러모로 여건이 안되어서 미뤄 두었던 게임이었다.&lt;/p&gt;
 &lt;p&gt;소식을 듣자마자 아마존 언더그라운드어플을 깔고, 얼른 받아서 플레이 했다.&lt;/p&gt;
 &lt;p&gt;결과는 대 만족&lt;/p&gt;

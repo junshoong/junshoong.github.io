@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - Agile</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/agile.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2016-10-02T00:00:00+09:00</updated><entry><title>[Agile] 의도적 수련하기</title><link href="http://blog.junshoong.net/agile/deliberate-practice" rel="alternate"></link><published>2016-10-02T00:00:00+09:00</published><updated>2016-10-02T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-10-02:/agile/deliberate-practice</id><summary type="html">&lt;h1&gt;개요&lt;/h1&gt;
-&lt;p&gt;한참 전에 김창준님의 &lt;a href="http://agile.egloos.com/5749946"&gt;"당신이 제자리 걸음인 이유 : 지루하거나 불안하거나"&lt;/a&gt;라는 글을 읽었는데 최근 Xpergroup에 올라온 &lt;a href="https://groups.google.com/d/topic/xper/7lCVZ_kfLvM/discussion"&gt;어떤 분의 고민&lt;/a&gt;을 보고 다시 읽게 되었다. 많은 수업들과 그 수업들의 과제, 그리고 동아리 관리와 여러 overhead들에 치여 시간은 흐르지만 내 실력이나 남는 건 없는 듯한 느낌을 계속 받아 왔다. 이런 와중에 다시 …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;개요&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - Agile</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/agile.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2016-10-02T00:00:00+09:00</updated><entry><title>[Agile] 의도적 수련하기</title><link href="http://blog.junshoong.net/agile/deliberate-practice/" rel="alternate"></link><published>2016-10-02T00:00:00+09:00</published><updated>2016-10-02T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-10-02:/agile/deliberate-practice/</id><summary type="html">&lt;h1&gt;개요&lt;/h1&gt;
+&lt;p&gt;한참 전에 김창준님의 &lt;a href="http://agile.egloos.com/5749946"&gt;"당신이 제자리 걸음인 이유 : 지루하거나 불안하거나"&lt;/a&gt;라는 글을 읽었는데 최근 Xpergroup에 올라온 &lt;a href="https://groups.google.com/d/topic/xper/7lCVZ_kfLvM/discussion"&gt;어떤 분의 고민&lt;/a&gt;을 …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;개요&lt;/h1&gt;
 &lt;p&gt;한참 전에 김창준님의 &lt;a href="http://agile.egloos.com/5749946"&gt;"당신이 제자리 걸음인 이유 : 지루하거나 불안하거나"&lt;/a&gt;라는 글을 읽었는데 최근 Xpergroup에 올라온 &lt;a href="https://groups.google.com/d/topic/xper/7lCVZ_kfLvM/discussion"&gt;어떤 분의 고민&lt;/a&gt;을 보고 다시 읽게 되었다. 많은 수업들과 그 수업들의 과제, 그리고 동아리 관리와 여러 overhead들에 치여 시간은 흐르지만 내 실력이나 남는 건 없는 듯한 느낌을 계속 받아 왔다. 이런 와중에 다시 읽게 된 글이 도움이 되었다.  &lt;/p&gt;
 &lt;h1&gt;고민&lt;/h1&gt;
 &lt;p&gt;또한 글에 있는 &lt;strong&gt;팀장이 할 수 있는 일&lt;/strong&gt; 에서도 나름대로의 고민을 하게 되었다. 자신이든 타인이든 실력에 맞는 업무를 부여하는게 쉽지는 않는 것 같다. 또 업무가 고정되어 있을 때 실력을 변화시키는것도 쉽지 않은 것 같다. 무엇보다 그것이 일치하더라도 그걸하게하는 &lt;strong&gt;동기부여&lt;/strong&gt; 가 중요한데 그런걸 스스로에게, 타인에게 부여하는 것도 어려운것 같다. 게다가 과정과 결과에 대한 피드백을 받기가 쉽지 않은 것 같다.  &lt;/p&gt;
@@ -14,18 +14,12 @@
 &lt;blockquote&gt;
 &lt;p&gt;비슷한 이야기를 언어학자인 크라센(Stephen Krashen)이 입력가설(Input Hypothesis)을 통해 말하고 있습니다. i+1 이론이라고 하는데, 현재 언어학습자의 언어 수준을 i라고 할 때 딱 한 단계 높은 i+1 수준의 입력이 주어질 때에만 유의미한 언어 능력 진전이 있다는 이론이죠.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;i+1, 그러니까 요구 수준이 10이고 내 능력이 10일때 내 능력을 9로 맞추던지 요구수준을 11로 맞추던지 하는 &lt;strong&gt;의도적인&lt;/strong&gt; 조정을 통한 &lt;strong&gt;연습&lt;/strong&gt; 이 필요하다. 시간이 없어서라는 핑계를 대지 말고 틈틈히 수련에 정진해야겠다.&lt;/p&gt;</content><category term="agile"></category><category term="practice"></category></entry><entry><title>[Agile] 칸반시스템 시작 가이드 12과정</title><link href="http://blog.junshoong.net/agile/kanban-start-guide" rel="alternate"></link><published>2015-11-24T00:00:00+09:00</published><updated>2015-11-24T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2015-11-24:/agile/kanban-start-guide</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;i+1, 그러니까 요구 수준이 10이고 내 능력이 10일때 내 능력을 9로 맞추던지 요구수준을 11로 맞추던지 하는 &lt;strong&gt;의도적인&lt;/strong&gt; 조정을 통한 &lt;strong&gt;연습&lt;/strong&gt; 이 필요하다. 시간이 없어서라는 핑계를 대지 말고 틈틈히 수련에 정진해야겠다.&lt;/p&gt;</content><category term="agile"></category><category term="practice"></category></entry><entry><title>[Agile] 칸반시스템 시작 가이드 12과정</title><link href="http://blog.junshoong.net/agile/kanban-start-guide/" rel="alternate"></link><published>2015-11-24T00:00:00+09:00</published><updated>2015-11-24T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2015-11-24:/agile/kanban-start-guide/</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;칸반시스템 시작 가이드 12과정  &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;칸반 도입 목표 합의  &lt;/li&gt;
 &lt;li&gt;가치 흐름 (고객,관리자의 요청을 수행하기 위한 행동들) 그리기  &lt;/li&gt;
-&lt;li&gt;입력 제어 지점 정의  &lt;/li&gt;
-&lt;li&gt;종료 지점 정의  &lt;/li&gt;
-&lt;li&gt;업무 항목 유형(서비스 클래스) 나누기  &lt;/li&gt;
-&lt;li&gt;업무 항목 유형의 요구 분석, 요구 위험 프로파일  &lt;/li&gt;
-&lt;li&gt;상, 하류의 이해 관계자들과의 소통  &lt;/li&gt;
-&lt;li&gt;WIP Limit에 대한 합의  &lt;/li&gt;
-&lt;li&gt;규칙적인 우선순위 회의 …&lt;/li&gt;&lt;/ol&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;blockquote&gt;
+&lt;li&gt;입력 제어 지점 …&lt;/li&gt;&lt;/ol&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;blockquote&gt;
 &lt;p&gt;칸반시스템 시작 가이드 12과정  &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;칸반 도입 목표 합의  &lt;/li&gt;

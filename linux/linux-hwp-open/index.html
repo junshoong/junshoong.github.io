@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Junshoong의 기술블로그</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="../../theme/css/style.css" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+    </head>
+
+    <body>
+        <div class="container-fluid">
+<div class="row justify-content-start sticky-top header">
+    <div class="col-1 header-img">
+        <img class="profile-img" src="../../images/profile.png">
+    </div>
+    <div class="col header-title">
+        <h2 class="sitename"><a href="../.."> Junshoong의 기술블로그 </a></h2>
+    </div>
+</div>            <div class="row justify-content-around">
+                <div class="col-md-8 content">
+<div class="post">
+    <h1 class="post-title">[Linux] 리눅스에서 한글포맷 열기</h1>
+    <span class="post-date">2016-08-10, Wed</span>
+    <p>리눅스에서는 한글 포맷(.hwp)을 여는게 여간 힘든게 아니다.</p>
+<p>작년 상반기까지만 해도 <a href="http://www.hancom.com/">한글과컴퓨터</a>(이하 한컴)에서 공식뷰어를 제공해줘서 잘 쓰고 있었는데, 어느순간 조용히 넷피스24로 전환되어 웹에서만 볼 수 있게 되었다. 그래서 개인적으로 만들어서 사용하고 있는 뷰어가 있나 찾아다녔다. 하지만 오늘 이런 기사를 봤다. <a href="http://www.etnews.com/20160810000093">"리눅스에서 한글(hwp)파일 연다...한컴 '한컴오피스 뷰어 통합 다운로드' 개시"</a> 당혹스럽다. 말도 없이 한글뷰어를 내리더니 새로운 서비스를 내놓는 것 마냥 다시 올려뒀다.</p>
+<p><img alt="한컴 오피스 뷰어 설치하기 이미지" src="/images/2016-08-16/01_hancom.png"></p>
+<p>리눅스라는 플랫폼이 국내에서 흔하게 쓰이는 플랫폼은 아니지만 얼마 안 되는 리눅스 사용자를 이용해서 혼란스러운 마케팅을 보여주는건 조금 속상하다.</p>
+<p>오해하고 있는 사람이 조금 있는데, 한글은 폐쇄적이진 않다. 실제로 .hwp의 한글 포맷은 한컴 공식홈페이지에서 공개하고 있다. 다만 그걸 굳이 다른 뷰어를 만들지 않는 게 문제인것 같다.</p>
+<p>한글 뷰어를 잃었을 때 사용했던 도구는 <a href="https://github.com/mete0r/pyhwp">pyhwp</a>로, hwp 포맷을 odt나 html 포맷으로 변환 할 수 있는 도구였다.</p>
+<p>한글 뷰어는 <a href="http://www.hancom.com/office/viewer_usage_guide.jsp">한컴홈페이지</a>에서 받을 수 있다.</p>
+<h2>참고링크</h2>
+<p><a href="http://storycompiler.tistory.com/197">한글파일(hwp)을 텍스트(txt) 혹은 웹문서(html)로 변환하자!</a>
+<a href="http://mytory.net/archives/12797">리눅스에서 한글 파일(hwp) 파일 변환해서 읽기</a>
+<a href="http://pythonhosted.org/pyhwp/ko/intro.html">pyhwp Docs</a></p>
+</div>
+                </div>
+<div class="col-md-3 sidebar">
+    <div class="list-group category">
+        <div class="list-group-item list-group-item-primary"> Category </div>
+        <a class="list-group-item list-group-item-action category-item" href="../../agile/">
+            Agile
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../angular/">
+            Angular
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../blog/">
+            Blog
+            <span class="category-item-count">(3)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../book/">
+            Book
+            <span class="category-item-count">(3)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../css/">
+            CSS
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../ctf/">
+            CTF
+            <span class="category-item-count">(4)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../devops/">
+            DevOps
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../django/">
+            Django
+            <span class="category-item-count">(6)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../docker/">
+            Docker
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../editor/">
+            Editor
+            <span class="category-item-count">(3)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../english/">
+            English
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../etc/">
+            ETC
+            <span class="category-item-count">(11)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../game/">
+            Game
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../git/">
+            Git
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../life/">
+            Life
+            <span class="category-item-count">(21)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../linux/">
+            Linux
+            <span class="category-item-count">(19)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../mac/">
+            Mac
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../movie/">
+            Movie
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../nginx/">
+            Nginx
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../pelican/">
+            Pelican
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../python/">
+            Python
+            <span class="category-item-count">(8)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../regex/">
+            Regex
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../shell/">
+            Shell
+            <span class="category-item-count">(2)</span>
+        </a> 
+    </div>
+    <div class="list-group social">
+        <div class="list-group-item list-group-item-primary"> Social </div>
+        <a class="list-group-item list-group-item-action" href="mailto:junshoong@gmail.com"> email </a>
+        <a class="list-group-item list-group-item-action" href="https://www.facebook.com/vaporize93"> facebook </a>
+        <a class="list-group-item list-group-item-action" href="https://www.linkedin.com/in/junshoong"> linkedin </a>
+        <a class="list-group-item list-group-item-action" href="https://www.slideshare.net/junshoong"> slideshare </a>
+        <a class="list-group-item list-group-item-action" href="https://github.com/junshoong"> github </a>
+        <a class="list-group-item list-group-item-action" href="https://www.stackoverflow.com/users/4466697/junsu-kim"> stack-overflow </a>
+        <a class="list-group-item list-group-item-action" href=""> FEED </a>
+    </div>
+</div>            </div>
+        </div>
+    </body>
+</html>

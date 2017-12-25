@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - Python</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/python.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2017-05-01T00:00:00+09:00</updated><entry><title>[Python]import_module을 사용해서 import 하기</title><link href="http://blog.junshoong.net/python/import-module-function" rel="alternate"></link><published>2017-05-01T00:00:00+09:00</published><updated>2017-05-01T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-05-01:/python/import-module-function</id><summary type="html">&lt;p&gt;python에서 숫자 등으로 시작하는 패키지를 import 할때는 주의해야한다.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - Python</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/python.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2017-05-01T00:00:00+09:00</updated><entry><title>[Python]import_module을 사용해서 import 하기</title><link href="http://blog.junshoong.net/python/import-module-function/" rel="alternate"></link><published>2017-05-01T00:00:00+09:00</published><updated>2017-05-01T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-05-01:/python/import-module-function/</id><summary type="html">&lt;p&gt;python에서 숫자 등으로 시작하는 패키지를 import 할때는 주의해야한다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="mi"&gt;1234&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="mi"&gt;1234&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;abc&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;위와 같이 숫자로 된 파일은 에러를 뱉을 뿐 import 되지 않는다.
-그럴 땐 아래와 같이 한다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;importlib&lt;/span&gt;
-
-&lt;span class="n"&gt;importlib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;import_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;1234&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;importlib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;import_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;1234&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;abc&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;위와 같은 작업으로 import를 진행할 수 있다.&lt;/p&gt;
-&lt;p&gt;참고링크
-- &lt;a href="https://docs.python.org/3/library/importlib.html#importlib.import_module"&gt;python …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;python에서 숫자 등으로 시작하는 패키지를 import 할때는 주의해야한다.&lt;/p&gt;
+&lt;p&gt;위와 같이 숫자로 된 파일은 에러를 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;python에서 숫자 등으로 시작하는 패키지를 import 할때는 주의해야한다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="mi"&gt;1234&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="mi"&gt;1234&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;abc&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -36,12 +24,8 @@
 &lt;p&gt;위와 같은 작업으로 import를 진행할 수 있다.&lt;/p&gt;
 &lt;p&gt;참고링크
 - &lt;a href="https://docs.python.org/3/library/importlib.html#importlib.import_module"&gt;python docs&lt;/a&gt;
-- &lt;a href="http://stackoverflow.com/questions/9090079/in-python-how-to-import-filename-starts-with-a-number"&gt;stackoverflow - In python, how to import filename starts with a number&lt;/a&gt;&lt;/p&gt;</content><category term="python"></category><category term="package"></category></entry><entry><title>[Python] http 요청을 비동기로하기</title><link href="http://blog.junshoong.net/python/asyncronous-http-request" rel="alternate"></link><published>2017-04-26T00:00:00+09:00</published><updated>2017-04-26T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-26:/python/asyncronous-http-request</id><summary type="html">&lt;p&gt;http 요청으로 간단한 스크래핑 작업을 하는데 요청 갯수가 일곱개 정도 되니 시간이 오래걸린다.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;asyncio&lt;/code&gt;와 &lt;code&gt;aiohttp&lt;/code&gt;를 사용해서 속도를 높여보자.&lt;/p&gt;
-&lt;p&gt;[gist:id=6c7db753f49f4720473b34147abc3b6c,file=requests_test.py]&lt;/p&gt;
-&lt;p&gt;위 코드는 &lt;code&gt;http://example.com&lt;/code&gt;에 http get을 20회 실행하는 코드다.
-timeit을 이용해서 시간을 확인해보니 6~7초정도 걸렸다.&lt;/p&gt;
-&lt;p&gt;[gist:id=6c7db753f49f4720473b34147abc3b6c,file=aiohttp_test.py …&lt;/p&gt;</summary><content type="html">&lt;p&gt;http 요청으로 간단한 스크래핑 작업을 하는데 요청 갯수가 일곱개 정도 되니 시간이 오래걸린다.&lt;/p&gt;
+- &lt;a href="http://stackoverflow.com/questions/9090079/in-python-how-to-import-filename-starts-with-a-number"&gt;stackoverflow - In python, how to import filename starts with a number&lt;/a&gt;&lt;/p&gt;</content><category term="python"></category><category term="package"></category></entry><entry><title>[Python] http 요청을 비동기로하기</title><link href="http://blog.junshoong.net/python/asyncronous-http-request/" rel="alternate"></link><published>2017-04-26T00:00:00+09:00</published><updated>2017-04-26T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-26:/python/asyncronous-http-request/</id><summary type="html">&lt;p&gt;http 요청으로 간단한 스크래핑 작업을 하는데 요청 갯수가 일곱개 정도 되니 시간이 오래걸린다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;asyncio&lt;/code&gt;와 &lt;code&gt;aiohttp&lt;/code&gt;를 사용해서 속도를 높여보자 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;http 요청으로 간단한 스크래핑 작업을 하는데 요청 갯수가 일곱개 정도 되니 시간이 오래걸린다.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;asyncio&lt;/code&gt;와 &lt;code&gt;aiohttp&lt;/code&gt;를 사용해서 속도를 높여보자.&lt;/p&gt;
 &lt;p&gt;[gist:id=6c7db753f49f4720473b34147abc3b6c,file=requests_test.py]&lt;/p&gt;
 &lt;p&gt;위 코드는 &lt;code&gt;http://example.com&lt;/code&gt;에 http get을 20회 실행하는 코드다.
@@ -49,7 +33,7 @@ timeit을 이용해서 시간을 확인해보니 6~7초정도 걸렸다.&lt;/p&g
 &lt;p&gt;[gist:id=6c7db753f49f4720473b34147abc3b6c,file=aiohttp_test.py]&lt;/p&gt;
 &lt;p&gt;같은 동작을 하는 코드지만 비동기처리를 한다.
 시간을 확인해보니 1초 전후로 수행된다.&lt;/p&gt;
-&lt;p&gt;입출력이나 대기하는시간이 긴 작업일수록 비동기처리가 효율이 좋을 수 있다.&lt;/p&gt;</content><category term="python"></category><category term="asyncronous"></category></entry><entry><title>[Python] 프로그램 시간 체크하기</title><link href="http://blog.junshoong.net/python/time-check" rel="alternate"></link><published>2017-04-26T00:00:00+09:00</published><updated>2017-04-26T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-26:/python/time-check</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;timeit&lt;/span&gt;
+&lt;p&gt;입출력이나 대기하는시간이 긴 작업일수록 비동기처리가 효율이 좋을 수 있다.&lt;/p&gt;</content><category term="python"></category><category term="asyncronous"></category></entry><entry><title>[Python] 프로그램 시간 체크하기</title><link href="http://blog.junshoong.net/python/time-check/" rel="alternate"></link><published>2017-04-26T00:00:00+09:00</published><updated>2017-04-26T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-26:/python/time-check/</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;timeit&lt;/span&gt;
 
 &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;timeit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;default_timer&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
@@ -60,7 +44,7 @@ timeit을 이용해서 시간을 확인해보니 6~7초정도 걸렸다.&lt;/p&g
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;위와 같이 특정 처리에 걸린 시간을 확인할 수 있다.&lt;/p&gt;</summary><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;timeit&lt;/span&gt;
+&lt;p&gt;위와 같이 특정 처리에 걸린 시간을 확인할 수 …&lt;/p&gt;</summary><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;timeit&lt;/span&gt;
 
 &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;timeit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;default_timer&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
@@ -71,20 +55,8 @@ timeit을 이용해서 시간을 확인해보니 6~7초정도 걸렸다.&lt;/p&g
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;위와 같이 특정 처리에 걸린 시간을 확인할 수 있다.&lt;/p&gt;</content><category term="python"></category><category term="time"></category></entry><entry><title>[Python] lambda를 통한 sort</title><link href="http://blog.junshoong.net/python/lambda-sort" rel="alternate"></link><published>2017-04-12T00:00:00+09:00</published><updated>2017-04-12T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-12:/python/lambda-sort</id><summary type="html">&lt;p&gt;&lt;code&gt;lambda&lt;/code&gt;는 익명 함수이다. python 외에도 여러 언어에서 지원하는 expression으로, 짧은 함수를 잠깐 사용할 때 쓸 수 있다.
-가장 기본적으로는 아래와 같이 쓴다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="mi"&gt;9&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="mi"&gt;225&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;code&gt;lambda&lt;/code&gt;뒤에 인자를 받고 return 값을 적어준다.
-아래와 같이 사용할 수도 있다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;read&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;lambda …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;lambda&lt;/code&gt;는 익명 함수이다. python 외에도 여러 언어에서 지원하는 expression으로, 짧은 함수를 잠깐 사용할 때 쓸 수 있다.
+&lt;p&gt;위와 같이 특정 처리에 걸린 시간을 확인할 수 있다.&lt;/p&gt;</content><category term="python"></category><category term="time"></category></entry><entry><title>[Python] lambda를 통한 sort</title><link href="http://blog.junshoong.net/python/lambda-sort/" rel="alternate"></link><published>2017-04-12T00:00:00+09:00</published><updated>2017-04-12T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-12:/python/lambda-sort/</id><summary type="html">&lt;p&gt;&lt;code&gt;lambda&lt;/code&gt;는 익명 함수이다. python 외에도 여러 언어에서 지원하는 expression으로, 짧은 함수를 잠깐 사용할 때 쓸 수 있다.
+가장 기본적으로는 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;lambda&lt;/code&gt;는 익명 함수이다. python 외에도 여러 언어에서 지원하는 expression으로, 짧은 함수를 잠깐 사용할 때 쓸 수 있다.
 가장 기본적으로는 아래와 같이 쓴다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -113,25 +85,12 @@ timeit을 이용해서 시간을 확인해보니 6~7초정도 걸렸다.&lt;/p&g
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sort&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;
 &lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category></entry><entry><title>[Python] selenium 3 + FireFox50 사용시 발생하는 geckodriver관련 에러 해결</title><link href="http://blog.junshoong.net/python/selenium3-FireFox50-geckodriver-error-solve" rel="alternate"></link><published>2017-01-09T00:00:00+09:00</published><updated>2017-01-09T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-01-09:/python/selenium3-FireFox50-geckodriver-error-solve</id><summary type="html">&lt;h2&gt;문제&lt;/h2&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category></entry><entry><title>[Python] selenium 3 + FireFox50 사용시 발생하는 geckodriver관련 에러 해결</title><link href="http://blog.junshoong.net/python/selenium3-FireFox50-geckodriver-error-solve/" rel="alternate"></link><published>2017-01-09T00:00:00+09:00</published><updated>2017-01-09T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-01-09:/python/selenium3-FireFox50-geckodriver-error-solve/</id><summary type="html">&lt;h2&gt;문제&lt;/h2&gt;
 &lt;p&gt;selenium과 firefox를 사용해서 테스트를 진행하는 도중 아래와 같은 에러가 발생했다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;selenium&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;webdriver&lt;/span&gt;
 
 &lt;span class="n"&gt;browser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;webdriver&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Firefox&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;http://www.python.org&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Python&amp;#39;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;
-
-&lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;quit&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python functional_test.py
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Traceback&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt; &lt;span class="n"&gt;recent&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;last&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-  &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;/home/harvey/venvs/dbproject/lib/python3.5/site-packages/selenium/webdriver …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2&gt;문제&lt;/h2&gt;
+&lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2&gt;문제&lt;/h2&gt;
 &lt;p&gt;selenium과 firefox를 사용해서 테스트를 진행하는 도중 아래와 같은 에러가 발생했다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;selenium&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;webdriver&lt;/span&gt;
 
@@ -235,10 +194,8 @@ $ pip install selenium
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://stackoverflow.com/questions/40073548/python-selenium-in-ubuntu-oserror-errno-20-not-a-directory"&gt;Python - Selenium in Ubuntu OSError: (Errno 20) Not a directory - Stack Overflow&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette/WebDriver"&gt;WebDriver - Mozilla&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="python"></category><category term="troubleshooting"></category><category term="selenium"></category><category term="test"></category><category term="firefox"></category></entry><entry><title>[Python] 8퍼센트 투자목록 출력 슬랙 봇</title><link href="http://blog.junshoong.net/python/8percent-investlist-bot" rel="alternate"></link><published>2016-07-09T00:00:00+09:00</published><updated>2016-07-09T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-07-09:/python/8percent-investlist-bot</id><summary type="html">&lt;p&gt;생각은 대충하고 있었는데 실제로 만든 건 이틀정도 걸린 것 같다. p2p 대부업체인 8percent에 올라오는 투자목록을 긁어와서 알려준다.&lt;/p&gt;
-&lt;p&gt;로직은 단순하다. 사용자가 list라고 bot에게 dm을 보내면 beautifulsoup로 투자 목록 페이지의 내용을 정리해서 보여준다.&lt;/p&gt;
-&lt;p&gt;아직은 단순하지만 몇가지 더 만들어 볼 수 있지 않을까 싶다. 간단한 정렬이라던지, 원하는 내용만 설정해서 보여주는 식으로 말이다.&lt;/p&gt;
-&lt;p&gt;코드와 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;생각은 대충하고 있었는데 실제로 만든 건 이틀정도 걸린 것 같다. p2p 대부업체인 8percent에 올라오는 투자목록을 긁어와서 알려준다.&lt;/p&gt;
+&lt;/ul&gt;</content><category term="python"></category><category term="troubleshooting"></category><category term="selenium"></category><category term="test"></category><category term="firefox"></category></entry><entry><title>[Python] 8퍼센트 투자목록 출력 슬랙 봇</title><link href="http://blog.junshoong.net/python/8percent-investlist-bot/" rel="alternate"></link><published>2016-07-09T00:00:00+09:00</published><updated>2016-07-09T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-07-09:/python/8percent-investlist-bot/</id><summary type="html">&lt;p&gt;생각은 대충하고 있었는데 실제로 만든 건 이틀정도 걸린 것 같다. p2p 대부업체인 8percent에 올라오는 투자목록을 긁어와서 알려준다.&lt;/p&gt;
+&lt;p&gt;로직은 단순하다. 사용자가 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;생각은 대충하고 있었는데 실제로 만든 건 이틀정도 걸린 것 같다. p2p 대부업체인 8percent에 올라오는 투자목록을 긁어와서 알려준다.&lt;/p&gt;
 &lt;p&gt;로직은 단순하다. 사용자가 list라고 bot에게 dm을 보내면 beautifulsoup로 투자 목록 페이지의 내용을 정리해서 보여준다.&lt;/p&gt;
 &lt;p&gt;아직은 단순하지만 몇가지 더 만들어 볼 수 있지 않을까 싶다. 간단한 정렬이라던지, 원하는 내용만 설정해서 보여주는 식으로 말이다.&lt;/p&gt;
 &lt;p&gt;코드와 설치 방법은 &lt;a href="https://github.com/vaporize93/8percent-slack-bot"&gt;github&lt;/a&gt;에 오픈소스로 올려두었다. 크롤링부분은 생략하고 슬랙 봇 부분을 간단히 살펴보자.&lt;/p&gt;
@@ -263,7 +220,7 @@ $ pip install selenium
             &lt;span class="k"&gt;except&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
                 &lt;span class="k"&gt;pass&lt;/span&gt;
         &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category><category term="slack"></category><category term="bot"></category></entry><entry><title>[Python] nosttest 사용하기</title><link href="http://blog.junshoong.net/python/python-nosetest" rel="alternate"></link><published>2016-06-26T00:00:00+09:00</published><updated>2016-06-26T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-06-26:/python/python-nosetest</id><summary type="html"></summary><content type="html">&lt;p&gt;깐깐하게 배우는 파이썬 (&lt;a href="http://learnpythonthehardway.org/"&gt;Learn the Python hard way&lt;/a&gt;)을 공부하는 중에 nose를 설치해서 테스트해야 하는 부분이 있었다. (208page) 그런데 현재 사용하는 노트북의 파이썬 환경이 python 3.4 로 맞춰져 있기 때문에 pip 역시 3버전으로 되어 있다.&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category><category term="slack"></category><category term="bot"></category></entry><entry><title>[Python] nosttest 사용하기</title><link href="http://blog.junshoong.net/python/python-nosetest/" rel="alternate"></link><published>2016-06-26T00:00:00+09:00</published><updated>2016-06-26T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-06-26:/python/python-nosetest/</id><summary type="html"></summary><content type="html">&lt;p&gt;깐깐하게 배우는 파이썬 (&lt;a href="http://learnpythonthehardway.org/"&gt;Learn the Python hard way&lt;/a&gt;)을 공부하는 중에 nose를 설치해서 테스트해야 하는 부분이 있었다. (208page) 그런데 현재 사용하는 노트북의 파이썬 환경이 python 3.4 로 맞춰져 있기 때문에 pip 역시 3버전으로 되어 있다.&lt;/p&gt;
 &lt;p&gt;nose 를 따로 깔아서 사용하기도 싫어서 조금 찾아봤더니 이런 방법이 있다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ nosttest
 &lt;/pre&gt;&lt;/div&gt;
@@ -281,9 +238,7 @@ $ pip install selenium
 
 &lt;p&gt;으로 사용한다.&lt;/p&gt;
 &lt;h3&gt;참고&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/26579670/force-nosetests-to-use-python-2-7-instead-of-3-4"&gt;Force Nosetests to Use Python 2.7 instead of 3.4&lt;/a&gt;&lt;/p&gt;</content><category term="python"></category><category term="test"></category></entry><entry><title>[Python] PyQt5 설치</title><link href="http://blog.junshoong.net/python/pyqt5-install" rel="alternate"></link><published>2016-02-08T00:00:00+09:00</published><updated>2016-02-08T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-02-08:/python/pyqt5-install</id><summary type="html">&lt;p&gt;GUI를 해볼까 하면서 Python GUI를 찾아봤다. 리눅스 환경에도 적절하고, 크로스플랫폼 지원도 한다고 하니, 이게 좋겠다 싶어 받기로 했다. 일단 PyQt는 Qt라는 GUI 개발용 프레임워크를 파이썬으로 사용할 수 있게 해주는 거라고 보면 될 것 같다.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://ko.wikipedia.org/wiki/Qt_%28%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%29"&gt;Qt (프레임 워크) - 위키백과&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;PyQt는 널리 사용하는 v4와 최신인 v5가 있다. 나는 최신 버전이 좋다. PyQt5를 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;GUI를 해볼까 하면서 Python GUI를 찾아봤다. 리눅스 환경에도 적절하고, 크로스플랫폼 지원도 한다고 하니, 이게 좋겠다 싶어 받기로 했다. 일단 PyQt는 Qt라는 GUI 개발용 프레임워크를 파이썬으로 사용할 수 있게 해주는 거라고 보면 될 것 같다.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/26579670/force-nosetests-to-use-python-2-7-instead-of-3-4"&gt;Force Nosetests to Use Python 2.7 instead of 3.4&lt;/a&gt;&lt;/p&gt;</content><category term="python"></category><category term="test"></category></entry><entry><title>[Python] PyQt5 설치</title><link href="http://blog.junshoong.net/python/pyqt5-install/" rel="alternate"></link><published>2016-02-08T00:00:00+09:00</published><updated>2016-02-08T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-02-08:/python/pyqt5-install/</id><summary type="html">&lt;p&gt;GUI를 해볼까 하면서 Python GUI를 찾아봤다. 리눅스 환경에도 적절하고, 크로스플랫폼 지원도 한다고 하니, 이게 좋겠다 싶어 받기로 했다. 일단 PyQt는 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;GUI를 해볼까 하면서 Python GUI를 찾아봤다. 리눅스 환경에도 적절하고, 크로스플랫폼 지원도 한다고 하니, 이게 좋겠다 싶어 받기로 했다. 일단 PyQt는 Qt라는 GUI 개발용 프레임워크를 파이썬으로 사용할 수 있게 해주는 거라고 보면 될 것 같다.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://ko.wikipedia.org/wiki/Qt_%28%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%29"&gt;Qt (프레임 워크) - 위키백과&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;PyQt는 널리 사용하는 v4와 최신인 v5가 있다. 나는 최신 버전이 좋다. PyQt5를 설치하기로 했다.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://pyqt.sourceforge.net/Docs/PyQt5/installation.html"&gt;PyQt5 설치 가이드(공식)&lt;/a&gt;&lt;/p&gt;

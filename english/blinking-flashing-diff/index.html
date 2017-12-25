@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Junshoong의 기술블로그</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="../../theme/css/style.css" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+    </head>
+
+    <body>
+        <div class="container-fluid">
+<div class="row justify-content-start sticky-top header">
+    <div class="col-1 header-img">
+        <img class="profile-img" src="../../images/profile.png">
+    </div>
+    <div class="col header-title">
+        <h2 class="sitename"><a href="../.."> Junshoong의 기술블로그 </a></h2>
+    </div>
+</div>            <div class="row justify-content-around">
+                <div class="col-md-8 content">
+<div class="post">
+    <h1 class="post-title">[English] blinking 과 flashing의 차이</h1>
+    <span class="post-date">2016-01-26, Tue</span>
+    <p>KWCAG를 공부하는 중 원칙 2인 운용의 용이성 중 지침 2.3의 광과민성 발작 예방 관련한 검사 항목 2.3.1 부분 이슈이다.</p>
+<blockquote>
+<p>2.3.1 (깜빡임과 번쩍임 사용 제한) 초당 3~50회 주기로 깜빡이거나 번쩍이는 콘텐츠를 제공하지 않아야 한다.</p>
+</blockquote>
+<p>혼란이 오는 부분은 깜빡임과 번쩍임이라는 단어를 같이 사용한다는 점이다. KWCAG는 기본적으로 영문으로된 WCAG를 가져오면서 작성된 점을 미루어 <a href="https://www.w3.org/TR/WCAG20">W3C의 원문</a>을 찾아나섰다. 문서 안에는 flash와 blink의 의미가 명시되어 있다.</p>
+<p>KWCAG에서 보듯이 번쩍임은 Flash를 의미하고, 깜빡임은 Blinking을 의미한다.</p>
+<blockquote>
+<p>flash  </p>
+<p>a pair of opposing changes in relative luminance that can cause seizures in some people if it is large enough and in the right frequency range  </p>
+<p>Note 1: See general flash and red flash thresholds for information about types of flash that are not allowed.  </p>
+<p>Note 2: See also blinking.  </p>
+</blockquote>
+<p>번쩍임</p>
+<p>상대 밝기가 서로 변화하는 한 쌍이 충분히 크고, 적절한 주파수 범위 내에 있다면, 어떤 사람들에겐 발작을 유발할 수 있다.</p>
+<p>Note 1: 허용되지 않는 번쩍임의 유형에 대한 정보를 위해 일반적인 번쩍임와 빨간 번쩍임의 임계 값을 보시오.</p>
+<p>Note 2: 깜빡임도 확인하시오.</p>
+<blockquote>
+<p>blinking<br>
+   switch back and forth between two visual states in a way that is meant to draw attention<br>
+   Note: See also flash. It is possible for something to be large enough and blink brightly enough at the right frequency to be also classified as a flash.  </p>
+</blockquote>
+<p>깜박임</p>
+<p>주의를 끌기 위한 의미 있는 방법으로, 두 시각적 상태가 앞뒤로 교차한다.</p>
+<p>Note: 번쩍임도 확인하시오. 충분히 크고 적절한 주파수에서 충분히 밝게 깜빡이면 또한 번쩍임으로 분류될 수 있다.</p>
+<p>문서를 보면 추측할 수 있듯이,</p>
+<p>깜빡임(Blinking)은 단순히 두 가지의 상태가 전환되는 모습을 나타내고, 충분히 크고 밝게 빛나면 번쩍임이라고 볼 수 있겠다. 번쩍임(Flash)에 대한 정보는 자세하게 나와있는데, 상대 밝기부터 번쩍임에 대한 임계 값도 안내 되어있다. 결국, Flash와 Blinking은 그 정도의 차이라고 볼 수 있겠다.</p>
+<h2>참고자료</h2>
+<p>KWCAG 2.0</p>
+<p>http://www.w3.org/TR/2008/REC-WCAG20-20081211/#blinksdef</p>
+<p>http://www.w3.org/TR/2008/REC-WCAG20-20081211/#flash-def</p>
+</div>
+                </div>
+<div class="col-md-3 sidebar">
+    <div class="list-group category">
+        <div class="list-group-item list-group-item-primary"> Category </div>
+        <a class="list-group-item list-group-item-action category-item" href="../../agile/">
+            Agile
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../angular/">
+            Angular
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../blog/">
+            Blog
+            <span class="category-item-count">(3)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../book/">
+            Book
+            <span class="category-item-count">(3)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../css/">
+            CSS
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../ctf/">
+            CTF
+            <span class="category-item-count">(4)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../devops/">
+            DevOps
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../django/">
+            Django
+            <span class="category-item-count">(6)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../docker/">
+            Docker
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../editor/">
+            Editor
+            <span class="category-item-count">(3)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../english/">
+            English
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../etc/">
+            ETC
+            <span class="category-item-count">(11)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../game/">
+            Game
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../git/">
+            Git
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../life/">
+            Life
+            <span class="category-item-count">(21)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../linux/">
+            Linux
+            <span class="category-item-count">(19)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../mac/">
+            Mac
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../movie/">
+            Movie
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../nginx/">
+            Nginx
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../pelican/">
+            Pelican
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../python/">
+            Python
+            <span class="category-item-count">(8)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../regex/">
+            Regex
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../shell/">
+            Shell
+            <span class="category-item-count">(2)</span>
+        </a> 
+    </div>
+    <div class="list-group social">
+        <div class="list-group-item list-group-item-primary"> Social </div>
+        <a class="list-group-item list-group-item-action" href="mailto:junshoong@gmail.com"> email </a>
+        <a class="list-group-item list-group-item-action" href="https://www.facebook.com/vaporize93"> facebook </a>
+        <a class="list-group-item list-group-item-action" href="https://www.linkedin.com/in/junshoong"> linkedin </a>
+        <a class="list-group-item list-group-item-action" href="https://www.slideshare.net/junshoong"> slideshare </a>
+        <a class="list-group-item list-group-item-action" href="https://github.com/junshoong"> github </a>
+        <a class="list-group-item list-group-item-action" href="https://www.stackoverflow.com/users/4466697/junsu-kim"> stack-overflow </a>
+        <a class="list-group-item list-group-item-action" href=""> FEED </a>
+    </div>
+</div>            </div>
+        </div>
+    </body>
+</html>

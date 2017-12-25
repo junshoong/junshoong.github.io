@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - Shell</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/shell.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2016-09-05T00:00:00+09:00</updated><entry><title>[Shell] rename을 사용하여 여러 파일의 이름을 한번에 변경하는 방법</title><link href="http://blog.junshoong.net/shell/linux-rename-usage" rel="alternate"></link><published>2016-09-05T00:00:00+09:00</published><updated>2016-09-05T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-09-05:/shell/linux-rename-usage</id><summary type="html">&lt;p&gt;리눅스에서는 일반적으로 &lt;code&gt;mv&lt;/code&gt;를 사용해서 파일명을 변경한다. 하지만 여러 파일의 이름을 변경하기 위해서 &lt;code&gt;rename&lt;/code&gt;을 사용하기도 하는데, 이를 좀 살펴보자.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ man rename
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;이렇게 쳐보면 매뉴얼이 나오고 상단을 보면&lt;code&gt;Perl Programmers Reference Guide&lt;/code&gt;라는 글자가 있다. rename은 perl의 표현식으로 파일명을 변경해준다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ rename &lt;span class="s1"&gt;&amp;#39;s/[변경 전 문자]/[변경 후 문자]/&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;변경할 파일 …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;리눅스에서는 일반적으로 &lt;code&gt;mv&lt;/code&gt;를 사용해서 파일명을 변경한다. 하지만 여러 파일의 이름을 변경하기 위해서 &lt;code&gt;rename&lt;/code&gt;을 사용하기도 하는데, 이를 좀 살펴보자.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - Shell</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/shell.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2016-09-05T00:00:00+09:00</updated><entry><title>[Shell] rename을 사용하여 여러 파일의 이름을 한번에 변경하는 방법</title><link href="http://blog.junshoong.net/shell/linux-rename-usage/" rel="alternate"></link><published>2016-09-05T00:00:00+09:00</published><updated>2016-09-05T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-09-05:/shell/linux-rename-usage/</id><summary type="html">&lt;p&gt;리눅스에서는 일반적으로 &lt;code&gt;mv&lt;/code&gt;를 사용해서 파일명을 변경한다. 하지만 여러 파일의 이름을 변경하기 위해서 &lt;code&gt;rename&lt;/code&gt;을 사용하기도 하는데, 이를 좀 살펴보자 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;리눅스에서는 일반적으로 &lt;code&gt;mv&lt;/code&gt;를 사용해서 파일명을 변경한다. 하지만 여러 파일의 이름을 변경하기 위해서 &lt;code&gt;rename&lt;/code&gt;을 사용하기도 하는데, 이를 좀 살펴보자.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ man rename
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -36,7 +30,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;이렇게 여러 파일명을 쉽게 바꿀 수 있다.&lt;/p&gt;</content><category term="linux"></category><category term="shell"></category></entry><entry><title>[Shell] tar 명령어로 압축하기/압축풀기</title><link href="http://blog.junshoong.net/shell/linux-tar" rel="alternate"></link><published>2015-10-20T00:00:00+09:00</published><updated>2015-10-20T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2015-10-20:/shell/linux-tar</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;$tar&lt;/span&gt; -zcvf 압축.tar.gz *
+&lt;p&gt;이렇게 여러 파일명을 쉽게 바꿀 수 있다.&lt;/p&gt;</content><category term="linux"></category><category term="shell"></category></entry><entry><title>[Shell] tar 명령어로 압축하기/압축풀기</title><link href="http://blog.junshoong.net/shell/linux-tar/" rel="alternate"></link><published>2015-10-20T00:00:00+09:00</published><updated>2015-10-20T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2015-10-20:/shell/linux-tar/</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;$tar&lt;/span&gt; -zcvf 압축.tar.gz *
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -45,14 +39,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;이러면 알아서 풀린다.&lt;/p&gt;
-&lt;p&gt;여기서 tar 명령어의 옵션을 살펴보자&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;-z  gzip gunzip을 사용해서 압축하고 압축을 해제한다.&lt;br&gt;
--c 파일을 모은다. create&lt;br&gt;
--x 파일을 푼다. extract&lt;br&gt;
--v 진행 상황을 본다. verbose&lt;br&gt;
--f 입/출력을 파일로 지정해준다 …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;$tar&lt;/span&gt; -zcvf 압축.tar.gz *
+&lt;p&gt;이러면 알아서 풀린다 …&lt;/p&gt;</summary><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;$tar&lt;/span&gt; -zcvf 압축.tar.gz *
 &lt;/pre&gt;&lt;/div&gt;
 
 

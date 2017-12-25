@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - Git</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/git.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2017-04-13T00:00:00+09:00</updated><entry><title>[Git] Submodule 사용하기</title><link href="http://blog.junshoong.net/git/use-submodule" rel="alternate"></link><published>2017-04-13T00:00:00+09:00</published><updated>2017-04-13T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-13:/git/use-submodule</id><summary type="html">&lt;p&gt;git에서 Submodule을 사용해봤다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;단순하게 git repo안에서 &lt;code&gt;git clone&lt;/code&gt;을 하는 경우 연동이 잘 되지 않는것 같다. &lt;code&gt;git checkout&lt;/code&gt;등을 하면서 git repo안에 clone 했던 git repo가 날아가버리는 상황도 발생했다. 이럴땐 아래와 같이 하자.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - Git</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/git.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2017-04-13T00:00:00+09:00</updated><entry><title>[Git] Submodule 사용하기</title><link href="http://blog.junshoong.net/git/use-submodule/" rel="alternate"></link><published>2017-04-13T00:00:00+09:00</published><updated>2017-04-13T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-13:/git/use-submodule/</id><summary type="html">&lt;p&gt;git에서 Submodule을 사용해봤다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;단순하게 git repo안에서 &lt;code&gt;git clone&lt;/code&gt;을 하는 경우 연동이 잘 되지 않는것 같다. &lt;code&gt;git checkout&lt;/code&gt;등을 하면서 git repo안에 clone 했던 git repo가 날아가버리는 상황도 발생했다. 이럴땐 아래와 같이 하자.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git submodule add git@github.com:&amp;lt;user&amp;gt;/&amp;lt;repo&amp;gt;.git
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -7,20 +7,11 @@
 &lt;p&gt;&lt;code&gt;.gitmodules&lt;/code&gt;라는 파일이 생성되고 submodule로 등록되었다. push하면 웹상에서도 연결되어 있음을 확인할 수 있다.&lt;/p&gt;
 &lt;p&gt;더 자세한 도움은 아래 링크에서 받을 수 있다.
 - &lt;a href="https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-%EC%84%9C%EB%B8%8C%EB%AA%A8%EB%93%88"&gt;git-scm docs&lt;/a&gt;
-- &lt;a href="http://ohgyun.com/711"&gt;꿀벌개발일지 - 서브모듈 이해하기&lt;/a&gt;&lt;/p&gt;</content><category term="git"></category></entry><entry><title>[Git] 원격지에 새 branch를 만들며 push하기</title><link href="http://blog.junshoong.net/git/git-push-with-new-branch" rel="alternate"></link><published>2016-07-03T00:00:00+09:00</published><updated>2016-07-03T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-07-03:/git/git-push-with-new-branch</id><summary type="html">&lt;blockquote&gt;
+- &lt;a href="http://ohgyun.com/711"&gt;꿀벌개발일지 - 서브모듈 이해하기&lt;/a&gt;&lt;/p&gt;</content><category term="git"></category></entry><entry><title>[Git] 원격지에 새 branch를 만들며 push하기</title><link href="http://blog.junshoong.net/git/git-push-with-new-branch/" rel="alternate"></link><published>2016-07-03T00:00:00+09:00</published><updated>2016-07-03T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-07-03:/git/git-push-with-new-branch/</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;local : master, test&lt;br&gt;
 origin: master&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;의 상태에서 master는 서로 같은 시점에 있다. 여기서 local에 test를 만들어 작업하다가 원격지에도 test와 일치하는 새 branch를 만들어 관리하고 싶다.
-이런 경우 아래와 같이 처리한다.
-로컬저장소의 위치에서&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ git push origin &lt;span class="nb"&gt;test&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;를 입력한다. origin은 원격 저장소이름이고, test는 원하는 branch 이름이다. 성공하고나면 하단에&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;* [new branch]   test …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;의 상태에서 master는 서로 같은 시점에 있다. 여기서 local에 test를 만들어 작업하다가 원격지에도 test와 일치하는 …&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
 &lt;p&gt;local : master, test&lt;br&gt;
 origin: master&lt;/p&gt;
 &lt;/blockquote&gt;

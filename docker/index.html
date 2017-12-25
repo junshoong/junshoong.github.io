@@ -1,126 +1,156 @@
 <!DOCTYPE html>
 <html lang="ko">
-	<head>
-		<link href="http://gmpg.org/xfn/11" rel="profile">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Junshoong의 기술블로그</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="../theme/css/style.css" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+    </head>
 
-		<!-- Enable responsiveness on mobile devices-->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-		<title>Junshoong의 기술블로그</title>
-
-		<!-- CSS -->
-		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
-		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
-
-		<link rel="stylesheet" href="../theme/css/poole.css" />
-		<link rel="stylesheet" href="../theme/css/hyde.css" />
-		<link rel="stylesheet" href="../theme/css/syntax.css" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="../theme/css/style.css" />
-
-		<!-- RSS -->
-		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
-	</head>
-
-	<body class="theme-base-0d">
-<div class="sidebar">
-	<div class="container sidebar-sticky">
-		<div class="sidebar-about">
-
-			<h1>
-				<a href="/">
-					<img class="profile-picture" src="../images/profile.png">
-                    <p class="sitename"> Junshoong의 기술블로그 </p>
-				</a>
-			</h1>
-			<p class="lead"></p>
-			<p class="lead"> </p>
-			<p></p>
-		</div>
-		<ul class="sidebar-nav">
-                <li>
-					<a class="sidebar-nav-item" href="mailto:junshoong@gmail.com">
-						<i class="fa fa-envelope"></i>
-                        email
-					</a>
-                </li>
-                <li>
-					<a class="sidebar-nav-item" href="https://www.facebook.com/vaporize93">
-						<i class="fa fa-facebook"></i>
-                        facebook
-					</a>
-                </li>
-                <li>
-					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/junshoong">
-						<i class="fa fa-linkedin"></i>
-                        linkedin
-					</a>
-                </li>
-                <li>
-					<a class="sidebar-nav-item" href="https://www.slideshare.net/junshoong">
-						<i class="fa fa-slideshare"></i>
-                        slideshare
-					</a>
-                </li>
-                <li>
-					<a class="sidebar-nav-item" href="https://github.com/junshoong">
-						<i class="fa fa-github"></i>
-                        github
-					</a>
-                </li>
-                <li>
-					<a class="sidebar-nav-item" href="https://www.stackoverflow.com/users/4466697/junsu-kim">
-						<i class="fa fa-stack-overflow"></i>
-                        stack-overflow
-					</a>
-                </li>
-            <li>
-			<a class="sidebar-nav-item" href="">
-				<i class="fa fa-feed"></i>
-                FEED
-			</a>
-            </li>
-		</nav>
-	</div>
-</div>		<div class="content container">
-	<div class="posts">
-			<div class="post">
-				<h1 class="post-title" href="../docker/persist-data-with-data-volume#persist-data-with-data-volume">
-					<a href="../docker/persist-data-with-data-volume#persist-data-with-data-volume">[Docker] Data Volume을 사용해서 데이터 지속하기</a>
-				</h1>
-				<span class="post-date">2017-04-21, Fri</span>
-				<p>
-					<p>docker와 git-hook을 사용해서 어느정도 프로세스를 자동화하고 있다.
-하지만 docker container를 부수고 다시 build 해서 돌리면 내부 데이터가 날아간다. DB의 경우는 <code>--link</code> 옵션을 이용해서 유지하지만 실제로 upload한 image와 같은 file들의 경우는 컨테이너와 함께 지워진다.</p>
-<p>Data Volume을 사용해서 해결해보자.</p>
-<div class="highlight"><pre><span></span>docker create -v /srv/media --name data-store ubuntu /bin/true
-</pre></div>
-
-
-<p>이렇게하면 ubuntu 이미지를 …</p>
-				</p>
-				<a class="read-more" href="docker/persist-data-with-data-volume">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="../docker/arch-docker-oracle#arch-docker-oracle">
-					<a href="../docker/arch-docker-oracle#arch-docker-oracle">[Docker] Arch linux에서 Docker로 Oracle Database 사용하기</a>
-				</h1>
-				<span class="post-date">2016-11-22, Tue</span>
-				<p>
-					<h1>개요</h1>
-<p>학교 수업으로 오라클 11g를 사용하고 있는데, 아치리눅스에 설치가 쉽지 않아보여서 미루고 있었다. Windows를 가지고 있지 않아 그간 프로젝트실에 있는 Windows 10으로 실습을 진행하고 있었다. 하지만 주말마다 실습을 위해 학교에 와서 하는게 여간 번거로운게 아니었다. 이러던 참에 최근 스터디하고 있는 Docker를 사용하면 되겠다 싶어서 얼른 찾아봤더니 아니나 다를까 Docker로 Oracle을 …</p>
-				</p>
-				<a class="read-more" href="docker/arch-docker-oracle">Continue reading »</a>
-			</div>
-	</div>
-	<div class="pagination">
-
-		<span class="pagination-item older">Newer</span>
-
-		<span class="pagination-item newer">Older</span>
-	</div>
-		</div>
-	</body>
+    <body>
+        <div class="container-fluid">
+<div class="row justify-content-start sticky-top header">
+    <div class="col-1 header-img">
+        <img class="profile-img" src="../images/profile.png">
+    </div>
+    <div class="col header-title">
+        <h2 class="sitename"><a href=".."> Junshoong의 기술블로그 </a></h2>
+    </div>
+</div>            <div class="row justify-content-around">
+                <div class="col-md-8 content">
+<div class="posts">
+    <div class="post">
+        <h1 class="post-title">
+            <a href="../docker/persist-data-with-data-volume/">[Docker] Data Volume을 사용해서 데이터 지속하기</a>
+        </h1>
+        <span class="post-date">2017-04-21, Fri</span>
+        <p>
+        <p>docker와 git-hook을 사용해서 어느정도 프로세스를 자동화하고 있다.
+하지만 docker container를 부수고 다시 build 해서 돌리면 내부 데이터가 날아간다. DB의 경우는 …</p>
+        </p>
+    </div>
+    <div class="post">
+        <h1 class="post-title">
+            <a href="../docker/arch-docker-oracle/">[Docker] Arch linux에서 Docker로 Oracle Database 사용하기</a>
+        </h1>
+        <span class="post-date">2016-11-22, Tue</span>
+        <p>
+        <h1>개요</h1>
+<p>학교 수업으로 오라클 11g를 사용하고 있는데, 아치리눅스에 설치가 쉽지 않아보여서 미루고 있었다. Windows를 가지고 있지 않아 그간 프로젝트실에 있는 …</p>
+        </p>
+    </div>
+</div>
+                </div>
+<div class="col-md-3 sidebar">
+    <div class="list-group category">
+        <div class="list-group-item list-group-item-primary"> Category </div>
+        <a class="list-group-item list-group-item-action category-item" href="../agile/">
+            Agile
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../angular/">
+            Angular
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../blog/">
+            Blog
+            <span class="category-item-count">(3)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../book/">
+            Book
+            <span class="category-item-count">(3)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../css/">
+            CSS
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../ctf/">
+            CTF
+            <span class="category-item-count">(4)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../devops/">
+            DevOps
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../django/">
+            Django
+            <span class="category-item-count">(6)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../docker/">
+            Docker
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../editor/">
+            Editor
+            <span class="category-item-count">(3)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../english/">
+            English
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../etc/">
+            ETC
+            <span class="category-item-count">(11)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../game/">
+            Game
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../git/">
+            Git
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../life/">
+            Life
+            <span class="category-item-count">(21)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../linux/">
+            Linux
+            <span class="category-item-count">(19)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../mac/">
+            Mac
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../movie/">
+            Movie
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../nginx/">
+            Nginx
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../pelican/">
+            Pelican
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../python/">
+            Python
+            <span class="category-item-count">(8)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../regex/">
+            Regex
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../shell/">
+            Shell
+            <span class="category-item-count">(2)</span>
+        </a> 
+    </div>
+    <div class="list-group social">
+        <div class="list-group-item list-group-item-primary"> Social </div>
+        <a class="list-group-item list-group-item-action" href="mailto:junshoong@gmail.com"> email </a>
+        <a class="list-group-item list-group-item-action" href="https://www.facebook.com/vaporize93"> facebook </a>
+        <a class="list-group-item list-group-item-action" href="https://www.linkedin.com/in/junshoong"> linkedin </a>
+        <a class="list-group-item list-group-item-action" href="https://www.slideshare.net/junshoong"> slideshare </a>
+        <a class="list-group-item list-group-item-action" href="https://github.com/junshoong"> github </a>
+        <a class="list-group-item list-group-item-action" href="https://www.stackoverflow.com/users/4466697/junsu-kim"> stack-overflow </a>
+        <a class="list-group-item list-group-item-action" href=""> FEED </a>
+    </div>
+</div>            </div>
+        </div>
+    </body>
 </html>

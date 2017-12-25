@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Junshoong의 기술블로그</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="../../theme/css/style.css" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+    </head>
+
+    <body>
+        <div class="container-fluid">
+<div class="row justify-content-start sticky-top header">
+    <div class="col-1 header-img">
+        <img class="profile-img" src="../../images/profile.png">
+    </div>
+    <div class="col header-title">
+        <h2 class="sitename"><a href="../.."> Junshoong의 기술블로그 </a></h2>
+    </div>
+</div>            <div class="row justify-content-around">
+                <div class="col-md-8 content">
+<div class="post">
+    <h1 class="post-title">[Linux] Arch linux 설치</h1>
+    <span class="post-date">2016-10-30, Sun</span>
+    <p><img alt="my-arch-linux" src="/images/2016-10-30/1.png"></p>
+<h1>개요</h1>
+<p>27일 저녁부터 <a href="https://www.archlinux.org/">Arch linux</a> 설치를 진행했다. 이전에는 <a href="http://elementary.io/">Elementary OS</a>를 사용했었는데 어느 정도 리눅스에 익숙해지기도 했고 사용하던 HDD를 SSD로 바꾸려고 계속 계획을 해 왔기에 이참에 Arch 를 설치해봤다. 이 기회를 빌어 결심부터 설치까지 여러 도움을 준 <a href="https://youngbin.xyz/">@youngbin</a> 에게 감사한다.</p>
+<h1>Arch linux Download &amp; Write</h1>
+<p>먼저 <a href="https://archlinux.org/download/">Arch linux Downloads 페이지</a>에서 파일을 받는다. torrent나 kaist mirror등을 통해서 직접 받는다. 그리고 적당한 usb에 write 해준다. <a href="https://wiki.archlinux.org/index.php/USB_flash_installation_media">USB flach installation media</a>를 참고해보면 usb에 굽는 여러 방법을 보여준다. 내 경우에는 이미 linux를 사용하고 있기 때문에 별다른 유틸리티 없이 구울 수 있었다. 처음엔 <code>gnome-disk-utility</code>를 통해서 구웠는데 부팅시 문제가 발생해서 <code>dd</code>명령을 통해서 다시 구워줬다.  </p>
+<div class="highlight"><pre><span></span>$ sudo fdisk -l
+$ sudo dd <span class="nv">bs</span><span class="o">=</span>4M <span class="k">if</span><span class="o">=</span>/path/to/archlinux.iso <span class="nv">of</span><span class="o">=</span>/dev/sdb <span class="o">&amp;&amp;</span> sync
+</pre></div>
+
+
+<p>먼저 <code>fdisk</code>를 통해서 구울 usb의 이름을 확인하고 진행한다. 내 경우에는 <code>sdb</code> 였지만 다른 경우가 있을 수 있으므로 확실히 확인 후 진행한다. 이후 usb를 다시 꼽고 재부팅을 진행한다. 부팅시 usb로 부팅을 진행하도록한다.  </p>
+<h1>Live Booting</h1>
+<p>처음에는 그래픽화면이 나오면서 메뉴를 확인할 수 있다. 상단에 있는 <code>Boot Arch Linux</code>를 클릭해서 부팅을 진행한다. CLI 환경으로 shell이 뜨는 걸 확인할 수 있다.  </p>
+<div class="highlight"><pre><span></span>root@archiso ~ <span class="c1">#</span>
+</pre></div>
+
+
+<h2>인터넷 연결</h2>
+<p>내 경우에는 인터넷 연결이 되지 않아서 난감했었는데 LAN선을 직접 연결해서 잡아주면 된다.</p>
+<div class="highlight"><pre><span></span><span class="c1"># ip addr</span>
+<span class="c1"># systemctl start dhcpcd@&lt;interface name&gt;</span>
+</pre></div>
+
+
+<p>인터넷이 연결 확인은 <code>ping</code> 명령을 통해서 확인하는게 좋다. wireless LAN을 사용해서 진행하고 싶기 때문에 <code>wifi-menu</code>를 통해서 무선 랜을 잡아줬다. 해당 명령을 입력하는 경우 의존성 패키지가 필요한 경우가 있기 때문에 유선 연결 상태에서 <code>dialog</code>, <code>wpa_supplicant</code>를 설치해준 뒤에 다시 명령을 실행한다.</p>
+<h2>파티션 설정</h2>
+<p>그럼 이제 설치를 진행할 디스크의 파티션을 편집해주자. <code>fdisk</code>를 통해서 파티션을 확인한다. 내 <code>/dev/sda</code> 등으로 잡혀있는걸 확인 할 수 있다. 연결된 경우에는 <code>umount</code>로 마운트를 해제해주고 <code>cfdisk</code> 툴을 사용해서 파티션을 편집해주었다.</p>
+<div class="highlight"><pre><span></span><span class="c1"># fdisk -l</span>
+<span class="c1"># umount /dev/sda*</span>
+<span class="c1"># cfdisk /dev/sda</span>
+</pre></div>
+
+
+<p>검은 화면에 흰 글씨지만 직관적인 화면을 볼 수 있다. 기존에 있는 파티션을 Delete해서 Free Space로 만들고 원하는 대로 파티션을 나눠준다.</p>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Boot</th>
+<th>Size</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/dev/sda1</td>
+<td>*</td>
+<td>230.8G</td>
+<td>Linux</td>
+</tr>
+<tr>
+<td>/dev/sda2</td>
+<td></td>
+<td>7.7G</td>
+<td>Extended</td>
+</tr>
+<tr>
+<td>/dev/sda5</td>
+<td></td>
+<td>7.7G</td>
+<td>Linux swap / Solaris</td>
+</tr>
+</tbody>
+</table>
+<p>형태로 파티션을 맞춰주고 Write한 후 종료한다.</p>
+<div class="highlight"><pre><span></span><span class="c1"># mkfs.ext4 /dev/sda1</span>
+<span class="c1"># mkswap /dev/sda5</span>
+<span class="c1"># swapon /dev/sda5</span>
+</pre></div>
+
+
+<p>이렇게 위와 같이 명령하면 포맷을 진행한다.</p>
+<div class="highlight"><pre><span></span><span class="c1"># mount /dev/sda1 /mnt</span>
+<span class="c1"># mkdir /mnt/boot</span>
+</pre></div>
+
+
+<p>위 작업을 통해 마운트해준다.  </p>
+<h2>mirror 설정</h2>
+<p>이제 기본적인 작업은 다 되었다. <code>mirrorlist</code>를 수정해서 내 네트워크 환경을 맞춰 줘야한다.</p>
+<div class="highlight"><pre><span></span><span class="c1"># vi /etc/pacman.d/mirrorlist</span>
+</pre></div>
+
+
+<p>필요없는 부분을 다 지우고 Korea에 해당하는 mirror만 남겨주면 된다.</p>
+<h2>패키지 설치</h2>
+<div class="highlight"><pre><span></span><span class="c1"># pacstrap /mnt base base-devel</span>
+<span class="c1"># genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</span>
+</pre></div>
+
+
+<p>base 패키지를 설치해주고 부팅시 해당 디스크를 읽을 수 있게 작업해준다.</p>
+<div class="highlight"><pre><span></span><span class="c1"># arch-chroot \mnt</span>
+</pre></div>
+
+
+<p>루트를 바꿔주고 작업한다.</p>
+<h2>기타 설정</h2>
+<div class="highlight"><pre><span></span><span class="c1"># ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime</span>
+<span class="c1"># hwclock --systohc</span>
+<span class="c1"># locale-gen</span>
+</pre></div>
+
+
+<p>기타 Localization을 진행해준다.</p>
+<div class="highlight"><pre><span></span><span class="c1"># passwd</span>
+<span class="c1"># vi /etc/hostname</span>
+<span class="c1"># vi /etc/hosts</span>
+</pre></div>
+
+
+<p>root 계정 password와 hostname을 지정해준다.
+해당 내용은 <a href="https://wiki.archlinux.org/index.php/Installation_guide#Hostname">Wiki의 Hostname부분</a>을 참고한다.</p>
+<div class="highlight"><pre><span></span><span class="c1"># mkinitcpio -p linux</span>
+</pre></div>
+
+
+<p>램파일시스템에 대한 설정을 해준다. 정확히 무슨 역할을 하는지는 잘 모르겠다.</p>
+<h2>부트로더 설치</h2>
+<div class="highlight"><pre><span></span><span class="c1"># pacman -S grub-bios</span>
+<span class="c1"># grub-install --target=i386-pc /dev/sda</span>
+<span class="c1"># grub-mkconfig -o /boot/grub/grub.cfg</span>
+</pre></div>
+
+
+<p>부트로더를 설치해준다. <code>grub</code>을 사용하는 경우 이렇게 설치해주면 된다.</p>
+<h2>재부팅</h2>
+<div class="highlight"><pre><span></span><span class="c1"># exit</span>
+<span class="c1"># umount -R /mnt</span>
+<span class="c1"># reboot</span>
+</pre></div>
+
+
+<p>부트로더까지 설치가 완료되었으면 접속을 종료하고 재부팅한다. 재부팅시에는 usb를 뽑고 진행하면 된다.</p>
+<h1>환경 구축하기</h1>
+<p>재부팅이 되었으면 먼저 <strong>root</strong> 로 로그인해준다.</p>
+<h2>유저생성하기</h2>
+<div class="highlight"><pre><span></span><span class="c1"># useradd -m -G wheel -s /bin/bash harvey</span>
+<span class="c1"># passwd harvey</span>
+<span class="c1"># visudo</span>
+</pre></div>
+
+
+<p>계정을 생성하고 <code>visudo</code>를 통해서 sudo권한을 부여해준다.</p>
+<h2>GUI 환경 설치</h2>
+<div class="highlight"><pre><span></span><span class="c1"># pacman -S dialog wpa_supplicant networkmanager</span>
+<span class="c1"># pacman -S xf86-video-intel xorg-server gdm gnome gnome-shell</span>
+<span class="c1"># pacman -S xterm</span>
+<span class="c1"># systemctl enable gdm.service</span>
+<span class="c1"># systemctl enable NetworkManager</span>
+</pre></div>
+
+
+<p>첫번째 명령은 와이파이 연결을 위해서 설치해줬던 패키지와 네트워크매니저 패키지를 설치해준다. 두번째는 video card를 잡아주고, Display Server와 Display Manager, Desktop 환경을 설치해준다. 세번째는 xterm이라는 터미널을 설치해준다. 내 경우에는 처음에 gnome-terminal이 켜지지 않아서 난감했었다. 마지막 두 라인은 시작시 자동으로 실행되도록 등록해준다.<br>
+재부팅하면 gnome 환경으로 로그인 할 수 있다.</p>
+<h2>터치패드 설정</h2>
+<div class="highlight"><pre><span></span><span class="c1"># sudo pacman -S xf86-input-libinput</span>
+</pre></div>
+
+
+<p>만약 작동하지 않는다면 <code>-R</code> 명령으로 지우고 <code>xf86-input-synaptics</code>를 설치해준다.</p>
+<h2>기타 설치</h2>
+<p>이외에 필요한 패키지들을 아래와 같이 설치했다. pacman을 통해서는 기본적인 패키지만 설치할 수 있고, AUR에 있는 패키지를 설치하는 경우에는 Helper인 <a href="https://archlinux.fr/yaourt-en">yaourt</a>나 <a href="https://github.com/aurapm/aura">aura</a>를 사용할 수 있다.</p>
+<div class="highlight"><pre><span></span>$ git cloen https://aur.archlinux.org/aura-bin.git
+$ <span class="nb">cd</span> aura-bin
+$ makepkg -sri
+</pre></div>
+
+
+<p><code>aura-bin(AUR)</code>, <code>terminix(AUR)</code>
+AUR에 있는 자료를 git clone 해서 받아오는경우 <code>PKGBUILD</code>, <code>.install</code>파일만 존재한다. 이 경우에는 위 명령을 통해서 설치할 수 있다.  </p>
+<p>나는 aura을 사용해서 아래 패키지들을 받았다.<br>
+<code>slack-desktop</code>, <code>gnome-tweak-tool</code>, <code>ibus</code>, <code>ibus-hangul</code>, <code>openssh</code>, <code>ttf-d2coding</code>, <code>ttf-monaco</code>, <code>jdk8-openjdk</code>, <code>pycharm-professional</code>, <code>atom</code>, <code>ntfs-3g</code>, <code>eclipse-jee</code>, <code>insync</code>, <code>pushbullet</code>, <code>cups</code>, <code>hplip</code>, <code>ttf-nanumgothic_coding</code></p>
+<p>이외에 git을 통해서 설치한 패키지는 아래와 같다. <code>powerline/fonts</code>, <code>vaporize93/dotfiles</code>, <code>VundleVim/Vundle.vim</code>  </p>
+<h1>References</h1>
+<p><strong>ArchWiki</strong>  </p>
+<ul>
+<li><a href="https://wiki.archlinux.org/index.php/Installation_guide">Installation guide</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Network_configuration">Network configuration</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Wireless_network_configuration">Wireless Network configuration</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/GRUB">GRUB</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/General_recommendations">General recommendations</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Users_and_groups">Users and groups</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/AUR_helpers">AUR helpers</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Pacman_(%ED%95%9C%EA%B5%AD%EC%96%B4)">Pacman (한국어)</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/CUPS">CUPS</a></li>
+</ul>
+<p><strong>Etc</strong>  </p>
+<ul>
+<li><a href="http://bagjunggyu.blogspot.kr/2014/07/arch-linux-part-i.html">박정규님의 블로그 - Arch Linux 설치과정 정리 - Part I</a></li>
+<li><a href="http://bagjunggyu.blogspot.kr/2014/07/arch-linux-part-ii.html">박정규님의 블로그 - Arch Linux 설치과정 정리 - Part II</a></li>
+</ul>
+</div>
+                </div>
+<div class="col-md-3 sidebar">
+    <div class="list-group category">
+        <div class="list-group-item list-group-item-primary"> Category </div>
+        <a class="list-group-item list-group-item-action category-item" href="../../agile/">
+            Agile
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../angular/">
+            Angular
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../blog/">
+            Blog
+            <span class="category-item-count">(3)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../book/">
+            Book
+            <span class="category-item-count">(3)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../css/">
+            CSS
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../ctf/">
+            CTF
+            <span class="category-item-count">(4)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../devops/">
+            DevOps
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../django/">
+            Django
+            <span class="category-item-count">(6)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../docker/">
+            Docker
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../editor/">
+            Editor
+            <span class="category-item-count">(3)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../english/">
+            English
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../etc/">
+            ETC
+            <span class="category-item-count">(11)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../game/">
+            Game
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../git/">
+            Git
+            <span class="category-item-count">(2)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../life/">
+            Life
+            <span class="category-item-count">(21)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../linux/">
+            Linux
+            <span class="category-item-count">(19)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../mac/">
+            Mac
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../movie/">
+            Movie
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../nginx/">
+            Nginx
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../pelican/">
+            Pelican
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../python/">
+            Python
+            <span class="category-item-count">(8)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../regex/">
+            Regex
+            <span class="category-item-count">(1)</span>
+        </a> 
+        <a class="list-group-item list-group-item-action category-item" href="../../shell/">
+            Shell
+            <span class="category-item-count">(2)</span>
+        </a> 
+    </div>
+    <div class="list-group social">
+        <div class="list-group-item list-group-item-primary"> Social </div>
+        <a class="list-group-item list-group-item-action" href="mailto:junshoong@gmail.com"> email </a>
+        <a class="list-group-item list-group-item-action" href="https://www.facebook.com/vaporize93"> facebook </a>
+        <a class="list-group-item list-group-item-action" href="https://www.linkedin.com/in/junshoong"> linkedin </a>
+        <a class="list-group-item list-group-item-action" href="https://www.slideshare.net/junshoong"> slideshare </a>
+        <a class="list-group-item list-group-item-action" href="https://github.com/junshoong"> github </a>
+        <a class="list-group-item list-group-item-action" href="https://www.stackoverflow.com/users/4466697/junsu-kim"> stack-overflow </a>
+        <a class="list-group-item list-group-item-action" href=""> FEED </a>
+    </div>
+</div>            </div>
+        </div>
+    </body>
+</html>

@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - Linux</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/linux.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2017-04-04T00:00:00+09:00</updated><entry><title>[Linux]archlinux에서 vmware player가 실행되지 않는 문제 해결</title><link href="http://blog.junshoong.net/linux/arch-vmware-problem.md" rel="alternate"></link><published>2017-04-04T00:00:00+09:00</published><updated>2017-04-04T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-04:/linux/arch-vmware-problem.md</id><summary type="html">&lt;h2&gt;문제상황&lt;/h2&gt;
-&lt;p&gt;최근 archlinux의 패키지를 업그레이드하고 나서 vmware player가 실행되지 않는 문제를 겪었다. 실행시에 잠깐 프로세스가 떴다가 사라지고 아무런 로그를 보여주지도 않고 있었다. 관련 문제는 libpng의 업그레이드에 따른 문제로 libpng 1.6.29버전에서 나타나는 문제다.&lt;/p&gt;
-&lt;h2&gt;환경&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;VMware Player 12.5.2&lt;/li&gt;
-&lt;li&gt;Kernel : 4.10.6-1-ARCH&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;해결&lt;/h2&gt;
-&lt;p&gt;해당 버전을 없애고 업그레이드 하기전으로 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;문제상황&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Junshoong의 기술블로그 - Linux</title><link href="http://blog.junshoong.net/" rel="alternate"></link><link href="http://blog.junshoong.net/feeds/linux.atom.xml" rel="self"></link><id>http://blog.junshoong.net/</id><updated>2017-04-04T00:00:00+09:00</updated><entry><title>[Linux]archlinux에서 vmware player가 실행되지 않는 문제 해결</title><link href="http://blog.junshoong.net/linux/arch-vmware-problem.md/" rel="alternate"></link><published>2017-04-04T00:00:00+09:00</published><updated>2017-04-04T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-04-04:/linux/arch-vmware-problem.md/</id><summary type="html">&lt;h2&gt;문제상황&lt;/h2&gt;
+&lt;p&gt;최근 archlinux의 패키지를 업그레이드하고 나서 vmware player가 실행되지 않는 문제를 겪었다. 실행시에 잠깐 프로세스가 떴다가 사라지고 아무런 로그를 보여주지도 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;문제상황&lt;/h2&gt;
 &lt;p&gt;최근 archlinux의 패키지를 업그레이드하고 나서 vmware player가 실행되지 않는 문제를 겪었다. 실행시에 잠깐 프로세스가 떴다가 사라지고 아무런 로그를 보여주지도 않고 있었다. 관련 문제는 libpng의 업그레이드에 따른 문제로 libpng 1.6.29버전에서 나타나는 문제다.&lt;/p&gt;
 &lt;h2&gt;환경&lt;/h2&gt;
 &lt;ul&gt;
@@ -36,16 +29,9 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://bbs.archlinux.org/viewtopic.php?id=224667"&gt;vmware workstation 12.5.5 not starting [TEMP FIX]&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://bbs.archlinux.org/viewtopic.php?id=224680"&gt;[Solved] Vmware - Launch problem (zlib version ?)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="linux"></category><category term="troubleshooting"></category><category term="vmware"></category><category term="pacman"></category></entry><entry><title>[Linux] pacman failed to commit transaction 해결</title><link href="http://blog.junshoong.net/linux/pacman-force-install" rel="alternate"></link><published>2017-02-14T00:00:00+09:00</published><updated>2017-02-14T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-02-14:/linux/pacman-force-install</id><summary type="html">&lt;p&gt;docker-compose를 설치하다가 종속된 패키지의 일부가 충돌해서 설치가 진행되지 않았다. 아래는 해당 내용을 간단하게 정리했다.&lt;/p&gt;
+&lt;/ul&gt;</content><category term="linux"></category><category term="troubleshooting"></category><category term="vmware"></category><category term="pacman"></category></entry><entry><title>[Linux] pacman failed to commit transaction 해결</title><link href="http://blog.junshoong.net/linux/pacman-force-install/" rel="alternate"></link><published>2017-02-14T00:00:00+09:00</published><updated>2017-02-14T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2017-02-14:/linux/pacman-force-install/</id><summary type="html">&lt;p&gt;docker-compose를 설치하다가 종속된 패키지의 일부가 충돌해서 설치가 진행되지 않았다. 아래는 해당 내용을 간단하게 정리했다.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;aura는 aur 패키지들을 받을 수 있는 pacman의 확장 프로그램으로 본 포스트에서는 pacman으로 대체해도 아무런 상관이 없다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo aura -S docker-compose 
-resolving dependencies...
-looking &lt;span class="k"&gt;for&lt;/span&gt; conflicting packages...
-
-Packages &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;11&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; python-cached-property-1.3.0-2  python-colorama-0.3.7-2
-              python-docker-2.0 …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;docker-compose를 설치하다가 종속된 패키지의 일부가 충돌해서 설치가 진행되지 않았다. 아래는 해당 내용을 간단하게 정리했다.&lt;/p&gt;
+&lt;p&gt;aura는 aur 패키지들을 받을 수 있는 …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;docker-compose를 설치하다가 종속된 패키지의 일부가 충돌해서 설치가 진행되지 않았다. 아래는 해당 내용을 간단하게 정리했다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;aura는 aur 패키지들을 받을 수 있는 pacman의 확장 프로그램으로 본 포스트에서는 pacman으로 대체해도 아무런 상관이 없다.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -124,10 +110,8 @@ Total Installed Size:  &lt;span class="m"&gt;3&lt;/span&gt;.14 MiB
 &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;11&lt;/span&gt;/11&lt;span class="o"&gt;)&lt;/span&gt; installing docker-compose                   &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="c1"&gt;###########################] 100%&lt;/span&gt;
 :: Running post-transaction hooks...
 &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;/1&lt;span class="o"&gt;)&lt;/span&gt; Arming ConditionNeedsUpdate...
-&lt;/pre&gt;&lt;/div&gt;</content><category term="linux"></category><category term="arch"></category><category term="pacman"></category><category term="troubleshooting"></category></entry><entry><title>[Linux] ThinkPad 랩탑 배터리관리 패키지 (tlp) 설치</title><link href="http://blog.junshoong.net/linux/install-tlp" rel="alternate"></link><published>2016-10-31T00:00:00+09:00</published><updated>2016-10-31T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-10-31:/linux/install-tlp</id><summary type="html">&lt;h1&gt;tlp 설치&lt;/h1&gt;
-&lt;p&gt;이전에도 사용했던 ThinkPad를 위한 배터리관리 패키지인 &lt;code&gt;tlp&lt;/code&gt;를 설치했다. 그냥 설치해두고 잊어버려도 되는 편리한 패키지였는데 리눅스를 새로 설치하는 김에 다시 받았다. 실제로 체감은 잘 모르겠어서 당분간 써보고 통계자료를 뽑아볼 수 있으면 다시 추가하도록 하겠다. 배터리 사용 관련 그래프를 나타내주는 패키지로는 &lt;code&gt;gnome-power-manager&lt;/code&gt; 가 있다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo aura -S tlp
-$ sudo …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h1&gt;tlp 설치&lt;/h1&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="linux"></category><category term="arch"></category><category term="pacman"></category><category term="troubleshooting"></category></entry><entry><title>[Linux] ThinkPad 랩탑 배터리관리 패키지 (tlp) 설치</title><link href="http://blog.junshoong.net/linux/install-tlp/" rel="alternate"></link><published>2016-10-31T00:00:00+09:00</published><updated>2016-10-31T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-10-31:/linux/install-tlp/</id><summary type="html">&lt;h1&gt;tlp 설치&lt;/h1&gt;
+&lt;p&gt;이전에도 사용했던 ThinkPad를 위한 배터리관리 패키지인 &lt;code&gt;tlp&lt;/code&gt;를 설치했다. 그냥 설치해두고 잊어버려도 되는 편리한 패키지였는데 리눅스를 새로 설치하는 …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;tlp 설치&lt;/h1&gt;
 &lt;p&gt;이전에도 사용했던 ThinkPad를 위한 배터리관리 패키지인 &lt;code&gt;tlp&lt;/code&gt;를 설치했다. 그냥 설치해두고 잊어버려도 되는 편리한 패키지였는데 리눅스를 새로 설치하는 김에 다시 받았다. 실제로 체감은 잘 모르겠어서 당분간 써보고 통계자료를 뽑아볼 수 있으면 다시 추가하도록 하겠다. 배터리 사용 관련 그래프를 나타내주는 패키지로는 &lt;code&gt;gnome-power-manager&lt;/code&gt; 가 있다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo aura -S tlp
 $ sudo tlp start
@@ -161,11 +145,9 @@ $ gnome-power-statistics
 &lt;li&gt;&lt;a href="https://wiki.archlinux.org/index.php/TLP"&gt;ArchWiki - TLP&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://help.gnome.org/users/gnome-power-manager/stable/statistics.html.en"&gt;Gnome Help - Gnome Power Manager&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://bbs.archlinux.org/viewtopic.php?id=169195"&gt;Arch Forum - Tool for reporting battery stats?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="laptop"></category><category term="linux"></category><category term="tlp"></category></entry><entry><title>[Linux] Arch linux 설치</title><link href="http://blog.junshoong.net/linux/install-arch-linux" rel="alternate"></link><published>2016-10-30T00:00:00+09:00</published><updated>2016-10-30T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-10-30:/linux/install-arch-linux</id><summary type="html">&lt;p&gt;&lt;img alt="my-arch-linux" src="/images/2016-10-30/1.png"&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><category term="laptop"></category><category term="linux"></category><category term="tlp"></category></entry><entry><title>[Linux] Arch linux 설치</title><link href="http://blog.junshoong.net/linux/install-arch-linux/" rel="alternate"></link><published>2016-10-30T00:00:00+09:00</published><updated>2016-10-30T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-10-30:/linux/install-arch-linux/</id><summary type="html">&lt;p&gt;&lt;img alt="my-arch-linux" src="/images/2016-10-30/1.png"&gt;&lt;/p&gt;
 &lt;h1&gt;개요&lt;/h1&gt;
-&lt;p&gt;27일 저녁부터 &lt;a href="https://www.archlinux.org/"&gt;Arch linux&lt;/a&gt; 설치를 진행했다. 이전에는 &lt;a href="http://elementary.io/"&gt;Elementary OS&lt;/a&gt;를 사용했었는데 어느 정도 리눅스에 익숙해지기도 했고 사용하던 HDD를 SSD로 바꾸려고 계속 계획을 해 왔기에 이참에 Arch 를 설치해봤다. 이 기회를 빌어 결심부터 설치까지 여러 도움을 준 &lt;a href="https://youngbin.xyz/"&gt;@youngbin&lt;/a&gt; 에게 감사한다.&lt;/p&gt;
-&lt;h1&gt;Arch linux Download &amp;amp; Write&lt;/h1&gt;
-&lt;p&gt;먼저 &lt;a href="https://archlinux.org/download/"&gt;Arch linux Downloads 페이지&lt;/a&gt;에서 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="my-arch-linux" src="/images/2016-10-30/1.png"&gt;&lt;/p&gt;
+&lt;p&gt;27일 저녁부터 &lt;a href="https://www.archlinux.org/"&gt;Arch linux&lt;/a&gt; 설치를 진행했다. 이전에는 &lt;a href="http://elementary.io/"&gt;Elementary OS&lt;/a&gt;를 사용했었는데 어느 정도 리눅스에 익숙해지기도 했고 사용하던 HDD를 SSD로 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="my-arch-linux" src="/images/2016-10-30/1.png"&gt;&lt;/p&gt;
 &lt;h1&gt;개요&lt;/h1&gt;
 &lt;p&gt;27일 저녁부터 &lt;a href="https://www.archlinux.org/"&gt;Arch linux&lt;/a&gt; 설치를 진행했다. 이전에는 &lt;a href="http://elementary.io/"&gt;Elementary OS&lt;/a&gt;를 사용했었는데 어느 정도 리눅스에 익숙해지기도 했고 사용하던 HDD를 SSD로 바꾸려고 계속 계획을 해 왔기에 이참에 Arch 를 설치해봤다. 이 기회를 빌어 결심부터 설치까지 여러 도움을 준 &lt;a href="https://youngbin.xyz/"&gt;@youngbin&lt;/a&gt; 에게 감사한다.&lt;/p&gt;
 &lt;h1&gt;Arch linux Download &amp;amp; Write&lt;/h1&gt;
@@ -356,14 +338,7 @@ AUR에 있는 자료를 git clone 해서 받아오는경우 &lt;code&gt;PKGBUILD
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://bagjunggyu.blogspot.kr/2014/07/arch-linux-part-i.html"&gt;박정규님의 블로그 - Arch Linux 설치과정 정리 - Part I&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://bagjunggyu.blogspot.kr/2014/07/arch-linux-part-ii.html"&gt;박정규님의 블로그 - Arch Linux 설치과정 정리 - Part II&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="linux"></category></entry><entry><title>[Linux] 파일 인코딩 검사 및 인코딩 변환하기</title><link href="http://blog.junshoong.net/linux/file-encoding-detect-and-convert" rel="alternate"></link><published>2016-09-15T00:00:00+09:00</published><updated>2016-09-15T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-09-15:/linux/file-encoding-detect-and-convert</id><summary type="html">&lt;p&gt;윈도우의 메모장 등에서 작성한 파일은 리눅스에서 볼때 깨져서 보인다. 이런 경우 뿐만아니라 웹상에서 파일을 구한 경우에도 인코딩이 깨진 경우가 종종 있다. 이럴때 해당 파일의 인코딩을 검사하고 인코딩을 변환하는 방법을 알아보자.&lt;/p&gt;
-&lt;h2&gt;인코딩 검사&lt;/h2&gt;
-&lt;p&gt;인코딩 검사는 &lt;code&gt;chardet&lt;/code&gt;라는 좋은 파이썬 패키지가 있다. &lt;code&gt;pip&lt;/code&gt;을 통해 간단하게 설치할 수 있다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ chardet &lt;span class="o"&gt;[&lt;/span&gt;file&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;결과도 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;윈도우의 메모장 등에서 작성한 파일은 리눅스에서 볼때 깨져서 보인다. 이런 경우 뿐만아니라 웹상에서 파일을 구한 경우에도 인코딩이 깨진 경우가 종종 있다. 이럴때 해당 파일의 인코딩을 검사하고 인코딩을 변환하는 방법을 알아보자.&lt;/p&gt;
+&lt;/ul&gt;</content><category term="linux"></category></entry><entry><title>[Linux] 파일 인코딩 검사 및 인코딩 변환하기</title><link href="http://blog.junshoong.net/linux/file-encoding-detect-and-convert/" rel="alternate"></link><published>2016-09-15T00:00:00+09:00</published><updated>2016-09-15T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-09-15:/linux/file-encoding-detect-and-convert/</id><summary type="html">&lt;p&gt;윈도우의 메모장 등에서 작성한 파일은 리눅스에서 볼때 깨져서 보인다. 이런 경우 뿐만아니라 웹상에서 파일을 구한 경우에도 인코딩이 깨진 경우가 종종 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;윈도우의 메모장 등에서 작성한 파일은 리눅스에서 볼때 깨져서 보인다. 이런 경우 뿐만아니라 웹상에서 파일을 구한 경우에도 인코딩이 깨진 경우가 종종 있다. 이럴때 해당 파일의 인코딩을 검사하고 인코딩을 변환하는 방법을 알아보자.&lt;/p&gt;
 &lt;h2&gt;인코딩 검사&lt;/h2&gt;
 &lt;p&gt;인코딩 검사는 &lt;code&gt;chardet&lt;/code&gt;라는 좋은 파이썬 패키지가 있다. &lt;code&gt;pip&lt;/code&gt;을 통해 간단하게 설치할 수 있다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ chardet &lt;span class="o"&gt;[&lt;/span&gt;file&lt;span class="o"&gt;]&lt;/span&gt;
@@ -383,8 +358,8 @@ AUR에 있는 자료를 git clone 해서 받아오는경우 &lt;code&gt;PKGBUILD
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://superuser.com/questions/301552/how-to-auto-detect-text-file-encoding"&gt;How to auto detect text file encoding?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://forum.falinux.com/zbxe/index.php?document_srl=807803"&gt;[우분투14.04]윈도우에서 작성한 텍스트 파일의 한글이 깨져서 나올때 팁&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="linux"></category><category term="encoding"></category></entry><entry><title>[Linux] 리눅스에서 한글포맷 열기</title><link href="http://blog.junshoong.net/linux/linux-hwp-open" rel="alternate"></link><published>2016-08-10T00:00:00+09:00</published><updated>2016-08-10T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-08-10:/linux/linux-hwp-open</id><summary type="html">&lt;p&gt;리눅스에서는 한글 포맷(.hwp)을 여는게 여간 힘든게 아니다.&lt;/p&gt;
-&lt;p&gt;작년 상반기까지만 해도 &lt;a href="http://www.hancom.com/"&gt;한글과컴퓨터&lt;/a&gt;(이하 한컴)에서 공식뷰어를 제공해줘서 잘 쓰고 있었는데, 어느순간 조용히 넷피스24로 전환되어 웹에서만 볼 수 있게 되었다. 그래서 개인적으로 만들어서 사용하고 있는 뷰어가 있나 찾아다녔다. 하지만 오늘 이런 기사를 봤다. &lt;a href="http://www.etnews.com/20160810000093"&gt;"리눅스에서 한글(hwp)파일 연다...한컴 '한컴오피스 …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;리눅스에서는 한글 포맷(.hwp)을 여는게 여간 힘든게 아니다.&lt;/p&gt;
+&lt;/ul&gt;</content><category term="linux"></category><category term="encoding"></category></entry><entry><title>[Linux] 리눅스에서 한글포맷 열기</title><link href="http://blog.junshoong.net/linux/linux-hwp-open/" rel="alternate"></link><published>2016-08-10T00:00:00+09:00</published><updated>2016-08-10T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-08-10:/linux/linux-hwp-open/</id><summary type="html">&lt;p&gt;리눅스에서는 한글 포맷(.hwp)을 여는게 여간 힘든게 아니다.&lt;/p&gt;
+&lt;p&gt;작년 상반기까지만 해도 &lt;a href="http://www.hancom.com/"&gt;한글과컴퓨터&lt;/a&gt;(이하 한컴)에서 공식뷰어를 제공해줘서 잘 쓰고 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;리눅스에서는 한글 포맷(.hwp)을 여는게 여간 힘든게 아니다.&lt;/p&gt;
 &lt;p&gt;작년 상반기까지만 해도 &lt;a href="http://www.hancom.com/"&gt;한글과컴퓨터&lt;/a&gt;(이하 한컴)에서 공식뷰어를 제공해줘서 잘 쓰고 있었는데, 어느순간 조용히 넷피스24로 전환되어 웹에서만 볼 수 있게 되었다. 그래서 개인적으로 만들어서 사용하고 있는 뷰어가 있나 찾아다녔다. 하지만 오늘 이런 기사를 봤다. &lt;a href="http://www.etnews.com/20160810000093"&gt;"리눅스에서 한글(hwp)파일 연다...한컴 '한컴오피스 뷰어 통합 다운로드' 개시"&lt;/a&gt; 당혹스럽다. 말도 없이 한글뷰어를 내리더니 새로운 서비스를 내놓는 것 마냥 다시 올려뒀다.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="한컴 오피스 뷰어 설치하기 이미지" src="/images/2016-08-16/01_hancom.png"&gt;&lt;/p&gt;
 &lt;p&gt;리눅스라는 플랫폼이 국내에서 흔하게 쓰이는 플랫폼은 아니지만 얼마 안 되는 리눅스 사용자를 이용해서 혼란스러운 마케팅을 보여주는건 조금 속상하다.&lt;/p&gt;
@@ -394,12 +369,9 @@ AUR에 있는 자료를 git clone 해서 받아오는경우 &lt;code&gt;PKGBUILD
 &lt;h2&gt;참고링크&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://storycompiler.tistory.com/197"&gt;한글파일(hwp)을 텍스트(txt) 혹은 웹문서(html)로 변환하자!&lt;/a&gt;
 &lt;a href="http://mytory.net/archives/12797"&gt;리눅스에서 한글 파일(hwp) 파일 변환해서 읽기&lt;/a&gt;
-&lt;a href="http://pythonhosted.org/pyhwp/ko/intro.html"&gt;pyhwp Docs&lt;/a&gt;&lt;/p&gt;</content><category term="linux"></category><category term="editor"></category></entry><entry><title>[Linux] apt 패키지 관리 도구로 파이어폭스 마이너 버전 업그레이드</title><link href="http://blog.junshoong.net/linux/firefox-minor-upgrade-with-apt" rel="alternate"></link><published>2016-07-26T00:00:00+09:00</published><updated>2016-07-26T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-07-26:/linux/firefox-minor-upgrade-with-apt</id><summary type="html">&lt;h1&gt;배경&lt;/h1&gt;
+&lt;a href="http://pythonhosted.org/pyhwp/ko/intro.html"&gt;pyhwp Docs&lt;/a&gt;&lt;/p&gt;</content><category term="linux"></category><category term="editor"></category></entry><entry><title>[Linux] apt 패키지 관리 도구로 파이어폭스 마이너 버전 업그레이드</title><link href="http://blog.junshoong.net/linux/firefox-minor-upgrade-with-apt/" rel="alternate"></link><published>2016-07-26T00:00:00+09:00</published><updated>2016-07-26T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-07-26:/linux/firefox-minor-upgrade-with-apt/</id><summary type="html">&lt;h1&gt;배경&lt;/h1&gt;
 &lt;p&gt;django를 테스트하는데 selenium에서 firefox를 열 때 에러가 발생한다. &lt;a href="https://github.com/SeleniumHQ/selenium/issues/2110"&gt;(관련이슈)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;확인해보니 FF47.0에서 공통으로 발생하는 문제이고, 47.0.1에서 fix되었다.&lt;/p&gt;
-&lt;p&gt;기존에 사용하던 파이어폭스는 기본 ppa저장소에서 제공되는걸 받았었는데, 공식 홈페이지에 가니 tar 확장자로만 제공하고 있다. apt-get 을 사용해서 관리하고 싶은데.. 하며 찾아봤더니 방법을 찾았다.&lt;/p&gt;
-&lt;h1&gt;업그레이드&lt;/h1&gt;
-&lt;p&gt;&lt;a href="https://support.mozilla.org/en-US/kb/install-firefox-linux"&gt;파이어폭스설치 관련페이지 지원페이지&lt;/a&gt; 중간쯤에 보면 Installing …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;배경&lt;/h1&gt;
+&lt;p&gt;확인해보니 FF47.0에서 공통으로 발생하는 문제이고, 47.0.1에서 fix되었다 …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;배경&lt;/h1&gt;
 &lt;p&gt;django를 테스트하는데 selenium에서 firefox를 열 때 에러가 발생한다. &lt;a href="https://github.com/SeleniumHQ/selenium/issues/2110"&gt;(관련이슈)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;확인해보니 FF47.0에서 공통으로 발생하는 문제이고, 47.0.1에서 fix되었다.&lt;/p&gt;
 &lt;p&gt;기존에 사용하던 파이어폭스는 기본 ppa저장소에서 제공되는걸 받았었는데, 공식 홈페이지에 가니 tar 확장자로만 제공하고 있다. apt-get 을 사용해서 관리하고 싶은데.. 하며 찾아봤더니 방법을 찾았다.&lt;/p&gt;
@@ -414,23 +386,10 @@ sudo apt-get upgrade
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;다시 파이어폭스를 열어서 버전확인을 해보면 해당 버전으로 판올림 된걸 확인 할 수 있다.&lt;/p&gt;</content><category term="linux"></category><category term="firefox"></category></entry><entry><title>[Linux] FireFox에서 flash plugin 업데이트</title><link href="http://blog.junshoong.net/linux/firefox-flash-plug-in-update" rel="alternate"></link><published>2016-07-06T00:00:00+09:00</published><updated>2016-07-06T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-07-06:/linux/firefox-flash-plug-in-update</id><summary type="html">&lt;p&gt;답은 역시 &lt;a href="https://support.mozilla.org/ko/kb/install-flash-plugin-view-videos-animations-games"&gt;공식홈페이지&lt;/a&gt;에서 찾을 수 있었다. 아래와 같이 진행하도록 한다.&lt;/p&gt;
+&lt;p&gt;다시 파이어폭스를 열어서 버전확인을 해보면 해당 버전으로 판올림 된걸 확인 할 수 있다.&lt;/p&gt;</content><category term="linux"></category><category term="firefox"></category></entry><entry><title>[Linux] FireFox에서 flash plugin 업데이트</title><link href="http://blog.junshoong.net/linux/firefox-flash-plug-in-update/" rel="alternate"></link><published>2016-07-06T00:00:00+09:00</published><updated>2016-07-06T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-07-06:/linux/firefox-flash-plug-in-update/</id><summary type="html">&lt;p&gt;답은 역시 &lt;a href="https://support.mozilla.org/ko/kb/install-flash-plugin-view-videos-animations-games"&gt;공식홈페이지&lt;/a&gt;에서 찾을 수 있었다. 아래와 같이 진행하도록 한다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="https://get.adobe.com/kr/flashplayer/"&gt;flashplayer 공식홈페이지&lt;/a&gt;에서 왼쪽 하단에서 다운로드를 선택해  tar.gz 로 된 압축파일을 받는다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;압축파일을 푼다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;tar -zxvf install_flash_player_###.tar.gz
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;ul&gt;
-&lt;li&gt;압축을 풀어낸 폴더 내부에 있는 libflashplayer.so 파일을 firefox의 plugin 디렉터리에 넣는다.  &lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo cp libflashplayer.so /usr/lib/firefox-addons …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;답은 역시 &lt;a href="https://support.mozilla.org/ko/kb/install-flash-plugin-view-videos-animations-games"&gt;공식홈페이지&lt;/a&gt;에서 찾을 수 있었다. 아래와 같이 진행하도록 한다.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://get.adobe.com/kr/flashplayer/"&gt;flashplayer 공식홈페이지&lt;/a&gt;에서 왼쪽 하단에서 다운로드를 선택해  tar.gz …&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;답은 역시 &lt;a href="https://support.mozilla.org/ko/kb/install-flash-plugin-view-videos-animations-games"&gt;공식홈페이지&lt;/a&gt;에서 찾을 수 있었다. 아래와 같이 진행하도록 한다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="https://get.adobe.com/kr/flashplayer/"&gt;flashplayer 공식홈페이지&lt;/a&gt;에서 왼쪽 하단에서 다운로드를 선택해  tar.gz 로 된 압축파일을 받는다.&lt;/p&gt;
@@ -457,19 +416,8 @@ sudo apt-get upgrade
 &lt;p&gt;참고: Adobe Flash Player 11.2는 Linux를 지원 플랫폼으로 사용하는 마지막 버전이 될 것입니다. Linux용 Flash Player 11.2의 보안 업데이트는 계속 제공됩니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;2016년 7월 현재 자동 업데이트는 지원되고 있지 않다. apt 명령으로 인스톨도 안 된다.
-그러므로 필요할 때마다 직접 수동 설치를 해줘야 한다.&lt;/p&gt;</content><category term="linux"></category><category term="firefox"></category></entry><entry><title>[Linux] elementaryOS ppa repository 삭제하기</title><link href="http://blog.junshoong.net/linux/ppa-remove" rel="alternate"></link><published>2016-04-02T00:00:00+09:00</published><updated>2016-04-02T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-04-02:/linux/ppa-remove</id><summary type="html">&lt;p&gt;여러 프로그램을 받다보면 자연스레 ppa 가 쌓인다. 이러다보면 한번 정리해주고 싶을때가 온다. 일단 설치된 리스트를 확인해보자.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ls -al /etc/apt/sources.list.d/
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;해당 경로아래 리스트를 확인할 수 있다.
-그럼 지워보자.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo add-apt-repository --remove ppa:team/name
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;저 뒤에 ppa: 뒷부분은 해당 repository의 이름을 넣어주면 된다.
-혹은 GUI 환경에서도 삭제할 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;여러 프로그램을 받다보면 자연스레 ppa 가 쌓인다. 이러다보면 한번 정리해주고 싶을때가 온다. 일단 설치된 리스트를 확인해보자.&lt;/p&gt;
+그러므로 필요할 때마다 직접 수동 설치를 해줘야 한다.&lt;/p&gt;</content><category term="linux"></category><category term="firefox"></category></entry><entry><title>[Linux] elementaryOS ppa repository 삭제하기</title><link href="http://blog.junshoong.net/linux/ppa-remove/" rel="alternate"></link><published>2016-04-02T00:00:00+09:00</published><updated>2016-04-02T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-04-02:/linux/ppa-remove/</id><summary type="html">&lt;p&gt;여러 프로그램을 받다보면 자연스레 ppa 가 쌓인다. 이러다보면 한번 정리해주고 싶을때가 온다. 일단 설치된 리스트를 확인해보자.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ls -al /etc/apt …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;여러 프로그램을 받다보면 자연스레 ppa 가 쌓인다. 이러다보면 한번 정리해주고 싶을때가 온다. 일단 설치된 리스트를 확인해보자.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ls -al /etc/apt/sources.list.d/
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -485,15 +433,13 @@ sudo apt-get upgrade
 &lt;p&gt;&lt;img alt="Software &amp;amp; Updates 창" src="/images/2016-04-02/01.png"&gt;&lt;/p&gt;
 &lt;h2&gt;참고링크&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://askubuntu.com/questions/148932/how-can-i-get-a-list-of-all-repositories-and-ppas-from-the-command-line-into-an"&gt;How can I get a list of all repositories and PPAs from the command line into an install script?&lt;/a&gt;
-&lt;a href="http://askubuntu.com/questions/307/how-can-ppas-be-removed"&gt;How can PPAs be removed?&lt;/a&gt;&lt;/p&gt;</content><category term="linux"></category><category term="elementary"></category><category term="apt"></category></entry><entry><title>[Linux] elementaryOS critical notify-send 알림 없애기</title><link href="http://blog.junshoong.net/linux/linux-notify-close" rel="alternate"></link><published>2016-03-10T00:00:00+09:00</published><updated>2016-03-10T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-03-10:/linux/linux-notify-close</id><summary type="html">&lt;p&gt;터미널에서&lt;/p&gt;
+&lt;a href="http://askubuntu.com/questions/307/how-can-ppas-be-removed"&gt;How can PPAs be removed?&lt;/a&gt;&lt;/p&gt;</content><category term="linux"></category><category term="elementary"></category><category term="apt"></category></entry><entry><title>[Linux] elementaryOS critical notify-send 알림 없애기</title><link href="http://blog.junshoong.net/linux/linux-notify-close/" rel="alternate"></link><published>2016-03-10T00:00:00+09:00</published><updated>2016-03-10T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-03-10:/linux/linux-notify-close/</id><summary type="html">&lt;p&gt;터미널에서&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ notify-send -u critical &lt;span class="s2"&gt;&amp;quot;Test Notification&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;과 같이 입력하면 알림 창이 자동으로 사라지지 않는다.&lt;/p&gt;
-&lt;p&gt;이때 알림창 위에 마우스 포인터를 올려주면 X 버튼이 나타나서 알림을 끌 수 있다.&lt;/p&gt;
-&lt;p&gt;하지만 어떤 프로그램의 창 위에서는 알림창 위에 마우스 포인터를 올려도 x 버튼이 나타나지 않는다. 이때는 바탕화면으로 가서 마우스를 올리면 x 버튼이 나타난다.&lt;/p&gt;
-&lt;p&gt;Type …&lt;/p&gt;</summary><content type="html">&lt;p&gt;터미널에서&lt;/p&gt;
+&lt;p&gt;이때 알림창 위에 마우스 포인터를 올려주면 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;터미널에서&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ notify-send -u critical &lt;span class="s2"&gt;&amp;quot;Test Notification&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -509,17 +455,9 @@ sudo apt-get upgrade
 &lt;p&gt;In this case, notification don't automatically disappear.&lt;/p&gt;
 &lt;p&gt;This situation, place mouse pointer on notification, then appear close button.&lt;/p&gt;
 &lt;p&gt;But, if norification is on any program( firefox, terminal, .. etc.), don't appear close button.&lt;/p&gt;
-&lt;p&gt;This situation, view the desktop, you can see close button.  &lt;/p&gt;</content><category term="linux"></category><category term="elementary"></category></entry><entry><title>[Linux] eclipse 실행시 시스템이 멈추는 현상</title><link href="http://blog.junshoong.net/linux/eclipse-freeze-linux" rel="alternate"></link><published>2016-03-08T00:00:00+09:00</published><updated>2016-03-08T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-03-08:/linux/eclipse-freeze-linux</id><summary type="html">&lt;p&gt;eclipse 실행시 OS가 굳어버리는 문제가 있다.&lt;/p&gt;
+&lt;p&gt;This situation, view the desktop, you can see close button.  &lt;/p&gt;</content><category term="linux"></category><category term="elementary"></category></entry><entry><title>[Linux] eclipse 실행시 시스템이 멈추는 현상</title><link href="http://blog.junshoong.net/linux/eclipse-freeze-linux/" rel="alternate"></link><published>2016-03-08T00:00:00+09:00</published><updated>2016-03-08T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-03-08:/linux/eclipse-freeze-linux/</id><summary type="html">&lt;p&gt;eclipse 실행시 OS가 굳어버리는 문제가 있다.&lt;/p&gt;
 &lt;p&gt;GTK 버전 관련 이슈라고 한다.&lt;/p&gt;
-&lt;p&gt;실행 파일이 있는 디렉터리를 확인해보면 &lt;code&gt;eclipse.ini&lt;/code&gt; 라는 설정 파일을 볼 수 있다.&lt;/p&gt;
-&lt;p&gt;그 eclipse.ini 의 내용에 아래 항목을 추가한다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="na"&gt;-launcher.GTK_version&lt;/span&gt;
-&lt;span class="na"&gt;2&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;다만 추가할 때 &lt;code&gt;--launcher.appendVmargs&lt;/code&gt;의 윗줄에 추가해야 한다.&lt;/p&gt;
-&lt;p&gt;이후 실행하면 정상적으로 구동되는 걸 볼 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;eclipse 실행시 OS가 굳어버리는 문제가 있다.&lt;/p&gt;
+&lt;p&gt;실행 파일이 있는 디렉터리를 확인해보면 &lt;code&gt;eclipse.ini&lt;/code&gt; 라는 설정 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;eclipse 실행시 OS가 굳어버리는 문제가 있다.&lt;/p&gt;
 &lt;p&gt;GTK 버전 관련 이슈라고 한다.&lt;/p&gt;
 &lt;p&gt;실행 파일이 있는 디렉터리를 확인해보면 &lt;code&gt;eclipse.ini&lt;/code&gt; 라는 설정 파일을 볼 수 있다.&lt;/p&gt;
 &lt;p&gt;그 eclipse.ini 의 내용에 아래 항목을 추가한다.&lt;/p&gt;
@@ -533,13 +471,7 @@ sudo apt-get upgrade
 &lt;p&gt;참고로 시스템이 멈췄을 때는 &lt;code&gt;Alt&lt;/code&gt;+&lt;code&gt;PrtSc&lt;/code&gt;을 누른 상태에서 &lt;code&gt;REISUB&lt;/code&gt;를 순서대로 눌러주면 재부팅 된다.&lt;/p&gt;
 &lt;h2&gt;참고링크&lt;/h2&gt;
 &lt;p&gt;&lt;a href="http://nemonein.egloos.com/5280987"&gt;Ubuntu : 얼어붙은 시스템에 한방 먹여! (REISUB)&lt;/a&gt;&lt;br&gt;
-&lt;a href="http://elementaryos.stackexchange.com/questions/1276/eclipse-mars-freezes-after-splash-screen"&gt;Eclipse Mars freezes after splash screen&lt;/a&gt;&lt;/p&gt;</content><category term="elementary"></category><category term="linux"></category><category term="eclipse"></category></entry><entry><title>[Linux] elementaryOS 터미널 속성 수정하기</title><link href="http://blog.junshoong.net/linux/linux-terminal-configuration" rel="alternate"></link><published>2016-03-08T00:00:00+09:00</published><updated>2016-03-08T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-03-08:/linux/linux-terminal-configuration</id><summary type="html">&lt;p&gt;Elementary OS는 Pantheon-terminal 을 사용한다. Pantheon-termainal은 따로 속성을 수정하는 도구를 제공하진 않고 있어서 dconf editor 등으로 속성값은 변경해야 한다. 일단 해당 툴을 받아야 한다. 터미널을 열고 아래를 입력해서 dconf-tools를 설치한다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get install dconf-tools
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;그리고 슬링샷(&lt;code&gt;Alt&lt;/code&gt;+&lt;code&gt;F2&lt;/code&gt;)을 열어서 &lt;code&gt;dconf editor&lt;/code&gt;를 찾아서 연다.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;org -&amp;gt; pantheon -&amp;gt; terminal -&amp;gt; settings&lt;/code&gt; 로 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Elementary OS는 Pantheon-terminal 을 사용한다. Pantheon-termainal은 따로 속성을 수정하는 도구를 제공하진 않고 있어서 dconf editor 등으로 속성값은 변경해야 한다. 일단 해당 툴을 받아야 한다. 터미널을 열고 아래를 입력해서 dconf-tools를 설치한다.&lt;/p&gt;
+&lt;a href="http://elementaryos.stackexchange.com/questions/1276/eclipse-mars-freezes-after-splash-screen"&gt;Eclipse Mars freezes after splash screen&lt;/a&gt;&lt;/p&gt;</content><category term="elementary"></category><category term="linux"></category><category term="eclipse"></category></entry><entry><title>[Linux] elementaryOS 터미널 속성 수정하기</title><link href="http://blog.junshoong.net/linux/linux-terminal-configuration/" rel="alternate"></link><published>2016-03-08T00:00:00+09:00</published><updated>2016-03-08T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-03-08:/linux/linux-terminal-configuration/</id><summary type="html">&lt;p&gt;Elementary OS는 Pantheon-terminal 을 사용한다. Pantheon-termainal은 따로 속성을 수정하는 도구를 제공하진 않고 있어서 dconf editor 등으로 속성값은 변경해야 한다. 일단 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Elementary OS는 Pantheon-terminal 을 사용한다. Pantheon-termainal은 따로 속성을 수정하는 도구를 제공하진 않고 있어서 dconf editor 등으로 속성값은 변경해야 한다. 일단 해당 툴을 받아야 한다. 터미널을 열고 아래를 입력해서 dconf-tools를 설치한다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get install dconf-tools
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -561,30 +493,18 @@ sudo apt-get upgrade
 &lt;p&gt;라인 수는 개개인 마다 다를 수 있다. &lt;code&gt;force_color_prompt=yes&lt;/code&gt;의 주석을 제거 해주면 된다.&lt;/p&gt;
 &lt;p&gt;이외에도 터미널의 테마를 변경하는건 &lt;a href="https://github.com/Mayccoll/Gogh"&gt;Gogh 프로젝트&lt;/a&gt;를 참고할 수 있다.&lt;/p&gt;
 &lt;h2&gt;참고링크&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://unix.stackexchange.com/questions/141066/change-colors-for-the-pantheon-terminal-emulator"&gt;Change colors for the Pantheon terminal emulator&lt;/a&gt;&lt;/p&gt;</content><category term="linux"></category><category term="elementary"></category><category term="terminal"></category></entry><entry><title>[Linux] elementaryOS GUI환경에서 *.bundle 파일 실행이 안 될 때</title><link href="http://blog.junshoong.net/linux/linux-bundle-exec" rel="alternate"></link><published>2016-03-07T00:00:00+09:00</published><updated>2016-03-07T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-03-07:/linux/linux-bundle-exec</id><summary type="html">&lt;p&gt;mint에서는 잘 되었던 것 같은데 elementary OS에서는 bundle파일이 클릭으로 실행이 안 된다.&lt;br&gt;
+&lt;p&gt;&lt;a href="http://unix.stackexchange.com/questions/141066/change-colors-for-the-pantheon-terminal-emulator"&gt;Change colors for the Pantheon terminal emulator&lt;/a&gt;&lt;/p&gt;</content><category term="linux"></category><category term="elementary"></category><category term="terminal"></category></entry><entry><title>[Linux] elementaryOS GUI환경에서 *.bundle 파일 실행이 안 될 때</title><link href="http://blog.junshoong.net/linux/linux-bundle-exec/" rel="alternate"></link><published>2016-03-07T00:00:00+09:00</published><updated>2016-03-07T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-03-07:/linux/linux-bundle-exec/</id><summary type="html">&lt;p&gt;mint에서는 잘 되었던 것 같은데 elementary OS에서는 bundle파일이 클릭으로 실행이 안 된다.&lt;br&gt;
+그냥 터미널을 열고 실행권한을 준다음 실행하면 된다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ chmod …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;mint에서는 잘 되었던 것 같은데 elementary OS에서는 bundle파일이 클릭으로 실행이 안 된다.&lt;br&gt;
 그냥 터미널을 열고 실행권한을 준다음 실행하면 된다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ chmod &lt;span class="m"&gt;755&lt;/span&gt; *.bundle
 $ sudo ./*.bundle
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;* 은 파일 이름이다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;mint에서는 잘 되었던 것 같은데 elementary OS에서는 bundle파일이 클릭으로 실행이 안 된다.&lt;br&gt;
-그냥 터미널을 열고 실행권한을 준다음 실행하면 된다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ chmod &lt;span class="m"&gt;755&lt;/span&gt; *.bundle
-$ sudo ./*.bundle
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;* 은 파일 이름이다.&lt;/p&gt;</content><category term="linux"></category><category term="elementary"></category></entry><entry><title>[Linux] elementaryOS 초기 설치 셋팅</title><link href="http://blog.junshoong.net/linux/linux-elementary-settig" rel="alternate"></link><published>2016-03-07T00:00:00+09:00</published><updated>2016-03-07T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-03-07:/linux/linux-elementary-settig</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get update
+&lt;p&gt;* 은 파일 이름이다.&lt;/p&gt;</content><category term="linux"></category><category term="elementary"></category></entry><entry><title>[Linux] elementaryOS 초기 설치 셋팅</title><link href="http://blog.junshoong.net/linux/linux-elementary-settig/" rel="alternate"></link><published>2016-03-07T00:00:00+09:00</published><updated>2016-03-07T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-03-07:/linux/linux-elementary-settig/</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get update
 $ sudo apt-get install language-selector-gnome uim uim-byeoru vim tmux libreoffice git
-$ sudo add-apt-repository ppa:linrunner/tlp &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt-get update &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt-get install tlp tlp-rdw
-&lt;span class="c1"&gt;# (아래는 Thinkpad의 경우)&lt;/span&gt;
-$ sudo apt-get install tp-smapi-dkms acpi-call-tools
-$ sudo tlp start
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;한글 설정은 &lt;a href="http://bagjunggyu.blogspot.kr/2015/04/elementary-os-freya-stable-release.html"&gt;박정규님 블로그&lt;/a&gt;를 참고하면 좋겠다. 내 경우는 환경은 영어로 할거라 gnome-language-selector …&lt;/p&gt;</summary><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get update
+$ sudo add-apt-repository ppa:linrunner/tlp &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt-get …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get update
 $ sudo apt-get install language-selector-gnome uim uim-byeoru vim tmux libreoffice git
 $ sudo add-apt-repository ppa:linrunner/tlp &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt-get update &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt-get install tlp tlp-rdw
 &lt;span class="c1"&gt;# (아래는 Thinkpad의 경우)&lt;/span&gt;
@@ -603,8 +523,7 @@ $ sudo tlp start
 &lt;p&gt;이외에 jdk는 오라클 홈페이지에서 받고,  docker는 &lt;a href="https://docs.docker.com/engine/installation/linux/ubuntulinux/"&gt;공식홈페이지&lt;/a&gt;를 참고한다.&lt;/p&gt;
 &lt;p&gt;이클립스는 &lt;a href="https://www.eclipse.org/che/getting-started/"&gt;che버전&lt;/a&gt;을 한 번 사용해보고..&lt;/p&gt;
 &lt;p&gt;docker위에 돌아가는 것 같은데 조금 무리가 가길래 그냥 eclipse-mars를 설치했다.&lt;/p&gt;
-&lt;p&gt;그런데 eclipse 실행시 운영체제가 뻗어버리는 문제가 생겼다. 이 부분은 다음에 포스팅.&lt;/p&gt;</content><category term="linux"></category><category term="elementary"></category><category term="guide"></category></entry><entry><title>[Linux] elementaryOS lenovo e450 FreeDos에 Install</title><link href="http://blog.junshoong.net/linux/lenovo-elementary-os-install" rel="alternate"></link><published>2016-03-06T00:00:00+09:00</published><updated>2016-03-06T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-03-06:/linux/lenovo-elementary-os-install</id><summary type="html">&lt;p&gt;기존에 사용하던 HP430을 떠나보내면서 민트에서 elementary로 갈아타보기로 했다. &lt;a href="https://elementary.io/"&gt;공식 홈페이지&lt;/a&gt;에서 파일을 받을 수 있다. 금액이 적혀있는데, 구매하고 싶으면 금액을 선택해서 하고, 아니면 custom에 0을 입력하고 받으면 된다.&lt;/p&gt;
-&lt;p&gt;한글 입력기 관련 이슈를 설명해둔 &lt;a href="http://bagjunggyu.blogspot.kr/2015/12/2015.html"&gt;박정규님 블로그&lt;/a&gt;다. 항상 새로운 리눅스를 도전하시는 것 같은데 참고하면 큰 도움이 된다. 아직 해당 사항은 적용해보지 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;기존에 사용하던 HP430을 떠나보내면서 민트에서 elementary로 갈아타보기로 했다. &lt;a href="https://elementary.io/"&gt;공식 홈페이지&lt;/a&gt;에서 파일을 받을 수 있다. 금액이 적혀있는데, 구매하고 싶으면 금액을 선택해서 하고, 아니면 custom에 0을 입력하고 받으면 된다.&lt;/p&gt;
+&lt;p&gt;그런데 eclipse 실행시 운영체제가 뻗어버리는 문제가 생겼다. 이 부분은 다음에 포스팅.&lt;/p&gt;</content><category term="linux"></category><category term="elementary"></category><category term="guide"></category></entry><entry><title>[Linux] elementaryOS lenovo e450 FreeDos에 Install</title><link href="http://blog.junshoong.net/linux/lenovo-elementary-os-install/" rel="alternate"></link><published>2016-03-06T00:00:00+09:00</published><updated>2016-03-06T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2016-03-06:/linux/lenovo-elementary-os-install/</id><summary type="html">&lt;p&gt;기존에 사용하던 HP430을 떠나보내면서 민트에서 elementary로 갈아타보기로 했다. &lt;a href="https://elementary.io/"&gt;공식 홈페이지&lt;/a&gt;에서 파일을 받을 수 있다. 금액이 적혀있는데, 구매하고 싶으면 금액을 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;기존에 사용하던 HP430을 떠나보내면서 민트에서 elementary로 갈아타보기로 했다. &lt;a href="https://elementary.io/"&gt;공식 홈페이지&lt;/a&gt;에서 파일을 받을 수 있다. 금액이 적혀있는데, 구매하고 싶으면 금액을 선택해서 하고, 아니면 custom에 0을 입력하고 받으면 된다.&lt;/p&gt;
 &lt;p&gt;한글 입력기 관련 이슈를 설명해둔 &lt;a href="http://bagjunggyu.blogspot.kr/2015/12/2015.html"&gt;박정규님 블로그&lt;/a&gt;다. 항상 새로운 리눅스를 도전하시는 것 같은데 참고하면 큰 도움이 된다. 아직 해당 사항은 적용해보지 않았다. &lt;a href="https://elementaryforums.com"&gt;elementary os 포럼&lt;/a&gt;도 존재한다. 여타 리눅스 버전보다 작은 규모다. 현재 상황을 볼 수 있는 &lt;a href="https://translations.launchpad.net/elementary"&gt;런치패드&lt;/a&gt;도 존재한다. 번역, 버그, 이슈 등등의 트래킹서비스를 제공한다.&lt;/p&gt;
 &lt;p&gt;어디서 새로 얻어온 노랑 미니언즈 usb 4gb에 담아서 설치하기로 했다. &lt;code&gt;usb-creator-gtk&lt;/code&gt;, &lt;code&gt;mintstick&lt;/code&gt;, &lt;code&gt;dd&lt;/code&gt; 모두 실패 했다.&lt;/p&gt;
 &lt;p&gt;아무래도 잘 안 되서 공식 홈페이지에 가보니 &lt;a href="https://elementary.io/docs/installation#creating-an-installation-medium"&gt;설치관련 정보&lt;/a&gt;가 있다. 따라서 UNetbootin 이라는 프로그램을 사용했지만 역시 실패했다. 무슨 문제지.. 싶어서 다른 USB랑 동시에 시도하기로 했다. 다른 USB에서 mintstick으로 레코딩 했더니 잘 됬다. USB의 부트 영역이 망가진 것 같다. 아마 이전에 민트를 설치했던 문제와 비슷한 게 아닐까..&lt;/p&gt;
@@ -630,9 +549,8 @@ This is a fatal error.&lt;/p&gt;
 &lt;li&gt;&lt;a href="http://askubuntu.com/questions/532540/ubuntu-installation-failure-unable-to-install-grub"&gt;Ubuntu installation failure - Unable to install GRUB&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;내 경우는 BIOS에서 &lt;code&gt;QUICK boot&lt;/code&gt; 모드를 disable 시키고, livebooting해서 install 하니까 정상적으로 설치 되었다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="elementary os 바탕화면" src="/images/2016-03-06/02.png"&gt;&lt;/p&gt;</content><category term="linux"></category><category term="elementary"></category><category term="laptop"></category><category term="guide"></category></entry><entry><title>[Linux] sshfs로 리눅스간 디렉터리 공유하기</title><link href="http://blog.junshoong.net/linux/linux-sshfs-share" rel="alternate"></link><published>2015-11-17T00:00:00+09:00</published><updated>2015-11-17T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2015-11-17:/linux/linux-sshfs-share</id><summary type="html">&lt;p&gt;집에 있는 리눅스 데스크톱과 디렉터리를 공유하고 싶다. 그래서 조금 찾아봤더니 sshfs라는 방법이 있다.&lt;/p&gt;
-&lt;p&gt;ssh 연결을 기반으로 하기 때문에 일단 ssh 접속이 가능해야 한다. 그러므로 일단 서버에서 ssh server를 열어줘야 하기 때문에 openssh를 받아서 데몬으로 돌려준다.&lt;/p&gt;
-&lt;p&gt;그리고 개인 취향에 따라 ssh 포트를 변경해줘도 된다. 이 부분은 설정 파일을 조금 수정하면 되는데 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;집에 있는 리눅스 데스크톱과 디렉터리를 공유하고 싶다. 그래서 조금 찾아봤더니 sshfs라는 방법이 있다.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="elementary os 바탕화면" src="/images/2016-03-06/02.png"&gt;&lt;/p&gt;</content><category term="linux"></category><category term="elementary"></category><category term="laptop"></category><category term="guide"></category></entry><entry><title>[Linux] sshfs로 리눅스간 디렉터리 공유하기</title><link href="http://blog.junshoong.net/linux/linux-sshfs-share/" rel="alternate"></link><published>2015-11-17T00:00:00+09:00</published><updated>2015-11-17T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2015-11-17:/linux/linux-sshfs-share/</id><summary type="html">&lt;p&gt;집에 있는 리눅스 데스크톱과 디렉터리를 공유하고 싶다. 그래서 조금 찾아봤더니 sshfs라는 방법이 있다.&lt;/p&gt;
+&lt;p&gt;ssh 연결을 기반으로 하기 때문에 일단 ssh …&lt;/p&gt;</summary><content type="html">&lt;p&gt;집에 있는 리눅스 데스크톱과 디렉터리를 공유하고 싶다. 그래서 조금 찾아봤더니 sshfs라는 방법이 있다.&lt;/p&gt;
 &lt;p&gt;ssh 연결을 기반으로 하기 때문에 일단 ssh 접속이 가능해야 한다. 그러므로 일단 서버에서 ssh server를 열어줘야 하기 때문에 openssh를 받아서 데몬으로 돌려준다.&lt;/p&gt;
 &lt;p&gt;그리고 개인 취향에 따라 ssh 포트를 변경해줘도 된다. 이 부분은 설정 파일을 조금 수정하면 되는데 여기 서는 다루지 않겠다.&lt;/p&gt;
 &lt;p&gt;준비가 되었으면 클라이언트에서 루트로 접속하여 아래와 같이 입력한다.&lt;/p&gt;
@@ -649,21 +567,10 @@ This is a fatal error.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;정상적으로 해제 되면 다시 위에 있는 명령어로 연결 시켜준다.&lt;/p&gt;</content><category term="linux"></category><category term="shell"></category><category term="ssh"></category></entry><entry><title>[Linux] apt-get 제거 명령어 정리</title><link href="http://blog.junshoong.net/linux/apt-get-remove-command" rel="alternate"></link><published>2015-09-22T00:00:00+09:00</published><updated>2015-09-22T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2015-09-22:/linux/apt-get-remove-command</id><summary type="html">&lt;p&gt;&lt;code&gt;apt-get&lt;/code&gt;으로 신나게 많은 프로그램을 설치했었다.&lt;/p&gt;
+&lt;p&gt;정상적으로 해제 되면 다시 위에 있는 명령어로 연결 시켜준다.&lt;/p&gt;</content><category term="linux"></category><category term="shell"></category><category term="ssh"></category></entry><entry><title>[Linux] apt-get 제거 명령어 정리</title><link href="http://blog.junshoong.net/linux/apt-get-remove-command/" rel="alternate"></link><published>2015-09-22T00:00:00+09:00</published><updated>2015-09-22T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2015-09-22:/linux/apt-get-remove-command/</id><summary type="html">&lt;p&gt;&lt;code&gt;apt-get&lt;/code&gt;으로 신나게 많은 프로그램을 설치했었다.&lt;/p&gt;
 &lt;p&gt;그런데 필요 없어진 패키지는 어떻게 삭제할까?&lt;/p&gt;
 &lt;p&gt;아래와 같이 세가지 방법이 있다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get remove &amp;lt;package&amp;gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;package&gt;에 해당 패키지를 입력하면 삭제할 수 있다.&lt;/p&gt;
-&lt;p&gt;다만 설정 파일은 남겨둔다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get autoremove &amp;lt;package&amp;gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;remove와 같은데, 설치하면서 같이 설치된 다른 package들 중 사용하지 않는 package들도 같이 삭제해준다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;apt-get&lt;/code&gt;으로 신나게 많은 프로그램을 설치했었다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get remove …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;apt-get&lt;/code&gt;으로 신나게 많은 프로그램을 설치했었다.&lt;/p&gt;
 &lt;p&gt;그런데 필요 없어진 패키지는 어떻게 삭제할까?&lt;/p&gt;
 &lt;p&gt;아래와 같이 세가지 방법이 있다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get remove &amp;lt;package&amp;gt;
@@ -681,14 +588,12 @@ This is a fatal error.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;설정 파일도 삭제해준다.&lt;/p&gt;</content><category term="linux"></category><category term="shell"></category><category term="apt"></category></entry><entry><title>[Linux] SD카드 로우레벨 포맷 및 OS 부팅 디스크 만들기</title><link href="http://blog.junshoong.net/linux/sdcard-low-level-format" rel="alternate"></link><published>2015-08-18T00:00:00+09:00</published><updated>2015-08-18T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2015-08-18:/linux/sdcard-low-level-format</id><summary type="html">&lt;p&gt;라즈베리 파이에 사용하던 microSD를 포맷하고 새롭게 OS를 설치하려고 한다.&lt;/p&gt;
+&lt;p&gt;설정 파일도 삭제해준다.&lt;/p&gt;</content><category term="linux"></category><category term="shell"></category><category term="apt"></category></entry><entry><title>[Linux] SD카드 로우레벨 포맷 및 OS 부팅 디스크 만들기</title><link href="http://blog.junshoong.net/linux/sdcard-low-level-format/" rel="alternate"></link><published>2015-08-18T00:00:00+09:00</published><updated>2015-08-18T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2015-08-18:/linux/sdcard-low-level-format/</id><summary type="html">&lt;p&gt;라즈베리 파이에 사용하던 microSD를 포맷하고 새롭게 OS를 설치하려고 한다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo fdisk -l
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;위 명령어로 현재 시스템에서 인식하고 있는 디스크를 확인할 수 있다.&lt;/p&gt;
-&lt;p&gt;일반적으로 sda 는 사용하고 있는 하드일 것이고, sdb 나 usb, mmcblk0 등을 확인할 수 있다.&lt;/p&gt;
-&lt;p&gt;필자의 경우에는 &lt;code&gt;/dev/mmcblk0&lt;/code&gt;였고, 파티션이 분리되어 있어서 &lt;code&gt;/dev/mmcblk0p1&lt;/code&gt;,&lt;code&gt;mmcblk0p2&lt;/code&gt;로 나뉘어져 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;라즈베리 파이에 사용하던 microSD를 포맷하고 새롭게 OS를 설치하려고 한다.&lt;/p&gt;
+&lt;p&gt;위 명령어로 현재 시스템에서 인식하고 있는 디스크를 확인할 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;라즈베리 파이에 사용하던 microSD를 포맷하고 새롭게 OS를 설치하려고 한다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo fdisk -l
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -719,12 +624,8 @@ This is a fatal error.&lt;/p&gt;
 &lt;h2&gt;참고자료&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://blog.daum.net/bagjunggyu/91"&gt;Linux Mint(리눅스 민트)와 Ubuntu(우분투)의 터미널에서 usb 시동 디스크 만들기,usb 로우포맷,파티션 나누기(partition),포맷하기(format)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="linux"></category><category term="shell"></category></entry><entry><title>[Linux] MD5, SHA1 체크섬 확인하기</title><link href="http://blog.junshoong.net/linux/md5-sha1-checksum" rel="alternate"></link><published>2015-07-08T00:00:00+09:00</published><updated>2015-07-08T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2015-07-08:/linux/md5-sha1-checksum</id><summary type="html">&lt;p&gt;카테고리 구분은 linux에 넣으려고 했지만 아무래도 리눅스보다는 보안 관련인 것 같아서 새로 카테고리를 만들었다.&lt;/p&gt;
-&lt;p&gt;트리구조는 분류하긴 좋지만 분류할때마다 고민하게 되는 것 같다.&lt;/p&gt;
-&lt;p&gt;오늘은 리눅스민트에서 md5와 sha1의 checksum을 확인하는 방법을 알아보자.&lt;/p&gt;
-&lt;p&gt;그 일례로 vmware player를 들어보자. &lt;a href="https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/7_0"&gt;vmware 사이트의 다운로드 페이지&lt;/a&gt;를 확인해보면 아래와 같은 모습을 볼 수 있다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="vmware 다운로드 페이지 화면" src="/images/2015-07-08/01.png"&gt;&lt;/p&gt;
-&lt;p&gt;하단에 보면 &lt;code&gt;CHECKSUMS …&lt;/code&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;카테고리 구분은 linux에 넣으려고 했지만 아무래도 리눅스보다는 보안 관련인 것 같아서 새로 카테고리를 만들었다.&lt;/p&gt;
+&lt;/ul&gt;</content><category term="linux"></category><category term="shell"></category></entry><entry><title>[Linux] MD5, SHA1 체크섬 확인하기</title><link href="http://blog.junshoong.net/linux/md5-sha1-checksum/" rel="alternate"></link><published>2015-07-08T00:00:00+09:00</published><updated>2015-07-08T00:00:00+09:00</updated><author><name>junshoong</name></author><id>tag:blog.junshoong.net,2015-07-08:/linux/md5-sha1-checksum/</id><summary type="html">&lt;p&gt;카테고리 구분은 linux에 넣으려고 했지만 아무래도 리눅스보다는 보안 관련인 것 같아서 새로 카테고리를 만들었다.&lt;/p&gt;
+&lt;p&gt;트리구조는 분류하긴 좋지만 분류할때마다 고민하게 되는 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;카테고리 구분은 linux에 넣으려고 했지만 아무래도 리눅스보다는 보안 관련인 것 같아서 새로 카테고리를 만들었다.&lt;/p&gt;
 &lt;p&gt;트리구조는 분류하긴 좋지만 분류할때마다 고민하게 되는 것 같다.&lt;/p&gt;
 &lt;p&gt;오늘은 리눅스민트에서 md5와 sha1의 checksum을 확인하는 방법을 알아보자.&lt;/p&gt;
 &lt;p&gt;그 일례로 vmware player를 들어보자. &lt;a href="https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/7_0"&gt;vmware 사이트의 다운로드 페이지&lt;/a&gt;를 확인해보면 아래와 같은 모습을 볼 수 있다.&lt;/p&gt;
