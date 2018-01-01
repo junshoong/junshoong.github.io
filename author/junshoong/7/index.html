@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width">
         <title>Junshoong의 기술블로그 - Articles by junshoong</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="../../../theme/css/pygment.css" />
         <link rel="stylesheet" href="../../../theme/css/style.css" />
         <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
     </head>
@@ -22,6 +23,17 @@
 </div>            <div class="row justify-content-around">
                 <div class="col-md-8 content">
 <div class="posts">
+    <div class="post">
+        <h1 class="post-title">
+            <a href="../../../devops/django-travis-env/">[DevOps] travis에서 test시 생기는 데이터베이스 문제</a>
+        </h1>
+        <span class="post-date">2016-07-01, Fri</span>
+        <p>
+        <p>로컬에서는 별 말 없이 통과하던 테스트가 travis 위에서는 아래와 같은 오류를 뱉으며 실패한다.</p>
+<blockquote>
+<p>django.core.exceptions.ImproperlyConfigured: Requested setting DATABASES …</p></blockquote>
+        </p>
+    </div>
     <div class="post">
         <h1 class="post-title">
             <a href="../../../python/python-nosetest/">[Python] nosttest 사용하기</a>
@@ -83,15 +95,6 @@
         <p>eclipse 실행시 OS가 굳어버리는 문제가 있다.</p>
 <p>GTK 버전 관련 이슈라고 한다.</p>
 <p>실행 파일이 있는 디렉터리를 확인해보면 <code>eclipse.ini</code> 라는 설정 …</p>
-        </p>
-    </div>
-    <div class="post">
-        <h1 class="post-title">
-            <a href="../../../linux/linux-terminal-configuration/">[Linux] elementaryOS 터미널 속성 수정하기</a>
-        </h1>
-        <span class="post-date">2016-03-08, Tue</span>
-        <p>
-        <p>Elementary OS는 Pantheon-terminal 을 사용한다. Pantheon-termainal은 따로 속성을 수정하는 도구를 제공하진 않고 있어서 dconf editor 등으로 속성값은 변경해야 한다. 일단 …</p>
         </p>
     </div>
 </div>
@@ -162,7 +165,7 @@
         </a> 
         <a class="list-group-item list-group-item-action category-item" href="../../../life/">
             Life
-            <span class="category-item-count">(21)</span>
+            <span class="category-item-count">(22)</span>
         </a> 
         <a class="list-group-item list-group-item-action category-item" href="../../../linux/">
             Linux

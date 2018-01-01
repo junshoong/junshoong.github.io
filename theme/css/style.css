@@ -39,3 +39,10 @@ html {
 .category-item-count {
     font-size: 0.5em;
 }
+
+.highlight {
+    border: #888888 solid 1px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f0f0f3;
+}
