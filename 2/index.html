@@ -25,6 +25,17 @@
 <div class="posts">
     <div class="post">
         <h1 class="post-title">
+            <a href="../django/set-user-permission/">[Django] User에게 권한 부여하기</a>
+        </h1>
+        <span class="post-date">2017-04-21, Fri</span>
+        <p>
+        <p>코드 몇줄로 간단하게 권한을 부여할 수 있다.</p>
+<div class="highlight"><pre><span></span><span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s1">&#39;testuser&#39;</span><span class="p">)</span>
+<span class="n">perm</span> <span class="o">=</span> <span class="n">Permission</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">codename</span><span class="o">=</span><span class="s1">&#39;model.add_model …</span></pre></div>
+        </p>
+    </div>
+    <div class="post">
+        <h1 class="post-title">
             <a href="../django/serializer-or-view/">[Django] serializer의 구현</a>
         </h1>
         <span class="post-date">2017-04-20, Thu</span>
@@ -82,16 +93,6 @@
         <span class="post-date">2017-04-13, Thu</span>
         <p>
         <p>git에서 Submodule을 사용해봤다.</p>
-        </p>
-    </div>
-    <div class="post">
-        <h1 class="post-title">
-            <a href="../python/lambda-sort/">[Python] lambda를 통한 sort</a>
-        </h1>
-        <span class="post-date">2017-04-12, Wed</span>
-        <p>
-        <p><code>lambda</code>는 익명 함수이다. python 외에도 여러 언어에서 지원하는 expression으로, 짧은 함수를 잠깐 사용할 때 쓸 수 있다.
-가장 기본적으로는 …</p>
         </p>
     </div>
 </div>
@@ -178,7 +179,7 @@
         </a> 
         <a class="list-group-item list-group-item-action category-item" href="../nginx/">
             Nginx
-            <span class="category-item-count">(1)</span>
+            <span class="category-item-count">(2)</span>
         </a> 
         <a class="list-group-item list-group-item-action category-item" href="../pelican/">
             Pelican
