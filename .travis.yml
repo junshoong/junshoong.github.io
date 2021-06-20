@@ -1,0 +1,15 @@
+language: ruby
+cache: bundler
+rvm:
+- 2.1
+
+script: bundle exec rake test
+
+branches:
+  only:
+  - gh-pages
+
+env:
+  global:
+    secure: "FLxDSdZNp1f7trENpRId4pzb0iwZshjnO2X8PGHXntIg9118+fmGfICRmuKiXJc81q1nP8LVVeaXv4SIJ6wmHi4GhWl+O9GqA6VCr8QD4x3ezYBUP0QnbmUdboUS2uHkXxHe3cB4/3b9RrlO5xYeOEudaC21HGtgXUrl1QPq6AdfW7Lcvf+IKcTKkZK0IRglD3DDAfYe6LPVzo3lZCtgsoYe15tNIVZzHpkCE0SHj1tzTHYMPck4yqPGECEuM2hMsTfJk41TYsO0v9UrZuFbvnLAsFUjUvkZHgm+8rrCoLzWm8k1sk+rHohH8LW1LFZ4A8OY8wE+TOO2tqkQq+9abwitUWbtTuuknQ2pFrJCxOv+jDMEnNIvDFMF4nwKenyt7a0MyPC7PX62n8Dp7S5Ks1vs+qtCFEN9c5sxC7AMh2+4iktZQ1WkhcPQJguR0W9CUj4/lBH27jvL4ZSbVJcEDg4PgXNiDFA4sSDxKUb6lZYMVW9fDojEcvFvxxg3g9A/HL+NPzSDE9nVM+NMmNYBZtP/3867v1gRyDs4q2jGLjzKIeIGipGATbk4IC0cmDvSvpNZdehc1BQwzf2EbdJc0nPznba56JIJkPVGFdXyYPMdb3eQP7W0F67JHh3oiB9JPUwk8HVfPHurmglrHhu5borcCjird0trzEIIB0pOY3E="
+
