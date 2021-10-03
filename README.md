@@ -1,7 +1,28 @@
-![travis](https://travis-ci.org/junshoong/blog.svg?branch=post)
+## Build Environment
 
-1. Copy Template to some-post.md
-2. Write contents in some-post.md
-3. Commit
-4. Push to post branch
-5. Travis-CI will build and publish to gh-pages branch
+### install RVM
+
+[wiki](https://wiki.archlinux.org/title/RVM)
+
+```bash
+curl -L get.rvm.io > rvm-install
+bash < ./rvm-install
+source ~/.bash_profile
+```
+
+### install Ruby
+```
+rvm install 2.7
+rvm use 2.7 --default
+```
+
+### install jekyll
+```
+gem install bundler
+bundle install
+```
+
+### Running Test Server
+```
+rake build
+```
